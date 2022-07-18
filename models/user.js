@@ -2,16 +2,16 @@ const mongoose = require('mongoose')
 
 const userSchema = new mongoose.Schema({
     fullName: { type: String, required: true },
-    email:{ type: String, required: true },
-    password:[{ type: String, required: true }],
+    email: { type: String, required: true },
+    password: [{ type: String, required: true }],
     imageUser: { type: String, required: true },
-    favorite:{ type: Array },
-    buying:[{ 
-        id:{type: mongoose.Types.ObjectId, ref:'store'},
-     }],
-    admin: {type:Boolean, required:true}, 
-    uniqueString:{type:String, required:true},
-    verification:{type:Boolean , required:true}
+    favorite: { type: Array },
+    buying: [{
+        id: { type: mongoose.Types.ObjectId, ref: 'Store' },
+    }],
+    admin: { type: Boolean, required: true },
+    uniqueString: { type: String, required: true },
+    verification: { type: Boolean, required: true }
 
 })
 

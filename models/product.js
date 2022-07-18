@@ -8,9 +8,9 @@ const productSchema = new mongoose.Schema({
     category: [{ type: String, required: true }],
     stock: { type: Number, required: true },
     imageInfo: { type: String, required: true },
-    shoppingCart: { type:mongose.Schema.Types.ObjectId, ref:'Store' }
+    shoppingCart: { type: mongose.Schema.Types.ObjectId, ref: 'Store' }
 })
 
-const Product = mongoose.model('product', productSchema)
+const Product = mongose.model('product', productSchema)
 
 module.exports = Product;
