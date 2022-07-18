@@ -1,5 +1,7 @@
 const Store = require('../models/store')
 
+// HAY QUE TERMINAR DE DEFINIR EL MODELO Y CONTROLADOR DEL CARRITO
+
 const storeControllers = {
 
     getStore: async (req, res) => {
@@ -45,6 +47,7 @@ const storeControllers = {
                 totalPrice: totalPrice
 
             }).save()
+                .populate('Product')
         } catch (err) { error = err }
         res.json({
             response: error ? 'ERROR' : store,
@@ -60,6 +63,7 @@ const storeControllers = {
         let error = null
         try {
             storedb = await Store.findOneAndUpdate({ _id: id }, store, { new: true })
+                .populate('Product')
         } catch (err) { error = err }
         res.json({
             response: error ? 'ERROR' : storedb,
@@ -74,6 +78,7 @@ const storeControllers = {
         let error = null
         try {
             store = await Store.findOneAndDelete({ _id: id })
+                .populate('Product')
         } catch (err) { error = err }
         res.json({
             responde: error ? 'ERROR' : store,

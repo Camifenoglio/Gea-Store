@@ -12,6 +12,6 @@ const productSchema = new mongoose.Schema({
     favorite: { type:mongose.Schema.Types.ObjectId, ref:'User' }
 })
 
-const Product = mongoose.model('product', productSchema)
+const Product = mongose.model('product', productSchema)
 
 module.exports = Product;
