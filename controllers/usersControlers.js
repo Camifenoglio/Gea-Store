@@ -9,7 +9,7 @@ const jwt = require("jsonwebtoken")
 const usersControllers = {
 
     signUpUsers: async (req, res) => {
-        const { firstName, lastName, imageUser, email, password, from, country } = req.body.userData
+        const { fullName, imageUser, email, password, from } = req.body.userData
 
 
         try {
@@ -101,8 +101,7 @@ const usersControllers = {
                         const userData = {
 
                             id: userExist._id,
-                            firstName: userExist.firstName,
-                            lastName: userExist.lastName,
+                            fullName: userExist.fullName,
                             password: userExist.passwordHashed,
                             email: userExist.email,
                             imageUser:userExist.imageUser,
@@ -117,7 +116,7 @@ const usersControllers = {
                             success: true,
                             from: from,
                             response: { token, userData },
-                            message: "Wellcome" + "  " + userData.firstName + " " + userData.lastName
+                            message: "Wellcome" + "  " + userData.fullName 
 
 
                         })
@@ -146,8 +145,7 @@ const usersControllers = {
                             const userData = {
                                 id: userExist._id,
 
-                                firstName: userExist.firstName,
-                                lastName: userExist.lastName,
+                                firstName: userExist.fullName,
                                 email: userExist.email,
                                 from: userExist.from
                             }
@@ -156,7 +154,7 @@ const usersControllers = {
                                 success: true,
                                 from: from,
                                 response: { token, userData },
-                                message: "Welcome again " + userData.firstName,
+                                message: "Welcome again " + userData.fullName,
                             })
                         } else {
                             res.json({
@@ -208,8 +206,8 @@ const usersControllers = {
         if (req, res) {
             res.json({
                 success: true,
-                response: { id: req.user.id, firstName: req.user.firstName, email: req.user.email,imageUser:req.user.imageUser, from: 'token' },
-                message: "Welcome " + req.user.firstName
+                response: { id: req.user.id, fullName: req.user.fullName, email: req.user.email,imageUser:req.user.imageUser, from: 'token' },
+                message: "Welcome " + req.user.fullName
             })
         } else {
             console.log(req.err)

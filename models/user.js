@@ -7,7 +7,7 @@ const userSchema = new mongoose.Schema({
     imageUser: { type: String, required: true },
     favorite:{ type: Array },
     buying:{ type: Array, required: true },
-    rol:{type:Array},
+    admin: {type:Boolean, required:true}, 
     uniqueString:{type:String, required:true},
     verification:{type:Boolean , required:true}
 
