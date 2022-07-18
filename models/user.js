@@ -6,7 +6,9 @@ const userSchema = new mongoose.Schema({
     password:[{ type: String, required: true }],
     imageUser: { type: String, required: true },
     favorite:{ type: Array },
-    buying:{ type: Array, required: true },
+    buying:[{ 
+        id:{type: mongoose.Types.ObjectId, ref:'store'},
+     }],
     admin: {type:Boolean, required:true}, 
     uniqueString:{type:String, required:true},
     verification:{type:Boolean , required:true}
