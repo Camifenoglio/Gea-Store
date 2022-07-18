@@ -8,7 +8,8 @@ const productSchema = new mongoose.Schema({
     category: [{ type: String, required: true }],
     stock: { type: Number, required: true },
     imageInfo: { type: String, required: true },
-    shoppingCart: { type:mongose.Schema.Types.ObjectId, ref:'Store' }
+    shoppingCart: { type:mongose.Schema.Types.ObjectId, ref:'Store' },
+    favorite: { type:mongose.Schema.Types.ObjectId, ref:'User' }
 })
 
 const Product = mongoose.model('product', productSchema)
