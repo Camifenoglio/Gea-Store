@@ -5,16 +5,18 @@ const userSchema = new mongoose.Schema({
     email: { type: String, required: true },
     password: [{ type: String, required: true }],
     imageUser: { type: String, required: true },
-    favorite: { type: Array },
-    buying: [{
-        id: { type: mongoose.Types.ObjectId, ref: 'Store' },
-    }],
-    admin: { type: Boolean, required: true },
-    uniqueString: { type: String, required: true },
-    verification: { type: Boolean, required: true }
+    favorite:[{ 
+        productId:{type: mongoose.Types.ObjectId, ref:'Product'},
+     }],
+    buying:[{ 
+        productId:{type: mongoose.Types.ObjectId, ref:'Store'},
+     }],
+    admin: {type:Boolean, required:true}, 
+    uniqueString:{type:String, required:true},
+    verification:{type:Boolean , required:true}
 
 })
 
 
 const User = mongoose.model('users', userSchema)
-module.exports = User
+module.exports = User 
