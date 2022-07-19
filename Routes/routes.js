@@ -7,8 +7,8 @@ const passport =require('../config/passport')
 
 
 
-const usersControlers = require("../controlers/usersControlers")
-const {signUpUsers , logInUser,verifyMail,verifyToken} = usersControlers;
+const usersControllers = require("../controlers/usersControllers")
+const {signUpUsers , logInUser,verifyMail,verifyToken} = usersControllers;
 
 
 

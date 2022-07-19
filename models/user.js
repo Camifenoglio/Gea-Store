@@ -7,7 +7,7 @@ const userSchema = new mongoose.Schema({
     imageUser: { type: String, required: true },
     favorite:{ type: Array },
     buying:[{ 
-        id:{type: mongoose.Types.ObjectId, ref:'store'},
+        productId:{type: mongoose.Types.ObjectId, ref:'Product'},
      }],
     admin: {type:Boolean, required:true}, 
     uniqueString:{type:String, required:true},
