@@ -1,11 +1,18 @@
-import './App.css';
-import Main from './components/Main';
+//COMPONENTS
+// import Main from './components/Main'
+import CarouselProduct from './components/CarouselProductDetails';
+import NavBar from './components/NavBar'
+import HomePage from './pages/Home';
+
+//STYLES
+import './styles/App.css';
 
 function App() {
   return (
     <div className="App">
-      <h1>Ultimo esfuerzo!</h1>
-      <Main></Main>
+        <NavBar />
+        <CarouselProduct />
+        <HomePage/>
     </div>
   );
 }
