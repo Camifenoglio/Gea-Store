@@ -2,7 +2,11 @@
 const crypto = require("crypto")
 const User = require('../models/user')
 const bcryptjs = require('bcryptjs')
+<<<<<<< HEAD
 const sendVerification = require('../controllers/sendEmail')
+=======
+const sendVerification = require('./sendEmail')
+>>>>>>> 7ad86f4e1c801441264529a7d8f855c4798c3dad
 const jwt = require("jsonwebtoken")
 
 

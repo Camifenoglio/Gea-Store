@@ -23,7 +23,7 @@ const productControllers = {
         let product
         let error = null
         try {
-            product = await Product.finOne({ _id: id }).populate('shoppingCart')
+            product = await Product.findOne({ _id: id }).populate('shoppingCart')
         } catch (err) {
             error = err
         }
@@ -117,8 +117,31 @@ const productControllers = {
                 success: false,
             }))
     },
-    
-
-
+    createMultlipeProduct: async (req, res) => {
+        const products = req.body.products
+        let product
+        let error = null
+        try {
+        products.map(async (item) =>{
+            await new Product({
+                name: item.name,
+                description: item.description,
+                price: item.price,
+                image: item.image,
+                category: item.category,
+                stock: item.stock,
+                imageInfo: item.imageInfo
+            }).save()
+            })
+        } catch (err) {
+            error = err
+        }
+        res.json({
+            response: error ? 'ERROR' : product,
+            success: error ? false : true,
+            error: error,
+            console: console.log(error)
+        })
+    }
 }
 module.exports = productControllers

@@ -3,17 +3,33 @@ const validator = require ("../config/validator")
 const passport =require('../config/passport')
 
 
+const productControllers = require('../controllers/productControllers')
+const {getAllProducts, getProduct, createProduct, modifyProduct, deleteProduct, addFavorite, createMultlipeProduct} = productControllers
 
 
+<<<<<<< HEAD
 
 
+=======
+>>>>>>> 7ad86f4e1c801441264529a7d8f855c4798c3dad
 const usersControllers = require("../controllers/usersControllers")
 const {signUpUsers , logInUser,verifyMail,verifyToken} = usersControllers;
 
+// Products
+Router.route('/products')
+.get(getAllProducts)
+.post(createProduct)
 
+Router.route('/products/:id')
+.get(getProduct)
+.put(modifyProduct)
+.delete(deleteProduct)
+.post(addFavorite)
 
+Router.route('/all/products')
+.post(createMultlipeProduct)
 
-
+// Users
 Router.route("/verify/:string").get(verifyMail)
 Router.route("/auth/signin").post(logInUser)
 Router.route("/auth/signup").post(validator,signUpUsers)
