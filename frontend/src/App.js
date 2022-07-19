@@ -20,11 +20,10 @@ function App() {
         <NavBar />
         <CarouselProduct />
         <HomePage/>
-      <h1>Ultimo esfuerzo!</h1>
-      <Main></Main>
-      <Carrousel />
-      {/* <DetailsCarousel /> */}
-      <Footer />
+        <Main></Main>
+        <Carrousel />
+        {/* <DetailsCarousel /> */}
+        <Footer />
     </div>
   );
 }
