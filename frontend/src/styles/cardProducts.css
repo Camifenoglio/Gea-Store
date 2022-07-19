@@ -1,0 +1,14 @@
+.BL-NyP-products{
+    display:flex !important;
+    justify-content:space-around;
+    align-items:center;
+}
+.BL-card-products{
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    height:70vh;
+    max-width:345px;
+    margin-top:1rem;
+    margin-bottom:2rem;
+}
