@@ -11,7 +11,7 @@ const userSchema = new mongoose.Schema({
     buying:[{ 
         productId:{type: mongoose.Types.ObjectId, ref:'Store'},
      }],
-    admin: {type:Boolean, required:true}, 
+    admin: {type:Boolean}, 
     uniqueString:{type:String, required:true},
     verification:{type:Boolean , required:true}
 

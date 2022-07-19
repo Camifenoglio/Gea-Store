@@ -43,7 +43,7 @@ let mailOptions = {
     to:email,
     subject:'verify account',
     html: `
-    <a href=http://localhost:4000/api/verify/${string}>CLICK! </a>
+    <a href=https://gea-store-backend.herokuapp.com/api/verify/${string}>CLICK! </a>
     <h3>to Confirm!</h3>
     `
 }

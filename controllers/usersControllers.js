@@ -2,7 +2,7 @@
 const crypto = require("crypto")
 const User = require('../models/user')
 const bcryptjs = require('bcryptjs')
-const sendVerification = require('../controlers/sendEmail')
+const sendVerification = require('../controllers/sendEmail')
 const jwt = require("jsonwebtoken")
 
 
@@ -48,6 +48,7 @@ const usersControllers = {
                     imageUser: imageUser,
                     email: email,
                     password: passwordHashed,
+                   
                     verifiedEmail: false,
                     from: [from],
                     
@@ -103,9 +104,9 @@ const usersControllers = {
                             id: userExist._id,
                             fullName: userExist.fullName,
                             password: userExist.passwordHashed,
-                            email: userExist.email,
+                            email: userExist.email, 
                             imageUser:userExist.imageUser,
-                            from: from,
+                            from: from, 
                         }
 
                         await userExist.save()
@@ -144,7 +145,7 @@ const usersControllers = {
 
                             const userData = {
                                 id: userExist._id,
-
+                                imageUser:userExist.imageUser,
                                 firstName: userExist.fullName,
                                 email: userExist.email,
                                 from: userExist.from
