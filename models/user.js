@@ -5,9 +5,11 @@ const userSchema = new mongoose.Schema({
     email:{ type: String, required: true },
     password:[{ type: String, required: true }],
     imageUser: { type: String, required: true },
-    favorite:{ type: Array },
-    buying:[{ 
+    favorite:[{ 
         productId:{type: mongoose.Types.ObjectId, ref:'Product'},
+     }],
+    buying:[{ 
+        productId:{type: mongoose.Types.ObjectId, ref:'Store'},
      }],
     admin: {type:Boolean, required:true}, 
     uniqueString:{type:String, required:true},
