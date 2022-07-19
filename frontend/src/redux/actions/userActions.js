@@ -1,10 +1,11 @@
 import axios from 'axios';
+import { urlBack } from '../../../../urlBack';
 
 const userActions = {
     signUpUsers: (userData) => {
         return async (dispatch, getState) => {
             try {
-                const res = await axios.post('https://gea-store-backend.herokuapp.com/api/auth/signup', { userData })
+                const res = await axios.post(urlBack, '/api/auth/signup', { userData })
 
                 console.log(res)
                 dispatch({
@@ -28,7 +29,7 @@ const userActions = {
     logInUser: (logedUser) => {
         console.log(logedUser)
         return async (dispatch, getState) => {
-            const user = await axios.post('https://gea-store-backend.herokuapp.com/api/auth/signin', { logedUser })
+            const user = await axios.post(urlBack, '/api/auth/signin', { logedUser })
             console.log(user)
             if (user.data.success) {
 
@@ -49,26 +50,28 @@ const userActions = {
 
     },
     verifyToken: (token) => {
-        
+
         return async (dispatch, getState) => {
 
-            await axios.get('https://gea-store-backend.herokuapp.com/api/auth/token', {  // la ruta recibe a traveza del header el metodo de authorizacion bearer
+            await axios.get(urlBack, '/api/auth/token', {  // la ruta recibe a traveza del header el metodo de authorizacion bearer
                 headers: {
                     'Authorization': 'Bearer ' + token
                 }, //  Bearer es un metodo que permite autenticar y autorizar usuarios 
-                   // El espacio es para que no se quede el token pegado.
+                // El espacio es para que no se quede el token pegado.
 
             })
-         
+
                 .then(user => {
 
                     if (user.data.success) {
 
                         dispatch({ type: 'GET_USER', payload: user.data.response });
-                        dispatch({ type: 'GET_SIGN' ,
-                            payload: { view:true,
-                                message:user.data.message,
-                                userData:user.data.response,
+                        dispatch({
+                            type: 'GET_SIGN',
+                            payload: {
+                                view: true,
+                                message: user.data.message,
+                                userData: user.data.response,
                                 success: user.data.success
 
                             }
@@ -86,7 +89,7 @@ const userActions = {
                                 view: true,
                                 message: "Please Log In again",
                                 success: false
-                               
+
                             }
                         })
 
