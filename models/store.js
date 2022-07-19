@@ -1,11 +1,16 @@
 const mongoose = require('mongoose')
 
+
+// HAY QUE TERMINAR DE DEFINIR EL MODELO Y CONTROLADOR DEL CARRITO
+
 const storeSchema = new mongoose.Schema({
-    storeName: { type: String, required: true },
-    storeImage: { type: String, required: true },
-    price: { type: Number, required: true },
-    quantity: { type: Number, required: true },
-    totalPrice: { type: Number, required: true }
+    product: [{
+        productShop: { type: mongoose.Types.ObjectId, ref: 'Product' },
+        quantity: { type: Number, required: true },
+        subtotal: { type: Number, required: true }
+    }],
+    totalPrice: { type: Number, required: true },
+
 })
 
 const Store = mongoose.model('store', storeSchema)
