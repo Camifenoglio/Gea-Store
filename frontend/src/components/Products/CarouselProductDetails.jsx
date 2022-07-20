@@ -10,9 +10,11 @@ import "swiper/css/thumbs";
 
 // STYLES
 import '../../styles/carouselProductDetails.css'
+import CardCredit from "./CardCredit";
 
 // import required modules
 import { FreeMode, Navigation, Thumbs } from "swiper";
+
 
 export default function CarouselProductDetail() {
     const [thumbsSwiper, setThumbsSwiper] = useState(null);
@@ -50,24 +52,31 @@ export default function CarouselProductDetail() {
                         modules={[FreeMode, Navigation, Thumbs]}
                         className="mySwiper"
                     >
+                        
                         <SwiperSlide>
-                            <img src="https://swiperjs.com/demos/images/nature-1.jpg" alt="product" />
+                            <img className="swiperDetailImage_B" src="https://swiperjs.com/demos/images/nature-1.jpg" alt="product" />
                         </SwiperSlide>
                         <SwiperSlide>
-                            <img src="https://swiperjs.com/demos/images/nature-2.jpg" alt="product" />
+                            <img className="swiperDetailImage_B" src="https://swiperjs.com/demos/images/nature-2.jpg" alt="product" />
                         </SwiperSlide>
+                        
+
                     </Swiper>
 
                 </div>
                 <div className="productInfo_F">
-                    <h3>TITULO PRODUCTO</h3>
+                    <h3>NOMBRE DEL PRODUCTO</h3>
+                    <p>Price: 000$</p>
                     <p>Lorem ipsum dolor sit amet.</p>
+                    
                     <button className="btnCardDetails_F">
                         Sign up
                         <div className="arrow-wrapper">
                             <div className="arrow"></div>
                         </div>
                     </button>
+                    <h4>Description:</h4>
+                    <p>Lorem ipsum dolor sit amet.</p>
                 </div>
             </div>
         </>
