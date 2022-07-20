@@ -1,11 +1,12 @@
 import axios from 'axios';
-import urlBack from '../../urlBack';
+import urlBack  from '../../urlBack';
 
 const productsActions = {
     getProducts: () => {
         return async (dispatch, getState) => {
             try {
-                const res = await axios.get( urlBack, '/api/products' );
+                const res = await axios.get(urlBack+'/api/products' );
+                console.log(res)
                 dispatch({ type: 'GET_PRODUCTS', payload: res.data.response });
             } catch (error) {
                 console.log(error)
