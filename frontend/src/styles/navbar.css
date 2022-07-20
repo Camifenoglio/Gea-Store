@@ -3,6 +3,7 @@
     margin: 0 !important;
 }
 
+
 .logoContainer_F{
     background-color: #A4BF41;
     padding-left: 4vh;
@@ -16,18 +17,22 @@
     padding-right: 1rem;
 }
 
-
-.css-1pz7awu-MuiButtonBase-root-MuiIconButton-root{
+.css-1pz7awu-MuiButtonBase-root-MuiIconButton-root, .css-1uwgr7b-MuiTypography-root{
     color:#6D8C3E !important;
 }
 
-.css-1uwgr7b-MuiTypography-root{
-    color: white;
-}
 .css-6hp17o-MuiList-root-MuiMenu-list{
     background-color: #A4BF41;
+    background-color: #F2F2F2;
+}
+.css-i4bv87-MuiSvgIcon-root {
+    color: white !important;
 }
 .css-1t6c9ts {
     display: flex;
     gap: 3vh;
+}
+
+.css-r6ewbb-MuiToolbar-root{
+    justify-content: space-between;
 }

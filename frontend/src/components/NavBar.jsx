@@ -44,11 +44,11 @@ const NavBar = () => {
 
     return (
         <AppBar position="static" className='navbarColor_F'>
-            <Container maxWidth="xl">
+            <Container maxWidth="xl" className='navbarFlex_F'>
                 <Toolbar disableGutters>
 
                     {/* chiquito */}
-                    <Box sx={{ flexGrow: 1, display: { xs: 'flex', md: 'none' } }}>
+                    <Box sx={{  display: { xs: 'flex', md: 'none', backgroundColor: '#A4BF41' } }}>
                         <IconButton
                             size="large"
                             aria-label="account of current user"
@@ -83,7 +83,7 @@ const NavBar = () => {
                         >
                             {pages.map((page) => (
                                 <MenuItem className='pagesTypography_F' key={page} onClick={handleCloseNavMenu}>
-                                    <Typography textAlign="center">{page}</Typography>
+                                    <Typography style={{color: '#6D8C3E', fontWeight: 700,}} textAlign="center">{page}</Typography>
                                 </MenuItem>
                             ))}
                         </Menu>
