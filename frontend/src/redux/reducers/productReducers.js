@@ -1,6 +1,6 @@
 const initialState = {
     products: [],
-    onePrduct: {},
+    oneProduct: {},
     filterPerCategory: [],
     favoriteProducts: [],
 }
@@ -16,7 +16,7 @@ const productReducers = (state = initialState, action) => {
             case 'GET_ONE_PRODUCT':
                 return {
                     ...state,
-                    onePrduct: action.payload,
+                    oneProduct: action.payload,
                 }
             case 'FILTER_PER_CATEGORY':
                 let filter = state.products.filter( product => product.category === action.payload )
