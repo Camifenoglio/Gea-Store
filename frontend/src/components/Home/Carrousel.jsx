@@ -77,10 +77,15 @@ export default function Carrousel() {
           clickable: true,
         }}
         modules={[Pagination]}
-        className="mySwiper"
+        className="carouselFavProduct_F"
       >
       {Data.map((Data, index)=>(
-        <SwiperSlide key={index} style={{backgroundImage:`url("${Data.image}")`, backgroundPosition:"center", backgroundSize:"cover"}}>
+        <SwiperSlide 
+          key={index} 
+          style={{backgroundImage:`url("${Data.image}")`, 
+          backgroundPosition:"center", 
+          backgroundSize:"cover"}}
+          >
         </SwiperSlide>
         ))}
         

@@ -1,7 +1,7 @@
 
 .swiper {
   width: 80vw;
-  height: 10rem;
+  height: 50rem;
   padding-bottom: 2rem;
   margin-top: 3rem;
   margin-left: auto;
@@ -31,7 +31,11 @@
   align-items: center;
 }
 
-
+.carouselFavProduct_F {
+  height: 20%;
+  box-sizing: border-box;
+  padding: 10px 0;
+}
 
 
 /* #app { height: 100% }
