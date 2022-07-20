@@ -4,6 +4,7 @@
 import './styles/App.css';
 
 //COMPONENTS
+import {Routes, Route} from 'react-router-dom';
 import NavBar from './components/NavBar'
 import Footer from './components/Footer';
 import HomePage from './pages/Home';
@@ -15,9 +16,14 @@ function App() {
   return (
     <div className="App">
         <NavBar />
+        <Routes>
+        <Route path='/' element={<HomePage />} />
+        <Route path='/products' element={<ProductsPage />} />
+        <Route path='/products/details:id' element={<DetailsPage />} />
+        </Routes>
           {/* <HomePage /> */}
           {/* <ProductsPage /> */}
-          <DetailsPage />
+          {/* <DetailsPage /> */}
         <Footer />
     </div>
   );
