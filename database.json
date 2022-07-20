@@ -555,7 +555,7 @@
             "image": "https://i.imgur.com/C6C9odu.jpg",
             "category": [
                 "rice and pasta",
-                "GlutenFree"
+                "gluten free"
             ],
             "stock": 10,
             "imageInfo": "https://i.imgur.com/uKguQyd.jpg",
@@ -568,7 +568,7 @@
             "image": "https://i.imgur.com/0eAXmjG.jpg",
             "category": [
                 "rice and pasta",
-                "GlutenFree"
+                "gluten free"
             ],
             "stock": 8,
             "imageInfo": "https://i.imgur.com/sOkdifS.jpg",
@@ -629,7 +629,7 @@
             "image": "https://i.imgur.com/Gkgl6xE.jpg",
             "category": [
                 "rice and pasta",
-                "GlutenFree"
+                "gluten free"
             ],
             "stock": 10,
             "imageInfo": "https://i.imgur.com/uKguQyd.jpg",
@@ -642,7 +642,7 @@
             "image": "https://i.imgur.com/A5hARwL.jpg",
             "category": [
                 "oils, dressings and more",
-                "Vegan"
+                "vegan"
             ],
             "stock": 10,
             "imageInfo": "https://i.imgur.com/qADoItD.jpg",
@@ -667,7 +667,7 @@
             "image": "https://i.imgur.com/VL4SOvh.jpg",
             "category": [
                 "oils, dressings and more",
-                "GluteFree"
+                "gluten free"
             ],
             "stock": 10,
             "imageInfo": "https://i.imgur.com/QGqZIgU.gif",
@@ -680,7 +680,7 @@
             "image": "https://i.imgur.com/pJm7Nhg.jpg",
             "category": [
                 "oils, dressings and more",
-                "GlutenFree"
+                "gluten free"
             ],
             "stock": 8,
             "imageInfo": "https://i.imgur.com/JKsgkr7.jpg",
@@ -694,7 +694,7 @@
             "category": [
                 "oils, dressings and more",
                 "vegan",
-                "GlutenFree"
+                "gluten free"
             ],
             "stock": 10,
             "imageInfo": "https://i.imgur.com/QGqZIgU.gif",
@@ -707,7 +707,7 @@
             "image": "https://i.imgur.com/sGw4tr8.jpg",
             "category": [
                 "oils, dressings and more",
-                "GlutenFree"
+                "gluten free"
             ],
             "stock": 8,
             "imageInfo": "https://i.imgur.com/qADoItD.jpg",
@@ -744,7 +744,7 @@
             "image": "https://i.imgur.com/j1HrfOG.jpg",
             "category": [
                 "sugar, sweeteners and more",
-                "Sugarfree"
+                " sugar free"
             ],
             "stock": 10,
             "imageInfo": "https://i.imgur.com/xUgCbkJ.jpg",
@@ -757,8 +757,8 @@
             "image": "https://i.imgur.com/PB2O1zZ.jpg",
             "category": [
                 "sugar, sweeteners and more",
-                "Vegan",
-                "SugarFree"
+                "vegan",
+                "sugar free"
             ],
             "stock": 5,
             "imageInfo": "https://i.imgur.com/K7hbAuj.jpg",
@@ -771,7 +771,7 @@
             "image": "https://i.imgur.com/sm4MP1K.jpg",
             "category": [
                 "sugar, sweeteners and more",
-                "GlutenFree"
+                "gluten free"
             ],
             "stock": 4,
             "imageInfo": "https://i.imgur.com/F96gWbU.jpg",
@@ -784,8 +784,8 @@
             "image": "https://i.imgur.com/PsjbHzP.jpg",
             "category": [
                 "sugar, sweeteners and more",
-                "SugarFree",
-                "Vegan"
+                "sugar free",
+                "vegan"
             ],
             "stock": 8,
             "imageInfo": "https://i.imgur.com/F96gWbU.jpg",
@@ -798,9 +798,9 @@
             "image": "https://i.imgur.com/10PYGMY.jpg",
             "category": [
                 "sugar, sweeteners and more",
-                "SugarFree",
-                "Vegan",
-                "GlutenFree"
+                "sugar free",
+                "vegan",
+                "gluten free"
             ],
             "stock": 2,
             "imageInfo": "https://i.imgur.com/F96gWbU.jpg",
@@ -813,8 +813,8 @@
             "image": "https://i.imgur.com/d7QfomR.jpg",
             "category": [
                 "sugar, sweeteners and more",
-                "SugarFree",
-                "Vegan"
+                "sugar free",
+                "vegan"
             ],
             "stock": 7,
             "imageInfo": "https://i.imgur.com/J743eNG.jpg",
@@ -839,7 +839,7 @@
             "image": "https://i.imgur.com/FrSGi6K.jpg",
             "category": [
                 "broths, soups and sauces",
-                "GlutenFree"
+                "gluten free"
             ],
             "stock": 6,
             "imageInfo": "https://i.imgur.com/A0BwXiV.jpg",
@@ -852,7 +852,7 @@
             "image": "https://i.imgur.com/6jJoUp7.jpg",
             "category": [
                 "broths, soups and sauces",
-                "GlutenFree"
+                "gluten free"
             ],
             "stock": 6,
             "imageInfo": "https://i.imgur.com/irY8tx5.jpg",
@@ -936,7 +936,7 @@
             "price": 1,
             "image": "https://i.imgur.com/JLpDCuA.jpg",
             "category": [
-                "CEREALES,GRANOLAS&MÁS"
+                "cereals, granola and more"
             ],
             "stock": 4,
             "imageInfo": "https://i.imgur.com/vmTn8TQ.jpg",
@@ -948,7 +948,8 @@
             "price": 3,
             "image": "https://i.imgur.com/ImBuehE.jpg",
             "category": [
-                "CEREALES,GRANOLAS&MÁS"
+                "cereals, granola and more",
+                "sugar free"
             ],
             "stock": 4,
             "imageInfo": "https://i.imgur.com/q4nXoEQ.jpg",
@@ -960,7 +961,7 @@
             "price": 2,
             "image": "https://i.imgur.com/I7oFLsQ.jpg",
             "category": [
-                "CEREALES,GRANOLAS&MÁS"
+                "cereals, granola and more"
             ],
             "stock": 6,
             "imageInfo": "https://i.imgur.com/Pk9gzsW.jpg",
@@ -972,7 +973,7 @@
             "price": 1,
             "image": "https://i.imgur.com/WqTuMdz.jpg",
             "category": [
-                "CEREALES,GRANOLAS&MÁS"
+                "cereals, granola and more"
             ],
             "stock": 6,
             "imageInfo": "https://i.imgur.com/ROnSzJW.png",
@@ -984,7 +985,8 @@
             "price": 1,
             "image": "https://i.imgur.com/PuNmGwS.jpg",
             "category": [
-                "CEREALES,GRANOLAS&MÁS"
+                "cereals, granola and more",
+                "gluten free"
             ],
             "stock": 8,
             "imageInfo": "https://i.imgur.com/CxouD1I.png",
@@ -996,7 +998,8 @@
             "price": 1,
             "image": "https://i.imgur.com/4ZElEql.jpg",
             "category": [
-                "CEREALES,GRANOLAS&MÁS"
+                "cereals, granola and more",
+                "gluten free"
             ],
             "stock": 9,
             "imageInfo": "https://i.imgur.com/SBdFbYt.jpg",
@@ -1008,7 +1011,7 @@
             "price": 1,
             "image": "https://i.imgur.com/MiuWpAp.jpg",
             "category": [
-                "CEREALES,GRANOLAS&MÁS"
+                "cereals, granola and more"
             ],
             "stock": 4,
             "imageInfo": "https://i.imgur.com/fGPzEY8.jpg",
@@ -1020,7 +1023,7 @@
             "price": 1,
             "image": "https://i.imgur.com/FpjorjP.jpg",
             "category": [
-                "CEREALES,GRANOLAS&MÁS"
+                "cereals, granola and more"
             ],
             "stock": 9,
             "imageInfo": "https://i.imgur.com/uqvjx15.png",
@@ -1032,7 +1035,8 @@
             "price": 1,
             "image": "httpshttps://i.imgur.com/QV5huDr.jpg",
             "category": [
-                "CHOCOLATES&MÁS"
+                "chocolate and more",
+                "gluten free"
             ],
             "stock": 10,
             "imageInfo": "https://i.imgur.com/q6TPBmj.jpg",
@@ -1044,7 +1048,7 @@
             "price": 2,
             "image": "https://i.imgur.com/URadj5B.jpg",
             "category": [
-                "CHOCOLATES&MÁS"
+                "chocolate and more"
             ],
             "stock": 10,
             "imageInfo": "https://i.imgur.com/oUMaDk8.jpg",
@@ -1056,7 +1060,9 @@
             "price": 3,
             "image": "https://i.imgur.com/9gfJEeW.jpg",
             "category": [
-                "CHOCOLATES&MÁS"
+                "chocolate and more",
+                "sugar free",
+                "gluten free"
             ],
             "stock": 10,
             "imageInfo": "https://i.imgur.com/mnWP9IW.jpg",
@@ -1068,7 +1074,8 @@
             "price": 1,
             "image": "https://i.imgur.com/LJ7CHHs.jpg",
             "category": [
-                "CHOCOLATES&MÁS"
+                "chocolate and more",
+                "gluten free"
             ],
             "stock": 8,
             "imageInfo": "https://i.imgur.com/fQPSxRA.jpg",
@@ -1080,7 +1087,9 @@
             "price": 2,
             "image": "https://i.imgur.com/J9Fb1N0.jpg",
             "category": [
-                "CHOCOLATES&MÁS"
+                "chocolate and more",
+                "gluten free",
+                "vegan"
             ],
             "stock": 8,
             "imageInfo": "https://i.imgur.com/mnWP9IW.jpg",
@@ -1092,7 +1101,10 @@
             "price": 2,
             "image": "https://i.imgur.com/IzSD29R.jpg",
             "category": [
-                "CHOCOLATES&MÁS"
+                "chocolate and more",
+                "gluten free",
+                "vegan",
+                "sugar free"
             ],
             "stock": 8,
             "imageInfo": "https://i.imgur.com/JxdsEWX.jpg",
@@ -1104,7 +1116,9 @@
             "price": 1,
             "image": "https://i.imgur.com/3NaqWTM.jpg",
             "category": [
-                "CHOCOLATES&MÁS"
+                "chocolate and more",
+                "gluten free",
+                "vegan"
             ],
             "stock": 5,
             "imageInfo": "https://i.imgur.com/fQPSxRA.jpg",
@@ -1116,7 +1130,8 @@
             "price": 1,
             "image": "https://i.imgur.com/2azsjpK.jpg",
             "category": [
-                "CHOCOLATES&MÁS"
+                "chocolate and more",
+                "gluten free"
             ],
             "stock": 5,
             "imageInfo": "https://i.imgur.com/tEeNP10.jpg",
