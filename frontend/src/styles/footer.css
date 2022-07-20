@@ -17,33 +17,32 @@
     justify-content: center;
     align-items: center;
 }
+
 .MuiButton-root{
     margin: 0 !important;
     padding: 0 !important;
 }
+
 .navFooter>a {
     text-decoration: none;
-    
-    /* display: flex;
-    flex-direction: column; */
 }
-h3{
+
+.navigationTitle{
     color: #F2F2F2;
 }
 
 .navegation{
-
     height: 10vh;
     display: flex;
     flex-direction: column;
     justify-content: center;
+    gap: .2rem;
 }
 .navFooter {
     height: 20vh;
     display: flex;
     flex-direction: column;
     justify-content: center;
-
 }
 
 .socialMedia {
@@ -51,7 +50,6 @@ h3{
 }
 
 .footerLogo {
-    
     max-width: 100%;
     height: 6rem !important;
 }
@@ -65,8 +63,6 @@ h3{
         padding-bottom: 1vw;
     }
 }
-
-
 
 @media (max-width: 768px) {
     .copyrg {

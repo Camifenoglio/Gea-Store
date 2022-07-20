@@ -1,7 +1,6 @@
 .navbarColor_F {
     background-color: #F2F2F2 !important;
     margin: 0 !important;
-
 }
 
 .logoContainer_F{
@@ -16,10 +15,7 @@
     padding-left: 0 !important;
     padding-right: 1rem;
 }
-.css-1q39md6-MuiButtonBase-root-MuiButton-root{
-    color: #6D8C3E !important;
-    font-weight: bolder !important;
-}
+
 
 .css-1pz7awu-MuiButtonBase-root-MuiIconButton-root{
     color:#6D8C3E !important;
@@ -30,5 +26,8 @@
 }
 .css-6hp17o-MuiList-root-MuiMenu-list{
     background-color: #A4BF41;
-
+}
+.css-1t6c9ts {
+    display: flex;
+    gap: 3vh;
 }

@@ -7,7 +7,7 @@ import WhatsappRoundedIcon from '@mui/icons-material/WhatsappRounded';
 import VolunteerActivismRoundedIcon from '@mui/icons-material/VolunteerActivismRounded';
 
 //STYLES
-import '../styles/bannerInfo.css'
+import '../../styles/bannerInfo.css'
 
 function BannerInfo () {
     return(

@@ -37,7 +37,7 @@ function Footer() {
                     
                 <div className="navFooter">
                     <div className="navegation">
-                        <h3>Navegation</h3>
+                        <h3 className="navegationTitle">Navegation</h3>
                         <Button onClick={ScrollToTop} style={{ color: "#F2F2F2" }}>Home</Button>
                         <Button onClick={ScrollToTop} style={{ color: "#F2F2F2" }}>Products</Button>
                         <Button onClick={ScrollToTop} style={{ color: "#F2F2F2" }}>About Us</Button>
@@ -45,9 +45,6 @@ function Footer() {
                     </div>
 
                 </div>
-            </div>
-            <div className="copyrg">
-                <p> Copyright © 2022 Cristaldo Fiorela</p>
             </div>
         </>
     )

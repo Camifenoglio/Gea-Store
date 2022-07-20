@@ -13,14 +13,14 @@ import Avatar from '@mui/material/Avatar';
 import Button from '@mui/material/Button';
 import Tooltip from '@mui/material/Tooltip';
 import MenuItem from '@mui/material/MenuItem';
+import ShoppingCartOutlinedIcon from '@mui/icons-material/ShoppingCartOutlined';
 
 //STYLES
 import '../styles/navbar.css'
 
 
-const pages = ['Home','Products', 'About Us', 'Blog'];
+const pages = ['Home', 'Blog', 'About Us', 'Products'];
 const settings = ['Profile', 'Logout'];
-
 
 
 const NavBar = () => {
@@ -48,10 +48,7 @@ const NavBar = () => {
                 <Toolbar disableGutters>
 
                     {/* chiquito */}
-
-                    {/* <AdbIcon sx={{ display: { xs: 'none', md: 'flex' }, mr: 1 }} /> */}
                     <Box sx={{ flexGrow: 1, display: { xs: 'flex', md: 'none' } }}>
-                        <img src='https://i.imgur.com/UFZBBG3.png' className='logoContainer_F' alt='logoGea' style={{height: "4rem"}}  />
                         <IconButton
                             size="large"
                             aria-label="account of current user"
@@ -63,6 +60,8 @@ const NavBar = () => {
                         >
                             <MenuIcon />
                         </IconButton>
+                        <img src='https://i.imgur.com/UFZBBG3.png' className='logoContainer_F' alt='logoGea' style={{height: "4rem"}}  />
+
                         <Menu
                             id="menu-appbar"
                             anchorEl={anchorElNav}
@@ -80,6 +79,7 @@ const NavBar = () => {
                             sx={{
                                 display: { xs: 'block', md: 'none'},
                             }}
+                            
                         >
                             {pages.map((page) => (
                                 <MenuItem className='pagesTypography_F' key={page} onClick={handleCloseNavMenu}>
@@ -90,18 +90,16 @@ const NavBar = () => {
                     </Box>
 
                     {/* GRANDE */}
-                    {/* <AdbIcon sx={{ display: { xs: 'flex', md: 'none' }, mr: 1 }} /> */}
                     <Box sx={{ flexGrow: 1, display: { xs: 'none', md: 'flex' } }}>
                         <img src='https://i.imgur.com/UFZBBG3.png' className='logoContainer_F' alt='logoGea' style={{height: "5rem"}}  />
                     </Box>
 
-                    {/* MENU HAMBURGUESA */}
                     <Box sx={{ flexGrow: 1, display: { xs: 'none', md: 'flex' } }}>
                         {pages.map((page) => (
                             <Button
                                 key={page}
                                 onClick={handleCloseNavMenu}
-                                sx={{ my: 2, color: 'white', display: 'block' }}
+                                sx={{ my: 2, color: '#6D8C3E ', display: 'block', fontWeight: 'bolder', width: 'fit-content' }}
                             >
                                 {page}
                             </Button>
@@ -137,6 +135,12 @@ const NavBar = () => {
                             ))}
                         </Menu>
                     </Box>
+                    <Box>
+                        <IconButton>
+                            <ShoppingCartOutlinedIcon style={{color: 'red'}} fontSize='large' />
+                        </IconButton>
+                    </Box>
+
                 </Toolbar>
             </Container>
         </AppBar>

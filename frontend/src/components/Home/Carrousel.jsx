@@ -51,17 +51,17 @@
 //   );
 // }
 
-import React, { useRef, useState } from "react";
+import React from "react";
 // Import Swiper React components
 import { Swiper, SwiperSlide } from "swiper/react";
 
-import Data from "./Data"
+import Data from "../Data"
 
 // Import Swiper styles
 import "swiper/css";
 import "swiper/css/pagination";
 
-import "../styles/carrousel.css";
+import "../../styles/carrousel.css";
 
 // import required modules
 import { Pagination } from "swiper";
@@ -79,10 +79,10 @@ export default function Carrousel() {
         modules={[Pagination]}
         className="mySwiper"
       >
-       {Data.map((Data, index)=>(
+      {Data.map((Data, index)=>(
         <SwiperSlide key={index} style={{backgroundImage:`url("${Data.image}")`, backgroundPosition:"center", backgroundSize:"cover"}}>
         </SwiperSlide>
-         ))}
+        ))}
         
       </Swiper>
     </>
