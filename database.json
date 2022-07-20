@@ -1,0 +1,1126 @@
+{
+    "products": [
+        {
+            "name": "SARDINES MARECHIARE X 170GRS",
+            "description": "Each can contains sardines specially selected for their quality and size. Without head and tail. Product information: Net weight of the can: 170 grs. Drained weight of the can: 119 grs. Gluten Free - No Tacc",
+            "price": "2",
+            "image": "https://i.imgur.com/ZBZr4W5.jpg",
+            "category": [
+                "canned food"
+            ],
+            "stock": "20",
+            "imageInfo": "https://i.imgur.com/jcaasAx.jpg",
+            "favorite": ""
+        },
+        {
+            "name": "TUNA MARECHIARE X 170GRS",
+            "description": "In each can of Marechiare natural tuna, only tuna loins are placed, carefully selected, each can is the same as the other, mechanically packed and controlled by hand. Product data: Net weight of the can:170 grs. Drained weight of the can: 119 grs. Gluten Free - No Tacc",
+            "price": "2",
+            "image": "https://i.imgur.com/9xZmSHo.jpg",
+            "category": [
+                "canned food",
+                "gluten free"
+            ],
+            "stock": "25",
+            "imageInfo": "https://i.imgur.com/5MYWmWL.jpg",
+            "favorite": ""
+        },
+        {
+            "name": "LA TRANQUILINA SPICED EGGPLANTS X 330GRS",
+            "description": "La tranquilina spiced eggplants does not provide significant amounts of protein, trans fats and dietary fiber",
+            "price": "3",
+            "image": "https://i.imgur.com/7nhc0ju.jpg",
+            "category": [
+                "canned food"
+            ],
+            "stock": "15",
+            "imageInfo": "https://i.imgur.com/HTSU4st.jpg",
+            "favorite": ""
+        },
+        {
+            "name": "LA TRANQUILINA PEPPERS X 330GRS",
+            "description": "Peppers, (per 100 g serving), provides 29.5 Kcal (Kilo Calories). Besides the value of Fats (lipids) that it contributes is 0.4 g and of Cholesterol: 0 mg. However, the number of Proteins is 1.19 g. Its number of Carbohydrates is 5.2 g. It contributes the amount of . Concretely, the Iron that it contributes makes a total of 0.3 mg. It is interesting to add that the amount of Vitamin C is 81 mg. Translated with www.DeepL.com/Translator (free version)",
+            "price": "4",
+            "image": "https://i.imgur.com/x1CmEQ8.jpg",
+            "category": [
+                "canned food",
+                "vegan"
+            ],
+            "stock": "20",
+            "imageInfo": "https://i.imgur.com/6JsN0eY.png",
+            "favorite": ""
+        },
+        {
+            "name": "FITLIFE ORIGINAL PEANUT PASTE X 400 GRS.",
+            "description": "Suitable for Vegans. Trans Fat Free. No Preservatives. No Sugar Added.",
+            "price": "2",
+            "image": "https://i.imgur.com/x1CmEQ8.jpg",
+            "category": [
+                "jams",
+                "vegan"
+            ],
+            "stock": "20",
+            "imageInfo": "https://i.imgur.com/6JsN0eY.png",
+            "favorite": ""
+        },
+        {
+            "name": "FITLIFE ORIGINAL PEANUT PASTE X 400 GRS.",
+            "description": "Suitable for Vegans. Trans Fat Free. No Preservatives. No Sugar Added.",
+            "price": "2",
+            "image": "https://i.imgur.com/VXYctqs.jpg",
+            "category": [
+                "sweets and jams",
+                "vegan"
+            ],
+            "stock": "20",
+            "imageInfo": "https://i.imgur.com/egzYlCM.png",
+            "favorite": ""
+        },
+        {
+            "name": "PASTA DE MANÍ PROTEICA FITLIFE X 400 GRS.",
+            "description": "Peanut Protein Paste. With Whey Protein. Trans Fat Free. No Preservatives. No Sugar Added.",
+            "price": "2",
+            "image": "https://i.imgur.com/0hafzN8.jpg",
+            "category": [
+                "sweets and jams"
+            ],
+            "stock": "15",
+            "imageInfo": "https://i.imgur.com/5qtdbC8.png",
+            "favorite": ""
+        },
+        {
+            "name": "ADORADA TRADITIONAL HARVEST HONEY LIQUID X500 GRS.",
+            "description": "Specially packaged after being extracted from selected apiaries without distorting its qualities or flavors through industrial processes. From the heating process it is achieved that the honey modifies its original state obtaining a liquid, crystalline honey of easy dissolution, ideal for daily use.",
+            "price": "2",
+            "image": "https://i.imgur.com/pv1bg6v.jpg",
+            "category": [
+                "sweets and jams"
+            ],
+            "stock": "15",
+            "imageInfo": "https://i.imgur.com/UtLgaXf.jpg",
+            "favorite": ""
+        },
+        {
+            "name": "ADORADA CREAMY TRADITIONAL HARVEST HONEY X500 GRS",
+            "description": "The creamy consistency is obtained from an eight-hour churning process, which gives it a smooth and pleasant texture. This process allows us to preserve its flavor and natural properties and, at the same time, to obtain an ideal honey for spreading.",
+            "price": "2",
+            "image": "https://i.imgur.com/NBbOPBt.jpg",
+            "category": [
+                "sweets and jams"
+            ],
+            "stock": "15",
+            "imageInfo": "https://i.imgur.com/CrrvtHk.jpg",
+            "favorite": ""
+        },
+        {
+            "name": "MASSEUBE NATURAL SWEETS",
+            "description": "Sweets made with organic whole fruit, without artificial additives or preservatives, in a sustainable way, preserving the natural preserving the earth's natural resources.",
+            "price": "3",
+            "image": "https://i.imgur.com/hvxbjJS.jpg",
+            "category": [
+                "sweets and jams",
+                "gluten free"
+            ],
+            "stock": "15",
+            "imageInfo": "https://i.imgur.com/QSoVKfy.jpg",
+            "favorite": ""
+        },
+        {
+            "name": "MASSEUBE ORGANIC SWEETS",
+            "description": "Without added cane sugar. Approved by LAPDI (Liga Argentina de Protección al Diabético). Gluten Free - No Tacc.",
+            "price": "3",
+            "image": "https://i.imgur.com/dJ8nlSy.jpg",
+            "category": [
+                "sweets and jams",
+                "gluten free"
+            ],
+            "stock": "10",
+            "imageInfo": "https://i.imgur.com/trJkBcB.jpg",
+            "favorite": ""
+        },
+        {
+            "name": "DOLCELLA LA SERENISIMA X 300 GRS.",
+            "description": "Spreadable product based on dulce de leche and hazelnut-flavored cocoa. Gluten Free - No Tacc.",
+            "price": "3",
+            "image": "https://i.imgur.com/isx5fhm.jpg",
+            "category": [
+                "sweets and jams",
+                "gluten free"
+            ],
+            "stock": "10",
+            "imageInfo": "https://i.imgur.com/0BMNDkU.jpg",
+            "favorite": ""
+        },
+        {
+            "name": "SANTA MARÍA LACTOSE-FREE UNIVERSAL PREMIX X 1 KG.",
+            "description": "For bakery and pastry elaborations. Gluten Free - Toc Free.     Lactose Free. 0% Trans Fat. Ingredients: Rice flour, cassava starch, corn starch, potato starch, sugar, vegetable oil, egg, salt, emulsifiers (stearoyl, sodium lactylate, soy lecithin), stabilizers (carboxymethylcellulose, xanthan gum, guar gum). Contains: Egg, soy lecithin.",
+            "price": "3",
+            "image": "https://i.imgur.com/ZhyT9Kx.jpg",
+            "category": [
+                "flours and more",
+                "gluten free",
+                "lactose free"
+            ],
+            "stock": "10",
+            "imageInfo": "https://i.imgur.com/wlrGrIf.jpg",
+            "favorite": ""
+        },
+        {
+            "name": "SANTA MARIA UNIVERSAL PREMIX X 1 KG.",
+            "description": "For bakery and pastry elaborations. Gluten Free - Toc Free. 0% Trans Fat.",
+            "price": "3",
+            "image": "https://i.imgur.com/cpYssKy.jpg",
+            "category": [
+                "flours and more",
+                "gluten free"
+            ],
+            "stock": "3",
+            "imageInfo": "https://i.imgur.com/wlrGrIf.jpg",
+            "favorite": ""
+        },
+        {
+            "name": "ABUCEL CASSAVA STARCH X 500 GRS.",
+            "description": "Gluten Free - No Tacc",
+            "price": "2",
+            "image": "https://i.imgur.com/yq14F7H.jpg",
+            "category": [
+                "flours and more",
+                "gluten free"
+            ],
+            "stock": "3",
+            "imageInfo": "https://i.imgur.com/lZvH1ml.png",
+            "favorite": ""
+        },
+        {
+            "name": "UNIVERSAL PREMIX DOÑA PACHA X 500 GRS.",
+            "description": "For bakery, pastry and pasta elaborations. Gluten Free - No Tocc. No Preservatives Added. No Trans Fat. Low Sodium Content. Ingredients: corn starch, cassava starch, potato starch, milk powder, sugar, egg powder, soy lecithin, xanthan gum, guar gum. Contains milk, egg, soy",
+            "price": "2",
+            "image": "https://i.imgur.com/VpLvy0P.jpg",
+            "category": [
+                "flours and more",
+                "gluten free"
+            ],
+            "stock": "4",
+            "imageInfo": "https://i.imgur.com/T4pa47S.jpg",
+            "favorite": ""
+        },
+        {
+            "name": "LEVEX NATURAL INSTANT YEAST X 20 GRS.",
+            "description": "For home use, suitable for baking homemade bread, pizzas and pastries. It is added directly on the flour. It is not necessary to dissolve it previously in water. No refrigerator required. Exquisite flavor. Gluten Free - No Tacc. Presentation: 2 sachets of 10 gr. each.",
+            "price": "1",
+            "image": "https://i.imgur.com/5QXxSZU.jpg",
+            "category": [
+                "flours and more",
+                "gluten free"
+            ],
+            "stock": "5",
+            "imageInfo": "https://i.imgur.com/s47wFpL.jpg",
+            "favorite": ""
+        },
+        {
+            "name": "UNIVERSAL PREMIX DELICEL X 500 GRS.",
+            "description": "For bakery and pastry elaborations. Gluten Free - Toc Free. Ingredients: Corn starch, rice flour, cassava starch, emulsifier (INS 415, INS 471).",
+            "price": "1",
+            "image": "https://i.imgur.com/RGSwkio.jpg",
+            "category": [
+                "flours and more",
+                "gluten free"
+            ],
+            "stock": "5",
+            "imageInfo": "https://i.imgur.com/TXeeakb.jpg",
+            "favorite": ""
+        },
+        {
+            "name": "KAPAC UNIVERSAL PREMIX X 500 GRS.",
+            "description": "For bakery and pastry elaborations. Gluten Free - Toc Free.   Ingredients: corn starch, rice flour, potato starch, whole milk powder, thickener, emulsifier. Contains milk and soy lecithin.",
+            "price": "1",
+            "image": "https://i.imgur.com/gmziBzN.jpg",
+            "category": [
+                "flours and more",
+                "gluten free"
+            ],
+            "stock": "8",
+            "imageInfo": "https://i.imgur.com/b7ax8Fn.jpg",
+            "favorite": ""
+        },
+        {
+            "name": "ABUCEL WHITE RICE FLOUR X 500 GRS.",
+            "description": "Gluten Free - No Tacc.",
+            "price": "1",
+            "image": "https://i.imgur.com/XcCSib6.jpg",
+            "category": [
+                "flours and more",
+                "gluten free"
+            ],
+            "stock": "8",
+            "imageInfo": "https://i.imgur.com/6ym9emB.jpg",
+            "favorite": ""
+        },
+        {
+            "name": "WHOLE BARS X 42 GRS.",
+            "description": "Integra Banana and Walnut Cereal Bar x 42 g. Ingredients: Oats, honey, textured vegetable protein, peanuts, dietary fiber (chicory root), dehydrated banana and walnut. CONTAINS OATS, PEANUTS, WALNUTS, SOYBEANS. MAY CONTAIN ALMONDS, CASHEWS AND MILK DERIVATIVES.",
+            "price": "1",
+            "image": "https://i.imgur.com/oiKMi7y.jpg",
+            "category": [
+                "cookies, bakery and more"
+            ],
+            "stock": "20",
+            "imageInfo": "https://i.imgur.com/cgpp5gq.jpg",
+            "favorite": ""
+        },
+        {
+            "name": "SCHAR TRADITIONAL SLICED BREAD X 200 GRS.",
+            "description": "Gluten Free - No Preservatives. No Preservatives. Source of Fiber.",
+            "price": "2",
+            "image": "https://i.imgur.com/Z153qtB.jpg",
+            "category": [
+                "cookies, bakery and more",
+                "gluten free"
+            ],
+            "stock": "40",
+            "imageInfo": "https://i.imgur.com/yprd65l.jpg",
+            "favorite": ""
+        },
+        {
+            "name": "RISKY-DIT BROWN RICE COOKIES X 100 GRS.",
+            "description": "Gluten Free - No Tacc.",
+            "price": "1",
+            "image": "https://i.imgur.com/Z55q9mI.jpg",
+            "category": [
+                "cookies, bakery and more",
+                "gluten free",
+                "snacks"
+            ],
+            "stock": "40",
+            "imageInfo": "https://i.imgur.com/51nduar.jpg",
+            "favorite": ""
+        },
+        {
+            "name": "DELICEL COOKIES X 200 GRS.",
+            "description": "Gluten Free - No Tacc. Lactose Free.",
+            "price": "2",
+            "image": "https://i.imgur.com/UEl0AzZ.jpg",
+            "category": [
+                "cookies, bakery and more",
+                "gluten free",
+                "lactose free"
+            ],
+            "stock": "10",
+            "imageInfo": "https://i.imgur.com/jWzjhuB.jpg",
+            "favorite": ""
+        },
+        {
+            "name": "CARILÓ RICE TOASTS X 150 GRS.",
+            "description": "They are an excellent complement to dietary and nutritional bases and daily meals. They provide the necessary nutrients for a healthy and balanced diet. They provide well-being and are a valuable source of energy. Gluten Free - Non-Tacc. 0% Trans Fat. Ingredients: rice flour (own milling, quality controlled), skim milk powder, white sugar, salt (only in classic cookies) and microfiltered water.",
+            "price": "2",
+            "image": "https://i.imgur.com/Rht0f1F.jpg",
+            "category": [
+                "cookies, bakery and more",
+                "gluten free",
+                "snacks"
+            ],
+            "stock": "10",
+            "imageInfo": "https://i.imgur.com/dCFqb4l.jpg",
+            "favorite": ""
+        },
+        {
+            "name": "NAQUET BREADSTICKS X 140 GRS.",
+            "description": "Gluten Free - No Tacc.",
+            "price": "1",
+            "image": "https://i.imgur.com/2FmQGfp.jpg",
+            "category": [
+                "cookies, bakery and more",
+                "gluten free"
+            ],
+            "stock": "10",
+            "imageInfo": "https://i.imgur.com/MrqA4Xy.jpg",
+            "favorite": ""
+        },
+        {
+            "name": "CRACKERS RICE TOAST X 120 GRS.",
+            "description": "Gluten Free - No Tacc. 0% Trans Fat. Made with Natural Products. Ingredients: ground rice, powdered milk without TACC, sugar, salt.",
+            "price": "1",
+            "image": "https://i.imgur.com/qEyRay4.jpg",
+            "category": [
+                "cookies, bakery and more",
+                "gluten free",
+                "snacks"
+            ],
+            "stock": "10",
+            "imageInfo": "https://i.imgur.com/key8lGc.jpg",
+            "favorite": ""
+        },
+        {
+            "name": "SUGAR FREE ALFAJOR CERRO AZUL X 55 GRS.",
+            "description": "No Sugar Added. Gluten Free - No Tacc. Sweetened with Stevia.",
+            "price": "1",
+            "image": "https://i.imgur.com/LGs4vyK.jpg",
+            "category": [
+                "cookies, bakery and more",
+                "gluten free",
+                "sugar free"
+            ],
+            "stock": "20",
+            "imageInfo": "https://i.imgur.com/stZrpQw.jpg",
+            "favorite": ""
+        },
+        {
+            "name": "SUNFLOWER SEEDS NATURAL SEED X 200 GRS.",
+            "description": "Gluten Free - No Toc. Free of Agrotoxics. Source of Magnesium, Vitamin E and Antioxidants.",
+            "price": "2",
+            "image": "https://i.imgur.com/YgWDQzJ.jpg",
+            "category": [
+                "nuts, seeds and more",
+                "gluten free"
+            ],
+            "stock": "20",
+            "imageInfo": "https://i.imgur.com/IDzWcWt.jpg",
+            "favorite": ""
+        },
+        {
+            "name": "FIBRAMAS PSYLLIUM HUSK + NATURAL GROUND LINUM SEED X 200 GRS.",
+            "description": "Gluten Free - No Tacc. Prebiotic Fiber. Natural Regulator. Satiating. Ideal for Gluten Free Baking.",
+            "price": "2",
+            "image": "https://i.imgur.com/6VIqJBF.jpg",
+            "category": [
+                "nuts, seeds and more",
+                "gluten free"
+            ],
+            "stock": "20",
+            "imageInfo": "https://i.imgur.com/ZZX9mhk.jpg",
+            "favorite": ""
+        },
+        {
+            "name": "NATURAL FLAXSEED SEED X 200 GRS.",
+            "description": "Gluten Free - No Tacc. Vegan. 100% Natural.0% Cholesterol. Source of Fiber, Omega 3, Zinc and Protein.",
+            "price": "2",
+            "image": "https://i.imgur.com/d96Axx1.jpg",
+            "category": [
+                "nuts, seeds and more",
+                "gluten free",
+                "vegan"
+            ],
+            "stock": "20",
+            "imageInfo": "https://i.imgur.com/A8Q5yi7.jpg",
+            "favorite": ""
+        },
+        {
+            "name": "NATURAL FLAXSEED SEED X 200 GRS.",
+            "description": "Gluten Free - No Tacc. Vegan 100% Natural. 0% Cholesterol. Source of Calcium, Fiber, Protein and Magnesium.",
+            "price": "2",
+            "image": "https://imgur.com/DTE2hOO",
+            "category": [
+                "nuts, seeds and more",
+                "gluten free",
+                "vegan"
+            ],
+            "stock": "20",
+            "imageInfo": "https://i.imgur.com/IN4bKyi.jpg",
+            "favorite": ""
+        },
+        {
+            "name": "QUINOA MIX NATURAL SEED X 250 GRS.",
+            "description": "White and Red Quinoa. Gluten Free - No Tacc. Free of Agrotoxics Source of Iron, Proteins and Amino Acids. Low Glycemic Index.",
+            "price": "2",
+            "image": "https://i.imgur.com/R4NfeAY.jpg",
+            "category": [
+                "nuts, seeds and more",
+                "gluten free"
+            ],
+            "stock": "20",
+            "imageInfo": "https://i.imgur.com/wFmq6FT.jpg",
+            "favorite": ""
+        },
+        {
+            "name": "NUTRIMIX NATURAL SEED X 250 GRS.",
+            "description": "Ground Mix of: Sunflower, Chia, Almond, Buckwheat, Alfalfa and Flax. Gluten Free - No Tacc. Antioxidant and Energizing. Source of Protein and Fiber.",
+            "price": "2",
+            "image": "https://i.imgur.com/hjI1AHu.jpg",
+            "category": [
+                "nuts, seeds and more",
+                "gluten free"
+            ],
+            "stock": "15",
+            "imageInfo": "https://i.imgur.com/eVqSLH5.jpg",
+            "favorite": ""
+        },
+        {
+            "name": "NATURAL WHOLE GROUND SESAME SEED X 250 GRS.",
+            "description": "Gluten Free - No Tacc. Source of Calcium. High Fiber Content.",
+            "price": "2",
+            "image": "https://i.imgur.com/nQBLgV4.png",
+            "category": [
+                "nuts, seeds and more",
+                "gluten free"
+            ],
+            "stock": "15",
+            "imageInfo": "https://i.imgur.com/hrilImI.jpg",
+            "favorite": ""
+        },
+        {
+            "name": "NATURAL GROUND FLAXSEED SEED X 250 GRS.",
+            "description": "Gluten Free - No Tacc. Source of Omega 3. High Fiber Content.",
+            "price": "2",
+            "image": "https://i.imgur.com/xbxKvzz.jpg",
+            "category": [
+                "nuts, seeds and more",
+                "gluten free"
+            ],
+            "stock": "15",
+            "imageInfo": "https://i.imgur.com/VwEgu3O.jpg",
+            "favorite": ""
+        },
+        {
+            "name": "DON MARCOS RICE SNACK X 80 GRS.",
+            "description": "Baked, NOT Fried. Ideal for Healthy Snacking. Gluten Free - No Tacc. Contains Dairy Derivatives",
+            "price": "1",
+            "image": "https://i.imgur.com/XOqNUFG.jpg",
+            "category": [
+                "snacks",
+                "gluten free"
+            ],
+            "stock": "15",
+            "imageInfo": "https://i.imgur.com/46yzrKK.png",
+            "favorite": ""
+        },
+        {
+            "name": "DON MARCOS RICE SNACK X 80 GRS.",
+            "description": "Let yourself be surprised by the exquisite Alwa rustic sweet potato chips. Discover the perfect balance between natural sweetness and the right amount of salt from one of the oldest crops of our land. Gluten Free - No Tacc.100% natural - No preservatives or additives. Produced by hand. Ingredients: sweet potato, 100% sunflower oil, salt.",
+            "price": "1",
+            "image": "https://i.imgur.com/m99etRl.jpg",
+            "category": [
+                "snacks",
+                "gluten free"
+            ],
+            "stock": "30",
+            "imageInfo": "https://i.imgur.com/CePTTJt.jpg",
+            "favorite": ""
+        },
+        {
+            "name": "VEGGIE SNACKS PIZZA GRANIX",
+            "description": "With Chickpea, Corn, Potato, Oats and Soybean. High content of Vitamins A and E. Free of trans fats and cholesterol. Reduced in sodium.Source of Omega 9. Suitable for Vegans.",
+            "price": "1",
+            "image": "https://i.imgur.com/ZUr6ozW.jpg",
+            "category": [
+                "snacks",
+                "vegan"
+            ],
+            "stock": "30",
+            "imageInfo": "https://i.imgur.com/IFYj8go.jpg",
+            "favorite": ""
+        },
+        {
+            "name": "VEGGIE SNACKS FINE HERBS GRANIX",
+            "description": "With peas, corn, potatoes, oats and soybeans. High content of Vitamins A and E. Free of trans fats and cholesterol. Reduced sodium. Source of Omega 9. Suitable for Vegans.",
+            "price": "1",
+            "image": "https://i.imgur.com/5J2ocLJ.jpg",
+            "category": [
+                "snacks",
+                "vegan"
+            ],
+            "stock": "30",
+            "imageInfo": "https://i.imgur.com/ihMXH57.jpg",
+            "favorite": ""
+        },
+        {
+            "name": "SANTA MARIA CHEESE STICKS X 200 GRS.",
+            "description": "Gluten Free - No Tacc. Made with High Oleic Sunflower Oil. Ingredients: rice flour, corn starch, cheese, manioc starch, potato starch, vegetable oil, salt, dextrose, flavorings (cheese essence), stabilizers (xanthan gum - guar gum), emulsifiers (soy lecithin), yellow coloring (tartrazine).",
+            "price": "2",
+            "image": "https://i.imgur.com/jOc0JcT.jpg",
+            "category": [
+                "snacks",
+                "gluten free"
+            ],
+            "stock": "30",
+            "imageInfo": "https://i.imgur.com/7TYGM5v.jpg",
+            "favorite": ""
+        },
+        {
+            "name": "POPCORN MARLOM'S.",
+            "description": "Gluten Free - No Tacc.",
+            "price": "1",
+            "image": "https://i.imgur.com/K610QBM.jpg",
+            "category": [
+                "snacks",
+                "gluten free"
+            ],
+            "stock": "30",
+            "imageInfo": "https://i.imgur.com/9mClsk4.jpg",
+            "favorite": ""
+        },
+        {
+            "name": "FUSILLI MATARAZZO X 500 GRS.",
+            "description": "GlutenFree, 0 % Trans Fat., 0 % Cholesterol., Low Sodium.",
+            "price": 2,
+            "image": "https://i.imgur.com/C6C9odu.jpg",
+            "category": [
+                "rice and pasta",
+                "GlutenFree"
+            ],
+            "stock": 10,
+            "imageInfo": "https://i.imgur.com/uKguQyd.jpg",
+            "favorite": ""
+        },
+        {
+            "name": "RICE NOODLES SOYRICE X 300 GRS.",
+            "description": "Gluten Free",
+            "price": 2,
+            "image": "https://i.imgur.com/0eAXmjG.jpg",
+            "category": [
+                "rice and pasta",
+                "GlutenFree"
+            ],
+            "stock": 8,
+            "imageInfo": "https://i.imgur.com/sOkdifS.jpg",
+            "favorite": ""
+        },
+        {
+            "name": "SPAGHETTI MATARAZZO X 500 GRS.",
+            "description": "Gluten Free, No Tacc.,0% Trans. Fat, 0% Cholesterol., Low Sodium.",
+            "price": 2,
+            "image": "https://i.imgur.com/ceoA8UF.jpg",
+            "category": [
+                "rice and pasta"
+            ],
+            "stock": 10,
+            "imageInfo": "https://i.imgur.com/uKguQyd.jpg",
+            "favorite": ""
+        },
+        {
+            "name": "WHOLE WHEAT PASTA KNORR X 500 GRS.",
+            "description": "Natural Fiber Source.",
+            "price": 1,
+            "image": "https://i.imgur.com/2Fd3C27.jpg",
+            "category": [
+                "rice and pasta"
+            ],
+            "stock": 10,
+            "imageInfo": "https://i.imgur.com/eg86DwI.jpg",
+            "favorite": ""
+        },
+        {
+            "name": "DOUBLE CAROLINA RICE ASAHI X 1 KG.",
+            "description": "Long Wide Polished Rice.",
+            "price": 2,
+            "image": "https://i.imgur.com/sWrdoeJ.jpg",
+            "category": [
+                "rice and pasta"
+            ],
+            "stock": 8,
+            "imageInfo": "https://i.imgur.com/djVl8nG.jpg",
+            "favorite": ""
+        },
+        {
+            "name": "WHOLE WHEAT FLOUR NOODLES LILEN X 500 GRS.",
+            "description": "Made with Whole Wheat Candeal, Wheat Flour., Contains soy flour., Salt Free., No preservatives., No Artificial Coloring.",
+            "price": 3,
+            "image": "https://i.imgur.com/eldxmu7.jpg",
+            "category": [
+                "rice and pasta"
+            ],
+            "stock": 10,
+            "imageInfo": "https://i.imgur.com/f4dof3Z.jpg",
+            "favorite": ""
+        },
+        {
+            "name": "MULTIGRAIN PASTA MAIZENA X 400 GRS.",
+            "description": "Gluten Free.,Low Sodium, Contains soy flour., Salt Free.,No preservatives., No Artificial Coloring.",
+            "price": 1,
+            "image": "https://i.imgur.com/Gkgl6xE.jpg",
+            "category": [
+                "rice and pasta",
+                "GlutenFree"
+            ],
+            "stock": 10,
+            "imageInfo": "https://i.imgur.com/uKguQyd.jpg",
+            "favorite": ""
+        },
+        {
+            "name": "COCONUT OIL VIRGEN GOD BLESS YOU.",
+            "description": "Virgin Coconut Oil.",
+            "price": 3,
+            "image": "https://i.imgur.com/A5hARwL.jpg",
+            "category": [
+                "oils, dressings and more",
+                "Vegan"
+            ],
+            "stock": 10,
+            "imageInfo": "https://i.imgur.com/qADoItD.jpg",
+            "favorite": ""
+        },
+        {
+            "name": "NEUTRAL COCONUT OIL GOD BLESS YOU.",
+            "description": "Neutral Coconut Oil.",
+            "price": 3,
+            "image": "https://i.imgur.com/XVyYHUE.jpg",
+            "category": [
+                "oils, dressings and more"
+            ],
+            "stock": 10,
+            "imageInfo": "https://i.imgur.com/Mf4uEH7.jpg",
+            "favorite": ""
+        },
+        {
+            "name": "FLAVORED EXTRA VIRGIN OLIVE OILS LA TOSCANA X 250 ML.",
+            "description": "Gluten Free, No Trans. Fat, First Cold Extraction",
+            "price": 3,
+            "image": "https://i.imgur.com/VL4SOvh.jpg",
+            "category": [
+                "oils, dressings and more",
+                "GluteFree"
+            ],
+            "stock": 10,
+            "imageInfo": "https://i.imgur.com/QGqZIgU.gif",
+            "favorite": ""
+        },
+        {
+            "name": "OLIVE OIL FAMILIA ZUCCARDI X 500 ML.",
+            "description": "Gluten Free, No Trans. Fat.",
+            "price": 4,
+            "image": "https://i.imgur.com/pJm7Nhg.jpg",
+            "category": [
+                "oils, dressings and more",
+                "GlutenFree"
+            ],
+            "stock": 8,
+            "imageInfo": "https://i.imgur.com/JKsgkr7.jpg",
+            "favorite": ""
+        },
+        {
+            "name": "EXTRA VIRGIN OLIVE OIL ZUELO X 500 ML.",
+            "description": "Gluten Free, No Trans. Fat.",
+            "price": 3,
+            "image": "https://i.imgur.com/lSF1O8z.jpg",
+            "category": [
+                "oils, dressings and more",
+                "vegan",
+                "GlutenFree"
+            ],
+            "stock": 10,
+            "imageInfo": "https://i.imgur.com/QGqZIgU.gif",
+            "favorite": ""
+        },
+        {
+            "name": "MCT LIQUID COCONUT OIL PREMIUM GOD BLESS YOU X 200 ML.",
+            "description": "Gluten Free, No Trans. Fat.",
+            "price": 9,
+            "image": "https://i.imgur.com/sGw4tr8.jpg",
+            "category": [
+                "oils, dressings and more",
+                "GlutenFree"
+            ],
+            "stock": 8,
+            "imageInfo": "https://i.imgur.com/qADoItD.jpg",
+            "favorite": ""
+        },
+        {
+            "name": "PESTO GENOVESE DE CECCCO X 200 GRS.",
+            "description": "Pesto From Italy",
+            "price": 4,
+            "image": "https://i.imgur.com/irKFq19.jpg",
+            "category": [
+                "oils, dressings and more"
+            ],
+            "stock": 2,
+            "imageInfo": "https://i.imgur.com/LjIyIC2.jpg",
+            "favorite": ""
+        },
+        {
+            "name": "SRIRACHA SAUCE TUONG OT.",
+            "description": "Sriracha Sauce",
+            "price": 9,
+            "image": "https://i.imgur.com/91fXQ6f.jpg",
+            "category": [
+                "oils, dressings and more"
+            ],
+            "stock": 1,
+            "imageInfo": "https://i.imgur.com/LjIyIC2.jpg",
+            "favorite": ""
+        },
+        {
+            "name": "LIQUID STEVIA SWEETENER JUAL.",
+            "description": "Vegan, Sugar Free, Chemical free., No residual flavor., Does not contain Aspartame.",
+            "price": 1,
+            "image": "https://i.imgur.com/j1HrfOG.jpg",
+            "category": [
+                "sugar, sweeteners and more",
+                "Sugarfree"
+            ],
+            "stock": 10,
+            "imageInfo": "https://i.imgur.com/xUgCbkJ.jpg",
+            "favorite": ""
+        },
+        {
+            "name": "MAPLE SYRUP X 250 ML.",
+            "description": "Vegan, Natural sweetener., Source of manganese, zinc, magnesium, calcium, potassium and vitamin B1 and B3., Low glycemic index",
+            "price": 5,
+            "image": "https://i.imgur.com/PB2O1zZ.jpg",
+            "category": [
+                "sugar, sweeteners and more",
+                "Vegan",
+                "SugarFree"
+            ],
+            "stock": 5,
+            "imageInfo": "https://i.imgur.com/K7hbAuj.jpg",
+            "favorite": ""
+        },
+        {
+            "name": "IMPALPABLE SUGAR ABUCEL X 500 GRS.",
+            "description": "Gluten Free",
+            "price": 1,
+            "image": "https://i.imgur.com/sm4MP1K.jpg",
+            "category": [
+                "sugar, sweeteners and more",
+                "GlutenFree"
+            ],
+            "stock": 4,
+            "imageInfo": "https://i.imgur.com/F96gWbU.jpg",
+            "favorite": ""
+        },
+        {
+            "name": "SWEETENER ERYLITE NATIER FOODS X 250 GRS.",
+            "description": "Plant Based Sweetener., Sugar Free, Gluten Free, Vegan, Sugar Flavor",
+            "price": 7,
+            "image": "https://i.imgur.com/PsjbHzP.jpg",
+            "category": [
+                "sugar, sweeteners and more",
+                "SugarFree",
+                "Vegan"
+            ],
+            "stock": 8,
+            "imageInfo": "https://i.imgur.com/F96gWbU.jpg",
+            "favorite": ""
+        },
+        {
+            "name": "SWEETENER XILITOL NATIER FOODS X 250 GRS.",
+            "description": "Plant Based Sweetener., Sugar Free, Gluten Free, Vegan, Sugar Flavor",
+            "price": 8,
+            "image": "https://i.imgur.com/10PYGMY.jpg",
+            "category": [
+                "sugar, sweeteners and more",
+                "SugarFree",
+                "Vegan",
+                "GlutenFree"
+            ],
+            "stock": 2,
+            "imageInfo": "https://i.imgur.com/F96gWbU.jpg",
+            "favorite": ""
+        },
+        {
+            "name": "STEVIA POWDER SWEETENER JUAL X 110 GRS.",
+            "description": "Product used to sweeten beverages, infusions and baked goods, with the virtue that it has no calories., Sugar Free, Vegan",
+            "price": 1,
+            "image": "https://i.imgur.com/d7QfomR.jpg",
+            "category": [
+                "sugar, sweeteners and more",
+                "SugarFree",
+                "Vegan"
+            ],
+            "stock": 7,
+            "imageInfo": "https://i.imgur.com/J743eNG.jpg",
+            "favorite": ""
+        },
+        {
+            "name": "WHOLE SUGAR MASCABO BEEPURE X 250 GRS.",
+            "description": "Brown Sugar",
+            "price": 1,
+            "image": "https://i.imgur.com/mdmhVCW.jpg",
+            "category": [
+                "sugar, sweeteners and more"
+            ],
+            "stock": 0,
+            "imageInfo": "https://i.imgur.com/FwtvCMq.jpg",
+            "favorite": ""
+        },
+        {
+            "name": "LOW CALORIE INSTANT SOUP BON WERT X 50 GRS.",
+            "description": "Gluten Free, 0% Fat",
+            "price": 1,
+            "image": "https://i.imgur.com/FrSGi6K.jpg",
+            "category": [
+                "broths, soups and sauces",
+                "GlutenFree"
+            ],
+            "stock": 6,
+            "imageInfo": "https://i.imgur.com/A0BwXiV.jpg",
+            "favorite": ""
+        },
+        {
+            "name": "READY SAUCE ARCOR X 340 GRS.",
+            "description": "Gluten Free, No preservatives",
+            "price": 1,
+            "image": "https://i.imgur.com/6jJoUp7.jpg",
+            "category": [
+                "broths, soups and sauces",
+                "GlutenFree"
+            ],
+            "stock": 6,
+            "imageInfo": "https://i.imgur.com/irY8tx5.jpg",
+            "favorite": ""
+        },
+        {
+            "name": "VEGETABLE BROTH CALDIET X 200 GRS.",
+            "description": "Vegetable broth",
+            "price": 1,
+            "image": "https://i.imgur.com/TCP1AlJ.jpg",
+            "category": [
+                "broths, soups and sauces"
+            ],
+            "stock": 6,
+            "imageInfo": "https://i.imgur.com/CBLWfgI.jpg",
+            "favorite": ""
+        },
+        {
+            "name": "SRIRACHA TABASCO SAUCE MC ILHENNY X 300 GRS.",
+            "description": "Sriracha Sauce",
+            "price": 2,
+            "image": "https://i.imgur.com/l5oxBfy.jpg",
+            "category": [
+                "broths, soups and sauces"
+            ],
+            "stock": 5,
+            "imageInfo": "https://i.imgur.com/LjIyIC2.jpg",
+            "favorite": ""
+        },
+        {
+            "name": "SWEET AND SOUR SAUCE FUMEIGA X 287 GRS.",
+            "description": "Sriracha Sauce",
+            "price": 1,
+            "image": "https://i.imgur.com/IJGSNib.jpg",
+            "category": [
+                "broths, soups and sauces"
+            ],
+            "stock": 5,
+            "imageInfo": "https://i.imgur.com/px1QTM4.jpg",
+            "favorite": ""
+        },
+        {
+            "name": "SOY SAUCE FUMEIGA X 500 ML.",
+            "description": "Soy Sauce",
+            "price": 1,
+            "image": "https://i.imgur.com/vhOxMgJ.jpg",
+            "category": [
+                "broths, soups and sauces"
+            ],
+            "stock": 9,
+            "imageInfo": "https://i.imgur.com/fDOjPcp.jpg",
+            "favorite": ""
+        },
+        {
+            "name": "CRISPY GARLIC WITH CHILI OIL S&B X 110 GRS.",
+            "description": "Crunchy Garlic with Mild Chile Oil.",
+            "price": 8,
+            "image": "https://i.imgur.com/Vn3sLZi.jpg",
+            "category": [
+                "broths, soups and sauces"
+            ],
+            "stock": 6,
+            "imageInfo": "https://i.imgur.com/JhBuy5L.jpg",
+            "favorite": ""
+        },
+        {
+            "name": "OYSTER SAUCE LEE KUM KEE.",
+            "description": "Oyster Sauce",
+            "price": 2,
+            "image": "https://i.imgur.com/oTT80zZ.jpg",
+            "category": [
+                "broths, soups and sauces"
+            ],
+            "stock": 3,
+            "imageInfo": "https://i.imgur.com/K2X52nA.jpg",
+            "favorite": ""
+        },
+        {
+            "name": "INTEGRAL BARS X 42 GRS.",
+            "description": "Integral Bars, Chocolate Flavour",
+            "price": 1,
+            "image": "https://i.imgur.com/JLpDCuA.jpg",
+            "category": [
+                "CEREALES,GRANOLAS&MÁS"
+            ],
+            "stock": 4,
+            "imageInfo": "https://i.imgur.com/vmTn8TQ.jpg",
+            "favorite": ""
+        },
+        {
+            "name": "SUGAR-FREE GRANOLA MARIA E X 230 GRS.",
+            "description": "No Cane Sugar, No Honey Added, Food based on oats, wheat germ, dried fruits and almonds. Vanilla flavored.",
+            "price": 3,
+            "image": "https://i.imgur.com/ImBuehE.jpg",
+            "category": [
+                "CEREALES,GRANOLAS&MÁS"
+            ],
+            "stock": 4,
+            "imageInfo": "https://i.imgur.com/q4nXoEQ.jpg",
+            "favorite": ""
+        },
+        {
+            "name": "WHOLE GRANOLAS X 350 GRS.",
+            "description": "Natural Granola",
+            "price": 2,
+            "image": "https://i.imgur.com/I7oFLsQ.jpg",
+            "category": [
+                "CEREALES,GRANOLAS&MÁS"
+            ],
+            "stock": 6,
+            "imageInfo": "https://i.imgur.com/Pk9gzsW.jpg",
+            "favorite": ""
+        },
+        {
+            "name": "PROTEIN BAR ENA X 46 GRS.",
+            "description": "It is a very good source of protein and carbohydrates ideal to complete a long exercise routine, in a format that is easy to carry and consume.",
+            "price": 1,
+            "image": "https://i.imgur.com/WqTuMdz.jpg",
+            "category": [
+                "CEREALES,GRANOLAS&MÁS"
+            ],
+            "stock": 6,
+            "imageInfo": "https://i.imgur.com/ROnSzJW.png",
+            "favorite": ""
+        },
+        {
+            "name": "PROTEIN BARS LOW CARB GENTECH X 45 GRS",
+            "description": "Gluten Free",
+            "price": 1,
+            "image": "https://i.imgur.com/PuNmGwS.jpg",
+            "category": [
+                "CEREALES,GRANOLAS&MÁS"
+            ],
+            "stock": 8,
+            "imageInfo": "https://i.imgur.com/CxouD1I.png",
+            "favorite": ""
+        },
+        {
+            "name": "GRATED COCONUT ABUCEL X 200 GRS.",
+            "description": "Gluten Free",
+            "price": 1,
+            "image": "https://i.imgur.com/4ZElEql.jpg",
+            "category": [
+                "CEREALES,GRANOLAS&MÁS"
+            ],
+            "stock": 9,
+            "imageInfo": "https://i.imgur.com/SBdFbYt.jpg",
+            "favorite": ""
+        },
+        {
+            "name": "SALTY MIX BEEPURE X 190 GRS.",
+            "description": "Healthy snack mix of roasted corn, roasted peanuts, pumpkin seeds, sunflower seeds, cashews, sunflower oil and salt.",
+            "price": 1,
+            "image": "https://i.imgur.com/MiuWpAp.jpg",
+            "category": [
+                "CEREALES,GRANOLAS&MÁS"
+            ],
+            "stock": 4,
+            "imageInfo": "https://i.imgur.com/fGPzEY8.jpg",
+            "favorite": ""
+        },
+        {
+            "name": "CLASSIC MIX BEEPURE X 300 GRS.",
+            "description": "Healthy snack mix of walnuts, almonds, raisins and peanuts.",
+            "price": 1,
+            "image": "https://i.imgur.com/FpjorjP.jpg",
+            "category": [
+                "CEREALES,GRANOLAS&MÁS"
+            ],
+            "stock": 9,
+            "imageInfo": "https://i.imgur.com/uqvjx15.png",
+            "favorite": ""
+        },
+        {
+            "name": "WHITE ALFAJOR WALNUT CELIENERGY X 50 GRS.",
+            "description": "Gluten Free, Alfajor made of walnut flour filled with dulce de leche with white fantasy pastry coating.",
+            "price": 1,
+            "image": "httpshttps://i.imgur.com/QV5huDr.jpg",
+            "category": [
+                "CHOCOLATES&MÁS"
+            ],
+            "stock": 10,
+            "imageInfo": "https://i.imgur.com/q6TPBmj.jpg",
+            "favorite": ""
+        },
+        {
+            "name": "CHOCOLATE EXCELLENCE LINDT",
+            "description": "Dark Chocolate, 70% cocoa",
+            "price": 2,
+            "image": "https://i.imgur.com/URadj5B.jpg",
+            "category": [
+                "CHOCOLATES&MÁS"
+            ],
+            "stock": 10,
+            "imageInfo": "https://i.imgur.com/oUMaDk8.jpg",
+            "favorite": ""
+        },
+        {
+            "name": "CHOCOLATE 70% COCOA SUGAR FREE COLONIAL X 100 GRS.",
+            "description": "Diet Dark Chocolate with Stevia., Gluten Free, No Sugar Added.",
+            "price": 3,
+            "image": "https://i.imgur.com/9gfJEeW.jpg",
+            "category": [
+                "CHOCOLATES&MÁS"
+            ],
+            "stock": 10,
+            "imageInfo": "https://i.imgur.com/mnWP9IW.jpg",
+            "favorite": ""
+        },
+        {
+            "name": "BLACK ALFAJOR HAZELNUT CELIENERGY X 50 GRS.",
+            "description": "Gluten Free, Alfajor made of hazelnut flour, filled with quince jelly and covered with pastry coating.",
+            "price": 1,
+            "image": "https://i.imgur.com/LJ7CHHs.jpg",
+            "category": [
+                "CHOCOLATES&MÁS"
+            ],
+            "stock": 8,
+            "imageInfo": "https://i.imgur.com/fQPSxRA.jpg",
+            "favorite": ""
+        },
+        {
+            "name": "CHOCOLATE AMARGO 70% COCOA AGUILA X 150 GRS.",
+            "description": "Gluten Free, Vegan",
+            "price": 2,
+            "image": "https://i.imgur.com/J9Fb1N0.jpg",
+            "category": [
+                "CHOCOLATES&MÁS"
+            ],
+            "stock": 8,
+            "imageInfo": "https://i.imgur.com/mnWP9IW.jpg",
+            "favorite": ""
+        },
+        {
+            "name": "COCOA POWDER DR. CACAO X 130 GRS.",
+            "description": "Gluten Free, 100% Vegan, 0% Trans Fat, Sugar Free, Lactose Free, Soy Free, No Preservatives or Colorants, 100% pure cocoa, without any kind of additives, MAY CONTAIN ALMONDS AND HAZELNUTS.",
+            "price": 2,
+            "image": "https://i.imgur.com/IzSD29R.jpg",
+            "category": [
+                "CHOCOLATES&MÁS"
+            ],
+            "stock": 8,
+            "imageInfo": "https://i.imgur.com/JxdsEWX.jpg",
+            "favorite": ""
+        },
+        {
+            "name": "CHOCOLATE PEANUT PASTE ALFAJOR X 60 GRS.",
+            "description": "Gluten Free, Vegan",
+            "price": 1,
+            "image": "https://i.imgur.com/3NaqWTM.jpg",
+            "category": [
+                "CHOCOLATES&MÁS"
+            ],
+            "stock": 5,
+            "imageInfo": "https://i.imgur.com/fQPSxRA.jpg",
+            "favorite": ""
+        },
+        {
+            "name": "DULCE DE LECHE CHOCOLATE BUTTONS KONFITT X 30 GRS.",
+            "description": "Gluten Free",
+            "price": 1,
+            "image": "https://i.imgur.com/2azsjpK.jpg",
+            "category": [
+                "CHOCOLATES&MÁS"
+            ],
+            "stock": 5,
+            "imageInfo": "https://i.imgur.com/tEeNP10.jpg",
+            "favorite": ""
+        }
+    ]
+}
