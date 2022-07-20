@@ -19,7 +19,7 @@ import ShoppingCartOutlinedIcon from '@mui/icons-material/ShoppingCartOutlined';
 import '../styles/navbar.css'
 
 
-const pages = ['Home', 'Blog', 'About Us', 'Products'];
+const pages = ['Home', 'Products', 'About Us', 'Blog'];
 const settings = ['Profile', 'Logout'];
 
 
