@@ -5,13 +5,13 @@ const userSchema = new mongoose.Schema({
     email: { type: String, required: true },
     password: [{ type: String, required: true }],
     imageUser: { type: String, required: true },
+    role: {type:String, required:true},
     favorite:[{ 
         productId:{type: mongoose.Types.ObjectId, ref:'Product'},
      }],
     buying:[{ 
         productId:{type: mongoose.Types.ObjectId, ref:'Store'},
-     }],
-    admin: {type:Boolean}, 
+     }], 
     uniqueString:{type:String, required:true},
     verification:{type:Boolean , required:true}
 

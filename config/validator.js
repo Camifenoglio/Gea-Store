@@ -16,7 +16,7 @@ const validator = (req, res, next) => {
       
         imageUser: joi.string()
           ,
-          admin:joi.string(),
+          role:joi.string(),
         password: joi.string()
             .min(8)
             .max(30)
