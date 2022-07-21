@@ -21,12 +21,12 @@ export default function Carrousel() {
     const dispatch = useDispatch()
 
     useEffect(()=>{
-        dispatch(productsActions.getProducts())
+        dispatch(productsActions.getProducts)
+        // eslint-disable-next-line
     }, [])
 
-    const allProducts = useSelector(store => store.productReducers.products)
+    const allProducts = useSelector(store => store.productReducers)
     console.log(allProducts)
-
 
 
     return (
