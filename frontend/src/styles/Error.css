@@ -1,0 +1,13 @@
+.product-error {
+    flex-grow: 1;
+    height: 60vh;
+    display: flex;
+    flex-direction:column;
+    justify-content: center;
+    align-items: center;
+    font-size: 30px;
+    flex-wrap: wrap;
+    gap: 1rem;
+    max-height: 100%;
+
+  }

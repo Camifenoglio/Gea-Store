@@ -17,18 +17,23 @@
 .productsPageContainer_F {
     display: flex;
     flex-direction: column;
+    justify-content:space-around;
     align-items: center;
     width: 100%;
 }
 .products_F {
+    
     display: flex;
     flex-direction: row;
+    justify-content:space-around;
+    flex-wrap:wrap;
+    min-height: 52.2vh;
 }
 .card_F {
+    margin-top:8rem !important;
     width: 300px;
     height: min-content;
     padding: 25px;
-    margin: 0 15px;
     background: rgb(209, 230, 210);
     border-radius: 8px;
     box-shadow: 0 0 20px rgba(0, 0, 0, .05) ;
@@ -40,14 +45,14 @@
 }
 
 .card_F .cardImg_F img {
-    height: 200px;
+    height: 8rem;
     margin: -150px 0 15px 0;
     filter: drop-shadow(0 8px 8px #cdd5e2);
     transition: .3s;
 }
 
 .card_F:hover .cardImg_F img  {
-    height: 240px;
+    height: 11rem;
 }
 .card_F .cardImg_F h3 {
     color: #1b2430;
@@ -88,13 +93,17 @@
     font-weight: 600;
     cursor: pointer;
 }
+.BL-img-cards-products{
+    max-height:30vh !important;
+}
 
 
 /* CARD 3 */
 /* From uiverse.io by @alexruix */
 .card {
+    margin-top:2rem;
     width: 190px;
-    height: 320px;
+    min-height: 320px;
     padding: .8em;
     background: #f5f5f5;
     position: relative;
