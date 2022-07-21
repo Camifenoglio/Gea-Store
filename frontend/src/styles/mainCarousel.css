@@ -1,12 +1,15 @@
-* {
-    padding: 0px;
-    margin: 0px;
-    box-sizing: border-box;
+.bVoXXg {
+    background-color: aqua;
+    height: auto;
 }
-
 .BL-img-carrusel {
     height: 100%;
     width: 100%;
-    background-size:cover;
+    background-size:contain;
     background-repeat:no-repeat;
+}
+
+.mainCarouselContainer_F {
+    margin-bottom: 5vh;
+    margin-top: 5vh;
 }
