@@ -160,11 +160,11 @@ const NavBar = () => {
                             onClose={handleCloseUserMenu}
                         >
                             {settings.map((setting, index) => (
-                                <LinkRouter key={index}>
-                                <MenuItem onClick={handleCloseUserMenu}>
+                                
+                                <MenuItem key={index} onClick={handleCloseUserMenu}>
                                     <Typography textAlign="center">{setting}</Typography>
                                 </MenuItem>
-                                </LinkRouter>
+                                
                             ))}
                         </Menu>
                         <IconButton>

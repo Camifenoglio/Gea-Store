@@ -1,10 +1,11 @@
 import '../App';
+import CardBlog from '../components/Blog/CardBlog';
 
 
 function BlogPage() {
     return (
         <>
-            <p>BLOG</p>
+            <CardBlog />
         </>
     );
 }
