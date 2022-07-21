@@ -22,7 +22,7 @@ export default function CardProducts() {
             </div>
 
             <div className='products_F'>
-                <Card className='BL-card-products'>
+                {/* <Card className='BL-card-products'>
                     <CardActionArea>
                         <CardMedia
                             component="img"
@@ -43,7 +43,7 @@ export default function CardProducts() {
                             </Typography>
                         </CardContent>
                     </CardActionArea>
-                </Card>
+                </Card> */}
 
                 <div className='card_F'>
                     <div className='cardImg_F'>
@@ -65,8 +65,148 @@ export default function CardProducts() {
                     </div>
                     <button>Buy Now</button>
                 </div>
+                <div className='card_F'>
+                    <div className='cardImg_F'>
+                        <img src="https://pngimg.com/uploads/apple/apple_PNG12444.png" alt="product" />
+                    </div>
+                    <div className='cardTitle_F'>
+                        <h3>Manzana</h3>
+                        <p>Lorem ipsum dolor sit amet.</p>
+                    </div>
+                    <div className='cardDetails_F'>
+                        <div className='price_F'>
+                            <span>Price</span>
+                            <p>$5000</p>
+                        </div>
+                        <div className='volume'>
+                            <span>Item Volume</span>
+                            <p>5kg</p>
+                        </div>
+                    </div>
+                    <button>Buy Now</button>
+                </div>
+                <div className='card_F'>
+                    <div className='cardImg_F'>
+                        <img src="https://pngimg.com/uploads/apple/apple_PNG12444.png" alt="product" />
+                    </div>
+                    <div className='cardTitle_F'>
+                        <h3>Manzana</h3>
+                        <p>Lorem ipsum dolor sit amet.</p>
+                    </div>
+                    <div className='cardDetails_F'>
+                        <div className='price_F'>
+                            <span>Price</span>
+                            <p>$5000</p>
+                        </div>
+                        <div className='volume'>
+                            <span>Item Volume</span>
+                            <p>5kg</p>
+                        </div>
+                    </div>
+                    <button>Buy Now</button>
+                </div>
+                <div className='card_F'>
+                    <div className='cardImg_F'>
+                        <img src="https://pngimg.com/uploads/apple/apple_PNG12444.png" alt="product" />
+                    </div>
+                    <div className='cardTitle_F'>
+                        <h3>Manzana</h3>
+                        <p>Lorem ipsum dolor sit amet.</p>
+                    </div>
+                    <div className='cardDetails_F'>
+                        <div className='price_F'>
+                            <span>Price</span>
+                            <p>$5000</p>
+                        </div>
+                        <div className='volume'>
+                            <span>Item Volume</span>
+                            <p>5kg</p>
+                        </div>
+                    </div>
+                    <button>Buy Now</button>
+                </div>
+                <div className='card_F'>
+                    <div className='cardImg_F'>
+                        <img src="https://pngimg.com/uploads/apple/apple_PNG12444.png" alt="product" />
+                    </div>
+                    <div className='cardTitle_F'>
+                        <h3>Manzana</h3>
+                        <p>Lorem ipsum dolor sit amet.</p>
+                    </div>
+                    <div className='cardDetails_F'>
+                        <div className='price_F'>
+                            <span>Price</span>
+                            <p>$5000</p>
+                        </div>
+                        <div className='volume'>
+                            <span>Item Volume</span>
+                            <p>5kg</p>
+                        </div>
+                    </div>
+                    <button>Buy Now</button>
+                </div>
+                <div className='card_F'>
+                    <div className='cardImg_F'>
+                        <img src="https://pngimg.com/uploads/apple/apple_PNG12444.png" alt="product" />
+                    </div>
+                    <div className='cardTitle_F'>
+                        <h3>Manzana</h3>
+                        <p>Lorem ipsum dolor sit amet.</p>
+                    </div>
+                    <div className='cardDetails_F'>
+                        <div className='price_F'>
+                            <span>Price</span>
+                            <p>$5000</p>
+                        </div>
+                        <div className='volume'>
+                            <span>Item Volume</span>
+                            <p>5kg</p>
+                        </div>
+                    </div>
+                    <button>Buy Now</button>
+                </div>
+                <div className='card_F'>
+                    <div className='cardImg_F'>
+                        <img src="https://pngimg.com/uploads/apple/apple_PNG12444.png" alt="product" />
+                    </div>
+                    <div className='cardTitle_F'>
+                        <h3>Manzana</h3>
+                        <p>Lorem ipsum dolor sit amet.</p>
+                    </div>
+                    <div className='cardDetails_F'>
+                        <div className='price_F'>
+                            <span>Price</span>
+                            <p>$5000</p>
+                        </div>
+                        <div className='volume'>
+                            <span>Item Volume</span>
+                            <p>5kg</p>
+                        </div>
+                    </div>
+                    <button>Buy Now</button>
+                </div>
+                <div className='card_F'>
+                    <div className='cardImg_F'>
+                        <img src="https://pngimg.com/uploads/apple/apple_PNG12444.png" alt="product" />
+                    </div>
+                    <div className='cardTitle_F'>
+                        <h3>Manzana</h3>
+                        <p>Lorem ipsum dolor sit amet.</p>
+                    </div>
+                    <div className='cardDetails_F'>
+                        <div className='price_F'>
+                            <span>Price</span>
+                            <p>$5000</p>
+                        </div>
+                        <div className='volume'>
+                            <span>Item Volume</span>
+                            <p>5kg</p>
+                        </div>
+                    </div>
+                    <button>Buy Now</button>
+                </div>
 
-                <div className="card">
+                {/* <div className="card">
                     <div className="card-img"></div>
                     <div className="card-info">
                         <p className="text-title">Product title </p>
@@ -78,7 +218,7 @@ export default function CardProducts() {
                             <ShoppingCartOutlinedIcon className="svg-icon" />
                         </div>
                     </div>
-                </div>
+                </div> */}
                 
             </div>
         </div>
