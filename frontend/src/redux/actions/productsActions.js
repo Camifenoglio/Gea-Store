@@ -32,6 +32,11 @@ const productsActions = {
             }
         }
     },
+    filterProducts: (input) => {
+        return (dispatch,getState)=>{
+            dispatch({type:'FILTER_PRODUCTS', payload:input})
+        }
+    },
     createProduct: (product) => {
         return async (dispatch, getState) => {
             try {
