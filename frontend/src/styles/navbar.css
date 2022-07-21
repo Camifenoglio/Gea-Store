@@ -2,7 +2,13 @@
     background-color: #F2F2F2 !important;
     margin: 0 !important;
 }
-
+.avatarAndCart_F {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    width: 10%;
+}
 
 .logoContainer_F{
     background-color: #A4BF41;
@@ -16,6 +22,13 @@
     padding-left: 0 !important;
     padding-right: 1rem;
 }
+/* .css-r6ewbb-MuiToolbar-root {
+    background-color: aqua;
+} */
+
+.css-19r6kue-MuiContainer-root {
+    padding-left: 0;
+}
 
 .css-1pz7awu-MuiButtonBase-root-MuiIconButton-root, .css-1uwgr7b-MuiTypography-root{
     color:#6D8C3E !important;
@@ -25,8 +38,8 @@
     background-color: #A4BF41;
     background-color: #F2F2F2;
 }
-.css-i4bv87-MuiSvgIcon-root {
-    color: white !important;
+.navbarIconMenu_F {
+    color: white;
 }
 .css-1t6c9ts {
     display: flex;

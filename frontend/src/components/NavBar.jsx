@@ -1,5 +1,5 @@
 import * as React from 'react';
-import {Link as LinkRouter} from "react-router-dom"
+import { Link as LinkRouter } from 'react-router-dom';
 
 // MUI
 import AppBar from '@mui/material/AppBar';
@@ -20,11 +20,30 @@ import ShoppingCartOutlinedIcon from '@mui/icons-material/ShoppingCartOutlined';
 import '../styles/navbar.css'
 // ['Home', 'Products', 'About Us', 'Blog']
 
-const pages = [{ name: 'Home', to: '/' },{ name: 'Products', to: '/products' }, { name: 'About Us', to: '/aboutus'}, { name: 'Blog', to:'/blog'}];
+
+const pages = [
+    {
+        to: '/',
+        name: 'Home'
+    },
+    {
+        to: '/products',
+        name: 'Products'
+    },
+    {
+        to: '/aboutus',
+        name: 'About Us'
+    },
+    {
+        to: '/blog',
+        name: 'Blog'
+    }
+];
 const settings = ['Profile', 'Logout'];
 
 
 const NavBar = () => {
+
     const [anchorElNav, setAnchorElNav] = React.useState(null);
     const [anchorElUser, setAnchorElUser] = React.useState(null);
 
@@ -48,8 +67,8 @@ const NavBar = () => {
             <Container maxWidth="xl" className='navbarFlex_F'>
                 <Toolbar disableGutters>
 
-                    {/* chiquito */}
-                    <Box sx={{  display: { xs: 'flex', md: 'none', backgroundColor: '#A4BF41' } }}>
+                    {/* MENU HAMBURGUESA */}
+                    <Box sx={{ display: { xs: 'flex', md: 'none', backgroundColor: '#A4BF41' } }}>
                         <IconButton
                             size="large"
                             aria-label="account of current user"
@@ -59,9 +78,9 @@ const NavBar = () => {
                             color="inherit"
                             className='pagesTypography_F'
                         >
-                            <MenuIcon />
+                            <MenuIcon className='navbarIconMenu_F' />
                         </IconButton>
-                        <img src='https://i.imgur.com/UFZBBG3.png' className='logoContainer_F' alt='logoGea' style={{height: "4rem"}}  />
+                        <img src='https://i.imgur.com/UFZBBG3.png' className='logoContainer_F' alt='logoGea' style={{ height: "4rem" }} />
 
                         <Menu
                             id="menu-appbar"
@@ -78,15 +97,20 @@ const NavBar = () => {
                             open={Boolean(anchorElNav)}
                             onClose={handleCloseNavMenu}
                             sx={{
-                                display: { xs: 'block', md: 'none'},
+                                display: { xs: 'block', md: 'none' },
                             }}
-                            // key={page} 
+
                         >
                             {pages.map((page, index) => (
-                                <LinkRouter onClick={handleCloseNavMenu} to={page.to} key={index}>
-                                <MenuItem className='pagesTypography_F' >
-                                    <Typography style={{color: '#6D8C3E', fontWeight: 700,}} textAlign="center">{page.name}</Typography>
-                                </MenuItem>
+                                <LinkRouter
+                                    to={page.to}
+                                    key={index}
+                                    onClick={handleCloseNavMenu}
+                                    className='underline-none'
+                                >
+                                    <MenuItem className='pagesTypography_F'>
+                                        <Typography style={{ color: '#6D8C3E', fontWeight: 700, }} textAlign="center">{page.name}</Typography>
+                                    </MenuItem>
                                 </LinkRouter>
                             ))}
                         </Menu>
@@ -94,14 +118,18 @@ const NavBar = () => {
 
                     {/* GRANDE */}
                     <Box sx={{ flexGrow: 1, display: { xs: 'none', md: 'flex' } }}>
-                        <img src='https://i.imgur.com/UFZBBG3.png' className='logoContainer_F' alt='logoGea' style={{height: "5rem"}}  />
+                        <img src='https://i.imgur.com/UFZBBG3.png' className='logoContainer_F' alt='logoGea' style={{ height: "5rem" }} />
                     </Box>
 
                     <Box sx={{ flexGrow: 1, display: { xs: 'none', md: 'flex' } }}>
                         {pages.map((page, index) => (
-                            <LinkRouter onClick={handleCloseNavMenu} to={page.to} key={index}>
+                            <LinkRouter
+                            to={page.to}
+                            key={index}
+                            onClick={handleCloseNavMenu}
+                            className='underline-none'
+                            >
                             <Button
-                                
                                 sx={{ my: 2, color: '#6D8C3E ', display: 'block', fontWeight: 'bolder', width: 'fit-content' }}
                             >
                                 {page.name}
@@ -109,8 +137,7 @@ const NavBar = () => {
                             </LinkRouter>
                         ))}
                     </Box>
-
-                    <Box sx={{ flexGrow: 0 }}>
+                    <Box sx={{ flexGrow: 0, justifyContent: 'space-between' }}>
                         <Tooltip title="Open settings">
                             <IconButton onClick={handleOpenUserMenu} sx={{ p: 0, color: '#6D8C3E' }}>
                                 <Avatar alt="Remy Sharp" src="/static/images/avatar/2.jpg" />
@@ -140,13 +167,10 @@ const NavBar = () => {
                                 </LinkRouter>
                             ))}
                         </Menu>
-                    </Box>
-                    <Box>
                         <IconButton>
-                            <ShoppingCartOutlinedIcon style={{color: 'red'}} fontSize='large' />
+                            <ShoppingCartOutlinedIcon style={{ color: '#6D8C3E' }} fontSize='large' />
                         </IconButton>
                     </Box>
-
                 </Toolbar>
             </Container>
         </AppBar>

@@ -7,7 +7,6 @@ import { Swiper, SwiperSlide } from "swiper/react";
 import { Pagination } from "swiper";
 
 // COMPONENTS AND ACTIONS
-import Data from "../Data"
 import productsActions from "../../redux/actions/productsActions";
 
 // STYLES
@@ -25,12 +24,15 @@ export default function Carrousel() {
         // eslint-disable-next-line
     }, [])
 
-    const allProducts = useSelector(store => store.productReducers)
+    const allProducts = useSelector(store => store.productReducers.products)
     console.log(allProducts)
 
 
     return (
-        <>
+        <div className="popularProductsContainer_F">  
+            <div className="popularTitle_F">
+                    <h2 className="titlePopularSection_F">Popular Products</h2>
+            </div>
             <Swiper
                 slidesPerGroup={2}
                 slidesPerView={4}
@@ -41,19 +43,20 @@ export default function Carrousel() {
                 modules={[Pagination]}
                 className="carouselFavProduct_F"
             >
-                {Data.map((Data, index) => (
+                {allProducts.map((product, index) => (
                     <SwiperSlide
                         key={index}
                         style={{
-                            backgroundImage: `url("${Data.image}")`,
+                            backgroundImage: `url("${product.image}")`,
                             backgroundPosition: "center",
-                            backgroundSize: "cover"
+                            backgroundSize: "contain",
+                            backgroundRepeat: 'no-repeat',
                         }}
                     >
                     </SwiperSlide>
                 ))}
 
             </Swiper>
-        </>
+        </div>
     );
 }
