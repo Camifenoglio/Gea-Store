@@ -13,12 +13,20 @@
   align-items: center;
   justify-content: space-evenly;
   width: 40vh;
+  
 }
 .swiperDetailImage_F{
   width: 60vh;
   height: 60vh;
+  display: flex;
+  flex-direction: column;
+  
+}
+.swiperDetailImage_B{
+  height: 80vh !important;
 }
 .swiper {
+  padding: 0;
   width: 100%;
   height: 100%;
 }
@@ -152,4 +160,22 @@
 
 .btnCardDetails_F:hover .arrow:before {
   right: 0;
+}
+
+@media (max-width: 425px) {
+  .swiperDetailImage_F{
+    width: 30vh;
+    height: 60vh;
+    display: flex;
+    flex-direction: column;
+    
+  }
+  .productInfo_F {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-evenly;
+    width: 30vh;
+    
+  }
 }
