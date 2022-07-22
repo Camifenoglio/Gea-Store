@@ -39,7 +39,16 @@ const pages = [
         name: 'Blog'
     }
 ];
-const settings = ['Profile', 'Logout'];
+const settings = [
+    {
+    to:'/profile',
+    name: 'Profile'
+    }, 
+    {
+    to: '/sign',
+    name: 'Sign'    
+    }
+];
 
 
 const NavBar = () => {
@@ -160,11 +169,16 @@ const NavBar = () => {
                             onClose={handleCloseUserMenu}
                         >
                             {settings.map((setting, index) => (
-                                
+                                <LinkRouter
+                                    to={setting.to}
+                                    key={index}
+                                    onClick={handleCloseNavMenu}
+                                    className='underline-none'
+                                >
                                 <MenuItem key={index} onClick={handleCloseUserMenu}>
-                                    <Typography textAlign="center">{setting}</Typography>
+                                    <Typography textAlign="center">{setting.name}</Typography>
                                 </MenuItem>
-                                
+                                </LinkRouter>
                             ))}
                         </Menu>
                         <IconButton>
