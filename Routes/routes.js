@@ -9,6 +9,13 @@ const {getAllProducts, getProduct, createProduct, modifyProduct, deleteProduct, 
 const usersControllers = require("../controllers/usersControllers")
 const {signUpUsers , logInUser,verifyMail,verifyToken} = usersControllers;
 
+
+
+const blogControllers= require('../controllers/blogControllers')
+const {getPosts,getOnePost,uploadPost,deletePost,modifyPost,likePost,addComment,modifyComment,deleteComment} = blogControllers
+
+
+
 // Products
 Router.route('/products')
 .get(getAllProducts)
@@ -29,3 +36,20 @@ Router.route("/auth/signin").post(logInUser)
 Router.route("/auth/signup").post(validator,signUpUsers)
 Router.route('/auth/token').get(passport.authenticate('jwt', {session: false}),verifyToken)
 module.exports = Router;  
+
+
+// Blog & Comments & Likes
+Router.route('/post')
+    .get(getPosts)
+    .put(passport.authenticate('jwt', {session:false}), modifyPost)
+    .post(passport.authenticate('jwt', {session:false}), uploadPost)
+Router.route('/post/:id')
+    .get(getOnePost)
+    .post(passport.authenticate('jwt', {session: false}), deletePost)
+Router.route('/post/likes/:id')
+    .put(passport.authenticate('jwt', {session:false}), likePost)
+Router.route('/comments')
+    .post(passport.authenticate('jwt', {session: false}), addComment)
+    .put(passport.authenticate('jwt', {session: false}), modifyComment)
+Router.route('/comments/:id')
+    .post(passport.authenticate('jwt', {session: false}), deleteComment) 

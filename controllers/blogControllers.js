@@ -7,7 +7,7 @@ const blogControllers = {
         let error = null
         try {
             posting = await Blog.find()
-                .populate("userComent", {_id:1,email:1,fullName:1,imageUser:1})
+                
                 .populate("comments.userId", {_id:1,email:1,fullName:1,imageUser:1})
         } catch (err) {
             error = err
@@ -26,7 +26,7 @@ const blogControllers = {
         let error = null
         try {
             post = await Blog.find({_id:id})
-                .populate("userComent", {_id:1,email:1,fullName:1,imageUser:1})
+                
                 .populate("comments.userId", {_id:1,email:1,fullName:1,imageUser:1})
         } catch (err) {
             error = err
@@ -78,7 +78,7 @@ const blogControllers = {
                     .findOneAndUpdate({"_id": id}, {$set:{
                         "title": title,
                         "text": text,}}, {new: true})
-                    .populate("userComent", {_id:1,email:1,userName:1,imageUser:1})
+                  
                     .populate("comments.userId", {_id:1,email:1,userName:1,imageUser:1})
                 res.json({success: true,
                     response: {modifyPost},
@@ -100,7 +100,7 @@ const blogControllers = {
             let posting = await Topic.findOne({_id:id}) 
             if (posting.likes.includes(user)) {
                 Blog.findOneAndUpdate({_id:id}, {$pull:{likes:user}}, {new:true})
-                    .populate("userComent", {_id:1,email:1,fullName:1,imageUser:1})
+                  
                     .populate("comments.userId", {_id:1,email:1,fullName:1,imageUser:1})
                     .then(response => res.json({
                         response: response.likes, 
@@ -109,7 +109,7 @@ const blogControllers = {
                     .catch(error => console.log(error))
             } else {
                 Blog.findOneAndUpdate({_id:id}, {$push:{likes:user}}, {new:true})
-                    .populate("userComent", {_id:1,email:1,fullName:1,imageUser:1})
+                   
                     .populate("comments.userId", {_id:1,email:1,fullName:1,imageUser:1})
                     .then(response => res.json({
                         response: response.likes, 
@@ -133,7 +133,7 @@ const blogControllers = {
         try {
             const newComment = await Blog
                     .findOneAndUpdate({_id: commentId}, {$push: {comments: {comment: comment, userId: user}}}, {new: true})
-                    .populate("userComent", {_id:1,email:1,fullName:1,imageUser:1})
+                   
                     .populate("comments.userId", {_id:1,email:1,fullName:1,imageUser:1})
                 res.json({success: true,
                     response: {newComment},
@@ -152,7 +152,7 @@ const blogControllers = {
         try {
             const modifyComment = await Blog
                 .findOneAndUpdate({"comments._id": commentId}, {$set: {"comments.$.comment": comment}}, {new: true})
-                .populate("userComent", {_id:1,email:1,fullName:1,imageUser:1})
+                
                 .populate("comments.userId", {_id:1,email:1,fullName:1,imageUser:1})
             res.json({success: true,
                 response: {modifyComment},
