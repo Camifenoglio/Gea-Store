@@ -39,11 +39,8 @@ function App() {
                     <Route path='/products/:id' element={<DetailsPage />} />
                     <Route path='/aboutus' element={<AboutUsPage />} />
                     <Route path='/blog' element={<BlogPage />} />
-<<<<<<< HEAD
                     <Route path='/sign' element={<SignInOutPage />} />
-=======
                     <Route path='/cart' element={<CartPage />} />
->>>>>>> 741274f8810a3d723c33c63ecaab78fc1e3e83f6
                     {/* <DetailsPage /> */}
                 </Routes>
             <Footer />
