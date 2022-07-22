@@ -1,0 +1,93 @@
+.footerNav {
+    background-color: #6D8C3E;
+    height: 22vh;
+    display: flex;
+    flex-direction: row-reverse;
+    align-items: center;
+    justify-content: space-around;    
+}
+
+.copyrg {
+    background-color: #F2F2F2;
+    height: 1.5vw;
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+}
+
+.MuiButton-root{
+    margin: 0 !important;
+    padding: 0 !important;
+}
+
+.navFooter>a {
+    text-decoration: none;
+}
+
+.navigationTitle{
+    color: #F2F2F2;
+}
+
+.navegation{
+    height: 10vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    gap: .2rem;
+}
+.navFooter {
+    height: 20vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.socialMedia {
+    width: 20vw;
+}
+
+.footerLogo {
+    max-width: 100%;
+    height: 6rem !important;
+}
+
+
+
+@media (max-width: 1200px) {
+    .copyrg {
+        height: fit-content;
+        padding-top: 1vw;
+        padding-bottom: 1vw;
+    }
+}
+
+@media (max-width: 768px) {
+    .copyrg {
+        height: .5vw;
+        padding-top: 2vw;
+        padding-bottom: 2vw;
+    }
+}
+
+@media (max-width: 576px) {
+    .footerNav {
+        height: fit-content;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        gap: 1rem;
+        padding-top: 5vw;
+        padding-bottom: 5vw;
+    }
+    .copyrg {
+        height: fit-content;
+        padding-top: 2vw;
+        padding-bottom: 2vw;
+    }
+
+    .footerLogo {
+        height: 5rem !important ;
+    }
+}
