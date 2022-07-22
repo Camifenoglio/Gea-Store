@@ -14,7 +14,7 @@ import ProductsPage from './pages/Products';
 import DetailsPage from './pages/DetailsProducts';
 import AboutUsPage from './pages/AboutUsPage';
 import BlogPage from './pages/BlogPage';
-
+import CartPage from './pages/CartPage';
 
 //ACTIONS
 import productsActions from './redux/actions/productsActions';
@@ -37,6 +37,7 @@ function App() {
                     <Route path='/products/:id' element={<DetailsPage />} />
                     <Route path='/aboutus' element={<AboutUsPage />} />
                     <Route path='/blog' element={<BlogPage />} />
+                    <Route path='/cart' element={<CartPage />} />
                     {/* <DetailsPage /> */}
                 </Routes>
             <Footer />

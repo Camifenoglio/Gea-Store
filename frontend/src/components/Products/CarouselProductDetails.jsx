@@ -2,6 +2,7 @@
 import React, { useState, useEffect } from "react";
 import { useParams } from "react-router-dom";
 import { useDispatch, useSelector } from "react-redux";
+import { Link as LinkRouter } from 'react-router-dom';
 
 
 // Import Swiper React components
@@ -20,6 +21,7 @@ import productsActions from "../../redux/actions/productsActions";
 
 // import required modules
 import { FreeMode, Navigation, Thumbs } from "swiper";
+import ArrowBackOutlinedIcon from '@mui/icons-material/ArrowBackOutlined';
 
 
 export default function CarouselProductDetail() {
@@ -38,7 +40,17 @@ export default function CarouselProductDetail() {
     const [thumbsSwiper, setThumbsSwiper] = useState(null);
 
     return (
+        <div className="flexbox_F">
         <div className="productDetailPage_F">
+            <div className="btnBackContainer_F">
+                <LinkRouter to='/products' className="underline-none">
+                <button className="btnBackProducts_F">
+                    <ArrowBackOutlinedIcon  className="arrowBackBtn_F"/>
+                    Back to products
+                </button>
+                </LinkRouter>
+            </div>
+
             <div className="productDetailContainer_F">
                 <div className="swiperDetailImage_F">
                     <Swiper
@@ -102,11 +114,12 @@ export default function CarouselProductDetail() {
 
                     <div className="descriptionDetail_F">
                         <h4>Description:</h4>
-                        <p>{dataProduct.description}.</p>
+                        <p >{dataProduct.description}.</p>
                     </div>
 
                 </div>
             </div>
         </div>
+    </div>
     );
 }

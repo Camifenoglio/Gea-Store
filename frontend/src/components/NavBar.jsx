@@ -167,9 +167,11 @@ const NavBar = () => {
                                 
                             ))}
                         </Menu>
+                        <LinkRouter to='/cart'>
                         <IconButton>
                             <ShoppingCartOutlinedIcon style={{ color: '#6D8C3E' }} fontSize='large' />
                         </IconButton>
+                        </LinkRouter>
                     </Box>
                 </Toolbar>
             </Container>

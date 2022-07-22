@@ -21,14 +21,13 @@ const productReducers = (state = initialState, action) => {
                 oneProduct: action.payload,
             }
         case 'FILTER_PER_CATEGORY':
-            let filterPerCategory = state.products.filter(product => product.category.includes(action.payload.toLowerCase()))
+            let filterPerCategory = state.filterPerCategory.filter(product => product.category.includes(action.payload.toLowerCase()))
             console.log(filterPerCategory)
             //console.log(state.products)
             return {
                 ...state,
                 //filterPerCategory: filter,
                 filterPerName: filterPerCategory
-
             }
         case 'ADD_FAVORITE':
             return {
