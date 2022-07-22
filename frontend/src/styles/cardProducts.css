@@ -13,6 +13,36 @@
     margin-bottom:2rem;
 }
 
+.productAndFilters_F{
+    display: flex;
+    width: 100%;
+    gap: 5vh;
+}
+
+.categoriesSidebar_F {
+    background-image: url(https://i.imgur.com/NIbgh4h.jpg);
+    background-size: cover;
+    background-repeat: no-repeat;
+    width: 20%;
+    height: max-content;
+    border-bottom-right-radius: 30px;
+    border-top-right-radius: 30px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: .5vh;
+    position: sticky;
+    top:80px;
+    display:inline-block;
+    padding-bottom: 2rem;
+}
+
+.btnSidebarCategory_F{
+    width: 80%;
+}
+.logoSidebar_F {
+    width: 15vh;
+}
 /* CARD 2 */
 .productsPageContainer_F {
     display: flex;
@@ -22,12 +52,13 @@
     width: 100%;
 }
 .products_F {
-    
     display: flex;
     flex-direction: row;
     justify-content:space-around;
     flex-wrap:wrap;
     min-height: 52.2vh;
+    background-color: #bcc88d;
+    width: 100%;
 }
 .card_F {
     margin-top:8rem !important;

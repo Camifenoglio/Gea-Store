@@ -33,7 +33,6 @@ export default function CarouselProductDetail() {
     }, [])
 
     const dataProduct = useSelector(store => store.productReducers.oneProduct)
-    console.log(dataProduct)
 
     const [thumbsSwiper, setThumbsSwiper] = useState(null);
 
