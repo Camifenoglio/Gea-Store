@@ -18,6 +18,7 @@ import ShoppingCartOutlinedIcon from '@mui/icons-material/ShoppingCartOutlined';
 
 //STYLES
 import '../styles/navbar.css'
+// ['Home', 'Products', 'About Us', 'Blog']
 
 
 const pages = [
@@ -158,10 +159,12 @@ const NavBar = () => {
                             open={Boolean(anchorElUser)}
                             onClose={handleCloseUserMenu}
                         >
-                            {settings.map((setting) => (
-                                <MenuItem key={setting} onClick={handleCloseUserMenu}>
+                            {settings.map((setting, index) => (
+                                
+                                <MenuItem key={index} onClick={handleCloseUserMenu}>
                                     <Typography textAlign="center">{setting}</Typography>
                                 </MenuItem>
+                                
                             ))}
                         </Menu>
                         <IconButton>
