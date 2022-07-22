@@ -6,7 +6,6 @@ const productsActions = {
         return async (dispatch, getState) => {
             try {
                 const res = await axios.get( urlBack + '/api/products' );
-                console.log(res)
                 dispatch({ type: 'GET_PRODUCTS', payload: res.data.response });
             } catch (error) {
                 console.log(error)
@@ -16,14 +15,16 @@ const productsActions = {
     getOneProduct: (id) => {
         return async (dispatch, getState) => {
             try {
-                const res = await axios.get( urlBack + `/api/products/${id}` );
+                const res = await axios.get( urlBack + `/api/products/${id.id}` );
+                //console.log(res)
                 dispatch({ type: 'GET_ONE_PRODUCT', payload: res.data.response });
             } catch (error) {
-                console.log(error)
+                console.log(error.message)
             }
         }
     },
     filterPerCategory: (input) => {
+        console.log(input)
         return async (dispatch, getState) => {
             try {
                 dispatch({ type: 'FILTER_PER_CATEGORY', payload: input });

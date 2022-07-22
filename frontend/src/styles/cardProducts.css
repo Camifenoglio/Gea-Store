@@ -1,19 +1,34 @@
-.BL-NyP-products{
-    display:flex !important;
-    justify-content:space-around;
-    align-items:center;
-}
-.BL-card-products{
-    display:flex;
-    justify-content:center;
-    align-items:center;
-    height:70vh;
-    max-width:345px;
-    margin-top:1rem;
-    margin-bottom:2rem;
+
+.productAndFilters_F{
+    display: flex;
+    width: 100%;
+    gap: 5vh;
 }
 
-/* CARD 2 */
+.categoriesSidebar_F {
+    background-image: url(https://i.imgur.com/NIbgh4h.jpg);
+    background-size: cover;
+    background-repeat: no-repeat;
+    width: 20%;
+    height: max-content;
+    border-bottom-right-radius: 30px;
+    border-top-right-radius: 30px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    position: sticky;
+    top:30px;
+    display:inline-block;
+    padding-bottom: 2rem;
+}
+
+.btnSidebarCategory_F{
+    width: 80%;
+}
+.logoSidebar_F {
+    width: 15vh;
+}
+
 .productsPageContainer_F {
     display: flex;
     flex-direction: column;
@@ -22,154 +37,117 @@
     width: 100%;
 }
 .products_F {
-    
     display: flex;
     flex-direction: row;
     justify-content:space-around;
     flex-wrap:wrap;
     min-height: 52.2vh;
-}
-.card_F {
-    margin-top:8rem !important;
-    width: 300px;
-    height: min-content;
-    padding: 25px;
-    background: rgb(209, 230, 210);
-    border-radius: 8px;
-    box-shadow: 0 0 20px rgba(0, 0, 0, .05) ;
-}
-
-.card_F .cardImg_F {
+    background-color: #bcc88d;
     width: 100%;
-    text-align: center;
+    padding-left: 2vh;
+    border-top-left-radius: 30px;
+    border-bottom-left-radius: 30px;
+    margin-bottom: 5vh;
+    padding-bottom: 5vh;
 }
 
-.card_F .cardImg_F img {
-    height: 8rem;
-    margin: -150px 0 15px 0;
-    filter: drop-shadow(0 8px 8px #cdd5e2);
-    transition: .3s;
-}
+/* BUTTON SIDEBAR */
 
-.card_F:hover .cardImg_F img  {
-    height: 11rem;
-}
-.card_F .cardImg_F h3 {
-    color: #1b2430;
-    font-size: 28px;
-    letter-spacing: -.5px;
-}
-
-.card_F .cardImg_F p {
-    color: #b3bac3;
-    font-size: 18px;
-    margin-top: -4px;
-    letter-spacing: -.5px;
-}
-.card_F .cardDetails_F {
-    display: flex;
-    justify-content: space-between;
-    margin: 15px 0;
-}
-
-.card_F .cardDetails_F span {
-    color: #b3bac3;
-    font-size: 16px;
-}
-.card_F .cardDetails_F p {
-    color: #1b2430;
-    font-size: 20px;
+.buttonCategory_F {
+    color: #ecf0f1;
+    background-color: #4b5f2d;
+    border: 1px solid #ffffff;
+    border-radius: 5px;
+    padding: 10px;
+    box-shadow: 0px 6px 0px #b9b8b8;
+    transition: all 50ms;
+    margin-bottom: .8vh;
     font-weight: 700;
-    margin-top: -2px;
 }
 
-.card_F button {
-    width: 100%;
-    height: 40px;
-    color: #fff;
-    background: #1b2430;
-    border-radius: 3px;
-    font-size: 18px;
-    font-weight: 600;
-    cursor: pointer;
-}
-.BL-img-cards-products{
-    max-height:30vh !important;
+.buttonCategory_F:active {
+    box-shadow: 0px 2px 0px #787878;
+    position: relative;
+    top: 2px;
 }
 
 
-/* CARD 3 */
 /* From uiverse.io by @alexruix */
 .card {
     margin-top:2rem;
     width: 190px;
     min-height: 320px;
     padding: .8em;
-    background: #f5f5f5;
     position: relative;
     overflow: visible;
     box-shadow: 0 1px 3px rgba(0,0,0,0.12), 0 1px 2px rgba(0,0,0,0.24);
-   }
-   
-   .card-img {
+    background-color: #D9E8D8;
+    border-radius: 30px;
+}
+
+.card-img {
     background-color: #ffcaa6;
     height: 40%;
     width: 100%;
-    border-radius: .5rem;
+    border-radius: .5rem ;
     transition: .3s ease;
-   }
-   
-   .card-info {
+    border:solid 1px #F2A0A0;
+}
+
+.card-info {
     padding-top: 10%;
-   }
-   
-   svg {
+    height:20vh;
+}
+
+svg {
     width: 20px;
     height: 20px;
-   }
-   
-   .card-footer {
+}
+
+.card-footer {
     width: 100%;
     display: flex;
     justify-content: space-between;
     align-items: center;
     padding-top: 10px;
     border-top: 1px solid #ddd;
-   }
-   
-   /*Text*/
-   .text-title {
-    font-weight: 900;
+}
+
+/*Text*/
+.text-title {
+    font-weight: 700;
+    font-family: 'Alegreya Sans', sans-serif;
     font-size: 1.2em;
     line-height: 1.5;
-   }
-   
-   .text-body {
+    color: #1b2808;
+}
+
+.text-body {
     font-size: .9em;
     padding-bottom: 10px;
-   }
-   
-   /*Button*/
-   .card-button {
+}
+
+/*Button*/
+.card-button {
     border: 1px solid #252525;
     display: flex;
     padding: .3em;
     cursor: pointer;
     border-radius: 50px;
     transition: .3s ease-in-out;
-   }
-   
-   /*Hover*/
-   .card-img:hover {
+}
+
+/*Hover*/
+.card-img:hover {
     transform: translateY(-25%);
     box-shadow: rgba(226, 196, 63, 0.25) 0px 13px 47px -5px, rgba(180, 71, 71, 0.3) 0px 8px 16px -8px;
-   }
-   
-   .card-button:hover {
+}
+
+.card-button:hover {
     border: 1px solid #ffcaa6;
     background-color: #ffcaa6;
-   }
-   
+}
+
 
 /* From uiverse.io by @G4b413l */
 .cardF {
@@ -184,9 +162,9 @@
     background: #fff;
     padding: 0.5em;
     padding-bottom: 3.4em;
-   }
-   
-   .cardF::after {
+}
+
+.cardF::after {
     content: "Add to Cart";
     padding-top: 1.25em;
     padding-left: 1.25em;
@@ -200,49 +178,49 @@
     transition: all 80ms;
     font-weight: 600;
     text-transform: uppercase;
-   }
-   
-   .cardF .title {
+}
+
+.cardF .title {
     font-family: Arial, Helvetica, sans-serif;
     font-size: 0.9em;
     position: absolute;
     left: 0.625em;
     bottom: 1.875em;
     font-weight: 400;
-   }
-   
-   .cardF .price {
+}
+
+.cardF .price {
     font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
     font-size: 0.9em;
     position: absolute;
     left: 0.625em;
     bottom: 0.625em;
-   }
-   
-   .cardF:hover::after {
+}
+
+.cardF:hover::after {
     bottom: 0;
-   }
-   
-   .card4:active {
+}
+
+.card4:active {
     transform: scale(0.98);
-   }
-   
-   .card4:active::after {
+}
+
+.card4:active::after {
     content: "Added !";
     height: 3.125em;
-   }
-   
-   .text {
+}
+
+.text {
     max-width: 55px;
-   }
-   
-   .image {
+}
+
+.image {
     background: rgb(241, 241, 241);
     width: 100%;
     height: 100%;
     display: grid;
     place-items: center;
-   }
+}
 
 
 /* From uiverse.io by @alexruix */
