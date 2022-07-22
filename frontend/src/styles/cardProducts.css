@@ -19,7 +19,7 @@
     position: sticky;
     top:30px;
     display:inline-block;
-    padding-bottom: 2rem;
+    padding-bottom: 2vh;
 }
 
 .btnSidebarCategory_F{
@@ -49,6 +49,7 @@
     border-bottom-left-radius: 30px;
     margin-bottom: 5vh;
     padding-bottom: 5vh;
+    height: fit-content;
 }
 
 /* BUTTON SIDEBAR */
@@ -75,8 +76,8 @@
 /* From uiverse.io by @alexruix */
 .card {
     margin-top:2rem;
-    width: 190px;
-    min-height: 320px;
+    width: 250px;
+    height: 100%;
     padding: .8em;
     position: relative;
     overflow: visible;
@@ -92,11 +93,14 @@
     border-radius: .5rem ;
     transition: .3s ease;
     border:solid 1px #F2A0A0;
+    border-radius: 30px;
+    
+
 }
 
 .card-info {
     padding-top: 10%;
-    height:20vh;
+    height:max-content;
 }
 
 svg {
@@ -262,4 +266,19 @@ svg {
     fill: #777;
     width: 1rem;
     height: 1rem;
+}
+
+
+@media (max-width: 1400px) {
+    .categoriesSidebar_F {
+        height: fit-content;
+        width: 30%;
+        top: 10px;
+    }
+    .buttonCategory_F {
+        padding: 10px;
+    }
+    .logoSidebar_F{
+        width: 12vh;
+    }
 }

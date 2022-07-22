@@ -1,36 +1,43 @@
 .conteinerCards{
+    background-image: url(https://th.bing.com/th/id/R.150201d…?rik=KKoE7FFruI1AJA&riu=http%3a%2f%2fwww.unico-poland.eu%2fwp-content%2fuploads%2f2021%2f01%2fSuperfoods-scaled.jpeg&ehk=Vpwk84BR4fn8TR6n7Z0cR1ta5ZCoCLcGEoRWH9tqS80%3d&risl=&pid=ImgRaw&r=0);
+    background-size: cover;
+    background-position: center;
     display: flex;
     justify-content: center;
     justify-content: space-around;
     flex-wrap: wrap;
 }
 
-.MuiPaper-root{
-    /* width: 20vw;
-    height: 20vh; */
-    /* background-color: #A4BF41 !important;
-    width: 50vw; */
+
+.card-conteiner_B{
+    width: 35vw;
+    background-color: rgba(217, 232, 216) !important;
     margin: 2rem;
     display: flex;
     flex-wrap: wrap !important;
-    /* align-items: flex-end; */
-} 
-
-.MuiButtonBase-root{
-    display: flex;
 }
 
-.MuiCardActions-root{
+.text-blog_B{
+    width: 10vw;
+}
+/* .box-conteiner-info-cardAction_B{
+    max-width: 30vh;
+    /* display:'flex';
+    justify-content: flex-end;
+    align-items:'flex-end';
+    flex-direction:'column' 
+} */
+
+.buttom-blog_B{
     height: 5vh;
-    background-color: #F2A0A0;
+    color:black !important;
+    background-color: #A4BF41;
 }
-.MuiCardContent-root{
-    padding: 0 !important;
 
-}
-.MuiCardMedia-media{
+.img-blog_B{
     margin-left: 1rem !important;
     margin-bottom: 1rem;
     width: 20vw !important;
     height: 25vh;
 }
+

@@ -10,12 +10,15 @@ import Error from '../Error'
 import IconButton from '@mui/material/IconButton';
 import SearchRoundedIcon from '@mui/icons-material/SearchRounded';
 import LocalGroceryStoreOutlinedIcon from '@mui/icons-material/LocalGroceryStoreOutlined';
-
+import InputLabel from '@mui/material/InputLabel';
+import MenuItem from '@mui/material/MenuItem';
+import FormControl from '@mui/material/FormControl';
+import Select from '@mui/material/Select';
 //STYLES
 import '../../styles/cardProducts.css'
 
-const arrayCategories = ["Gluten free", "Sugar free", "Lactose free", "Vegan","Canned food", "Sweets and jams", "Flours and more", "Cookies, bakery and more", "Nuts, seeds and more", "Snacks", "Rice and pasta", "Oils, dressings and more", "Sugar, sweeteners and more", "Broths, soups and sauces", "Cereals, granola and more", "Chocolate and more"]
-
+const arrayCategories = ["Gluten free", "Sugar free", "Lactose free", "Vegan", "Canned food", "Sweets and jams", "Flours and more", "Cookies, bakery and more", "Nuts, seeds and more", "Snacks", "Rice and pasta", "Oils, dressings and more", "Sugar, sweeteners and more", "Broths, soups and sauces", "Cereals, granola and more", "Chocolate and more"]
+const arrayStore = ["Canned food", "Sweets and jams", "Flours and more", "Cookies, bakery and more", "Nuts, seeds and more", "Snacks", "Rice and pasta", "Oils, dressings and more", "Sugar, sweeteners and more", "Broths, soups and sauces", "Cereals, granola and more", "Chocolate and more"]
 export default function CardProducts() {
 
     const dispatch = useDispatch() // 
@@ -47,16 +50,42 @@ export default function CardProducts() {
             <div className='productAndFilters_F'>
                 <div className='categoriesSidebar_F'>
                     <img src='https://i.imgur.com/hD3qytz.png' alt='logoGea' className='logoSidebar_F' />
-                    {arrayCategories.sort().map((category, index)=> (
+                    {/* 
+                    <FormControl sx={{ width: '80%' }}>
+                        <InputLabel id="store-select">Store</InputLabel>
+                        <Select
+                            labelId="demo-simple-select-label"
+                            id="store-select"
+                            label="Age"
+                            onChange={filterBtnSidebar}
+                        >
+                            {arrayStore.map((category, index) => (
+                                <MenuItem
+                                    key={index}
+                                    value={category}
+                                >{category}</MenuItem>
+
+                            ))}
+                        </Select>
+                    </FormControl> */}
+
+                    {arrayCategories.sort().map((category, index) => (
                         <button
-                        key={index}
-                        className='btnSidebarCategory_F buttonCategory_F'
-                        value={category}
-                        onClick={filterBtnSidebar}
+                            key={index}
+                            className='btnSidebarCategory_F buttonCategory_F'
+                            value={category}
+                            onClick={filterBtnSidebar}
                         >{category}</button>
                     ))}
+
+
                 </div>
                 <div className='products_F'>
+                    {/* <div class="card2">
+                        <div sx={{backgroundImage: ''}}></div>
+                        
+                    </div> */}
+
                     {productsFilter.length > 0 ? productsFilter?.map((product, index) => (
                         <LinkRouter
                             to={`/products/${product._id}`}
