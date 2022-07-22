@@ -1,6 +1,6 @@
 .footerNav {
     background-color: #6D8C3E;
-    height: 22vh;
+    min-height: 22.5vh;
     display: flex;
     flex-direction: row-reverse;
     align-items: center;
@@ -31,11 +31,11 @@
 }
 
 .navegation{
-    height: 10vh;
+    height:10vh;
     display: flex;
     flex-direction: column;
     justify-content: center;
-    gap: .2rem;
+    
 }
 .navFooter {
     height: 20vh;
