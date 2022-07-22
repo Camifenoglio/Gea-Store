@@ -1,7 +1,7 @@
 // REACT
 import { React, useEffect } from 'react';
 import { useDispatch } from 'react-redux';
-import { Route, Routes } from 'react-router-dom'
+import { Route, Routes } from 'react-router-dom';
 
 //STYLES
 import './styles/App.css';
