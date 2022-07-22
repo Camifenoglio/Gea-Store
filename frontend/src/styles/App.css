@@ -37,6 +37,11 @@
   }
 }
 
+.underline-none {
+  text-decoration: none;
+}
+
+
 /* 
 VERDE OSCURO -> #6D8C3E
 VERDE CLARO -> #A4BF41

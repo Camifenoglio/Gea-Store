@@ -36,6 +36,42 @@
   box-sizing: border-box;
   padding: 10px 0;
 }
+.popularProductsContainer_F {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+.popularTitle_F {
+  width: fit-content;
+  height: max-content;
+  position: relative;
+  display:block;
+}
+.popularTitle_F::before{
+  background-image: url(https://i.imgur.com/VGA6EJc.png);
+  background-size: contain;
+  background-repeat: no-repeat;
+  position: absolute;
+  width:auto;
+  height:auto;
+  z-index:-3;
+  opacity:0.5;
+  top:0;
+  bottom:0;
+  right:0;
+  left:0;
+  content:"";
+}
+
+
+.titlePopularSection_F {
+  font-size: 6vh;
+  color: #F2F2F2 ;
+  color: black;
+  color: #394923;
+  /* text-shadow: 4px 4px 2px #F2A0A0; */
+}
 
 
 /* #app { height: 100% }

@@ -5,7 +5,7 @@ const productsActions = {
     getProducts: () => {
         return async (dispatch, getState) => {
             try {
-                const res = await axios.get(urlBack+'/api/products' );
+                const res = await axios.get( urlBack + '/api/products' );
                 console.log(res)
                 dispatch({ type: 'GET_PRODUCTS', payload: res.data.response });
             } catch (error) {
@@ -16,7 +16,7 @@ const productsActions = {
     getOneProduct: (id) => {
         return async (dispatch, getState) => {
             try {
-                const res = await axios.get( urlBack, `/api/products/${id}` );
+                const res = await axios.get( urlBack + `/api/products/${id}` );
                 dispatch({ type: 'GET_ONE_PRODUCT', payload: res.data.response });
             } catch (error) {
                 console.log(error)
@@ -32,10 +32,15 @@ const productsActions = {
             }
         }
     },
+    filterProducts: (input) => {
+        return (dispatch,getState)=>{
+            dispatch({type:'FILTER_PRODUCTS', payload:input})
+        }
+    },
     createProduct: (product) => {
         return async (dispatch, getState) => {
             try {
-                const res = await axios.post( urlBack, '/api/products', product );
+                const res = await axios.post( urlBack + '/api/products', product );
             } catch (error) {
                 console.log(error)
             }
@@ -44,7 +49,7 @@ const productsActions = {
     modifyProduct: (id, product) => {
         return async (dispatch, getState) => {
             try {
-                const res = await axios.put( urlBack, `/api/products/${id}` , product );
+                const res = await axios.put( urlBack + `/api/products/${id}` , product );
             } catch (error) {
                 console.log(error)
             }
@@ -53,7 +58,7 @@ const productsActions = {
     deleteProduct: (id) => {
         return async (dispatch, getState) => {
             try {
-                const res = await axios.delete( urlBack, `/api/products/${id}` );
+                const res = await axios.delete( urlBack + `/api/products/${id}` );
             } catch (error) {
                 console.log(error)
             }
@@ -62,7 +67,7 @@ const productsActions = {
     addFavorite: (id) => {
         return async (dispatch, getState) => {
             try{
-                const res = await axios.post( urlBack, `/api/products/favorite/${id}` );
+                const res = await axios.post( urlBack + `/api/products/favorite/${id}` );
                 dispatch({ type: 'ADD_FAVORITE', payload: res.data.response })
             } catch (error) {
                 console.log(error)
