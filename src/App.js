@@ -14,11 +14,8 @@ import ProductsPage from './pages/Products';
 import DetailsPage from './pages/DetailsProducts';
 import AboutUsPage from './pages/AboutUsPage';
 import BlogPage from './pages/BlogPage';
-<<<<<<< HEAD
 import SignInOutPage from './pages/SignInOutPage';
-=======
 import CartPage from './pages/CartPage';
->>>>>>> 741274f8810a3d723c33c63ecaab78fc1e3e83f6
 
 //ACTIONS
 import productsActions from './redux/actions/productsActions';
