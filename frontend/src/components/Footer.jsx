@@ -24,37 +24,37 @@ const pages = [
         name: 'Blog'
     }
 ];
-const settings = ['Profile', 'Logout'];
+//const settings = ['Profile', 'Logout'];
 
 function Footer() {
 
 
-    const [anchorElNav, setAnchorElNav] = React.useState(null);
-    const [anchorElUser, setAnchorElUser] = React.useState(null);
+    //const [anchorElNav, setAnchorElNav] = React.useState(null);
+    //const [anchorElUser, setAnchorElUser] = React.useState(null);
 
-    const handleOpenNavMenu = (event) => {
-        setAnchorElNav(event.currentTarget);
-    };
-    const handleOpenUserMenu = (event) => {
-        setAnchorElUser(event.currentTarget);
-    };
+    // const handleOpenNavMenu = (event) => {
+    //     setAnchorElNav(event.currentTarget);
+    // };
+    // const handleOpenUserMenu = (event) => {
+    //     setAnchorElUser(event.currentTarget);
+    // };
 
-    const handleCloseNavMenu = () => {
-        setAnchorElNav(null);
-    };
+    // const handleCloseNavMenu = () => {
+    //     setAnchorElNav(null);
+    // };
 
-    const handleCloseUserMenu = () => {
-        setAnchorElUser(null);
-    };
+    // const handleCloseUserMenu = () => {
+    //     setAnchorElUser(null);
+    // };
 
 
-    const ScrollToTop = () => {
-        window.scroll({
-            top: 0,
-            behavior: "smooth",
-            left: 0
-        })
-    }
+    // const ScrollToTop = () => {
+    //     window.scroll({
+    //         top: 0,
+    //         behavior: "smooth",
+    //         left: 0
+    //     })
+    // }
 
     return (
         <>
@@ -82,10 +82,13 @@ function Footer() {
                         <LinkRouter 
                             to={page.to}
                             key={index}
-                            onClick={handleCloseNavMenu}
+                            // onClick={handleCloseNavMenu}
                             className='underline-none'
                             >
-                        <Button onClick={handleCloseNavMenu} style={{ color: "#F2F2F2" }}>{page.name}</Button>
+                        <Button 
+                        //onClick={handleCloseNavMenu} 
+                        style={{ color: "#F2F2F2" }}
+                        >{page.name}</Button>
                         </LinkRouter>
                         ))}
                         {/* <Button onClick={ScrollToTop} style={{ color: "#F2F2F2" }}>About Us</Button>

@@ -16,7 +16,7 @@ import "swiper/css/thumbs";
 // STYLES
 import '../../styles/carouselProductDetails.css'
 import productsActions from "../../redux/actions/productsActions";
-import CardCredit from "./CardCredit";
+//import CardCredit from "./CardCredit";
 
 // import required modules
 import { FreeMode, Navigation, Thumbs } from "swiper";
