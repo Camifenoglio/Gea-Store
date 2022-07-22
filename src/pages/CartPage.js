@@ -4,7 +4,7 @@ import '../App';
 function CartPage() {
     return (
         <>
-            <h1>CARRITO </h1>
+            <h1>CARRITOAAAAAAAAAAAAAAAAAAAAAAAA</h1>
         </>
     );
 }
