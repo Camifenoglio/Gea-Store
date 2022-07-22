@@ -16,9 +16,8 @@
     display: flex;
     flex-direction: column;
     align-items: center;
-    gap: .5vh;
     position: sticky;
-    top:80px;
+    top:30px;
     display:inline-block;
     padding-bottom: 2rem;
 }
@@ -29,7 +28,7 @@
 .logoSidebar_F {
     width: 15vh;
 }
-/* CARD 2 */
+
 .productsPageContainer_F {
     display: flex;
     flex-direction: column;
@@ -45,84 +44,110 @@
     min-height: 52.2vh;
     background-color: #bcc88d;
     width: 100%;
+    padding-left: 2vh;
+    border-top-left-radius: 30px;
+    border-bottom-left-radius: 30px;
+    margin-bottom: 5vh;
+    padding-bottom: 5vh;
 }
 
-/* CARD 3 */
+/* BUTTON SIDEBAR */
+
+.buttonCategory_F {
+    color: #ecf0f1;
+    background-color: #4b5f2d;
+    border: 1px solid #ffffff;
+    border-radius: 5px;
+    padding: 10px;
+    box-shadow: 0px 6px 0px #b9b8b8;
+    transition: all 50ms;
+    margin-bottom: .8vh;
+    font-weight: 700;
+}
+
+.buttonCategory_F:active {
+    box-shadow: 0px 2px 0px #787878;
+    position: relative;
+    top: 2px;
+}
+
+
 /* From uiverse.io by @alexruix */
 .card {
     margin-top:2rem;
     width: 190px;
     min-height: 320px;
     padding: .8em;
-    background: #A4BF41;
     position: relative;
     overflow: visible;
     box-shadow: 0 1px 3px rgba(0,0,0,0.12), 0 1px 2px rgba(0,0,0,0.24);
-   }
-   
-   .card-img {
+    background-color: #D9E8D8;
+    border-radius: 30px;
+}
+
+.card-img {
     background-color: #ffcaa6;
     height: 40%;
     width: 100%;
     border-radius: .5rem ;
     transition: .3s ease;
     border:solid 1px #F2A0A0;
-   }
-   
-   .card-info {
+}
+
+.card-info {
     padding-top: 10%;
     height:20vh;
-   }
-   
-   svg {
+}
+
+svg {
     width: 20px;
     height: 20px;
-   }
-   
-   .card-footer {
+}
+
+.card-footer {
     width: 100%;
     display: flex;
     justify-content: space-between;
     align-items: center;
     padding-top: 10px;
     border-top: 1px solid #ddd;
-   }
-   
-   /*Text*/
-   .text-title {
+}
+
+/*Text*/
+.text-title {
     font-weight: 700;
     font-family: 'Alegreya Sans', sans-serif;
-    font-family: 'Edu QLD Beginner', cursive;
     font-size: 1.2em;
     line-height: 1.5;
-   }
-   
-   .text-body {
+    color: #1b2808;
+}
+
+.text-body {
     font-size: .9em;
     padding-bottom: 10px;
-   }
-   
-   /*Button*/
-   .card-button {
+}
+
+/*Button*/
+.card-button {
     border: 1px solid #252525;
     display: flex;
     padding: .3em;
     cursor: pointer;
     border-radius: 50px;
     transition: .3s ease-in-out;
-   }
-   
-   /*Hover*/
-   .card-img:hover {
+}
+
+/*Hover*/
+.card-img:hover {
     transform: translateY(-25%);
     box-shadow: rgba(226, 196, 63, 0.25) 0px 13px 47px -5px, rgba(180, 71, 71, 0.3) 0px 8px 16px -8px;
-   }
-   
-   .card-button:hover {
+}
+
+.card-button:hover {
     border: 1px solid #ffcaa6;
     background-color: #ffcaa6;
-   }
-   
+}
+
 
 /* From uiverse.io by @G4b413l */
 .cardF {
@@ -137,9 +162,9 @@
     background: #fff;
     padding: 0.5em;
     padding-bottom: 3.4em;
-   }
-   
-   .cardF::after {
+}
+
+.cardF::after {
     content: "Add to Cart";
     padding-top: 1.25em;
     padding-left: 1.25em;
@@ -153,49 +178,49 @@
     transition: all 80ms;
     font-weight: 600;
     text-transform: uppercase;
-   }
-   
-   .cardF .title {
+}
+
+.cardF .title {
     font-family: Arial, Helvetica, sans-serif;
     font-size: 0.9em;
     position: absolute;
     left: 0.625em;
     bottom: 1.875em;
     font-weight: 400;
-   }
-   
-   .cardF .price {
+}
+
+.cardF .price {
     font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
     font-size: 0.9em;
     position: absolute;
     left: 0.625em;
     bottom: 0.625em;
-   }
-   
-   .cardF:hover::after {
+}
+
+.cardF:hover::after {
     bottom: 0;
-   }
-   
-   .card4:active {
+}
+
+.card4:active {
     transform: scale(0.98);
-   }
-   
-   .card4:active::after {
+}
+
+.card4:active::after {
     content: "Added !";
     height: 3.125em;
-   }
-   
-   .text {
+}
+
+.text {
     max-width: 55px;
-   }
-   
-   .image {
+}
+
+.image {
     background: rgb(241, 241, 241);
     width: 100%;
     height: 100%;
     display: grid;
     place-items: center;
-   }
+}
 
 
 /* From uiverse.io by @alexruix */

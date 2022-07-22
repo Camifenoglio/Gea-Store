@@ -84,20 +84,27 @@ export default function CarouselProductDetail() {
                 </div>
 
                 <div className="productInfo_F">
-                    <h3>{dataProduct.name}</h3>
-                    <p>Price: {dataProduct.price}$</p>
-                    <div>
-                        <p>{dataProduct.category}</p>
-
+                    <div className="titleAndPrice_F">
+                        <h3 className="titleProductDetail_F">{dataProduct.name}</h3>
+                        <p className="priceDetails_F">Price: {dataProduct.price}$</p>
+                    </div>
+                    <div className="categoryDetails_F">
+                        {dataProduct.category?.map((category, index)=>(
+                            <p key={index}>#{category}</p>
+                        ))}
                     </div>
                     <button className="btnCardDetails_F">
-                        Sign up
+                        Add to cart
                         <div className="arrow-wrapper">
                             <div className="arrow"></div>
                         </div>
                     </button>
-                    <h4>Description:</h4>
-                    <p>{dataProduct.description}.</p>
+
+                    <div className="descriptionDetail_F">
+                        <h4>Description:</h4>
+                        <p>{dataProduct.description}.</p>
+                    </div>
+
                 </div>
             </div>
         </div>

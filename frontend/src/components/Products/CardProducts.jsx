@@ -39,7 +39,6 @@ export default function CardProducts() {
     return (
 
         <div className='productsPageContainer_F'>
-
             <div className="group searchMargin_F">
                 <SearchRoundedIcon className="icon" />
                 <input placeholder="Search" type="search" className="input" onKeyUp={filter} />
@@ -51,7 +50,7 @@ export default function CardProducts() {
                     {arrayCategories.sort().map((category, index)=> (
                         <button
                         key={index}
-                        className='btnSidebarCategory_F'
+                        className='btnSidebarCategory_F buttonCategory_F'
                         value={category}
                         onClick={filterBtnSidebar}
                         >{category}</button>
@@ -67,7 +66,6 @@ export default function CardProducts() {
                             <img className="card-img" src={product.image} alt='product' />
                             <div className="card-info">
                                 <p className="text-title">{product.name}</p>
-                                <p className="text-body">Product description and details</p>
                             </div>
                             <div className="card-footer">
                                 <span className="text-title">${product.price}.00</span>
