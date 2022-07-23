@@ -1,10 +1,11 @@
 import '../App';
+import SignInOut from '../components/SignIn-Out/SignInOut';
 
 
 function SignInOutPage() {
     return (
         <>
-            <p>REGISTRATION</p>
+            <SignInOut/>
         </>
     );
 }
