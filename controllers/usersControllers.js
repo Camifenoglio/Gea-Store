@@ -9,7 +9,7 @@ const jwt = require("jsonwebtoken")
 const usersControllers = {
 
     signUpUsers: async (req, res) => {
-        const { fullName, imageUser, email, password, from,role } = req.body.userData
+        const { fullName, imageUser, email, password, from, role } = req.body
 
 
         try {
@@ -47,8 +47,8 @@ const usersControllers = {
                     fullName:  fullName,
                     imageUser: imageUser,
                     email: email,
-                    password: passwordHashed,
                     role: role,
+                    password: passwordHashed,
                     verifiedEmail: false,
                     from: [from],
                     
@@ -104,9 +104,9 @@ const usersControllers = {
                             id: userExist._id,
                             fullName: userExist.fullName,
                             password: userExist.passwordHashed,
-                            email: userExist.email, 
+                            email: userExist.email,
                             imageUser:userExist.imageUser,
-                            from: from, 
+                            from: from,
                         }
 
                         await userExist.save()
@@ -145,7 +145,7 @@ const usersControllers = {
 
                             const userData = {
                                 id: userExist._id,
-                                imageUser:userExist.imageUser,
+
                                 firstName: userExist.fullName,
                                 email: userExist.email,
                                 from: userExist.from
@@ -183,7 +183,19 @@ const usersControllers = {
             })
         }
     },
-
+    getUsers: async(req, res) => {
+        let users
+        let error = null
+        try {
+            users = await User.find()
+        } catch (err) { error = err } 
+            res.json({
+                response: error ? 'ERROR': users,
+                success: error ? false : true,
+                error: error,
+                console: console.log(error)
+            })
+    },
     verifyMail: async (req, res) => {
         console.log(req.params)
         const string = req.params.string

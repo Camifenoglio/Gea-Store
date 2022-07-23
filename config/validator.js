@@ -1,21 +1,16 @@
 const joi = require('joi')
 
 const validator = (req, res, next) => {
- 
     const schema = joi.object({
         fullName: joi.string()
             .min(3)
             .max(20)
-            .trim()
             .pattern(new RegExp('[a-zA-Z]'))
-           
             .messages({
                 'string.min': 'name: min 3 characters',
                 'string.max': 'name: max 20 characters'
             }),
-      
         imageUser: joi.string(),
-          role:joi.string(),
         password: joi.string()
             .min(8)
             .max(30)
@@ -25,12 +20,9 @@ const validator = (req, res, next) => {
                 'string.min': '"password": min 8 characters',
                 'string.max': '"password": max 30 characters'
             }),
-
-        
-            
-
+        role: joi.string(), 
         email: joi.string()
-           .email({ minDomainSegments: 2 })
+            .email({ minDomainSegments: 2 })
             .required()
             .messages({
                 'string.email': '"mail": incorrect format'

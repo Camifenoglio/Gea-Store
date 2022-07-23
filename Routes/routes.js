@@ -7,7 +7,7 @@ const productControllers = require('../controllers/productControllers')
 const {getAllProducts, getProduct, createProduct, modifyProduct, deleteProduct, addFavorite, createMultlipeProduct} = productControllers
 
 const usersControllers = require("../controllers/usersControllers")
-const {signUpUsers , logInUser,verifyMail,verifyToken} = usersControllers;
+const {signUpUsers , logInUser,verifyMail,verifyToken, getUsers} = usersControllers;
 
 
 
@@ -32,6 +32,7 @@ Router.route('/all/products')
 
 // Users
 Router.route("/verify/:string").get(verifyMail)
+Router.route('/users').get(getUsers)
 Router.route("/auth/signin").post(logInUser)
 Router.route("/auth/signup").post(validator,signUpUsers)
 Router.route('/auth/token').get(passport.authenticate('jwt', {session: false}),verifyToken)
