@@ -14,8 +14,7 @@ const validator = (req, res, next) => {
                 'string.max': 'name: max 20 characters'
             }),
       
-        imageUser: joi.string()
-          ,
+        imageUser: joi.string(),
           role:joi.string(),
         password: joi.string()
             .min(8)
