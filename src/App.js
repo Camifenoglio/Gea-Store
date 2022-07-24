@@ -2,6 +2,7 @@
 import { React, useEffect } from 'react';
 import { useDispatch } from 'react-redux';
 import { Route, Routes } from 'react-router-dom';
+import { Toaster } from 'react-hot-toast';
 
 //STYLES
 import './styles/App.css';
@@ -50,6 +51,13 @@ function App() {
 
                 </Routes>
             <Footer />
+            <Toaster
+                position='top-center'
+                autoClose={6000}
+                hideProgressBar={true}
+                newestOnTop={true}
+                transition={'scale'}
+            />
         </div>
     );
 }
