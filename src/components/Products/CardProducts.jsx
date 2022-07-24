@@ -6,22 +6,20 @@ import { Link as LinkRouter } from 'react-router-dom';
 //COMPONENTS AND ACTIONS
 import productsActions from '../../redux/actions/productsActions';
 import Error from '../Error'
+
 //MUI
 import IconButton from '@mui/material/IconButton';
 import SearchRoundedIcon from '@mui/icons-material/SearchRounded';
 import LocalGroceryStoreOutlinedIcon from '@mui/icons-material/LocalGroceryStoreOutlined';
-import InputLabel from '@mui/material/InputLabel';
-import MenuItem from '@mui/material/MenuItem';
-import FormControl from '@mui/material/FormControl';
-import Select from '@mui/material/Select';
+
 //STYLES
 import '../../styles/cardProducts.css'
 
 const arrayCategories = ["Gluten free", "Sugar free", "Lactose free", "Vegan", "Canned food", "Sweets and jams", "Flours and more", "Cookies, bakery and more", "Nuts, seeds and more", "Snacks", "Rice and pasta", "Oils, dressings and more", "Sugar, sweeteners and more", "Broths, soups and sauces", "Cereals, granola and more", "Chocolate and more"]
-const arrayStore = ["Canned food", "Sweets and jams", "Flours and more", "Cookies, bakery and more", "Nuts, seeds and more", "Snacks", "Rice and pasta", "Oils, dressings and more", "Sugar, sweeteners and more", "Broths, soups and sauces", "Cereals, granola and more", "Chocolate and more"]
+
 export default function CardProducts() {
 
-    const dispatch = useDispatch() // 
+    const dispatch = useDispatch() 
 
     useEffect(() => {
         dispatch(productsActions.getProducts())
@@ -39,8 +37,8 @@ export default function CardProducts() {
     }
 
 
-    return (
 
+    return (
         <div className='productsPageContainer_F'>
             <div className="group searchMargin_F">
                 <SearchRoundedIcon className="icon" />
