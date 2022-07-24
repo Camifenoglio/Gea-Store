@@ -1,10 +1,10 @@
 import '../App';
-
+import AboutUs from '../components/About-Us/Cuerpo'
 
 function AboutUsPage() {
     return (
         <>
-            <p>ABOUT US</p>
+            <AboutUs/>
         </>
     );
 }

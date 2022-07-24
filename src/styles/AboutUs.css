@@ -1,0 +1,29 @@
+.BL-container-about{
+    display:flex;
+    flex-direction:row;
+    justify-content:space-around;
+    align-items:center;
+    min-height:66.15vh;
+    background-image:url(https://i.imgur.com/c6Ttmlb.jpg);
+    background-repeat:no-repeat;
+    background-size:cover;
+}
+.BL-div-descripciones{
+    display:flex;
+    flex-direction:column;
+    width:40vw;
+}
+.BL-caja-texto{
+    border:solid 1px black;
+}
+.BL-mapa{
+    display:flex;
+    height:40vh;
+    width:30vw;
+}
+BL-mapa a:hover{
+    transform: scale3d(-3);
+}
+h2{
+    text-align:left;
+}

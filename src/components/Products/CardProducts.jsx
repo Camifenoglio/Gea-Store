@@ -50,24 +50,6 @@ export default function CardProducts() {
             <div className='productAndFilters_F'>
                 <div className='categoriesSidebar_F'>
                     <img src='https://i.imgur.com/hD3qytz.png' alt='logoGea' className='logoSidebar_F' />
-                    {/* 
-                    <FormControl sx={{ width: '80%' }}>
-                        <InputLabel id="store-select">Store</InputLabel>
-                        <Select
-                            labelId="demo-simple-select-label"
-                            id="store-select"
-                            label="Age"
-                            onChange={filterBtnSidebar}
-                        >
-                            {arrayStore.map((category, index) => (
-                                <MenuItem
-                                    key={index}
-                                    value={category}
-                                >{category}</MenuItem>
-
-                            ))}
-                        </Select>
-                    </FormControl> */}
 
                     {arrayCategories.sort().map((category, index) => (
                         <button
@@ -81,10 +63,6 @@ export default function CardProducts() {
 
                 </div>
                 <div className='products_F'>
-                    {/* <div class="card2">
-                        <div sx={{backgroundImage: ''}}></div>
-                        
-                    </div> */}
 
                     {productsFilter.length > 0 ? productsFilter?.map((product, index) => (
                         <LinkRouter
