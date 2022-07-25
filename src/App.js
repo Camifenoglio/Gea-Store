@@ -11,7 +11,7 @@ import './styles/App.css';
 import NavBar from './components/NavBar'
 import Footer from './components/Footer';
 import HomePage from './pages/Home';
-import ProductsPage from './pages/Products';
+import ProductsPage from './pages/ProductsPage';
 import DetailsPage from './pages/DetailsProducts';
 import AboutUsPage from './pages/AboutUsPage';
 import BlogPage from './pages/BlogPage';
