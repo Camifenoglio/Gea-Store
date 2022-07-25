@@ -1,7 +1,7 @@
 require('dotenv').config();
 require('./config/database');
 
-//const path = require('path')
+const path = require('path')
 const cors = require('cors');
 const passport = require('passport');
 const express = require('express');
