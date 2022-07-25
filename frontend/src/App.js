@@ -14,8 +14,7 @@ import ProductsPage from './pages/Products';
 import DetailsPage from './pages/DetailsProducts';
 import AboutUsPage from './pages/AboutUsPage';
 import BlogPage from './pages/BlogPage';
-
-
+import ShoppingCart from './components/ShoppingCart/ShoppingCart';
 //ACTIONS
 import productsActions from './redux/actions/productsActions';
 
@@ -31,14 +30,15 @@ function App() {
     return (
         <div className="App">
             <NavBar />
-                <Routes>
-                    <Route path='/' element={<HomePage />} />
-                    <Route path='/products' element={<ProductsPage />} />
-                    <Route path='/products/:id' element={<DetailsPage />} />
-                    <Route path='/aboutus' element={<AboutUsPage />} />
-                    <Route path='/blog' element={<BlogPage />} />
-                    {/* <DetailsPage /> */}
-                </Routes>
+
+            <Routes>
+                <Route path='/' element={<HomePage />} />
+                <Route path='/products' element={<ProductsPage />} />
+                <Route path='/products/:id' element={<DetailsPage />} />
+                <Route path='/aboutus' element={<AboutUsPage />} />
+                <Route path='/blog' element={<BlogPage />} />
+                <Route path='/shopping-cart' element={<ShoppingCart />} />
+            </Routes>
             <Footer />
         </div>
     );
