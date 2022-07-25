@@ -24,7 +24,6 @@ async function handleCallbackResponse(response) {
         const res = await dispatch(userActions.logInUser({
                 email: userObject.email,
                 password: userObject.sub,
-                image: userObject.picture,
                 from: 'google',
                 }
             ))   
