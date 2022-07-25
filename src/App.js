@@ -38,6 +38,7 @@ function App() {
     return (
         <div className="App">
             <NavBar />
+            <NavBarAdmin />
 
             <Routes>
                 <Route path='/' element={<HomePage />} />
@@ -52,7 +53,6 @@ function App() {
                 <Route path='/addblog' element={<AddBlogPage />} />
 
             </Routes>
-            <NavBarAdmin />
             <Footer />
             <Toaster
                 position='top-center'
