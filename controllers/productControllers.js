@@ -142,6 +142,13 @@ const productControllers = {
             error: error,
             console: console.log(error)
         })
-    }
+    },
+    // uploadProduct: async (req, res) => {
+    //     const {file} = req.files
+    //     const name = req.body.name
+    //     const description = req.body.description
+    //     const price = req.body.price 
+    // }
+    
 }
 module.exports = productControllers

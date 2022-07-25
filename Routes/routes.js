@@ -1,6 +1,6 @@
 const Router = require('express').Router();
 const validator = require ("../config/validator")
-const passport =require('../config/passport')
+const passport = require('../config/passport')
 
 
 const productControllers = require('../controllers/productControllers')
@@ -38,6 +38,9 @@ Router.route("/auth/signup").post(validator,signUpUsers)
 Router.route('/auth/token').get(passport.authenticate('jwt', {session: false}),verifyToken)
 module.exports = Router;  
 
+// Upload Blog 
+Router.route('/products/upload')
+.post(passport.authenticate('jwt', {session: false}), uploadProduct)
 
 // Blog & Comments & Likes
 Router.route('/post')
