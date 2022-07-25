@@ -40,7 +40,7 @@ module.exports = Router;
 
 // Upload Blog 
 Router.route('/products/upload')
-.post(passport.authenticate('jwt', {session: false}), uploadProduct)
+.post(passport.authenticate('jwt', {session: false}), uploadProduct) // si el usuario esta logeado y quiere subir la foto de un product debe autenticarse con passport porque es un usuario REGISTRADO
 
 // Blog & Comments & Likes
 Router.route('/post')
