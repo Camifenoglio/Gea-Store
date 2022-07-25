@@ -34,7 +34,6 @@ export default function CardBlog() {
                                     </CardContent>
                                 <CardActions className='buttom-blog_B' >
                                     <Button sx={{color:'black'}} size="small" color="primary">
-                                       
                                         Show More
                                     </Button>
                                 </CardActions>

@@ -6,13 +6,9 @@ export default function CardCredit() {
 
     return (
         <>
-                    <Button style={{ color: "black" }}>
-                        <CreditCardIcon fontSize="medium" style={{ color: "black" }} />
-                    </Button>
+            <Button style={{ color: "black" }}>
+                <CreditCardIcon fontSize="medium" style={{ color: "black" }} />
+            </Button>
         </>
     );
 }
-
-
-
-
