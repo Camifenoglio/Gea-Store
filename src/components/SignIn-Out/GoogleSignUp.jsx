@@ -27,11 +27,13 @@ function alerts(res) {
 }
 async function handleCallbackResponse(response) {
         const userObject = jwt_decode(response.credential)
+        console.log(userObject)
         const res = await dispatch(userActions.signUpUsers({
                 fullName: userObject.name,
                 email: userObject.email,
                 password: userObject.sub,
                 imageUser: userObject.picture,
+                verification: userObject.email_verified,
                 role: 'user',
                 from: 'google'
                 }
