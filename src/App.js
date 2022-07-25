@@ -15,7 +15,7 @@ import ProductsPage from './pages/ProductsPage';
 import DetailsPage from './pages/DetailsProducts';
 import AboutUsPage from './pages/AboutUsPage';
 import BlogPage from './pages/BlogPage';
-import ShoppingCart from './components/ShoppingCart';
+import ShoppingCart from './components/ShoppingCart/ShoppingCart';
 import SignInOutPage from './pages/SignInOutPage';
 import CartPage from './pages/CartPage';
 import NavBarAdmin from './components/UserAndAdmin/NavBarAdmin';
