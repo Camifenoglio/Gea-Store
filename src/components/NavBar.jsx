@@ -41,12 +41,12 @@ const pages = [
 ];
 const settings = [
     {
-    to:'/profile',
-    name: 'Profile'
-    }, 
+        to: '/profile',
+        name: 'Profile'
+    },
     {
-    to: '/sign',
-    name: 'Sign'    
+        to: '/sign',
+        name: 'Sign'
     }
 ];
 
@@ -133,16 +133,16 @@ const NavBar = () => {
                     <Box sx={{ flexGrow: 1, display: { xs: 'none', md: 'flex' } }}>
                         {pages.map((page, index) => (
                             <LinkRouter
-                            to={page.to}
-                            key={index}
-                            onClick={handleCloseNavMenu}
-                            className='underline-none'
+                                to={page.to}
+                                key={index}
+                                onClick={handleCloseNavMenu}
+                                className='underline-none'
                             >
-                            <Button
-                                sx={{ my: 2, color: '#6D8C3E ', display: 'block', fontWeight: 'bolder', width: 'fit-content' }}
-                            >
-                                {page.name}
-                            </Button>
+                                <Button
+                                    sx={{ my: 2, color: '#6D8C3E ', display: 'block', fontWeight: 'bolder', width: 'fit-content' }}
+                                >
+                                    {page.name}
+                                </Button>
                             </LinkRouter>
                         ))}
                     </Box>
@@ -175,16 +175,16 @@ const NavBar = () => {
                                     onClick={handleCloseNavMenu}
                                     className='underline-none'
                                 >
-                                <MenuItem key={index} onClick={handleCloseUserMenu}>
-                                    <Typography textAlign="center">{setting.name}</Typography>
-                                </MenuItem>
+                                    <MenuItem key={index} onClick={handleCloseUserMenu}>
+                                        <Typography textAlign="center">{setting.name}</Typography>
+                                    </MenuItem>
                                 </LinkRouter>
                             ))}
                         </Menu>
-                        <LinkRouter to='/cart'>
-                        <IconButton>
-                            <ShoppingCartOutlinedIcon style={{ color: '#6D8C3E' }} fontSize='large' />
-                        </IconButton>
+                        <LinkRouter to='/shopping-cart'>
+                            <IconButton>
+                                <ShoppingCartOutlinedIcon style={{ color: '#6D8C3E' }} fontSize='large' />
+                            </IconButton>
                         </LinkRouter>
                     </Box>
                 </Toolbar>

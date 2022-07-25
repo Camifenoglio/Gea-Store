@@ -1,16 +1,7 @@
 import { ADD_TO_CART, CLEAR_CART, REMOVE_ALL_FROM_CART, REMOVE_ONE_FROM_CART } from "../../types";
 
 export const initialState = {
-    cart: [
-        {
-            productId: "62d8198126d78fb1f4691810",
-            quantity: 5
-        },
-        {
-            productId: "62d8198126d78fb1f4691813",
-            quantity: 1
-        },
-    ],
+    cart: [],
 };
 
 export function shoppingReducers(state = initialState, action) {

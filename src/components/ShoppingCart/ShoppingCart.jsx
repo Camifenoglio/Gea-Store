@@ -74,6 +74,7 @@ const ShoppingCart = () => {
             <Stack direction="row" spacing={2} alignItems="center">
                 <h4>Total</h4>
                 <div>{new Intl.NumberFormat('us-US', { style: 'currency', currency: 'USD' }).format(total)}</div>
+                <button onClick={() => dispatch(clearCart())}>Clear Cart</button>
             </Stack>
             {/* <div className="shoppingContainer grid-resposive">
                 {cart.map((item) => {

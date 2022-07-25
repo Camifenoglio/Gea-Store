@@ -6,6 +6,8 @@ import { Link as LinkRouter } from 'react-router-dom';
 //COMPONENTS AND ACTIONS
 import productsActions from '../../redux/actions/productsActions';
 import Error from '../Error'
+import { addToCart } from "../../redux/actions/shoppingActions";
+
 
 //MUI
 import IconButton from '@mui/material/IconButton';
@@ -21,7 +23,7 @@ const arrayCategories = ["Gluten free", "Sugar free", "Lactose free", "Vegan", "
 
 export default function Products() {
 
-    const dispatch = useDispatch() 
+    const dispatch = useDispatch()
 
     // VAR DE ESTADO
     const [category, setCategory] = useState('')
@@ -35,10 +37,10 @@ export default function Products() {
         // eslint-disable-next-line react-hooks/exhaustive-deps
     }, [])
 
-    useEffect(()=> {
+    useEffect(() => {
         dispatch(productsActions.filterPerCategory(category))
         // eslint-disable-next-line react-hooks/exhaustive-deps
-    },[!reload])
+    }, [!reload])
 
     const selectCategoryBtn = async (event) => {
         setCategory(event.target.value)
@@ -48,14 +50,14 @@ export default function Products() {
         setReload(!reload)
     }
 
-    const currentStore =  useSelector(store => store.productReducers.filterPerCategory)
+    const currentStore = useSelector(store => store.productReducers.filterPerCategory)
     const filterStore = currentStore.filter(product => product.name.toLowerCase().includes(input.trim().toLowerCase()))
 
     return (
         <div className='productsPageContainer_F'>
             <div className="group searchMargin_F">
-            <SearchRoundedIcon className="icon" />
-            <input placeholder="Search" type="search" className="input" onKeyUp={(event)=> {setInput(event.target.value)}}/>
+                <SearchRoundedIcon className="icon" />
+                <input placeholder="Search" type="search" className="input" onKeyUp={(event) => { setInput(event.target.value) }} />
             </div>
 
             <div className='productAndFilters_F'>
@@ -85,9 +87,12 @@ export default function Products() {
                             </div>
                             <div className="card-footer">
                                 <span className="text-title">${product.price}.00</span>
-                                <IconButton className="card-button">
-                                    <LocalGroceryStoreOutlinedIcon fontSize='small' className="svg-icon" viewBox="0 0 20 20" />
-                                </IconButton>
+                                <LinkRouter
+                                    to={`/shopping-cart`}>
+                                    <IconButton onClick={() => dispatch(addToCart(product._id))} className="card-button">
+                                        <LocalGroceryStoreOutlinedIcon fontSize='small' className="svg-icon" viewBox="0 0 20 20" />
+                                    </IconButton>
+                                </LinkRouter>
                             </div>
                         </LinkRouter>
                     )) : <Error />}
