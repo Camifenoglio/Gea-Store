@@ -38,9 +38,9 @@ Router.route("/auth/signup").post(validator,signUpUsers)
 Router.route('/auth/token').get(passport.authenticate('jwt', {session: false}),verifyToken)
 module.exports = Router;  
 
-// Upload Blog 
-Router.route('/products/upload')
-.post(passport.authenticate('jwt', {session: false}), uploadProduct) // si el usuario esta logeado y quiere subir la foto de un product debe autenticarse con passport porque es un usuario REGISTRADO
+// // Upload Blog 
+// Router.route('/products/upload')
+// .post(passport.authenticate('jwt', {session: false}), uploadProduct) // si el usuario esta logeado y quiere subir la foto de un product debe autenticarse con passport porque es un usuario REGISTRADO
 
 // Blog & Comments & Likes
 Router.route('/post')
