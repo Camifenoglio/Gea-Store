@@ -1,7 +1,8 @@
 const initialState= {
 
     user: null ,
-        userSign:{
+    userSign:{
+        view: false,
         message:"",
         success:false
 
@@ -9,18 +10,15 @@ const initialState= {
 }
 
 const usersReducers = (state= initialState, action) => {
-  
     switch(action.type){
-        case 'GET_USER' : return {
+        case 'USER' : return {
             ...state,
             user:action.payload
-
         }
 
         case 'message' : return {
             ...state,
             userSign:action.payload
-
         }
         default: return state
     }

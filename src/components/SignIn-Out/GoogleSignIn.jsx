@@ -1,28 +1,27 @@
-import React, {useEffect} from 'react';
+import React, { useEffect } from 'react';
 import jwt_decode from 'jwt-decode';
 import {useDispatch} from 'react-redux';
-import userActions from '../redux/actions/userActions';
+import userActions from '../../redux/actions/userActions';
 // import { useNavigate } from 'react-router-dom';
-// import toast  from 'react-hot-toast';
+import toast  from 'react-hot-toast';
 
 
 function GoogleSignIn() {
     const dispatch = useDispatch();
     // const navigate = useNavigate();
 
-// function alerts(res) {
-//         if (res.data?.from === "signup") {
-//             if (res.data.success) {
-//                 toast.success(res.data.message)
-//                     navigate('/signin')
-//             } else {
-//                 toast.error(res.data.message)
-//             }
-//         }
-// }
+function alerts(res) {
+        if (res.data.from !== "form-signup") {
+            if (res.data.success) {
+                toast.success(res.data.message)
+            } else {
+                toast.error(res.data.message)
+            }
+        }
+}
 async function handleCallbackResponse(response) {
         const userObject = jwt_decode(response.credential)
-        const res = await dispatch(userActions.signIn({
+        const res = await dispatch(userActions.logInUser({
                 email: userObject.email,
                 password: userObject.sub,
                 image: userObject.picture,
@@ -30,7 +29,7 @@ async function handleCallbackResponse(response) {
                 }
             ))   
         
-        // alerts(res)
+        alerts(res)
 }
 
     useEffect(() => {
@@ -40,8 +39,8 @@ async function handleCallbackResponse(response) {
             callback: handleCallbackResponse,
         });
         google.accounts.id.renderButton(
-            document.getElementById('googleButton'),
-            { theme: "otuline", size: "standard", locale:'en', width: '90%' }
+            document.getElementById('googleButtonSignIn'),
+            { theme: "outline", size: "standard", locale:'en', width: '50%', borderRadius: '30px' }
             )
      // eslint-disable-next-line
     },[])
@@ -49,7 +48,7 @@ async function handleCallbackResponse(response) {
     return (
         <>  
         <div>
-            <div id='googleButton' class="fab fa-google-plus-g"></div>
+            <div id='googleButtonSignIn'></div>
         </div>
         </>
     )

@@ -1,11 +1,11 @@
 import '../App';
-import CardProducts from '../components/Products/CardProducts';
+import Products from '../components/Products/Products';
 
 
 function ProductsPage() {
     return (
         <>
-            <CardProducts />
+            <Products />
         </>
     );
 }
