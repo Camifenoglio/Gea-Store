@@ -6,10 +6,11 @@ import Divider from '@mui/material/Divider';
 import Box from '@mui/material/Box';
 
 import { addToCart, delFromCart, clearCart } from "../../redux/actions/shoppingActions";
-import CartItem from "./CartItem";
-import ProductItem from './ProductItem'
 import '../../styles/shoppingContainer.css';
 import { Container } from '@mui/system';
+import Swal from 'sweetalert2'
+import Paypal from '../../payform/Paypal';
+
 
 const ShoppingCart = () => {
     const dispatch = useDispatch();
@@ -22,7 +23,25 @@ const ShoppingCart = () => {
                 <CircularProgress />
             </Box>
         );
+    };
+
+    function handleDelete() {
+        Swal.fire({
+            title: 'Are you sure?',
+            text: "You won't be able to revert this!",
+            icon: 'warning',
+            showCancelButton: true,
+            confirmButtonColor: '#3085d6',
+            cancelButtonColor: '#d33',
+            confirmButtonText: 'Yes, delete it!'
+        }).then((result) => {
+
+            if (result.isConfirmed) {
+                dispatch(clearCart());
+            }
+        })
     }
+
 
     const productsById = {};
     products.forEach(product => {
@@ -62,7 +81,8 @@ const ShoppingCart = () => {
                                         </div>
                                         <button onClick={() => dispatch(delFromCart(product._id))}>-</button>
                                     </Stack>
-                                    <button onClick={() => dispatch(delFromCart(product._id, true))}>Remove</button>
+                                    <button onClick={() => dispatch(delFromCart(product._id, true))}>Remove Product
+                                    </button>
                                 </Stack>
                                 <Stack justifyContent="center">{new Intl.NumberFormat('us-US', { style: 'currency', currency: 'USD' }).format(product.price)}</Stack>
                             </Stack>
@@ -74,7 +94,17 @@ const ShoppingCart = () => {
             <Stack direction="row" spacing={2} alignItems="center">
                 <h4>Total</h4>
                 <div>{new Intl.NumberFormat('us-US', { style: 'currency', currency: 'USD' }).format(total)}</div>
+                <button onClick={() => {
+                    handleDelete()
+                }
+                }>Clear Cart</button>
             </Stack>
+            <Paypal />
+
+
+
+
+
             {/* <div className="shoppingContainer grid-resposive">
                 {cart.map((item) => {
                     const product = productsById[item.productId];
