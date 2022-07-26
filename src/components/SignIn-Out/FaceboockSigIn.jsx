@@ -35,6 +35,7 @@ const responseFacebook = async (response) => {
                 from: response.graphDomain
                 }
             )) 
+    console.log(res)
     alerts(res)
 }
     return (
