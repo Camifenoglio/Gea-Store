@@ -12,7 +12,7 @@ const {signUpUsers , logInUser,verifyMail,verifyToken, getUsers} = usersControll
 
 
 const blogControllers= require('../controllers/blogControllers')
-const {getPosts,getOnePost,uploadPost,deletePost,modifyPost,likePost,addComment,modifyComment,deleteComment} = blogControllers
+const {getPosts,getOnePost,uploadPost,deletePost,modifyPost,likePost,addComment,modifyComment,deleteComment, addBlog} = blogControllers
 
 
 
@@ -39,8 +39,9 @@ Router.route('/auth/token').get(passport.authenticate('jwt', {session: false}),v
 module.exports = Router;  
 
 // // Upload Blog 
-// Router.route('/products/upload')
-// .post(passport.authenticate('jwt', {session: false}), uploadProduct) // si el usuario esta logeado y quiere subir la foto de un product debe autenticarse con passport porque es un usuario REGISTRADO
+Router.route('/addblog')
+.post(addBlog) 
+//.post(passport.authenticate('jwt', {session: false}), addBlog) // si el usuario esta logeado y quiere subir la foto de un product debe autenticarse con passport porque es un usuario REGISTRADO
 
 // Blog & Comments & Likes
 Router.route('/post')

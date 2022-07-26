@@ -1,5 +1,6 @@
 const Blog = require('../models/blog')
 const crypto = require('crypto') 
+const path = require('path') //objeto nativo de node.js
 
 
 const blogControllers = {
@@ -185,35 +186,34 @@ const blogControllers = {
         }
     },
 
-    // addBlog: async (req,res) => {
-    //     const {file} = req.files //requiero el archivo subido
-    //     const titleBlog = req.body.title
-    //     const descriptionBlog = req.body.description
+    addBlog: async (req,res) => {
+        const {title, description} = req.body
+        const { fileUpload } = req.files //requiero el archivo subido
+        let newPost = {}
+        let error = null
 
-    //     try { //CHECKEO SI NO EXISTE UN BLOG CON ESE NOMBRE
-    //         const blogAlreadyExist = await Blog.findOne({ titleBlog })
-    //         if (blogAlreadyExist) {
-    //             res.json({
-    //                 success: false,
-    //                 message: 'EL BLOG YA EXISTE PAAA'
-    //             })
-    //         } else {
-    //             const fileName = crypto.randomBytes(10).toString('hex') + '.' + file.name.split('.')[file.name.split('.').length - 1]; //genera un nombre de archivo random al archivo subido por si alguna vez dos usuarios suber archivos diferentes pero con el mismo nombre => evita que se soobreescriban
-    //             const imageFileRoute = `${__dirname}../frontend/public/images/blog/${fileName}` // ruta donde se guarda la imagen subida! __dirname => palabra reservada? Si
-    //             file.mv((imageFileRoute, err) => { // aplicamos el metodo move(mv) mueve el archivo a la ruta especificada con el primer parametro
-    //                 if (err) {
-    //                     console.log(err)
-    //                 } else {
-    //                     console.log('SE CARGO EL ARCHIVO 🎉')
-    //                 }
-    //             })
-    //         }
-    //     } catch (error) {
-    //         console.log(error)
-    //         res.json({ success: false, message: "SALIO MAL PA" }) //CAPTURA EL ERROR
-    //     }
-    // },
-    
+        try{
+            const fileName = crypto.randomBytes(10).toString('hex') + '.' + fileUpload.name.split('.')[fileUpload.name.split('.').length - 1]
+            const routeFile = path.resolve('storage/blog', fileName) //resolvemos la ruta 
+            fileUpload.mv(routeFile, err => {
+                if (err) {
+                    console.log('error de upload', err)
+                } else {
+                    console.log('uploaded file')
+                }
+            })
+            newPost = await new Blog({title, fileUpload: fileName, description}).save()
+        } catch(errCatch) {
+            error = errCatch
+            console.log(error)
+        }
+        res.json({
+            response:error ? 'ERROR' : newPost,
+            success: error ? false : true,
+            error: error
+        })
+    },
+
 }
 
 module.exports = blogControllers
