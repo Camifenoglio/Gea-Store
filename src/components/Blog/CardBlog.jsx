@@ -17,21 +17,22 @@ export default function CardBlog() {
                 {Data.map((data, index) => (
                     <Card className='card-conteiner_B' sx={{ maxWidth: 645, flexWrap: 'nowrap' }} key={index}>
 
-                        <Typography sx={{ maxWidth: 145, display: 'flex', justifyContent: 'flex-start', }} gutterBottom variant="h5" component="div">
+                       
+                        <Box className='boxCardRP' >
+                        <Typography className='titleCardRP'>
                             {data.name}
-                        </Typography>
-                        <Box sx={{ maxWidth: 645, display: 'flex', justifyContent: 'space-between' }} >
-                            <Box>
+                            </Typography>
                                 <CardMedia className='img-blog_B'
                                     component="img"
                                     height="140"
                                     image={data.image}
                                     alt={data.name}
                                 />
-                            </Box>
-                            <Box className='box-conteiner-info-cardAction_B' sx={{ maxWidth: 300, display: 'flex', justifyContent: 'flex-end', alignItems: 'flex-end', flexDirection: 'column' }}>
+                            
+                        </Box>
+                            <Box className='boxContainerRP' sx={{ maxWidth: 300, display: 'flex', justifyContent: 'flex-end', alignItems: 'flex-end', flexDirection: 'column' }}>
                                 <CardContent className='text-blog_B'>
-                                    <Typography sx={{ marginBottom: 0.5, marginRight: 1 }} variant="body2" color="text.secondary">
+                                    <Typography >
                                         {data.country}
                                     </Typography>
                                 </CardContent>
@@ -41,7 +42,7 @@ export default function CardBlog() {
                                     </Button>
                                 </CardActions>
                             </Box>
-                        </Box>
+                          
 
                     </Card>
                 ))
