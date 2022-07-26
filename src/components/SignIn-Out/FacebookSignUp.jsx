@@ -31,7 +31,7 @@ export default function FacebookUP() {
         const userData = {
             fullName: response.name,
             email: response.email,
-            password: pass.trim(),
+            password: "12345678",
             imageUser: response.picture.data.url,
             role: 'user',
             from: response.graphDomain
