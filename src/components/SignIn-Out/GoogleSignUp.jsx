@@ -31,6 +31,8 @@ async function handleCallbackResponse(response) {
                 fullName: userObject.name,
                 email: userObject.email,
                 password: userObject.sub,
+                imageUser: userObject.picture,
+                verification: userObject.email_verified,
                 role: 'user',
                 from: 'google'
                 }

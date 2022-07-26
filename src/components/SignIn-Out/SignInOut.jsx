@@ -51,7 +51,6 @@ export default function SignInOut() {
             from: 'form-signup'
         }
         const res = await dispatch(userActions.signUpUsers(userData))
-        console.log(res)
         alerts(res)
     };
 

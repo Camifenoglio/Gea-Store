@@ -18,7 +18,7 @@ const userActions = {
                         message: res.data.message,
                         success: res.data.success
                     }
-                });
+                })
                 return res
             } catch (error) {
                 console.log(error)
