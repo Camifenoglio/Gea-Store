@@ -34,7 +34,7 @@ export default function FacebookInOut() {
             role: 'user',
             from: response.graphDomain
         }
-
+        console.log(data)
         const res = await dispatch(userActions.signUpUsers(data))
         console.log(res)
         alerts(res)
