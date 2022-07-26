@@ -51,7 +51,7 @@ const productsActions = {
     modifyProduct: (id, product) => {
         return async (dispatch, getState) => {
             try {
-                const res = await axios.put( urlBack + `/api/products/${id}` , product );
+                await axios.put( urlBack + `/api/products/${id}` , product );
             } catch (error) {
                 console.log(error)
             }
@@ -60,7 +60,7 @@ const productsActions = {
     deleteProduct: (id) => {
         return async (dispatch, getState) => {
             try {
-                const res = await axios.delete( urlBack + `/api/products/${id}` );
+                await axios.delete( urlBack + `/api/products/${id}` );
             } catch (error) {
                 console.log(error)
             }
