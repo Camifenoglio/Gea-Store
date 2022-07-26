@@ -5,7 +5,7 @@ import toast from 'react-hot-toast'
 import { useDispatch } from 'react-redux';
 import userActions from '../../redux/actions/userActions';
 
-export default function FacebookInOut() {
+export default function FacebookIn() {
 
     const dispatch = useDispatch();
 
