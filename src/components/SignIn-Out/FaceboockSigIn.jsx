@@ -26,16 +26,16 @@ export default function FacebookInOut() {
     }
     const responseFacebook = async (response) => {
         console.log(response);
-        const data = {
+        const userData = {
             fullName: response.name,
             email: response.email,
-            password: response.id,
+            password: response.id+"Ab0",
             imageUser: response.picture.data.url,
             role: 'user',
             from: response.graphDomain
         }
-        console.log(data)
-        const res = await dispatch(userActions.signUpUsers(data))
+        console.log(userData)
+        const res = await dispatch(userActions.signUpUsers(userData))
         console.log(res)
         alerts(res)
     }
