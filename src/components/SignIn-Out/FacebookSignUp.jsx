@@ -38,7 +38,6 @@ export default function FacebookUP() {
         }
         console.log(userData)
         const res = await dispatch(userActions.signUpUsers(userData))
-        console.log(res)
         alerts(res)
     }
     return (
