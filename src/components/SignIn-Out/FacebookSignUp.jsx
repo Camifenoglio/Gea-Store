@@ -25,9 +25,6 @@ export default function FacebookUP() {
         }
     }
     const responseFacebook = async (response) => {
-        const pass = response.id + "Ab0"
-        console.log(pass)
-        console.log(response);
         const userData = {
             fullName: response.name,
             email: response.email,
@@ -36,7 +33,6 @@ export default function FacebookUP() {
             role: 'user',
             from: response.graphDomain
         }
-        console.log(userData)
         const res = await dispatch(userActions.signUpUsers(userData))
         alerts(res)
     }

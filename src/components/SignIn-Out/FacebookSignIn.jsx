@@ -25,15 +25,12 @@ export default function FacebookIn() {
         }
     }
     const responseFacebook = async (response) => {
-        console.log(response);
         const logedUser = {
             email: response.email,
-            password: response.id +"Ab0",
+            password: "12345678",
             from: response.graphDomain
         }
-        console.log(logedUser)
         const res = await dispatch(userActions.logInUser(logedUser))
-        console.log(res)
         alerts(res)
     }
     return (
