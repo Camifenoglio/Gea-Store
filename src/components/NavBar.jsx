@@ -1,7 +1,11 @@
 import * as React from 'react';
 import { Link as LinkRouter } from 'react-router-dom';
+<<<<<<< HEAD
 import { useSelector } from 'react-redux'
 
+=======
+import { useSelector } from 'react-redux';
+>>>>>>> df6944dda87c1f55608a0451da90d8746210c0ab
 // MUI
 import AppBar from '@mui/material/AppBar';
 import Box from '@mui/material/Box';
@@ -16,10 +20,16 @@ import Button from '@mui/material/Button';
 import Tooltip from '@mui/material/Tooltip';
 import MenuItem from '@mui/material/MenuItem';
 import ShoppingCartOutlinedIcon from '@mui/icons-material/ShoppingCartOutlined';
+<<<<<<< HEAD
 import Badge from '@mui/material/Badge';
+=======
+import AccountCircleIcon from '@mui/icons-material/AccountCircle';
+import { useDispatch } from 'react-redux'
+>>>>>>> df6944dda87c1f55608a0451da90d8746210c0ab
 
 //STYLES
 import '../styles/navbar.css'
+import userActions from '../redux/actions/userActions';
 // ['Home', 'Products', 'About Us', 'Blog']
 
 
@@ -53,12 +63,26 @@ const settings = [
 ];
 
 
-const NavBar = () => {
+const NavBar = (props) => {
 
     const [anchorElNav, setAnchorElNav] = React.useState(null);
     const [anchorElUser, setAnchorElUser] = React.useState(null);
+<<<<<<< HEAD
     const count = useSelector(store => store.shoppingReducers.cart);
     console.log(count)
+=======
+
+    const dispatch = useDispatch()
+
+
+    async function signOut(){
+        await dispatch(userActions.logOutUser())
+    }
+
+    const user = useSelector(store => store.usersReducers.user)
+    console.log(user)
+
+>>>>>>> df6944dda87c1f55608a0451da90d8746210c0ab
     const handleOpenNavMenu = (event) => {
         setAnchorElNav(event.currentTarget);
     };
@@ -152,7 +176,13 @@ const NavBar = () => {
                     <Box sx={{ flexGrow: 0, justifyContent: 'space-between' }}>
                         <Tooltip title="Open settings">
                             <IconButton onClick={handleOpenUserMenu} sx={{ p: 0, color: '#6D8C3E' }}>
-                                <Avatar alt="Remy Sharp" src="/static/images/avatar/2.jpg" />
+                                {user ?
+                                    <Box sx={{ display: 'flex', justifyContent: 'center', alignItems: 'center', flexDirection: 'row' }}>
+                                        <Typography sx={{ color: 'black' }}>{user.fullName}</Typography>
+                                        <Avatar src={user.imageUser} alt='imgUsuario' />
+                                    </Box> :
+                                    <AccountCircleIcon />
+                                }
                             </IconButton>
                         </Tooltip>
                         <Menu
@@ -178,6 +208,7 @@ const NavBar = () => {
                                     onClick={handleCloseNavMenu}
                                     className='underline-none'
                                 >
+<<<<<<< HEAD
                                     <MenuItem key={index} onClick={handleCloseUserMenu}>
                                         <Typography textAlign="center">{setting.name}</Typography>
                                     </MenuItem>
@@ -189,6 +220,21 @@ const NavBar = () => {
                                 <Badge color='error' badgeContent={count.length}>
                                     <ShoppingCartOutlinedIcon style={{ color: '#6D8C3E' }} fontSize='large' />
                                 </Badge >
+=======
+                                    {user ?
+                                        <MenuItem>
+                                            <Typography textAlign="center" onClick={signOut}>LogOut</Typography>
+                                        </MenuItem> :
+                                        <MenuItem key={index} onClick={handleCloseUserMenu}>
+                                            <Typography textAlign="center">{setting.name}</Typography>
+                                        </MenuItem>}
+                                </LinkRouter>
+                            ))}
+                        </Menu>
+                        <LinkRouter to='/cart'>
+                            <IconButton>
+                                <ShoppingCartOutlinedIcon style={{ color: '#6D8C3E' }} fontSize='large' />
+>>>>>>> df6944dda87c1f55608a0451da90d8746210c0ab
                             </IconButton>
                         </LinkRouter>
                     </Box>
@@ -198,3 +244,19 @@ const NavBar = () => {
     );
 };
 export default NavBar;
+
+
+
+
+// {props.user ?
+//         <MenuItem>
+//             <Typography textAlign="center" onClick={signOut}>LogOut</Typography>
+//         </MenuItem>
+//     :
+//     settings.map((setting, index) => (
+//         <LinkRouter key={index} to={setting.to} onClick={handleCloseUserMenu}>
+//             <MenuItem>
+//                 <button>{setting.name}</button>
+//             </MenuItem>
+//         </LinkRouter>
+//     ))}
