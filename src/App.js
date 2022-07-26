@@ -18,7 +18,7 @@ import BlogPage from './pages/BlogPage';
 import ShoppingCart from './components/ShoppingCart/ShoppingCart';
 import SignInOutPage from './pages/SignInOutPage';
 import CartPage from './pages/CartPage';
-// import NavBarAdmin from './components/UserAndAdmin/NavBarAdmin';
+import NavBarAdmin from './components/UserAndAdmin/NavBarAdmin';
 import AddProductPage from './components/UserAndAdmin/AddProductPage.jsx'
 import AddBlogPage from './components/UserAndAdmin/AddBlogPage.jsx'
 import { connect } from 'react-redux'
