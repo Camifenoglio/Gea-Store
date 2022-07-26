@@ -213,7 +213,6 @@ const blogControllers = {
             error: error
         })
     },
-
 }
 
 module.exports = blogControllers

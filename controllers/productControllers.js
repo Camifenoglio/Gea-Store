@@ -143,12 +143,32 @@ const productControllers = {
             console: console.log(error)
         })
     },
-    // uploadProduct: async (req, res) => {
-    //     const {file} = req.files
-    //     const name = req.body.name
-    //     const description = req.body.description
-    //     const price = req.body.price 
-    // }
-    
+    addProduct: async (req,res) => {
+        const {name, description, price, category, stock } = req.body
+        const { fileUpload } = req.files //requiero el archivo subido
+        let newProduct = {}
+        let error = null
+
+        try{
+            const fileName = crypto.randomBytes(10).toString('hex') + '.' + fileUpload.name.split('.')[fileUpload.name.split('.').length - 1]
+            const routeFile = path.resolve('storage/blog', fileName) //resolvemos la ruta 
+            fileUpload.mv(routeFile, err => {
+                if (err) {
+                    console.log('error de upload', err)
+                } else {
+                    console.log('uploaded file')
+                }
+            })
+            newProduct = await new Blog({title, fileUpload: fileName, description}).save()
+        } catch(errCatch) {
+            error = errCatch
+            console.log(error)
+        }
+        res.json({
+            response:error ? 'ERROR' : newProduct,
+            success: error ? false : true,
+            error: error
+        })
+    },
 }
 module.exports = productControllers

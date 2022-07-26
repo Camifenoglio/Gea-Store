@@ -13,6 +13,7 @@ const PORT = process.env.PORT || 8000;
 
 // Middleware
 app.use(express.static(path.join(__dirname, 'storage/blog'))) //ruta donde vamos a guardar nuesta imagen
+app.use(express.static(path.join(__dirname, 'storage/product'))) //ruta donde vamos a guardar nuesta imagen
 app.use(cors());
 app.use(fileUpload()) 
 app.use(express.json());
