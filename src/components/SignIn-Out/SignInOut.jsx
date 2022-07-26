@@ -5,6 +5,7 @@ import { useDispatch } from "react-redux";
 import toast from 'react-hot-toast'
 import GoogleSignUp from './GoogleSignUp';
 import GoogleSignIn from "./GoogleSignIn";
+import FacebookSignIn from "./FaceboockSigIn";
 
 export default function SignInOut() {
     const dispatch = useDispatch();
@@ -75,7 +76,7 @@ export default function SignInOut() {
                         <form className="formSign_F" onSubmit={handleSubmitSignUp}>
                             <h1 className="titleSignUp_F">Create Account</h1>
                             <div className="social-container">
-                                
+                                <FacebookSignIn />
                                 <GoogleSignUp />
                                 
                             </div>
@@ -90,7 +91,7 @@ export default function SignInOut() {
                         <form className="formSign_F"  onSubmit={handleSubmitSignIn}>
                             <h1 className="titleSignUp_F">Sign in</h1>
                             <div className="social-container">
-                                
+                                <FacebookSignIn />
                                 <GoogleSignIn />
                                 
                             </div>

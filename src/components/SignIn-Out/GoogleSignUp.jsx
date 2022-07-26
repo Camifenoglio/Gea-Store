@@ -3,7 +3,7 @@ import jwt_decode from 'jwt-decode';
 import {useDispatch} from 'react-redux';
 import userActions from '../../redux/actions/userActions';
 import toast from 'react-hot-toast'
-// import { useNavigate } from 'react-router-dom';
+import '../../styles/signinout.css'
 
 
 function GoogleSignUp() {
@@ -56,7 +56,7 @@ async function handleCallbackResponse(response) {
     return (
         <>  
         <div>
-            <div id='googleButton' ></div>
+            <div id='googleButton'></div>
         </div>
         </>
     )

@@ -228,6 +228,26 @@ button.ghost {
 	width: 40px;
 }
 
+.facebook-login {
+	background-color: #3B5998;
+    border-radius: 50px;
+    color: white;
+    height: 40px;
+    text-align: center;
+    width: 250px;
+	
+}
+.btn-google{
+	border-radius: 50px !important;
+	color: white;
+	height: 40px;
+	text-align: center;
+	width: 250px;
+}
+.btn-facebook{
+margin: 0.5rem auto;
+}
+
 @media (max-width: 520px) {
 
 	.formSign_F {
