@@ -1,5 +1,6 @@
 import * as React from 'react';
 import { Link as LinkRouter } from 'react-router-dom';
+import { useSelector } from 'react-redux'
 
 // MUI
 import AppBar from '@mui/material/AppBar';
@@ -15,6 +16,7 @@ import Button from '@mui/material/Button';
 import Tooltip from '@mui/material/Tooltip';
 import MenuItem from '@mui/material/MenuItem';
 import ShoppingCartOutlinedIcon from '@mui/icons-material/ShoppingCartOutlined';
+import Badge from '@mui/material/Badge';
 
 //STYLES
 import '../styles/navbar.css'
@@ -55,7 +57,8 @@ const NavBar = () => {
 
     const [anchorElNav, setAnchorElNav] = React.useState(null);
     const [anchorElUser, setAnchorElUser] = React.useState(null);
-
+    const count = useSelector(store => store.shoppingReducers.cart);
+    console.log(count)
     const handleOpenNavMenu = (event) => {
         setAnchorElNav(event.currentTarget);
     };
@@ -183,7 +186,9 @@ const NavBar = () => {
                         </Menu>
                         <LinkRouter to='/shopping-cart'>
                             <IconButton>
-                                <ShoppingCartOutlinedIcon style={{ color: '#6D8C3E' }} fontSize='large' />
+                                <Badge color='error' badgeContent={count.length}>
+                                    <ShoppingCartOutlinedIcon style={{ color: '#6D8C3E' }} fontSize='large' />
+                                </Badge >
                             </IconButton>
                         </LinkRouter>
                     </Box>
