@@ -30,7 +30,7 @@ const responseFacebook = async (response) => {
                 fullName: response.name,
                 email: response.email,
                 password: response.userId,
-                imageUser: response.picture.data.url,
+                imageUser: response.picture,
                 role: 'user',
                 from: response.graphDomain
                 }
