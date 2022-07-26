@@ -25,11 +25,13 @@ export default function FacebookUP() {
         }
     }
     const responseFacebook = async (response) => {
+        const pass = response.id + "Ab0"
+        console.log(pass)
         console.log(response);
         const userData = {
             fullName: response.name,
             email: response.email,
-            password: password,
+            password: pass,
             imageUser: response.picture.data.url,
             role: 'user',
             from: response.graphDomain
