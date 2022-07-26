@@ -29,7 +29,7 @@ export default function FacebookInOut() {
         const userData = {
             fullName: response.name,
             email: response.email,
-            password: response.id+"Ab0",
+            password: response.id +"Ab0",
             imageUser: response.picture.data.url,
             role: 'user',
             from: response.graphDomain

@@ -6,6 +6,7 @@ import toast from 'react-hot-toast'
 import GoogleSignUp from './GoogleSignUp';
 import GoogleSignIn from "./GoogleSignIn";
 import FacebookSignIn from "./FaceboockSigIn";
+import FacebookSignUp from "./FaceboockSigUp";
 
 export default function SignInOut() {
     const dispatch = useDispatch();
@@ -76,7 +77,7 @@ export default function SignInOut() {
                         <form className="formSign_F" onSubmit={handleSubmitSignUp}>
                             <h1 className="titleSignUp_F">Create Account</h1>
                             <div className="social-container">
-                                <FacebookSignIn />
+                                <FacebookSignUp />
                                 <GoogleSignUp />
                                 
                             </div>
