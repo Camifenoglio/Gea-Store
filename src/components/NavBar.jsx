@@ -1,11 +1,7 @@
 import * as React from 'react';
 import { Link as LinkRouter } from 'react-router-dom';
-<<<<<<< HEAD
 import { useSelector } from 'react-redux'
 
-=======
-import { useSelector } from 'react-redux';
->>>>>>> df6944dda87c1f55608a0451da90d8746210c0ab
 // MUI
 import AppBar from '@mui/material/AppBar';
 import Box from '@mui/material/Box';
@@ -20,12 +16,9 @@ import Button from '@mui/material/Button';
 import Tooltip from '@mui/material/Tooltip';
 import MenuItem from '@mui/material/MenuItem';
 import ShoppingCartOutlinedIcon from '@mui/icons-material/ShoppingCartOutlined';
-<<<<<<< HEAD
 import Badge from '@mui/material/Badge';
-=======
 import AccountCircleIcon from '@mui/icons-material/AccountCircle';
 import { useDispatch } from 'react-redux'
->>>>>>> df6944dda87c1f55608a0451da90d8746210c0ab
 
 //STYLES
 import '../styles/navbar.css'
@@ -67,22 +60,19 @@ const NavBar = (props) => {
 
     const [anchorElNav, setAnchorElNav] = React.useState(null);
     const [anchorElUser, setAnchorElUser] = React.useState(null);
-<<<<<<< HEAD
     const count = useSelector(store => store.shoppingReducers.cart);
     console.log(count)
-=======
 
     const dispatch = useDispatch()
 
 
-    async function signOut(){
+    async function signOut() {
         await dispatch(userActions.logOutUser())
     }
 
     const user = useSelector(store => store.usersReducers.user)
     console.log(user)
 
->>>>>>> df6944dda87c1f55608a0451da90d8746210c0ab
     const handleOpenNavMenu = (event) => {
         setAnchorElNav(event.currentTarget);
     };
@@ -200,47 +190,36 @@ const NavBar = (props) => {
                             }}
                             open={Boolean(anchorElUser)}
                             onClose={handleCloseUserMenu}
-                        >
-                            {settings.map((setting, index) => (
+                        >{!user ?
+
+                            settings.map((setting, index) => (
                                 <LinkRouter
                                     to={setting.to}
                                     key={index}
                                     onClick={handleCloseNavMenu}
                                     className='underline-none'
                                 >
-<<<<<<< HEAD
                                     <MenuItem key={index} onClick={handleCloseUserMenu}>
                                         <Typography textAlign="center">{setting.name}</Typography>
                                     </MenuItem>
                                 </LinkRouter>
-                            ))}
+                            ))
+                            : <MenuItem>
+                                <Typography textAlign="center" onClick={signOut}>LogOut</Typography>
+                            </MenuItem>}
                         </Menu>
                         <LinkRouter to='/shopping-cart'>
                             <IconButton>
                                 <Badge color='error' badgeContent={count.length}>
                                     <ShoppingCartOutlinedIcon style={{ color: '#6D8C3E' }} fontSize='large' />
                                 </Badge >
-=======
-                                    {user ?
-                                        <MenuItem>
-                                            <Typography textAlign="center" onClick={signOut}>LogOut</Typography>
-                                        </MenuItem> :
-                                        <MenuItem key={index} onClick={handleCloseUserMenu}>
-                                            <Typography textAlign="center">{setting.name}</Typography>
-                                        </MenuItem>}
-                                </LinkRouter>
-                            ))}
-                        </Menu>
-                        <LinkRouter to='/cart'>
-                            <IconButton>
-                                <ShoppingCartOutlinedIcon style={{ color: '#6D8C3E' }} fontSize='large' />
->>>>>>> df6944dda87c1f55608a0451da90d8746210c0ab
-                            </IconButton>
+                            </IconButton >
                         </LinkRouter>
+
                     </Box>
                 </Toolbar>
             </Container>
-        </AppBar>
+        </AppBar >
     );
 };
 export default NavBar;
