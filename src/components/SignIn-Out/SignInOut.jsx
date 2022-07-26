@@ -5,8 +5,8 @@ import { useDispatch } from "react-redux";
 import toast from 'react-hot-toast'
 import GoogleSignUp from './GoogleSignUp';
 import GoogleSignIn from "./GoogleSignIn";
-import FacebookSignIn from "./FaceboockSigIn";
-import FacebookSignUp from "./FaceboockSigUp";
+import FacebookSignIn from "./FacebookSigIn";
+import FacebookSignUp from "./FacebookSigUp";
 
 export default function SignInOut() {
     const dispatch = useDispatch();
