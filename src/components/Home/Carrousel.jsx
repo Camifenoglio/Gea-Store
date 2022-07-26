@@ -25,7 +25,6 @@ export default function Carrousel() {
     }, [])
 
     const allProducts = useSelector(store => store.productReducers.products)
-    console.log(allProducts)
 
 
     return (
