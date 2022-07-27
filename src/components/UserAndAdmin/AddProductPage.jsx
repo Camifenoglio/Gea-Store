@@ -19,6 +19,7 @@ import productsActions from "../../redux/actions/productsActions";
 
 // STYLES
 import '../../styles/addProductForm.css'
+import NavBarAdmin from "./NavBarAdmin";
 
 const popular = ['Yes', 'No']
 const arrayCategories = ["Gluten free", "Sugar free", "Lactose free", "Vegan", "Canned food", "Sweets and jams", "Flours and more", "Cookies, bakery and more", "Nuts, seeds and more", "Snacks", "Rice and pasta", "Oils, dressings and more", "Sugar, sweeteners and more", "Broths, soups and sauces", "Cereals, granola and more", "Chocolate and more"]
@@ -111,7 +112,11 @@ export default function AddProductPage() {
     }
 
     return (
+<>
+        <NavBarAdmin />
         <div className="formContainerProduct_F">
+                            
+
             <Box className="form" component="form" onSubmit={handleSubmit} >
 
                 <TextField
@@ -229,5 +234,6 @@ export default function AddProductPage() {
                 <Button type="submit" color="success" variant="contained" style={{ height: '3rem' }}>Add Product</Button>
             </Box>
         </div>
+    </>
     )
 }

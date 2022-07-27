@@ -65,6 +65,11 @@ const settingProfile = [
         to: '/user',
         name: 'Profile'
     },
+    {
+        to: '/buys',
+        name: 'Buying History'
+    }
+
 ]
     const user = useSelector(store => store.usersReducers.user)
 
@@ -200,7 +205,7 @@ const settingProfile = [
                                 </LinkRouter>
                             ))
                             : (settingProfile.map((setting, index) => (
-                            <LinkRouter key={index} to={setting.to}>
+                            <LinkRouter key={index} to={setting.to} className='underline-none'>
                             <MenuItem >
                                 <Typography textAlign="center">{setting.name}</Typography>
                             </MenuItem>

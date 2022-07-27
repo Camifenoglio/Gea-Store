@@ -23,7 +23,7 @@ import AddBlogPage from './components/UserAndAdmin/AddBlogPage.jsx'
 import {connect} from 'react-redux'
 import AdminPage from './pages/AdminPage';
 import UserProfile from './pages/UserProfile';
-import NavBarAdmin from './components/UserAndAdmin/NavBarAdmin';
+import BuyingHistoy from './pages/BuyingHistory';
 
 //ACTIONS
 import productsActions from './redux/actions/productsActions';
@@ -55,7 +55,8 @@ function App(props) {
                 <Route path='/blog' element={<BlogPage />} />
                 <Route path='/user' element={props.user?.role === 'admin'? <AdminPage/> : <UserProfile />} />
                 <Route path='/shopping-cart' element={<ShoppingCart />} />
-                <Route path='/sign' element={props.user ? <UserProfile/> : <SignInOutPage />} />
+                <Route path='/buys' element={<BuyingHistoy />} />
+                <Route path='/sign' element={props.user ? <HomePage/> : <SignInOutPage />} />
                 <Route path='/cart' element={<CartPage />} />
                 <Route path='/addproduct' element={<AddProductPage />} />
                 <Route path='/addblog' element={<AddBlogPage />} />

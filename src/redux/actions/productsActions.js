@@ -24,7 +24,7 @@ const productsActions = {
         }
     },
     filterPerCategory: (input) => {
-        console.log(input)
+        // console.log(input)
         return async (dispatch, getState) => {
             try {
                 dispatch({ type: 'FILTER_PER_CATEGORY', payload: input });
