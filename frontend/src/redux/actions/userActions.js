@@ -7,7 +7,7 @@ const userActions = {
             try {
                 const res = await axios.post(urlBack, '/api/auth/signup', { userData })
 
-                console.log(res)
+                //console.log(res)
                 dispatch({
                     type: 'message',
                     payload: {
@@ -27,10 +27,10 @@ const userActions = {
 
 
     logInUser: (logedUser) => {
-        console.log(logedUser)
+        //console.log(logedUser)
         return async (dispatch, getState) => {
             const user = await axios.post(urlBack, '/api/auth/signin', { logedUser })
-            console.log(user)
+            //console.log(user)
             if (user.data.success) {
 
                 localStorage.setItem('token', user.data.response.token)

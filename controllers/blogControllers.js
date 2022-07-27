@@ -43,7 +43,7 @@ const blogControllers = {
     },
 
     uploadPost: async (req,res) => {
-        console.log(req.body)
+        //console.log(req.body)
         const {title, text} = req.body
         const userPost = req.user._id
         try {
@@ -169,7 +169,7 @@ const blogControllers = {
     },
 
     deleteComment: async (req, res) => {
-        console.log(req.params.id)
+        //console.log(req.params.id)
         const commentId = req.params.id
         const user = req.user._id
         try {
@@ -189,6 +189,7 @@ const blogControllers = {
     addBlog: async (req,res) => {
         const {title, description} = req.body
         const { fileUpload } = req.files //requiero el archivo subido
+        //console.log(fileUpload)
         let newPost = {}
         let error = null
 

@@ -1,5 +1,8 @@
 const { model } = require('mongoose');
 const Product = require('../models/product');
+const crypto = require('crypto') 
+const path = require('path') //objeto nativo de node.js
+
 
 
 const productControllers = {
@@ -24,30 +27,6 @@ const productControllers = {
         let error = null
         try {
             product = await Product.findOne({ _id: id }).populate('shoppingCart')
-        } catch (err) {
-            error = err
-        }
-        res.json({
-            response: error ? 'ERROR' : product,
-            success: error ? false : true,
-            error: error,
-            console: console.log(error)
-        })
-    },
-    createProduct: async (req, res) => {
-        const { name, description, price, image, category, stock, imageInfo } = req.body
-        let product
-        let error = null
-        try {
-            product = await new Product({
-                name,
-                description,
-                price,
-                image,
-                category,
-                stock,
-                imageInfo
-            }).save()
         } catch (err) {
             error = err
         }
@@ -144,22 +123,41 @@ const productControllers = {
         })
     },
     addProduct: async (req,res) => {
+
         const {name, description, price, category, stock } = req.body
-        const { fileUpload } = req.files //requiero el archivo subido
-        let newProduct = {}
+        const { image } = req.files //requiero el archivo subido
+        const { imageInfo} = req.files
         let error = null
 
         try{
-            const fileName = crypto.randomBytes(10).toString('hex') + '.' + fileUpload.name.split('.')[fileUpload.name.split('.').length - 1]
-            const routeFile = path.resolve('storage/blog', fileName) //resolvemos la ruta 
-            fileUpload.mv(routeFile, err => {
+            const fileName = crypto.randomBytes(10).toString('hex') + '.' + image.name.split('.')[image.name.split('.').length - 1]
+                const routeFile = path.resolve('storage/product', fileName) //resolvemos la ruta 
+            const fileNameInfo = crypto.randomBytes(10).toString('hex') + '.' + imageInfo.name.split('.')[imageInfo.name.split('.').length - 1]
+                const routeFileTwo = path.resolve('storage/product-info', fileNameInfo)
+            image.mv(routeFile, err => {
                 if (err) {
-                    console.log('error de upload', err)
+                    console.log('error de upload de imagen 1', err)
                 } else {
-                    console.log('uploaded file')
+                    console.log('uploaded file 1')
                 }
             })
-            newProduct = await new Blog({title, fileUpload: fileName, description}).save()
+            imageInfo.mv(routeFileTwo, err => {
+                if (err) {
+                    console.log('error de upload de imagen 2', err)
+                } else {
+                    console.log('uploaded file 2')
+                }
+            })
+            newProduct = await new Product({
+                name,
+                description, 
+                price, 
+                image: `https://gea-store-backend.herokuapp.com/api/product/${fileName}`, 
+                //image: `http://localhost:4000/product/${fileName}`, 
+                category, 
+                stock, 
+                imageInfo:`https://gea-store-backend.herokuapp.com/api/product-info/${fileNameInfo}`,
+            }).save()
         } catch(errCatch) {
             error = errCatch
             console.log(error)

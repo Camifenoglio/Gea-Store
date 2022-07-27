@@ -4,7 +4,7 @@ const passport = require('../config/passport')
 
 
 const productControllers = require('../controllers/productControllers')
-const {getAllProducts, getProduct, createProduct, modifyProduct, deleteProduct, addFavorite, createMultlipeProduct} = productControllers
+const {getAllProducts, getProduct, modifyProduct, deleteProduct, addFavorite, createMultlipeProduct, addProduct} = productControllers
 
 const usersControllers = require("../controllers/usersControllers")
 const {signUpUsers , logInUser,verifyMail,verifyToken, getUsers} = usersControllers;
@@ -19,7 +19,7 @@ const {getPosts,getOnePost,uploadPost,deletePost,modifyPost,likePost,addComment,
 // Products
 Router.route('/products')
 .get(getAllProducts)
-.post(createProduct)
+.post(addProduct)
 
 Router.route('/products/:id')
 .get(getProduct)
