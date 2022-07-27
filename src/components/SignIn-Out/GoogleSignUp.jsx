@@ -48,7 +48,7 @@ async function handleCallbackResponse(response) {
         });
         google.accounts.id.renderButton(
             document.getElementById('googleButton'),
-            { theme: "outline", size: "standard", locale:'en', width: '50%' }
+            { size: 'large',  shape: "pill", type:"icon", locale:"EN", text:"signup_with" }
             )
      // eslint-disable-next-line
     },[])
@@ -56,7 +56,9 @@ async function handleCallbackResponse(response) {
     return (
         <>  
         <div>
-            <div id='googleButton'></div>
+            <div id='googleButton'>
+                
+            </div>
         </div>
         </>
     )

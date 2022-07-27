@@ -18,15 +18,16 @@ import BlogPage from './pages/BlogPage';
 import ShoppingCart from './components/ShoppingCart/ShoppingCart';
 import SignInOutPage from './pages/SignInOutPage';
 import CartPage from './pages/CartPage';
-import NavBarAdmin from './components/UserAndAdmin/NavBarAdmin';
 import AddProductPage from './components/UserAndAdmin/AddProductPage.jsx'
 import AddBlogPage from './components/UserAndAdmin/AddBlogPage.jsx'
 import {connect} from 'react-redux'
-import userActions from '../src/redux/actions/userActions'
+import AdminPage from './pages/AdminPage';
+import UserProfile from './pages/UserProfile';
+import BuyingHistoy from './pages/BuyingHistory';
 
 //ACTIONS
 import productsActions from './redux/actions/productsActions';
-
+import userActions from '../src/redux/actions/userActions'
 
 function App(props) {
 
@@ -44,7 +45,6 @@ function App(props) {
     return (
         <div className="App">
             <NavBar />
-            <NavBarAdmin />
 
             <Routes>
                 <Route path='/' element={<HomePage />} />
@@ -53,8 +53,10 @@ function App(props) {
                 <Route path='/products/:id' element={<DetailsPage />} />
                 <Route path='/aboutus' element={<AboutUsPage />} />
                 <Route path='/blog' element={<BlogPage />} />
+                <Route path='/user' element={props.user?.role === 'admin'? <AdminPage/> : <UserProfile />} />
                 <Route path='/shopping-cart' element={<ShoppingCart />} />
-                {!props.user && <Route path='/sign' element={<SignInOutPage/>}/>}
+                <Route path='/buys' element={<BuyingHistoy />} />
+                <Route path='/sign' element={props.user ? <HomePage/> : <SignInOutPage />} />
                 <Route path='/cart' element={<CartPage />} />
                 <Route path='/addproduct' element={<AddProductPage />} />
                 <Route path='/addblog' element={<AddBlogPage />} />

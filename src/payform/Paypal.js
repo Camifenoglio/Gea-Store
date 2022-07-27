@@ -12,9 +12,9 @@ export default function PayPal() {
     const [orderID, setOrderID] = useState(false);
     const [ErrorMessage, setErrorMessage] = useState("");
 
-    console.log(1, orderID);
-    console.log(2, success);
-    console.log(3, ErrorMessage);
+    // console.log(1, orderID);
+    // console.log(2, success);
+    // console.log(3, ErrorMessage);
 
     useEffect(() => {
 

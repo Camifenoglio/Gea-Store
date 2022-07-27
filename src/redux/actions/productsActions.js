@@ -24,7 +24,7 @@ const productsActions = {
         }
     },
     filterPerCategory: (input) => {
-        console.log(input)
+        // console.log(input)
         return async (dispatch, getState) => {
             try {
                 dispatch({ type: 'FILTER_PER_CATEGORY', payload: input });
@@ -41,7 +41,8 @@ const productsActions = {
     createProduct: (product) => {
         return async (dispatch, getState) => {
             try {
-                await axios.post( urlBack + '/api/products', product );
+                //await axios.post( urlBack + '/api/products', product );
+                await axios.post( `http://localhost:4000/api/products`, product );
             } catch (error) {
                 console.log(error)
             }

@@ -55,91 +55,60 @@ const ShoppingCart = () => {
     });
 
     return (
-        <Container className='main'>
+        <div className='main'>
 
-            <Stack>
-                <Stack direction="column" spacing={1} divider={<Divider orientation="horizontal" flexItem />}>
-                    <Stack textAlign='center'>
+            <div className='main-content'>
+                <div className='titles'>
+                    <div>
                         <h2>Shopping Cart</h2>
                         <h3>Products</h3>
 
-                    </Stack>
+                    </div>
                     {cart.map((item) => {
                         const product = productsById[item.productId];
                         return (
-                            <Stack p={{ xs: 2, sm: 4 }} key={item.productId} direction="row" spacing={4} sx={{ xs: 2, sm: 4 }}>
-                                <Stack justifyContent="center" >
+                            <div className='cart-cointainer'>
+                                <div justifyContent="center" >
                                     <div className="image-container">
                                         <img src={product.image} alt={product.name} />
                                     </div>
-                                </Stack>
-                                <Stack justifyContent="center">
+                                </div>
+                                <div className='product-description'>
                                     <h3>{product.name}</h3>
                                     <Box display={{ xs: 'none', md: 'block' }}>{product.description}</Box>
-                                </Stack>
-                                <Stack justifyContent="center" direction={{ xs: "column", sm: "row" }} spacing={2}>
-                                    <Stack justifyContent="center" spacing={2}>
-                                        <Stack spacing={2} direction="row">
+                                </div>
+                                <div justifyContent="center" direction={{ xs: "column", sm: "row" }} spacing={2}>
+                                    <div justifyContent="center" spacing={2}>
+                                        <div spacing={2} direction="row">
                                             <button onClick={() => dispatch(addToCart(product._id))}>+</button>
                                             <div>
                                                 {item.quantity}
                                             </div>
                                             <button onClick={() => dispatch(delFromCart(product._id))}>-</button>
-                                        </Stack>
+                                        </div>
                                         <button onClick={() => dispatch(delFromCart(product._id, true))}>Remove Product
                                         </button>
-                                    </Stack>
-                                    <Stack justifyContent="center">{new Intl.NumberFormat('us-US', { style: 'currency', currency: 'USD' }).format(product.price)}</Stack>
-                                </Stack>
-                            </Stack>
+                                    </div>
+                                    <div justifyContent="center">{new Intl.NumberFormat('us-US', { style: 'currency', currency: 'USD' }).format(product.price)}</div>
+                                </div>
+                            </div>
                         )
                     })}
-                </Stack>
-            </Stack>
-            <Stack>
-
-                <Stack direction="row" spacing={2} alignItems="center">
-                    <h4>Total</h4>
+                </div>
+                <div className='total'>
+                    <div>
+                        <h4>Total</h4>
+                    </div>
                     <div>{new Intl.NumberFormat('us-US', { style: 'currency', currency: 'USD' }).format(total)}</div>
                     <button onClick={() => {
                         handleDelete()
                     }
                     }>Clear Cart</button>
-                </Stack>
-                <Paypal />
-
-            </Stack>
-
-
-
-
-            {/* <div className="shoppingContainer grid-resposive">
-                {cart.map((item) => {
-                    const product = productsById[item.productId];
-                    return (
-                        <ProductItem
-                            key={product._id}
-                            product={product}
-                            addtoCart={() => dispatch(addToCart(product._id))} />
-                    )
-                })}
+                    <Paypal />
+                </div>
             </div>
-            <h3>Cart</h3>
-            <div className="shoppingContainer">
-                <button onClick={() => dispatch(clearCart())}>Clear Cart</button>
-                {cart.map((item, index) => (
-                    <CartItem
-                        key={index}
-                        product={productsById[item.productId]}
-                        quantity={item.quantity}
-                        delOneFromCart={() => dispatch(delFromCart(item.productId))}
-                        delAllFromCart={() => dispatch(delFromCart(item.productId, true))}
-                    >
-                    </CartItem>
-                ))}
-            </div>
-            <h3>Total: ${total}</h3> */}
-        </Container>
+
+        </div>
     )
 }
 

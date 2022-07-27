@@ -46,7 +46,7 @@ const pages = [
 ];
 const settings = [
     {
-        to: '/profile',
+        to: '/user',
         name: 'Profile'
     },
     {
@@ -54,24 +54,24 @@ const settings = [
         name: 'Sign'
     }
 ];
-
-
 const NavBar = (props) => {
 
     const [anchorElNav, setAnchorElNav] = React.useState(null);
     const [anchorElUser, setAnchorElUser] = React.useState(null);
     const count = useSelector(store => store.shoppingReducers.cart);
-    console.log(count)
 
-    const dispatch = useDispatch()
-
-
-    async function signOut() {
-        await dispatch(userActions.logOutUser())
+const settingProfile = [
+    {
+        to: '/user',
+        name: 'Profile'
+    },
+    {
+        to: '/buys',
+        name: 'Buying History'
     }
 
+]
     const user = useSelector(store => store.usersReducers.user)
-    console.log(user)
 
     const handleOpenNavMenu = (event) => {
         setAnchorElNav(event.currentTarget);
@@ -204,9 +204,12 @@ const NavBar = (props) => {
                                     </MenuItem>
                                 </LinkRouter>
                             ))
-                            : <MenuItem>
-                                <Typography textAlign="center" onClick={signOut}>LogOut</Typography>
-                            </MenuItem>}
+                            : (settingProfile.map((setting, index) => (
+                            <LinkRouter key={index} to={setting.to} className='underline-none'>
+                            <MenuItem >
+                                <Typography textAlign="center">{setting.name}</Typography>
+                            </MenuItem>
+                        </LinkRouter>)))}
                         </Menu>
                         <LinkRouter to='/shopping-cart'>
                             <IconButton>
