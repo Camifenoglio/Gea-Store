@@ -7,11 +7,11 @@
     align-items: center;
 }
 
-.navbarAdmin_F {
+.btnAdminNav_F {
     padding: 10px !important;
 }
 
-.navbarAdmin_F:hover{
+.btnAdminNav_F:hover{
     background-color: #F2F2F2  !important;
     color: #6D8C3E;
 }
