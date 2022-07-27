@@ -21,12 +21,13 @@ import CartPage from './pages/CartPage';
 import AddProductPage from './components/UserAndAdmin/AddProductPage.jsx'
 import AddBlogPage from './components/UserAndAdmin/AddBlogPage.jsx'
 import {connect} from 'react-redux'
-import userActions from '../src/redux/actions/userActions'
+import AdminPage from './pages/AdminPage';
 import UserProfile from './pages/UserProfile';
+import NavBarAdmin from './components/UserAndAdmin/NavBarAdmin';
 
 //ACTIONS
 import productsActions from './redux/actions/productsActions';
-
+import userActions from '../src/redux/actions/userActions'
 
 function App(props) {
 
@@ -52,6 +53,7 @@ function App(props) {
                 <Route path='/products/:id' element={<DetailsPage />} />
                 <Route path='/aboutus' element={<AboutUsPage />} />
                 <Route path='/blog' element={<BlogPage />} />
+                <Route path='/user' element={props.user?.role === 'admin'? <AdminPage/> : <UserProfile />} />
                 <Route path='/shopping-cart' element={<ShoppingCart />} />
                 <Route path='/sign' element={props.user ? <UserProfile/> : <SignInOutPage />} />
                 <Route path='/cart' element={<CartPage />} />

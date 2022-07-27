@@ -7,7 +7,6 @@ import NavBarAdmin from '../components/UserAndAdmin/NavBarAdmin';
 function UserProfile() {
     return (
         <>
-            <NavBarAdmin />
             <AdminProfile/>
         </>
     );

@@ -46,14 +46,16 @@ const pages = [
 ];
 const settings = [
     {
-        to: '/profile',
-        name: 'Profile'
+        to: '/shopping-cart',
+        name: 'Cart'
     },
     {
         to: '/sign',
         name: 'Sign'
     }
 ];
+
+
 
 
 const NavBar = (props) => {
@@ -69,7 +71,16 @@ const NavBar = (props) => {
     async function signOut() {
         await dispatch(userActions.logOutUser())
     }
-
+const settingProfile = [
+    {
+        to: '/user',
+        name: 'Profile'
+    },
+    {
+        to: signOut,
+        name: 'Sign Out'
+    }
+]
     const user = useSelector(store => store.usersReducers.user)
     console.log(user)
 
@@ -204,9 +215,12 @@ const NavBar = (props) => {
                                     </MenuItem>
                                 </LinkRouter>
                             ))
-                            : <MenuItem>
-                                <Typography textAlign="center" onClick={signOut}>LogOut</Typography>
-                            </MenuItem>}
+                            : (settingProfile.map((setting, index) => (
+                            <LinkRouter key={index} to={setting.to}>
+                            <MenuItem >
+                                <Typography textAlign="center" onClick={setting.to}>{setting.name}</Typography>
+                            </MenuItem>
+                        </LinkRouter>)))}
                         </Menu>
                         <LinkRouter to='/shopping-cart'>
                             <IconButton>
