@@ -76,7 +76,6 @@ function Footer() {
                     
                 <div className="navFooter">
                     <div className="navegation">
-                        <h3 className="navegationTitle">Navegation</h3>
                         {/* <Button onClick={ScrollToTop} style={{ color: "#F2F2F2" }}>Home</Button> */}
                         {pages.map((page, index) => (
                         <LinkRouter 
