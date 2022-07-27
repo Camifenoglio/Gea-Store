@@ -45,7 +45,7 @@ export default function Products() {
     const [input, setInput] = useState('')
     const [count, setCount] = React.useState(1);
 
-    console.log(count)
+    // console.log(count)
 
 
     useEffect(() => {
