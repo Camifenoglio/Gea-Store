@@ -73,6 +73,14 @@
   /* text-shadow: 4px 4px 2px #F2A0A0; */
 }
 
+@media (max-width: 334px) {
+  .titlePopularSection_F {
+      font-size: 2rem;
+  }
+}
+.sc-ifAKCX {
+  max-width:100%!important;
+}
 
 /* #app { height: 100% }
 html,

@@ -268,8 +268,13 @@
 
     .sectionAboutTitle_F {
         text-align: left;
+<<<<<<< HEAD
         font-size: 1.2rem;
         width: 40vw;
+=======
+        font-size:1.2rem;
+       
+>>>>>>> 8a046d110c5fe7e32647e763cc99764fecb5436a
     }
 
     .BL-caja-texto {
@@ -280,10 +285,18 @@
         font-size: .7rem;
         width: 50vw;
     }
+<<<<<<< HEAD
 
     .sectionAboutTitle_F {
         font-size: 1.7rem;
         width: 90%;
         color: #1b2808;
     }
+=======
+}
+
+
+.css-nnsfc0-MuiTypography-root {
+    display:none!important;
+>>>>>>> 8a046d110c5fe7e32647e763cc99764fecb5436a
 }
