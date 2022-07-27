@@ -55,7 +55,7 @@ console.log(props.user)
                 <Route path='/blog' element={<BlogPage />} />
                 <Route path='/user' element={props.user?.role === "user" ? <UserProfile/> : <AdminPage/>} />
                 <Route path='/shopping-cart' element={<ShoppingCart />} />
-                {!props.user && <Route path='/sign' element={<SignInOutPage />} />}
+                <Route path='/sign' element={props.user ? <UserProfile/> : <SignInOutPage />} />
                 <Route path='/cart' element={<CartPage />} />
                 <Route path='/addproduct' element={<AddProductPage />} />
                 <Route path='/addblog' element={<AddBlogPage />} />
