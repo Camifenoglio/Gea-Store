@@ -7,11 +7,11 @@
     align-items: center;
 }
 
-.btnAdminNav_F {
+.btnShopping_A {
     padding: 10px !important;
 }
 
-.btnAdminNav_F:hover{
+.btnShopping_A:hover{
     background-color: #F2F2F2  !important;
     color: #6D8C3E;
 }
