@@ -5,12 +5,8 @@ import { useDispatch } from "react-redux";
 import toast from 'react-hot-toast'
 import GoogleSignUp from './GoogleSignUp';
 import GoogleSignIn from "./GoogleSignIn";
-<<<<<<< HEAD
-// import { Link as LinkRouter } from "react-router-dom"
-=======
 import FacebookSignIn from "./FacebookSignIn";
 import FacebookSignUp from "./FacebookSignUp";
->>>>>>> e38a64e24c81e13b2a534625f60ace8bfad1e8a8
 
 export default function SignInOut() {
     const dispatch = useDispatch();
@@ -96,19 +92,14 @@ export default function SignInOut() {
                         <form className="formSign_F"  onSubmit={handleSubmitSignIn}>
                             <h1 className="titleSignUp_F">Sign in</h1>
                             <div className="social-container">
-<<<<<<< HEAD
-                                <GoogleSignIn /> 
-=======
                                 <FacebookSignIn />
                                 <GoogleSignIn />
                                 
->>>>>>> e38a64e24c81e13b2a534625f60ace8bfad1e8a8
                             </div>
                             <span className="spanSign_F">or use your account</span>
                             <input className="inputSign_F" type="email" placeholder="Email" />
                             <input className="inputSign_F" type="password" placeholder="Password" />
-                            <input className="btnSign_F" type="submit" value="Sign In"/>
-                            
+                            <input className="btnSign_F" type="submit" value="Sign In" />
                         </form>
                     </div>
                     <div className="overlay-container">
@@ -116,7 +107,7 @@ export default function SignInOut() {
                             <div className="overlay-panel overlay-left">
                                 <h1 className="titleSignUp_F">Welcome Back!</h1>
                                 <p className="signText_F">To keep connected with us please login with your personal info</p>
-                                    <button className="ghost" onClick={signInButton}>Sign In</button>
+                                <button className="ghost" onClick={signInButton}>Sign In</button>
                             </div>
                             <div className="overlay-panel overlay-right">
                                 <h1 className="titleSignUp_F">Hello, Friend!</h1>

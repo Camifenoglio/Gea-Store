@@ -2,21 +2,15 @@ import React, { useEffect } from 'react';
 import jwt_decode from 'jwt-decode';
 import {useDispatch} from 'react-redux';
 import userActions from '../../redux/actions/userActions';
-import toast from 'react-hot-toast'
-import '../../styles/signinout.css'
+// import { useNavigate } from 'react-router-dom';
+import toast  from 'react-hot-toast';
 
 
-function GoogleSignUp() {
-    // const navigate = useNavigate()
+function GoogleSignIn() {
     const dispatch = useDispatch();
+    // const navigate = useNavigate();
 
 function alerts(res) {
-    const errormsg = res.data.message
-    if (res.data.from === "validator") {
-            errormsg.forEach(e => {
-                toast.error(e.message)
-            })
-        }
         if (res.data.from !== "form-signup") {
             if (res.data.success) {
                 toast.success(res.data.message)
@@ -27,17 +21,14 @@ function alerts(res) {
 }
 async function handleCallbackResponse(response) {
         const userObject = jwt_decode(response.credential)
-        const res = await dispatch(userActions.signUpUsers({
-                fullName: userObject.name,
+        const res = await dispatch(userActions.logInUser({
                 email: userObject.email,
                 password: userObject.sub,
-                imageUser: userObject.picture,
-                verification: userObject.email_verified,
-                role: 'user',
-                from: 'google'
+                from: 'google',
                 }
-            )) 
-    alerts(res)
+            ))   
+        
+        alerts(res)
 }
 
     useEffect(() => {
@@ -47,8 +38,8 @@ async function handleCallbackResponse(response) {
             callback: handleCallbackResponse,
         });
         google.accounts.id.renderButton(
-            document.getElementById('googleButton'),
-            { theme: "outline", size: "standard", locale:'en', width: '50%' }
+            document.getElementById('googleButtonSignIn'),
+            { theme: "outline", size: "standard", locale:'en', width: '50%', borderRadius: '30px' }
             )
      // eslint-disable-next-line
     },[])
@@ -56,10 +47,10 @@ async function handleCallbackResponse(response) {
     return (
         <>  
         <div>
-            <div id='googleButton'></div>
+            <div id='googleButtonSignIn'></div>
         </div>
         </>
     )
 }
 
-export default GoogleSignUp;
+export default GoogleSignIn;
