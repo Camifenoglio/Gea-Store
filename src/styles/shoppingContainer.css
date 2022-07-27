@@ -104,12 +104,12 @@
     justify-content: center;
 }
 
-.btnAdminNav_F {
+.btnShopping_A {
     border: solid 1px #6D8C3E !important;
     color: #6D8C3E !important;
 }
 
-.btnAdminNav_F:hover {
+.btnShopping_A:hover {
     background-color: #F2F2F2 !important;
     color: #6D8C3E;
 }
