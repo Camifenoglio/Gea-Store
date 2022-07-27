@@ -53,15 +53,7 @@ export default function AddProductPage() {
         } else {
             setCategoryArray(categoryArray.filter(category => category !== event.target.value))
         }
-<<<<<<< HEAD
     }
-=======
-        // if (checked === true) {
-        // setChecked(event.target.value);
-    }
-
-
->>>>>>> 8253dad6e5cff64c3101ce3b0ea62e97de1ef30c
 
 
     async function handleSubmit(event) {
@@ -97,7 +89,6 @@ export default function AddProductPage() {
         <>
             <NavBarAdmin />
             <div className="formContainerProduct_F">
-<<<<<<< HEAD
 
                 <Box className="form" component="form" onSubmit={handleSubmit} >
 
@@ -173,109 +164,6 @@ export default function AddProductPage() {
                     />
 
 
-=======
-
-
-                <Box className="form" component="form" onSubmit={handleSubmit} >
-
-                    <TextField
-                        helperText="Please enter the product name"
-                        id="produc-name"
-                        label="Product Name"
-                        variant="filled"
-                    />
-
-                    <TextField
-                        id="product-description"
-                        label="Multiline"
-                        multiline
-                        rows={4}
-                        variant="filled"
-                    />
-
-                    <TextField
-                        helperText="Please enter the product price"
-                        id="price"
-                        label="Price"
-                        variant="filled"
-                        startadornment={<InputAdornment position="start">$</InputAdornment>}
-                        InputProps={{
-                            startAdornment: (
-                                <InputAdornment position="start">
-                                    <AttachMoneyIcon />
-                                </InputAdornment>)
-                        }}
-                    />
-
-
-                    <TextField
-                        helperText="Please upload the product image"
-                        id="produc-image"
-                        type='file'
-                        variant="filled"
-                        onChange={(event) => setFiles(event.target.files)}
-                    />
-
-                    {/* <TextField
-                    select
-                    helperText="Please select the category product"
-                    id="product-category"
-                    label="Category"
-                    variant="filled"
-                    value={category}
-                    onChange={categoryChange}
-                >
-                    {arrayCategories.map((category) => (
-                        <MenuItem key={category} value={category}>{category}</MenuItem>
-                    ))}
-                </TextField> */}
-
-                    <div className="checkbox_F" variant="filled">
-                        {arrayCategories.map((category, index) => (
-                            // <div key={index} onClick={categoryCheck}>
-                            //     <label>{category}</label>
-                            //     <input  type="checkbox"
-                            //             value={category}
-
-                            //     />
-                            // </div>
-                            <FormControlLabel
-                                key={index}
-                                label={category}
-                                //onChange={(event) => setChecked(event.target.value)}
-                                id={index}
-                                control={<Checkbox
-                                    //checked={checked}
-                                    value={category}
-                                    onClick={categoryCheck}
-                                    color="success"
-                                />}
-                            />
-
-                            // <FormControlLabel  control={<Checkbox  key={category} id="category-check" value={category} color="success"
-                            // onChange={handleChange}  />} label={category}
-                            // />
-                        ))}
-                    </div>
-
-                    <TextField
-                        variant="filled"
-                        helperText="Please enter the product stock"
-                        id="produc-name"
-                        label="Product Stock"
-                    />
-
-
-                    <TextField
-                        helperText="Please upload the product information image "
-                        id="produc-image"
-                        type='file'
-                        variant="filled"
-                        onChange={(event) => setFilesTwo(event.target.files)}
-                    />
-
-
->>>>>>> 8253dad6e5cff64c3101ce3b0ea62e97de1ef30c
                     {/* <TextField
                     select
                     label="Popular product"
