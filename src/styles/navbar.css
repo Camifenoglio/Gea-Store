@@ -2,6 +2,9 @@
     background-color: #F2F2F2 !important;
     margin: 0 !important;
 }
+.css-nnsfc0-MuiTypography-root{
+    display:none;
+}
 .avatarAndCart_F {
     display: flex;
     flex-direction: row;
@@ -9,7 +12,6 @@
     align-items: center;
     width: 10%;
 }
-
 .logoContainer_F{
     background-color: #A4BF41;
     padding-left: 4vh;
@@ -45,7 +47,19 @@
     display: flex;
     gap: 3vh;
 }
-
 .css-r6ewbb-MuiToolbar-root{
     justify-content: space-between;
+}
+@media (max-width: 500px){
+    .logoContainer_F{
+        background-color: #A4BF41;
+        padding-left: 1vh;
+        padding-top: 6vw;
+        padding-bottom: 5vw;
+        padding:6px 0px 5px 1px;
+        width:37vw;
+    }
+    .css-b43s7q{
+        width:25vh;
+    }
 }

@@ -1,6 +1,6 @@
 //REACT
-import React, { useState }  from "react"
-import { useDispatch} from "react-redux";
+import React, { useState, useEffect } from "react"
+import { useDispatch } from "react-redux";
 
 
 // MUI
@@ -19,6 +19,7 @@ import productsActions from "../../redux/actions/productsActions";
 
 // STYLES
 import '../../styles/addProductForm.css'
+import NavBarAdmin from "./NavBarAdmin";
 
 const popular = ['Yes', 'No']
 const arrayCategories = ["Gluten free", "Sugar free", "Lactose free", "Vegan", "Canned food", "Sweets and jams", "Flours and more", "Cookies, bakery and more", "Nuts, seeds and more", "Snacks", "Rice and pasta", "Oils, dressings and more", "Sugar, sweeteners and more", "Broths, soups and sauces", "Cereals, granola and more", "Chocolate and more"]
@@ -39,39 +40,83 @@ export default function AddProductPage() {
     // }
 
     const dispatch = useDispatch()
+    const [checkedCategories, setCheckedCategories] = useState([])
+    console.log(checkedCategories)
 
     // VAR DE ESTADO
     const [files, setFiles] = useState([])
     const [filesTwo, setFilesTwo] = useState([])
-    console.log(files)
+    const [reload, setReload] = useState(false)
+    //const [checked, setChecked] = useState(false);
+
+    //console.log(checked)
+
+    //console.log(setChecked)
+    //console.log(files)
 
 
-    async function handleSubmit(event){
+    // useEffect(() => {
+    //     categoryCheck()
+    //     // eslint-disable-next-line
+    // }, [!reload])
+
+    function categoryCheck(event) {
+        console.log(event)
+        let check = event
+        if (check) {
+            setCheckedCategories(event.target.value)
+            setReload(!reload)
+        }
+        // if (checked === true) {
+        // setChecked(event.target.value);
+        }
+    
+
+
+
+    async function handleSubmit(event) {
         event.preventDefault()
         console.log(event)
 
-    const file = await files
-    // const file = await files[0] //toma solamente el primer archivo subido
-    // console.log(file)
-    //     const title = await event.target[0].value
-    //     const description = await event.target[2].value
-    //     console.log(title)
-    //     console.log(description)
+        const file = await files[4]
+        const fileTwo = await filesTwo[22]
+        // const file = await files[0] //toma solamente el primer archivo subido
+        console.log(files)
+        console.log(file)
+        console.log(filesTwo)
+        console.log(fileTwo)
+
+        const name = await event.target[0]
+        const description = await event.target[1]
+        const price = await event.target[3]
+        const stock = await event.target[0]
 
 
-    // // construccion de un nuevo formData
-    // const formData = await new FormData()
-    //     formData.append('title', title)
-    //     formData.append('fileUpload', file)
-    //     formData.append('description', description)
-    //     console.log(formData) //no es nada dice igna
-    
-    // await dispatch(productsActions.createProduct(formData))
 
-}
+
+        //     const title = await event.target[0].value
+        //     const description = await event.target[2].value
+        //     console.log(title)
+        //     console.log(description)
+
+
+        // // construccion de un nuevo formData
+        // const formData = await new FormData()
+        //     formData.append('title', title)
+        //     formData.append('fileUpload', file)
+        //     formData.append('description', description)
+        //     console.log(formData) //no es nada dice igna
+
+        // await dispatch(productsActions.createProduct(formData))
+
+    }
 
     return (
+<>
+        <NavBarAdmin />
         <div className="formContainerProduct_F">
+                            
+
             <Box className="form" component="form" onSubmit={handleSubmit} >
 
                 <TextField
@@ -103,13 +148,13 @@ export default function AddProductPage() {
                     }}
                 />
 
-                
+
                 <TextField
                     helperText="Please upload the product image"
                     id="produc-image"
                     type='file'
                     variant="filled"
-                    onChange={(event)=>setFiles(event.target.files)}
+                    onChange={(event) => setFiles(event.target.files)}
                 />
 
                 {/* <TextField
@@ -126,11 +171,33 @@ export default function AddProductPage() {
                     ))}
                 </TextField> */}
 
-                <FormGroup className="checkbox_F" variant="filled">
-                {arrayCategories.map((category) => (
-                    <FormControlLabel  key={category} control={<Checkbox value={category} color="success"  />} label={category} />
+                <div className="checkbox_F" variant="filled">
+                    {arrayCategories.map((category, index) => (
+                        // <div key={index} onClick={categoryCheck}>
+                        //     <label>{category}</label>
+                        //     <input  type="checkbox"
+                        //             value={category}
+                                    
+                        //     />
+                        // </div>
+                        <FormControlLabel
+                            key={index}
+                            label={category}
+                            //onChange={(event) => setChecked(event.target.value)}
+                            id={index}
+                            control={<Checkbox
+                                        //checked={checked}
+                                        value={category}
+                                        onClick={categoryCheck}
+                                        color="success"
+                                    />}
+                        />
+
+                        // <FormControlLabel  control={<Checkbox  key={category} id="category-check" value={category} color="success"
+                        // onChange={handleChange}  />} label={category}
+                        // />
                     ))}
-                </FormGroup>
+                </div>
 
                 <TextField
                     variant="filled"
@@ -139,13 +206,13 @@ export default function AddProductPage() {
                     label="Product Stock"
                 />
 
-                
+
                 <TextField
                     helperText="Please upload the product information image "
                     id="produc-image"
                     type='file'
                     variant="filled"
-                    onChange={(event)=>setFilesTwo(event.target.files)}
+                    onChange={(event) => setFilesTwo(event.target.files)}
                 />
 
 
@@ -164,8 +231,9 @@ export default function AddProductPage() {
 
                 </TextField> */}
 
-                <Button type="submit" color="success" variant="contained" style={{height: '3rem'}}>Add Product</Button>
+                <Button type="submit" color="success" variant="contained" style={{ height: '3rem' }}>Add Product</Button>
             </Box>
         </div>
+    </>
     )
 }

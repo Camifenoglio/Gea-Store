@@ -8,7 +8,10 @@ import '../../styles/cardBlog.css';
 import Data from '../Data'
 
 
+
 export default function CardBlog() {
+
+
 
 
     return (
@@ -41,6 +44,7 @@ export default function CardBlog() {
                                         Show More
                                     </Button>
                                 </CardActions>
+                                
                             </Box>
                           
 
@@ -48,10 +52,6 @@ export default function CardBlog() {
                 ))
                 }
             </div>
-
         </>
-
-
-
     );
 }

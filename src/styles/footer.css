@@ -38,20 +38,36 @@
     
 }
 .navFooter {
-    height: 20vh;
+    
     display: flex;
     flex-direction: column;
     justify-content: center;
 }
 
 .socialMedia {
-    width: 20vw;
+    display:flex;
+    flex-direction:row;
+  
+   
 }
-
+.MuiButton-root {
+    min-width:0!important;
+    margin:.5rem!important;
+}
 .footerLogo {
     max-width: 100%;
     height: 6rem !important;
 }
+
+.footerTextRP {
+    display:flex;
+    flex-direction:column;
+    align-items:center;
+    margin-left:.5rem;
+    
+    
+}
+
 
 
 
@@ -75,11 +91,10 @@
     .footerNav {
         height: fit-content;
         display: flex;
-        flex-direction: column;
+       
         align-items: center;
-        gap: 1rem;
-        padding-top: 5vw;
-        padding-bottom: 5vw;
+       
+        
     }
     .copyrg {
         height: fit-content;
@@ -89,5 +104,13 @@
 
     .footerLogo {
         height: 5rem !important ;
+    }
+}
+
+@media (min-width: 380px) {
+    .socialMedia {
+        font-size:1rem!important;
+       
+        
     }
 }

@@ -1,3 +1,74 @@
+.bannerAboutUs {
+    height: 20rem;
+    width: 100%;
+    background-image: url(https://i.imgur.com/QEY63DU.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: 25% 20%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+/* #1b2808 */
+.titleAboutUs_F {
+    font-size: 4rem;
+    color: white;
+    text-shadow: 1px 6px 4px rgba(0,0,0,0.74);
+    background-color: #595f5177;
+    height: 100%;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.whoWeAreImage_F {
+    background-image: url(https://i.imgur.com/jkSlwAN.jpg);
+    background-position: 20% 18%;
+    background-repeat: no-repeat;
+    background-size: cover;
+    height: 15rem;
+    width: 100%;
+    border-radius: 27px 200px 200px 27px;
+    -webkit-border-radius: 27px 200px 200px 27px;
+    -moz-border-radius: 27px 200px 200px 27px;
+}
+
+.philosophyImage_F{
+    background-image: url(https://i.imgur.com/UwpTfjV.jpg);
+    background-position: 20% 18%;
+    background-repeat: no-repeat;
+    background-size: cover;
+    height: 15rem;
+    width: 100%;
+    border-radius: 27px 200px 200px 27px;
+    -webkit-border-radius: 27px 200px 200px 27px;
+    -moz-border-radius: 27px 200px 200px 27px;
+}
+
+.sectionAboutTitle_F {
+    font-size: 2rem;
+    width: 60%;
+    color: #1b2808 ;
+}
+
+.infoSection_F {
+    display: flex;
+    justify-content: space-around;
+}
+
+.sectionInfo_F {
+    width: 90%;
+    font-size: 1.2rem;
+    font-weight: 500;
+    text-align: left;
+    color: #1b2808 ;
+}
+
+
+
+
+/* CARD BAUTI */
 .BL-container-about {
     display: flex;
     flex-direction: row;
@@ -8,23 +79,21 @@
 
 .BL-objetos-container-about {
     display: flex;
-    width: 80vw;
+    width: 100%;
     flex-direction: row;
     justify-content: space-around;
     align-items: center;
     min-height: 56.15vh;
-    background-image: url(https://i.imgur.com/c6Ttmlb.jpg);
-    background-repeat: no-repeat;
-    background-size: cover;
-    margin-top:1rem;
-    margin-bottom:1rem;
+    /* background-image: url(https://i.imgur.com/c6Ttmlb.jpg); */
+    margin-top: 5vh;
+    margin-bottom: 5vh;
 }
-
 .BL-div-descripciones {
     display: flex;
     flex-direction: column;
     width: 40vw;
-    margin-bottom:1rem;
+    margin-bottom: 1rem;
+    gap: 2rem;
 }
 
 .BL-caja-texto {
@@ -46,10 +115,7 @@
     align-items:center;
     width:40vw;
 }
-h2 {
-    text-align: left;
-    margin-left:1rem;
-}
+
 .BL-p-aboutUs{
     font-weight:500;
     font-size:1.3rem;
@@ -66,14 +132,17 @@ h2 {
 
     .BL-objetos-container-about {
         display: flex;
-        width: 80vw;
-        flex-direction: row;
+        width: 100vw;
+        flex-direction:column;
         justify-content: space-around;
         align-items: center;
         min-height: 46.15vh;
-        background-image: url(https://i.imgur.com/c6Ttmlb.jpg);
-        background-repeat: no-repeat;
-        background-size: cover;
+    }
+    .BL-sobre-nosotros{
+        width:50vw;
+    }
+    .BL-filosofia{
+        width:50vw;
     }
     .BL-mapa {
         display: flex;
@@ -94,17 +163,13 @@ h2 {
         align-items: center;
         min-height: 66.15vh;
     }
-
     .BL-objetos-container-about {
         display: flex;
-        width: 80vw;
+        width: 100vw;
         flex-direction:column;
         justify-content: space-around;
         align-items: center;
         min-height: 56.15vh;
-        background-image: url(https://i.imgur.com/c6Ttmlb.jpg);
-        background-repeat: no-repeat;
-        background-size: cover;
     }
     .BL-div-descripciones {
         display: flex;
@@ -137,15 +202,18 @@ h2 {
         align-items: center;
         min-height: 66.15vh;
     }
-
+    .infoSection_F {
+        display: flex;
+        flex-direction:column;
+        justify-content: space-around;
+    }
     .BL-objetos-container-about {
         display: flex;
-        width: 80vw;
+        width: 100vw;
         flex-direction:column;
         justify-content:center;
         align-items: center;
         min-height: 46.15vh;
-        background-image: url(https://i.imgur.com/c6Ttmlb.jpg);
         background-repeat: no-repeat;
         background-size: cover;
     }
@@ -163,6 +231,7 @@ h2 {
     }
     .BL-caja-texto {
         display:flex;
+        flex-direction:column;
         border: solid 1px #F2A0A0;
         flex-wrap:wrap;
         min-height:5vh;
@@ -173,6 +242,11 @@ h2 {
     .BL-p-aboutUs{
         font-weight:500;
         font-size:1.1rem;
+    }
+    .infoSection_F {
+        display: flex;
+        width:50vw;
+        justify-content: space-around;
     }
     h2 {
         text-align: left;
