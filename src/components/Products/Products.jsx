@@ -100,7 +100,11 @@ export default function Products() {
                                 className="underline-none"
                                 key={index}
                             >
-                                <img className="card-img" src={product.image} alt='product' />
+                                {product.image.includes("https") ? 
+                                    <img className="card-img" src={product.image} alt='product' />
+                                :
+                                    <img className="card-img" src={process.env.PUBLIC_URL +`storage/product/${product.image}`} alt='product' />
+                                }
                                 <div className="card-info">
                                     <p className="text-title">{product.name}</p>
                                 </div>

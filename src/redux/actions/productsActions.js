@@ -38,11 +38,11 @@ const productsActions = {
             dispatch({type:'FILTER_PRODUCTS', payload:input})
         }
     },
-    createProduct: (product) => {
+    createProduct: (formData) => {
         return async (dispatch, getState) => {
             try {
-                //await axios.post( urlBack + '/api/products', product );
-                await axios.post( `http://localhost:4000/api/products`, product );
+                await axios.post( urlBack + '/api/products', formData );
+                //await axios.post( `http://localhost:4000/api/products`, formData );
             } catch (error) {
                 console.log(error)
             }
