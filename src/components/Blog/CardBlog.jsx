@@ -6,9 +6,15 @@ import Typography from '@mui/material/Typography';
 import { Button, CardActions, Box } from '@mui/material';
 import '../../styles/cardBlog.css';
 import Data from '../Data'
+import {useSelector}  from 'react-redux'
+
 
 
 export default function CardBlog() {
+    
+    // const user = useSelector(store => store.usersReducers.user)
+    // //console.log(user)
+
 
 
     return (
@@ -16,7 +22,6 @@ export default function CardBlog() {
             <div className='conteinerCards'>
                 {Data.map((data, index) => (
                     <Card className='card-conteiner_B' sx={{ maxWidth: 645, flexWrap: 'nowrap' }} key={index}>
-
                         <Typography sx={{ maxWidth: 145, display: 'flex', justifyContent: 'flex-start', }} gutterBottom variant="h5" component="div">
                             {data.name}
                         </Typography>
@@ -42,15 +47,10 @@ export default function CardBlog() {
                                 </CardActions>
                             </Box>
                         </Box>
-
                     </Card>
                 ))
                 }
             </div>
-
         </>
-
-
-
     );
 }
