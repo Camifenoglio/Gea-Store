@@ -1,12 +1,13 @@
+import React from 'react';
 import '../App';
-import Profile from '../components/UserAndAdmin/Profile';
-
 
 
 function UserProfile() {
     return (
         <>
-            <Profile />
+            <div>
+                <h1>User Profile</h1>
+            </div>
         </>
     );
 }

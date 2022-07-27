@@ -71,6 +71,7 @@ const NavBar = (props) => {
     }
 
     const user = useSelector(store => store.usersReducers.user)
+    console.log(user)
 
     const handleOpenNavMenu = (event) => {
         setAnchorElNav(event.currentTarget);
