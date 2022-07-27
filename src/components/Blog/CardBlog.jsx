@@ -6,14 +6,11 @@ import Typography from '@mui/material/Typography';
 import { Button, CardActions, Box } from '@mui/material';
 import '../../styles/cardBlog.css';
 import Data from '../Data'
-import {useSelector}  from 'react-redux'
 
 
 
 export default function CardBlog() {
-    
-    // const user = useSelector(store => store.usersReducers.user)
-    // //console.log(user)
+
 
 
 
@@ -45,6 +42,7 @@ export default function CardBlog() {
                                         Show More
                                     </Button>
                                 </CardActions>
+                                
                             </Box>
                         </Box>
                     </Card>
