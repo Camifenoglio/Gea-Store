@@ -234,166 +234,26 @@ button.ghost {
     color: white;
     height: 40px;
     text-align: center;
-    width: 250px;
+    width: 8rem;
 	
 }
-.btn-google{
-	border-radius: 50px !important;
-	color: white;
-	height: 40px;
-	text-align: center;
-	width: 250px;
-}
+
 .btn-facebook{
 margin: 0.5rem auto;
 }
 
-@media (max-width: 520px) {
+#googleButtonSignIn , #googleButton {
+	display:flex;
+	align-items:center;
+	justify-content:center;
+}
 
-	.formSign_F {
-		background-color: #F2F2F2;
-		display: flex;
-		align-items: center;
-		justify-content: center;
-		flex-direction: column;
-		padding: 0 50px;
-		text-align: center;
-	}
+@media (max-width: 380px) {
+h1.titleSignUp_F {
+  font-size: 1.5rem;
+}
 
-	.inputSign_F {
-		background-color: #eee;
-		padding: 12px 15px;
-		margin: 8px 0;
-		width: 100%;
-		border: #6D8C3E 1px solid;
-		border-radius: 20px;
-	}
-
-	.container {
-		background: #6D8C3E;
-		border-radius: 10px;
-		box-shadow: 0 14px 28px rgba(0, 0, 0, 0.25),
-			0 10px 10px rgba(0, 0, 0, 0.22);
-		position: relative;
-		overflow: hidden;
-		height: 768px;
-		max-height: 100%;
-	}
-
-	.form-container {
-		position: absolute;
-		top: 0;
-		width: 100%;
-		transition: all 0.6s ease-in-out;
-	}
-
-	.sign-in-container {
-		top: 0;
-		height: 50%;
-		z-index: 2;
-	}
-
-	.container.right-panel-active .sign-in-container {
-		transform: translateY(100%);
-	}
-
-	.sign-up-container {
-		top: 0;
-		height: 50%;
-		opacity: 0;
-		z-index: 1;
-	}
-
-	.container.right-panel-active .sign-up-container {
-		transform: translateY(100%);
-		opacity: 1;
-		z-index: 5;
-		animation: show 0.6s;
-	}
-
-	@keyframes show {
-
-		0%,
-		49.99% {
-			opacity: 0;
-			z-index: 1;
-		}
-
-		50%,
-		100% {
-			opacity: 1;
-			z-index: 5;
-		}
-	}
-
-	.overlay-container {
-		position: absolute;
-		top: 50%;
-		height: 50%;
-		width: 100%;
-		overflow: hidden;
-		transition: transform 0.6s ease-in-out;
-		z-index: 0;
-	}
-
-	.container.right-panel-active .overlay-container {
-		transform: translateY(-100%);
-	}
-
-	.overlay {
-		background-image: url('https://i.imgur.com/NIbgh4h.jpg');
-		background-repeat: no-repeat;
-		background-size: cover;
-		background-position: 0 0;
-		color: #262f19;
-		position: absolute;
-		top: -100%;
-		left: -100%;
-		right: -100%;
-		width: -100%;
-		height: 200%;
-		transform: translateY(0);
-		transition: transform 0.6s ease-in-out;
-	}
-
-	.overlay .signText_F {
-		font-weight: bold;
-	}
-
-	.container.right-panel-active .overlay {
-		transform: translateY(50%);
-	}
-
-	.overlay-panel {
-		position: absolute;
-		display: flex;
-		align-items: center;
-		justify-content: center;
-		flex-direction: column;
-		padding: 0 40px;
-		text-align: center;
-		right: 0;
-		width: 100%;
-		height: 40%;
-		transform: translateY(-100%);
-		transition: transform 0.6s ease-in-out;
-	}
-
-	.overlay-left {
-		transform: translateY(100%);
-	}
-
-	.container.right-panel-active .overlay-left {
-		transform: translateY(0);
-	}
-
-	.overlay-right {
-		bottom: 0;
-		transform: translateY(100%);
-	}
-
-	.container.right-panel-active .overlay-right {
-		transform: translateY(0);
-	}
-
+p.signText_F {
+	margin-right:1rem;
+}
 }
