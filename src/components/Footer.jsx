@@ -59,19 +59,21 @@ function Footer() {
     return (
         <>
             <div className="footerNav">
+                <div className="footerTextRP">
                 <div className="socialMedia">
-                    <Button href="https://www.facebook.com/fiio.cristaldo/" style={{ color: "#F2F2F2" }}>
+                    <Button href="https://www.facebook.com" style={{ color: "#F2F2F2" }}>
                         <FacebookIcon fontSize="medium" style={{ color: "#F2F2F2" }} />
                     </Button>
                     <Button href="https://www.instagram.com/geastore28/" style={{ color: "#F2F2F2" }}>
                         <InstagramIcon fontSize="medium" style={{ color: "#F2F2F2" }} />
                     </Button>
-                    <Button href="https://github.com/Cristaldo-Fiorela" style={{ color: "#F2F2F2" }}>
+                    <Button href="https://github.com" style={{ color: "#F2F2F2" }}>
                         <GitHubIcon fontSize="medium" style={{ color: "#F2F2F2" }} />
                     </Button>
-                    <p>Belgrano 397, X5000JQG Córdoba</p>
+                    
+                </div> 
+                <p style={{ color: "white" }}>Belgrano 397, X5000JQG Córdoba</p>
                 </div>
-                
                     <img src="https://i.imgur.com/iyj9x1p.png" className="footerLogo" alt="LOGO" style={{ height: "10rem" }} />
                     
                 <div className="navFooter">

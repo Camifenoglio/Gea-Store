@@ -1,9 +1,7 @@
 .containterBannerInfo_F {
-    display: flex;
-    justify-content: space-evenly;
-    width: 100%;
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
     height: fit-content;
-    flex-wrap: wrap;
     margin-top: 5vh;
     margin-bottom: 5vh;
 }
@@ -15,7 +13,7 @@
     color: #2c3918;
 }
 .infoItem_F {
-    width: 15%;
+    
     flex-direction: column;
     justify-content: center;
     align-items: center;
@@ -24,3 +22,15 @@
 .marginNone {
     margin-top: 0;
 }
+
+
+@media (max-width: 500px) {
+    .containterBannerInfo_F {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        gap:1rem;
+        margin:1rem;
+    }
+}
+
+
