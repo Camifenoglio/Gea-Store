@@ -69,14 +69,21 @@ const blogActions = {
 
     likePost: (id) => {
         const token = localStorage.getItem('token')
-        return async() => {
+        return async(dispatch, getState) => {
             try {
+<<<<<<< HEAD
                 const answer = await axios.put(urlBack +`api/posts/likes/${id}`,{},
                     {headers: {Authorization: "Bearer "+token}})
+=======
+                const answer = await axios.put(urlBack+`api/posts/likes/${id}`,{},
+                    {headers: {'Authorization': 'Bearer '+token}})
+                    //console.log('holaa'+answer)
+>>>>>>> 8253dad6e5cff64c3101ce3b0ea62e97de1ef30c
                 return answer.data.response
             }catch (err) {
                 console.log(err)
             }
+            
         }
     },
 

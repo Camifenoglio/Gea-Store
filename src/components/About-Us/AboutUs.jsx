@@ -13,7 +13,7 @@ export default function AboutUs() {
             <div className="BL-objetos-container-about">
 
                 <div className="BL-div-descripciones">
-                    <div>
+                    <div className="BL-sobre-nosotros">
                         <div className="whoWeAreImage_F" />
                         <div className="infoSection_F">
                             <h2 className="sectionAboutTitle_F">Who we are?</h2>
@@ -23,7 +23,7 @@ export default function AboutUs() {
                         </div>
                     </div>
 
-                    <div>
+                    <div className="BL-filosofia">
                         <div className="philosophyImage_F" />
                         <div className="infoSection_F">
                             <h2 className="sectionAboutTitle_F">Our philosophy</h2>

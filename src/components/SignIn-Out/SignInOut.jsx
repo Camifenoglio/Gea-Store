@@ -7,11 +7,9 @@ import GoogleSignUp from './GoogleSignUp';
 import GoogleSignIn from "./GoogleSignIn";
 import FacebookSignIn from "./FacebookSignIn";
 import FacebookSignUp from "./FacebookSignUp";
-import { useNavigate } from "react-router-dom";
 
 export default function SignInOut() {
     const dispatch = useDispatch();
-    const navigate = useNavigate();
 
     function signUpButton() {
         const container = document.getElementById('container');
@@ -33,7 +31,6 @@ export default function SignInOut() {
         if (res.data.from === 'signup'){
             if(res.data.success){
                 toast.success(res.data.message)
-                navigate('/')
             } else {
                 toast.error(res.data.message)
             }
@@ -41,7 +38,6 @@ export default function SignInOut() {
         if (res.data.from === 'form-signup'){
             if(res.data.success){
                 toast.success(res.data.message)
-                navigate('/user')
             } else {
                 toast.error(res.data.message)
             }
@@ -58,7 +54,8 @@ export default function SignInOut() {
             from: 'form-signup'
         }
         const res = await dispatch(userActions.signUpUsers(userData))
-        // console.log(res)
+        if (res.data.success) {
+        }
         alerts(res)
     };
 

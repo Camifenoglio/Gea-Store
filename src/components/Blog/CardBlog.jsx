@@ -4,11 +4,15 @@ import CardContent from '@mui/material/CardContent';
 import CardMedia from '@mui/material/CardMedia';
 import Typography from '@mui/material/Typography';
 import { Button, CardActions, Box } from '@mui/material';
+import { Link as LinkRouter } from 'react-router-dom'
 import '../../styles/cardBlog.css';
 import Data from '../Data'
 
 
+
 export default function CardBlog() {
+
+
 
 
     return (
@@ -37,10 +41,12 @@ export default function CardBlog() {
                                     </Typography>
                                 </CardContent>
                                 <CardActions className='buttom-blog_B' >
-                                    <Button sx={{ color: 'black' }} size="small" color="primary">
-                                        Show More
-                                    </Button>
-                                </CardActions>
+                                        <LinkRouter to={`'${Data._id}`}>
+                                            <Button sx={{ color: 'black' }} size="small" color="primary">
+                                                Show More
+                                            </Button>
+                                        </LinkRouter>
+                                    </CardActions>
                             </Box>
                           
 
@@ -48,10 +54,6 @@ export default function CardBlog() {
                 ))
                 }
             </div>
-
         </>
-
-
-
     );
 }

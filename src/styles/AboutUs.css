@@ -9,11 +9,12 @@
     justify-content: center;
     align-items: center;
 }
+
 /* #1b2808 */
 .titleAboutUs_F {
     font-size: 4rem;
     color: white;
-    text-shadow: 1px 6px 4px rgba(0,0,0,0.74);
+    text-shadow: 1px 6px 4px rgba(0, 0, 0, 0.74);
     background-color: #595f5177;
     height: 100%;
     width: 100%;
@@ -34,7 +35,7 @@
     -moz-border-radius: 27px 200px 200px 27px;
 }
 
-.philosophyImage_F{
+.philosophyImage_F {
     background-image: url(https://i.imgur.com/UwpTfjV.jpg);
     background-position: 20% 18%;
     background-repeat: no-repeat;
@@ -49,7 +50,7 @@
 .sectionAboutTitle_F {
     font-size: 2rem;
     width: 60%;
-    color: #1b2808 ;
+    color: #1b2808;
 }
 
 .infoSection_F {
@@ -62,7 +63,7 @@
     font-size: 1.2rem;
     font-weight: 500;
     text-align: left;
-    color: #1b2808 ;
+    color: #1b2808;
 }
 
 
@@ -85,11 +86,8 @@
     align-items: center;
     min-height: 56.15vh;
     /* background-image: url(https://i.imgur.com/c6Ttmlb.jpg); */
-    background-repeat: no-repeat;
-    background-size: cover;
     margin-top: 5vh;
     margin-bottom: 5vh;
-
 }
 
 .BL-div-descripciones {
@@ -101,9 +99,9 @@
 }
 
 .BL-caja-texto {
-    display:flex;
+    display: flex;
     border: solid 1px #F2A0A0;
-    margin-left:1rem;
+    margin-left: 1rem;
 }
 
 .BL-mapa {
@@ -112,17 +110,18 @@
     width: 30vw;
     margin-top: 2rem;
 }
-.BL-caja-map{
-    display:flex;
-    flex-direction:column;
-    align-content:center;
-    align-items:center;
-    width:40vw;
+
+.BL-caja-map {
+    display: flex;
+    flex-direction: column;
+    align-content: center;
+    align-items: center;
+    width: 40vw;
 }
 
-.BL-p-aboutUs{
-    font-weight:500;
-    font-size:1.3rem;
+.BL-p-aboutUs {
+    font-weight: 500;
+    font-size: 1.3rem;
 }
 
 @media (max-width:900px) {
@@ -136,27 +135,35 @@
 
     .BL-objetos-container-about {
         display: flex;
-        width: 80vw;
-        flex-direction: row;
+        width: 100vw;
+        flex-direction: column;
         justify-content: space-around;
         align-items: center;
         min-height: 46.15vh;
-        background-image: url(https://i.imgur.com/c6Ttmlb.jpg);
-        background-repeat: no-repeat;
-        background-size: cover;
     }
+
+    .BL-sobre-nosotros {
+        width: 50vw;
+    }
+
+    .BL-filosofia {
+        width: 50vw;
+    }
+
     .BL-mapa {
         display: flex;
         height: 25vh;
         width: 30vw;
         margin-top: 2rem;
     }
+
     .BL-div-descripciones {
         display: flex;
         flex-direction: column;
         width: 40vw;
     }
 }
+
 @media (max-width:860px) {
     .BL-container-about {
         display: flex;
@@ -167,93 +174,115 @@
 
     .BL-objetos-container-about {
         display: flex;
-        width: 80vw;
-        flex-direction:column;
+        width: 100vw;
+        flex-direction: column;
         justify-content: space-around;
         align-items: center;
         min-height: 56.15vh;
-        background-image: url(https://i.imgur.com/c6Ttmlb.jpg);
-        background-repeat: no-repeat;
-        background-size: cover;
     }
+
     .BL-div-descripciones {
         display: flex;
         flex-direction: column;
         width: 40vw;
     }
-    
+
     .BL-caja-texto {
-        display:flex;
+        display: flex;
         border: solid 1px #F2A0A0;
-        flex-wrap:wrap;
-        min-height:5vh;
-        font-size:.9rem;
+        flex-wrap: wrap;
+        min-height: 5vh;
+        font-size: .9rem;
     }
-    
+
     .BL-mapa {
         display: flex;
         height: 30vh;
         width: 50vw;
         margin-top: 2rem;
-        margin-bottom:1rem;
+        margin-bottom: 1rem;
     }
 }
 
 @media (max-width:750px) {
     .BL-container-about {
         display: flex;
-        flex-direction:column;
-        justify-content:center;
+        flex-direction: column;
+        justify-content: center;
         align-items: center;
         min-height: 66.15vh;
     }
 
+    .infoSection_F {
+        display: flex;
+        flex-direction: column;
+        justify-content: space-around;
+    }
+
     .BL-objetos-container-about {
         display: flex;
-        width: 80vw;
-        flex-direction:column;
-        justify-content:center;
+        width: 100vw;
+        flex-direction: column;
+        justify-content: center;
         align-items: center;
         min-height: 46.15vh;
         background-repeat: no-repeat;
         background-size: cover;
     }
+
     .BL-mapa {
         display: flex;
-        height:30vh;
+        height: 30vh;
         width: 50vw;
         margin-top: 1rem;
-        margin-bottom:1rem;
+        margin-bottom: 1rem;
     }
+
     .BL-div-descripciones {
         display: flex;
         flex-direction: column;
         width: 50vw;
     }
+
     .BL-caja-texto {
-        display:flex;
+        display: flex;
+        flex-direction: column;
         border: solid 1px #F2A0A0;
-        flex-wrap:wrap;
-        min-height:5vh;
-        font-size:.7rem;
+        flex-wrap: wrap;
+        min-height: 5vh;
+        font-size: .7rem;
     }
 }
-@media (max-width:500px){
-    .BL-p-aboutUs{
-        font-weight:500;
-        font-size:1.1rem;
+
+@media (max-width:500px) {
+    .BL-p-aboutUs {
+        font-weight: 500;
+        font-size: 1.1rem;
     }
-    h2 {
+
+    .infoSection_F {
+        display: flex;
+        width: 50vw;
+        justify-content: space-around;
+    }
+
+    .sectionAboutTitle_F {
         text-align: left;
-        font-size:1.2rem;
-        width:40vw;
+        font-size: 1.2rem;
+
     }
+
     .BL-caja-texto {
-        display:flex;
+        display: flex;
         border: solid 1px #F2A0A0;
-        flex-wrap:wrap;
-        min-height:5vh;
-        font-size:.7rem;
-        width:50vw;
+        flex-wrap: wrap;
+        min-height: 5vh;
+        font-size: .7rem;
+        width: 50vw;
     }
+}
+
+
+.css-nnsfc0-MuiTypography-root {
+    display: none !important;
 }
