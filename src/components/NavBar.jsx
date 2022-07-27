@@ -1,6 +1,6 @@
 import * as React from 'react';
 import { Link as LinkRouter } from 'react-router-dom';
-
+import { useSelector } from 'react-redux';
 // MUI
 import AppBar from '@mui/material/AppBar';
 import Box from '@mui/material/Box';
@@ -15,9 +15,12 @@ import Button from '@mui/material/Button';
 import Tooltip from '@mui/material/Tooltip';
 import MenuItem from '@mui/material/MenuItem';
 import ShoppingCartOutlinedIcon from '@mui/icons-material/ShoppingCartOutlined';
+import AccountCircleIcon from '@mui/icons-material/AccountCircle';
+import { useDispatch } from 'react-redux'
 
 //STYLES
 import '../styles/navbar.css'
+import userActions from '../redux/actions/userActions';
 // ['Home', 'Products', 'About Us', 'Blog']
 
 
@@ -41,20 +44,30 @@ const pages = [
 ];
 const settings = [
     {
-    to:'/profile',
-    name: 'Profile'
-    }, 
+        to: '/profile',
+        name: 'Profile'
+    },
     {
-    to: '/sign',
-    name: 'Sign'    
+        to: '/sign',
+        name: 'Sign'
     }
 ];
 
 
-const NavBar = () => {
+const NavBar = (props) => {
 
     const [anchorElNav, setAnchorElNav] = React.useState(null);
     const [anchorElUser, setAnchorElUser] = React.useState(null);
+
+    const dispatch = useDispatch()
+
+
+    async function signOut(){
+        await dispatch(userActions.logOutUser())
+    }
+
+    const user = useSelector(store => store.usersReducers.user)
+    console.log(user)
 
     const handleOpenNavMenu = (event) => {
         setAnchorElNav(event.currentTarget);
@@ -133,23 +146,29 @@ const NavBar = () => {
                     <Box sx={{ flexGrow: 1, display: { xs: 'none', md: 'flex' } }}>
                         {pages.map((page, index) => (
                             <LinkRouter
-                            to={page.to}
-                            key={index}
-                            onClick={handleCloseNavMenu}
-                            className='underline-none'
+                                to={page.to}
+                                key={index}
+                                onClick={handleCloseNavMenu}
+                                className='underline-none'
                             >
-                            <Button
-                                sx={{ my: 2, color: '#6D8C3E ', display: 'block', fontWeight: 'bolder', width: 'fit-content' }}
-                            >
-                                {page.name}
-                            </Button>
+                                <Button
+                                    sx={{ my: 2, color: '#6D8C3E ', display: 'block', fontWeight: 'bolder', width: 'fit-content' }}
+                                >
+                                    {page.name}
+                                </Button>
                             </LinkRouter>
                         ))}
                     </Box>
                     <Box sx={{ flexGrow: 0, justifyContent: 'space-between' }}>
                         <Tooltip title="Open settings">
                             <IconButton onClick={handleOpenUserMenu} sx={{ p: 0, color: '#6D8C3E' }}>
-                                <Avatar alt="Remy Sharp" src="/static/images/avatar/2.jpg" />
+                                {user ?
+                                    <Box sx={{ display: 'flex', justifyContent: 'center', alignItems: 'center', flexDirection: 'row' }}>
+                                        <Typography sx={{ color: 'black' }}>{user.fullName}</Typography>
+                                        <Avatar src={user.imageUser} alt='imgUsuario' />
+                                    </Box> :
+                                    <AccountCircleIcon />
+                                }
                             </IconButton>
                         </Tooltip>
                         <Menu
@@ -175,16 +194,20 @@ const NavBar = () => {
                                     onClick={handleCloseNavMenu}
                                     className='underline-none'
                                 >
-                                <MenuItem key={index} onClick={handleCloseUserMenu}>
-                                    <Typography textAlign="center">{setting.name}</Typography>
-                                </MenuItem>
+                                    {user ?
+                                        <MenuItem>
+                                            <Typography textAlign="center" onClick={signOut}>LogOut</Typography>
+                                        </MenuItem> :
+                                        <MenuItem key={index} onClick={handleCloseUserMenu}>
+                                            <Typography textAlign="center">{setting.name}</Typography>
+                                        </MenuItem>}
                                 </LinkRouter>
                             ))}
                         </Menu>
                         <LinkRouter to='/cart'>
-                        <IconButton>
-                            <ShoppingCartOutlinedIcon style={{ color: '#6D8C3E' }} fontSize='large' />
-                        </IconButton>
+                            <IconButton>
+                                <ShoppingCartOutlinedIcon style={{ color: '#6D8C3E' }} fontSize='large' />
+                            </IconButton>
                         </LinkRouter>
                     </Box>
                 </Toolbar>
@@ -193,3 +216,19 @@ const NavBar = () => {
     );
 };
 export default NavBar;
+
+
+
+
+// {props.user ?
+//         <MenuItem>
+//             <Typography textAlign="center" onClick={signOut}>LogOut</Typography>
+//         </MenuItem>
+//     :
+//     settings.map((setting, index) => (
+//         <LinkRouter key={index} to={setting.to} onClick={handleCloseUserMenu}>
+//             <MenuItem>
+//                 <button>{setting.name}</button>
+//             </MenuItem>
+//         </LinkRouter>
+//     ))}
