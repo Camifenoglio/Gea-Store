@@ -177,7 +177,7 @@ h2 {
     h2 {
         text-align: left;
         font-size:1.2rem;
-        width:40vw;
+       
     }
     .BL-caja-texto {
         display:flex;
@@ -187,4 +187,9 @@ h2 {
         font-size:.7rem;
         width:50vw;
     }
+}
+
+
+.css-nnsfc0-MuiTypography-root {
+    display:none!important;
 }
