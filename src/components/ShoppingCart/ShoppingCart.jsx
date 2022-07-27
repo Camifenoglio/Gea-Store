@@ -10,6 +10,7 @@ import '../../styles/shoppingContainer.css';
 import { Container } from '@mui/system';
 import Swal from 'sweetalert2'
 import Paypal from '../../payform/Paypal';
+import { Button } from '@mui/material';
 
 
 const ShoppingCart = () => {
@@ -55,83 +56,68 @@ const ShoppingCart = () => {
     });
 
     return (
-        <Container maxWidth="md">
-            <h2>Shopping Cart</h2>
-            <h3>Products</h3>
-            <Stack direction="column" spacing={1} divider={<Divider orientation="horizontal" flexItem />}>
-                {cart.map((item) => {
-                    const product = productsById[item.productId];
-                    return (
-                        <Stack p={{ xs: 2, sm: 4 }} key={item.productId} direction="row" spacing={4} >
-                            <Stack justifyContent="center">
-                                <div className="image-container">
-                                    <img src={product.image} alt={product.name} />
-                                </div>
-                            </Stack>
-                            <Stack justifyContent="center">
-                                <h3>{product.name}</h3>
-                                <Box display={{ xs: 'none', md: 'block' }}>{product.description}</Box>
-                            </Stack>
-                            <Stack justifyContent="center" direction={{ xs: "column", sm: "row" }} spacing={2}>
-                                <Stack justifyContent="center" spacing={2}>
-                                    <Stack spacing={2} direction="row">
-                                        <button onClick={() => dispatch(addToCart(product._id))}>+</button>
-                                        <div>
-                                            {item.quantity}
+        <div className='main'>
+            <div className='main-content'>
+                <div className='cart-cointainer'>
+                    <div className='titles'>
+                        <h2>Shopping Cart</h2>
+                        <h3>Products</h3>
+
+                        {cart.map((item) => {
+                            const product = productsById[item.productId];
+                            return (
+                                <div className='yellow'>
+                                    <div className="image-container">
+                                        <img src={product.image} alt={product.name} />
+                                    </div>
+                                    <div className='product-description'>
+                                        <h3>{product.name}</h3>
+                                    </div>
+                                    <div className='content-right'>
+                                        <div className='quantity-more'>
+                                            <div className='plus'>
+                                                <Button
+                                                    className='btnAdminNav_F'
+                                                    onClick={() => dispatch(addToCart(product._id))}>+</Button>
+                                                <h4>
+                                                    {item.quantity}
+                                                </h4>
+                                                <Button
+                                                    className='btnAdminNav_F'
+                                                    onClick={() => dispatch(delFromCart(product._id))}>-</Button>
+                                            </div>
+                                            <Button
+                                                className='btnAdminNav_F'
+                                                onClick={() => dispatch(delFromCart(product._id, true))}>Remove Product
+                                            </Button>
+                                            <div className='price'>
+                                                <h3 className='total-price'>Price:</h3>
+                                                <h3> {new Intl.NumberFormat('us-US', { style: 'currency', currency: 'USD' }).format(product.price)}</h3>
+                                            </div>
                                         </div>
-                                        <button onClick={() => dispatch(delFromCart(product._id))}>-</button>
-                                    </Stack>
-                                    <button onClick={() => dispatch(delFromCart(product._id, true))}>Remove Product
-                                    </button>
-                                </Stack>
-                                <Stack justifyContent="center">{new Intl.NumberFormat('us-US', { style: 'currency', currency: 'USD' }).format(product.price)}</Stack>
-                            </Stack>
-                        </Stack>
-                    )
-                })}
-            </Stack>
-
-            <Stack direction="row" spacing={2} alignItems="center">
-                <h4>Total</h4>
-                <div>{new Intl.NumberFormat('us-US', { style: 'currency', currency: 'USD' }).format(total)}</div>
-                <button onClick={() => {
-                    handleDelete()
-                }
-                }>Clear Cart</button>
-            </Stack>
-            <Paypal />
-
-
-
-
-
-            {/* <div className="shoppingContainer grid-resposive">
-                {cart.map((item) => {
-                    const product = productsById[item.productId];
-                    return (
-                        <ProductItem
-                            key={product._id}
-                            product={product}
-                            addtoCart={() => dispatch(addToCart(product._id))} />
-                    )
-                })}
+                                    </div>
+                                </div>
+                            )
+                        })}
+                    </div>
+                </div>
+                <div className='total'>
+                    <div>
+                        <h2>Total</h2>
+                        <h3>{new Intl.NumberFormat('us-US', { style: 'currency', currency: 'USD' }).format(total)}</h3>
+                    </div>
+                    <Button
+                        className='btnAdminNav_F'
+                        onClick={() => {
+                            handleDelete()
+                        }
+                        }>Clear Cart
+                    </Button>
+                    <Paypal />
+                </div>
             </div>
-            <h3>Cart</h3>
-            <div className="shoppingContainer">
-                <button onClick={() => dispatch(clearCart())}>Clear Cart</button>
-                {cart.map((item, index) => (
-                    <CartItem
-                        key={index}
-                        product={productsById[item.productId]}
-                        quantity={item.quantity}
-                        delOneFromCart={() => dispatch(delFromCart(item.productId))}
-                        delAllFromCart={() => dispatch(delFromCart(item.productId, true))}
-                    >
-                    </CartItem>
-                ))}
-            </div>
-            <h3>Total: ${total}</h3> */}
-        </Container>
+
+        </div>
     )
 }
 

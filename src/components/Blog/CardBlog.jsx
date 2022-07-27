@@ -9,7 +9,10 @@ import '../../styles/cardBlog.css';
 import Data from '../Data'
 
 
+
 export default function CardBlog() {
+
+
 
 
     return (
@@ -51,10 +54,6 @@ export default function CardBlog() {
                 ))
                 }
             </div>
-
         </>
-
-
-
     );
 }
