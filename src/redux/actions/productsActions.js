@@ -41,7 +41,8 @@ const productsActions = {
     createProduct: (product) => {
         return async (dispatch, getState) => {
             try {
-                await axios.post( urlBack + '/api/products', product );
+                //await axios.post( urlBack + '/api/products', product );
+                await axios.post( `http://localhost:4000/api/products`, product );
             } catch (error) {
                 console.log(error)
             }
