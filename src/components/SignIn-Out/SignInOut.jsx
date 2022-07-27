@@ -7,9 +7,11 @@ import GoogleSignUp from './GoogleSignUp';
 import GoogleSignIn from "./GoogleSignIn";
 import FacebookSignIn from "./FacebookSignIn";
 import FacebookSignUp from "./FacebookSignUp";
+import { useNavigate } from "react-router-dom";
 
 export default function SignInOut() {
     const dispatch = useDispatch();
+    const navigate = useNavigate();
 
     function signUpButton() {
         const container = document.getElementById('container');
@@ -31,6 +33,7 @@ export default function SignInOut() {
         if (res.data.from === 'signup'){
             if(res.data.success){
                 toast.success(res.data.message)
+                navigate('/')
             } else {
                 toast.error(res.data.message)
             }
@@ -38,6 +41,7 @@ export default function SignInOut() {
         if (res.data.from === 'form-signup'){
             if(res.data.success){
                 toast.success(res.data.message)
+                navigate('/user')
             } else {
                 toast.error(res.data.message)
             }
@@ -45,22 +49,25 @@ export default function SignInOut() {
     }
     async function handleSubmitSignUp(event) {
         event.preventDefault();
+        
         const userData = {
-            fullName: event.target[0].value,
+            fullName: event.target[1].value,
             role: "user",
-            email: event.target[1].value,
-            password: event.target[2].value,
+            email: event.target[2].value,
+            password: event.target[3].value,
             from: 'form-signup'
         }
         const res = await dispatch(userActions.signUpUsers(userData))
+        // console.log(res)
         alerts(res)
     };
 
     async function handleSubmitSignIn(event) {
         event.preventDefault();
+        // console.log(event)
         const logedUser = {
-            email: event.target[0].value,
-            password: event.target[1].value,
+            email: event.target[1].value,
+            password: event.target[2].value,
             from: 'form-signup',
         }
         const res = await dispatch(userActions.logInUser(logedUser))
@@ -94,7 +101,6 @@ export default function SignInOut() {
                             <div className="social-container">
                                 <FacebookSignIn />
                                 <GoogleSignIn />
-                                
                             </div>
                             <span className="spanSign_F">or use your account</span>
                             <input className="inputSign_F" type="email" placeholder="Email" />

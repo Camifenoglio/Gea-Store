@@ -1,22 +1,16 @@
-import { ADD_TO_CART, CLEAR_CART, REMOVE_ALL_FROM_CART, REMOVE_ONE_FROM_CART } from "../../types";
+import { ADD_TO_CART, CLEAR_CART, REMOVE_ALL_FROM_CART, REMOVE_ONE_FROM_CART, ADD_TO_SHOPPING } from "../../types";
 
 export const initialState = {
-    cart: [
-        {
-            productId: "62d8198126d78fb1f4691810",
-            quantity: 5
-        },
-        {
-            productId: "62d8198126d78fb1f4691813",
-            quantity: 1
-        },
-    ],
+    cart: [],
+    count: 0,
+
 };
 
 export function shoppingReducers(state = initialState, action) {
     switch (action.type) {
         case ADD_TO_CART: {
             const itemId = action.payload;
+            console.log(itemId)
             let itemInCart = state.cart.find((item) => item.productId === itemId);
             return itemInCart
                 ? {
@@ -57,8 +51,22 @@ export function shoppingReducers(state = initialState, action) {
         case CLEAR_CART: {
             return initialState
         }
+        case ADD_TO_SHOPPING: {
+            return {
+                ...state,
+                count: action.payload
+            }
+        }
         default:
             return state;
 
     }
 };
+
+export const getTotal = (productsId) => {
+    let Total = productsId?.reduce((amount, item) => item.price + amount, 0);
+    console.log(productsId)
+
+    return Total;
+
+}

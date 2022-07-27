@@ -1,6 +1,7 @@
 import * as React from 'react';
 import { Link as LinkRouter } from 'react-router-dom';
-import { useSelector } from 'react-redux';
+import { useSelector } from 'react-redux'
+
 // MUI
 import AppBar from '@mui/material/AppBar';
 import Box from '@mui/material/Box';
@@ -15,6 +16,7 @@ import Button from '@mui/material/Button';
 import Tooltip from '@mui/material/Tooltip';
 import MenuItem from '@mui/material/MenuItem';
 import ShoppingCartOutlinedIcon from '@mui/icons-material/ShoppingCartOutlined';
+import Badge from '@mui/material/Badge';
 import AccountCircleIcon from '@mui/icons-material/AccountCircle';
 import { useDispatch } from 'react-redux'
 
@@ -44,7 +46,7 @@ const pages = [
 ];
 const settings = [
     {
-        to: '/profile',
+        to: '/user',
         name: 'Profile'
     },
     {
@@ -52,22 +54,25 @@ const settings = [
         name: 'Sign'
     }
 ];
-
-
 const NavBar = (props) => {
 
     const [anchorElNav, setAnchorElNav] = React.useState(null);
     const [anchorElUser, setAnchorElUser] = React.useState(null);
+    const count = useSelector(store => store.shoppingReducers.cart);
 
-    const dispatch = useDispatch()
-
-
-    async function signOut(){
-        await dispatch(userActions.logOutUser())
+const settingProfile = [
+    {
+        to: '/user',
+        name: 'Profile'
+    },
+    {
+        to: '/buys',
+        name: 'Buying History'
     }
 
+]
     const user = useSelector(store => store.usersReducers.user)
-    console.log(user)
+    //console.log(user)
 
     const handleOpenNavMenu = (event) => {
         setAnchorElNav(event.currentTarget);
@@ -186,33 +191,39 @@ const NavBar = (props) => {
                             }}
                             open={Boolean(anchorElUser)}
                             onClose={handleCloseUserMenu}
-                        >
-                            {settings.map((setting, index) => (
+                        >{!user ?
+
+                            settings.map((setting, index) => (
                                 <LinkRouter
                                     to={setting.to}
                                     key={index}
                                     onClick={handleCloseNavMenu}
                                     className='underline-none'
                                 >
-                                    {user ?
-                                        <MenuItem>
-                                            <Typography textAlign="center" onClick={signOut}>LogOut</Typography>
-                                        </MenuItem> :
-                                        <MenuItem key={index} onClick={handleCloseUserMenu}>
-                                            <Typography textAlign="center">{setting.name}</Typography>
-                                        </MenuItem>}
+                                    <MenuItem key={index} onClick={handleCloseUserMenu}>
+                                        <Typography textAlign="center">{setting.name}</Typography>
+                                    </MenuItem>
                                 </LinkRouter>
-                            ))}
+                            ))
+                            : (settingProfile.map((setting, index) => (
+                            <LinkRouter key={index} to={setting.to} className='underline-none'>
+                            <MenuItem >
+                                <Typography textAlign="center">{setting.name}</Typography>
+                            </MenuItem>
+                        </LinkRouter>)))}
                         </Menu>
-                        <LinkRouter to='/cart'>
+                        <LinkRouter to='/shopping-cart'>
                             <IconButton>
-                                <ShoppingCartOutlinedIcon style={{ color: '#6D8C3E' }} fontSize='large' />
-                            </IconButton>
+                                <Badge color='error' badgeContent={count.length}>
+                                    <ShoppingCartOutlinedIcon style={{ color: '#6D8C3E' }} fontSize='large' />
+                                </Badge >
+                            </IconButton >
                         </LinkRouter>
+
                     </Box>
                 </Toolbar>
             </Container>
-        </AppBar>
+        </AppBar >
     );
 };
 export default NavBar;
