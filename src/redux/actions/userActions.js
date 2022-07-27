@@ -6,7 +6,7 @@ const userActions = {
         return async (dispatch, getState) => {
             try {
                 const res = await axios.post(urlBack + '/api/auth/signup', userData )
-                console.log(res)
+                // console.log(res)
                 await dispatch({
                     type: 'USER',
                     payload: res.data.response

@@ -66,7 +66,7 @@ button.ghost {
 	border-radius: 50px;
 }
 
-.formSign_F  {
+.formSign_F {
 	background-color: #F2F2F2;
 	display: flex;
 	align-items: center;
@@ -152,7 +152,7 @@ button.ghost {
 	height: 100%;
 	overflow: hidden;
 	transition: transform 0.6s ease-in-out;
-    z-index: 100;
+	z-index: 100;
 }
 
 .container.right-panel-active .overlay-container {
@@ -230,30 +230,31 @@ button.ghost {
 
 .facebook-login {
 	background-color: #3B5998;
-    border-radius: 50px;
-    color: white;
-    height: 40px;
-    text-align: center;
-    width: 8rem;
-	
+	border-radius: 50px;
+	color: white;
+	height: 40px;
+	text-align: center;
+	width: 8rem;
+
 }
 
-.btn-facebook{
-margin: 0.5rem auto;
+.btn-facebook {
+	margin: 0.5rem auto;
 }
 
-#googleButtonSignIn , #googleButton {
-	display:flex;
-	align-items:center;
-	justify-content:center;
+#googleButtonSignIn,
+#googleButton {
+	display: flex;
+	align-items: center;
+	justify-content: center;
 }
 
 @media (max-width: 380px) {
-h1.titleSignUp_F {
-  font-size: 1.5rem;
-}
+	h1.titleSignUp_F {
+		font-size: 1.5rem;
+	}
 
-p.signText_F {
-	margin-right:1rem;
-}
+	p.signText_F {
+		margin-right: 1rem;
+	}
 }

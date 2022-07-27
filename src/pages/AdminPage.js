@@ -1,13 +1,14 @@
 import React from 'react';
 import '../App';
+import BtnSignOut from '../components/SignIn-Out/Btn-SignOut';
 import AdminProfile from '../components/UserAndAdmin/AdminProfile';
-import NavBarAdmin from '../components/UserAndAdmin/NavBarAdmin';
 
 
 function UserProfile() {
     return (
         <>
             <AdminProfile/>
+            <BtnSignOut/>
         </>
     );
 }
