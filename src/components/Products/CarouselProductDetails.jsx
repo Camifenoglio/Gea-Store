@@ -38,7 +38,7 @@ export default function CarouselProductDetail() {
     const dataProduct = useSelector(store => store.productReducers.oneProduct)
 
     const [thumbsSwiper, setThumbsSwiper] = useState(null);
-
+    console.log(dataProduct)
     return (
         <div className="flexbox_F">
             <div className="productDetailPage_F">

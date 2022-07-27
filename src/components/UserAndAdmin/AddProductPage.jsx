@@ -69,8 +69,8 @@ export default function AddProductPage() {
         }
         // if (checked === true) {
         // setChecked(event.target.value);
-        }
-    
+    }
+
 
 
 
@@ -112,52 +112,52 @@ export default function AddProductPage() {
     }
 
     return (
-<>
-        <NavBarAdmin />
-        <div className="formContainerProduct_F">
-                            
-
-            <Box className="form" component="form" onSubmit={handleSubmit} >
-
-                <TextField
-                    helperText="Please enter the product name"
-                    id="produc-name"
-                    label="Product Name"
-                    variant="filled"
-                />
-
-                <TextField
-                    id="product-description"
-                    label="Multiline"
-                    multiline
-                    rows={4}
-                    variant="filled"
-                />
-
-                <TextField
-                    helperText="Please enter the product price"
-                    id="price"
-                    label="Price"
-                    variant="filled"
-                    startadornment={<InputAdornment position="start">$</InputAdornment>}
-                    InputProps={{
-                        startAdornment: (
-                            <InputAdornment position="start">
-                                <AttachMoneyIcon />
-                            </InputAdornment>)
-                    }}
-                />
+        <>
+            <NavBarAdmin />
+            <div className="formContainerProduct_F">
 
 
-                <TextField
-                    helperText="Please upload the product image"
-                    id="produc-image"
-                    type='file'
-                    variant="filled"
-                    onChange={(event) => setFiles(event.target.files)}
-                />
+                <Box className="form" component="form" onSubmit={handleSubmit} >
 
-                {/* <TextField
+                    <TextField
+                        helperText="Please enter the product name"
+                        id="produc-name"
+                        label="Product Name"
+                        variant="filled"
+                    />
+
+                    <TextField
+                        id="product-description"
+                        label="Multiline"
+                        multiline
+                        rows={4}
+                        variant="filled"
+                    />
+
+                    <TextField
+                        helperText="Please enter the product price"
+                        id="price"
+                        label="Price"
+                        variant="filled"
+                        startadornment={<InputAdornment position="start">$</InputAdornment>}
+                        InputProps={{
+                            startAdornment: (
+                                <InputAdornment position="start">
+                                    <AttachMoneyIcon />
+                                </InputAdornment>)
+                        }}
+                    />
+
+
+                    <TextField
+                        helperText="Please upload the product image"
+                        id="produc-image"
+                        type='file'
+                        variant="filled"
+                        onChange={(event) => setFiles(event.target.files)}
+                    />
+
+                    {/* <TextField
                     select
                     helperText="Please select the category product"
                     id="product-category"
@@ -171,52 +171,52 @@ export default function AddProductPage() {
                     ))}
                 </TextField> */}
 
-                <div className="checkbox_F" variant="filled">
-                    {arrayCategories.map((category, index) => (
-                        // <div key={index} onClick={categoryCheck}>
-                        //     <label>{category}</label>
-                        //     <input  type="checkbox"
-                        //             value={category}
-                                    
-                        //     />
-                        // </div>
-                        <FormControlLabel
-                            key={index}
-                            label={category}
-                            //onChange={(event) => setChecked(event.target.value)}
-                            id={index}
-                            control={<Checkbox
-                                        //checked={checked}
-                                        value={category}
-                                        onClick={categoryCheck}
-                                        color="success"
-                                    />}
-                        />
+                    <div className="checkbox_F" variant="filled">
+                        {arrayCategories.map((category, index) => (
+                            // <div key={index} onClick={categoryCheck}>
+                            //     <label>{category}</label>
+                            //     <input  type="checkbox"
+                            //             value={category}
 
-                        // <FormControlLabel  control={<Checkbox  key={category} id="category-check" value={category} color="success"
-                        // onChange={handleChange}  />} label={category}
-                        // />
-                    ))}
-                </div>
+                            //     />
+                            // </div>
+                            <FormControlLabel
+                                key={index}
+                                label={category}
+                                //onChange={(event) => setChecked(event.target.value)}
+                                id={index}
+                                control={<Checkbox
+                                    //checked={checked}
+                                    value={category}
+                                    onClick={categoryCheck}
+                                    color="success"
+                                />}
+                            />
 
-                <TextField
-                    variant="filled"
-                    helperText="Please enter the product stock"
-                    id="produc-name"
-                    label="Product Stock"
-                />
+                            // <FormControlLabel  control={<Checkbox  key={category} id="category-check" value={category} color="success"
+                            // onChange={handleChange}  />} label={category}
+                            // />
+                        ))}
+                    </div>
 
-
-                <TextField
-                    helperText="Please upload the product information image "
-                    id="produc-image"
-                    type='file'
-                    variant="filled"
-                    onChange={(event) => setFilesTwo(event.target.files)}
-                />
+                    <TextField
+                        variant="filled"
+                        helperText="Please enter the product stock"
+                        id="produc-name"
+                        label="Product Stock"
+                    />
 
 
-                {/* <TextField
+                    <TextField
+                        helperText="Please upload the product information image "
+                        id="produc-image"
+                        type='file'
+                        variant="filled"
+                        onChange={(event) => setFilesTwo(event.target.files)}
+                    />
+
+
+                    {/* <TextField
                     select
                     label="Popular product"
                     helperText="Please select if the product is popular"
@@ -231,9 +231,9 @@ export default function AddProductPage() {
 
                 </TextField> */}
 
-                <Button type="submit" color="success" variant="contained" style={{ height: '3rem' }}>Add Product</Button>
-            </Box>
-        </div>
-    </>
+                    <Button type="submit" color="success" variant="contained" style={{ height: '3rem' }}>Add Product</Button>
+                </Box>
+            </div>
+        </>
     )
 }

@@ -11,7 +11,6 @@ import Avatar from '@mui/material/Avatar';
 import IconButton from '@mui/material/IconButton';
 import Typography from '@mui/material/Typography';
 import ExpandMoreIcon from '@mui/icons-material/ExpandMore';
-import MoreVertIcon from '@mui/icons-material/MoreVert';
 import { useSelector } from 'react-redux';
 import BtnSignOut from '../components/SignIn-Out/Btn-SignOut';
 
@@ -43,11 +42,6 @@ export default function RecipeReviewCard() {
                     <Avatar sx={{ bgcolor: '#6D8C3E' }} aria-label="recipe">
                         {user.fullName.charAt(0)}
                     </Avatar>
-                }
-                action={
-                    <IconButton aria-label="settings">
-                        <MoreVertIcon />
-                    </IconButton>
                 }
                 title={user.fullName}
                 subheader="Thanks for your purchase!"
