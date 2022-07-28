@@ -2,7 +2,6 @@
 import React, { useState, useEffect } from "react"
 import { useDispatch } from "react-redux";
 
-
 // MUI
 import TextField from '@mui/material/TextField';
 import InputAdornment from '@mui/material/InputAdornment';
@@ -16,12 +15,12 @@ import { Button } from "@mui/material";
 
 //COMPONENTS AND ACTIONS
 import productsActions from "../../redux/actions/productsActions";
+import NavBarAdmin from "./NavBarAdmin";
 
 // STYLES
 import '../../styles/addProductForm.css'
-import NavBarAdmin from "./NavBarAdmin";
 
-const popular = ['Yes', 'No']
+//const popular = ['Yes', 'No']
 const arrayCategories = ["Gluten free", "Sugar free", "Lactose free", "Vegan", "Canned food", "Sweets and jams", "Flours and more", "Cookies, bakery and more", "Nuts, seeds and more", "Snacks", "Rice and pasta", "Oils, dressings and more", "Sugar, sweeteners and more", "Broths, soups and sauces", "Cereals, granola and more", "Chocolate and more"]
 
 
@@ -38,84 +37,58 @@ export default function AddProductPage() {
     // const categoryChange = (event) => {
     //     setCategory(event.target.value)
     // }
-
     const dispatch = useDispatch()
-    const [checkedCategories, setCheckedCategories] = useState([])
-    console.log(checkedCategories)
 
     // VAR DE ESTADO
     const [files, setFiles] = useState([])
     const [filesTwo, setFilesTwo] = useState([])
     const [reload, setReload] = useState(false)
-    //const [checked, setChecked] = useState(false);
+    const [categoryArray, setCategoryArray] = useState([]);
+    console.log(categoryArray)
 
-    //console.log(checked)
-
-    //console.log(setChecked)
-    //console.log(files)
-
-
-    // useEffect(() => {
-    //     categoryCheck()
-    //     // eslint-disable-next-line
-    // }, [!reload])
-
-    function categoryCheck(event) {
-        console.log(event)
-        let check = event
-        if (check) {
-            setCheckedCategories(event.target.value)
-            setReload(!reload)
+    const categoryCheck = (event) => {
+        const index = categoryArray.indexOf(event.target.value)
+        if (index === -1) {
+            setCategoryArray([...categoryArray, event.target.value])
+        } else {
+            setCategoryArray(categoryArray.filter(category => category !== event.target.value))
         }
-        // if (checked === true) {
-        // setChecked(event.target.value);
     }
-
-
 
 
     async function handleSubmit(event) {
         event.preventDefault()
         console.log(event)
 
-        const file = await files[4]
-        const fileTwo = await filesTwo[22]
-        // const file = await files[0] //toma solamente el primer archivo subido
+        const file = await files[0]
+        const fileTwo = await filesTwo[0]
         console.log(files)
-        console.log(file)
         console.log(filesTwo)
-        console.log(fileTwo)
 
-        const name = await event.target[0]
-        const description = await event.target[1]
-        const price = await event.target[3]
-        const stock = await event.target[0]
+        const name = await event.target[0].value
+        const description = await event.target[1].value
+        const price = await Number(event.target[3].value)
+        const stock = await Number(event.target[21].value)
+        console.log(stock)
 
-
-
-
-        //     const title = await event.target[0].value
-        //     const description = await event.target[2].value
-        //     console.log(title)
-        //     console.log(description)
-
-
-        // // construccion de un nuevo formData
-        // const formData = await new FormData()
-        //     formData.append('title', title)
-        //     formData.append('fileUpload', file)
-        //     formData.append('description', description)
-        //     console.log(formData) //no es nada dice igna
-
-        // await dispatch(productsActions.createProduct(formData))
-
+        // construccion de un nuevo formData
+        const formData = await new FormData()
+            formData.append('name', name)
+            formData.append('description', description)
+            formData.append('price', price)
+            formData.append('image', file)
+            formData.append('category', await categoryArray)
+            formData.append('stock', stock)
+            formData.append('imageInfo', fileTwo)
+        console.log(formData) // si todo sale bien, deberia no traer nada
+        console.log(categoryArray)
+        await dispatch(productsActions.createProduct(formData))
     }
 
     return (
         <>
             <NavBarAdmin />
             <div className="formContainerProduct_F">
-
 
                 <Box className="form" component="form" onSubmit={handleSubmit} >
 
@@ -139,6 +112,7 @@ export default function AddProductPage() {
                         id="price"
                         label="Price"
                         variant="filled"
+                        type='number'
                         startadornment={<InputAdornment position="start">$</InputAdornment>}
                         InputProps={{
                             startAdornment: (
@@ -157,55 +131,29 @@ export default function AddProductPage() {
                         onChange={(event) => setFiles(event.target.files)}
                     />
 
-                    {/* <TextField
-                    select
-                    helperText="Please select the category product"
-                    id="product-category"
-                    label="Category"
-                    variant="filled"
-                    value={category}
-                    onChange={categoryChange}
-                >
-                    {arrayCategories.map((category) => (
-                        <MenuItem key={category} value={category}>{category}</MenuItem>
-                    ))}
-                </TextField> */}
-
                     <div className="checkbox_F" variant="filled">
                         {arrayCategories.map((category, index) => (
-                            // <div key={index} onClick={categoryCheck}>
-                            //     <label>{category}</label>
-                            //     <input  type="checkbox"
-                            //             value={category}
-
-                            //     />
-                            // </div>
                             <FormControlLabel
                                 key={index}
                                 label={category}
-                                //onChange={(event) => setChecked(event.target.value)}
+                                value={category}
                                 id={index}
                                 control={<Checkbox
-                                    //checked={checked}
-                                    value={category}
-                                    onClick={categoryCheck}
+                                    checked={categoryArray.includes(category)}
+                                    onChange={categoryCheck}
                                     color="success"
                                 />}
                             />
-
-                            // <FormControlLabel  control={<Checkbox  key={category} id="category-check" value={category} color="success"
-                            // onChange={handleChange}  />} label={category}
-                            // />
                         ))}
                     </div>
 
                     <TextField
                         variant="filled"
                         helperText="Please enter the product stock"
-                        id="produc-name"
+                        id="produc-stock"
+                        type='number'
                         label="Product Stock"
                     />
-
 
                     <TextField
                         helperText="Please upload the product information image "

@@ -77,17 +77,17 @@ const ShoppingCart = () => {
                                         <div className='quantity-more'>
                                             <div className='plus'>
                                                 <Button
-                                                    className='btnAdminNav_F'
+                                                    className='btnShopping_A'
                                                     onClick={() => dispatch(addToCart(product._id))}>+</Button>
                                                 <h4>
                                                     {item.quantity}
                                                 </h4>
                                                 <Button
-                                                    className='btnAdminNav_F'
+                                                    className='btnShopping_A'
                                                     onClick={() => dispatch(delFromCart(product._id))}>-</Button>
                                             </div>
                                             <Button
-                                                className='btnAdminNav_F'
+                                                className='btnShopping_A'
                                                 onClick={() => dispatch(delFromCart(product._id, true))}>Remove Product
                                             </Button>
                                             <div className='price'>
@@ -107,7 +107,7 @@ const ShoppingCart = () => {
                         <h3>{new Intl.NumberFormat('us-US', { style: 'currency', currency: 'USD' }).format(total)}</h3>
                     </div>
                     <Button
-                        className='btnAdminNav_F'
+                        className='btnShopping_A'
                         onClick={() => {
                             handleDelete()
                         }
