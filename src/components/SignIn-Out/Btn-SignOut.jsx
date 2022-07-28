@@ -1,6 +1,7 @@
 import React from "react";
 import { useDispatch } from "react-redux";
 import userActions from "../../redux/actions/userActions";
+import '../../styles/adminPages.css'
 
 
 export default function BtnSignOut() {
@@ -11,7 +12,7 @@ async function signOut() {
     }
 return(
     <>
-        <button style={{bgcolor:'#6D8C3E'}} onClick={signOut}>Sign Out</button>
+        <button className="btn-signout" onClick={signOut}>Sign Out</button>
     </>
 )
 }

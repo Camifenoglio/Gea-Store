@@ -70,8 +70,12 @@ const productsActions = {
     addFavorite: (id) => {
         return async (dispatch, getState) => {
             try{
-                const res = await axios.post( urlBack + `/api/products/favorite/${id}` );
+                const res = await axios.put( urlBack + `/api/products/favorites/${id}` , {}, { headers:{Authorization: `Bearer ${localStorage.getItem('token')}`}}            
+            );
+                console.log(res)
                 dispatch({ type: 'ADD_FAVORITE', payload: res.data.response })
+
+            return res
             } catch (error) {
                 console.log(error)
             }
