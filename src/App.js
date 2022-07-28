@@ -26,11 +26,8 @@ import AddBlogPage from './components/UserAndAdmin/AddBlogPage.jsx'
 import AdminPage from './pages/AdminPage';
 import UserProfile from './pages/UserProfile';
 import BuyingHistoy from './pages/BuyingHistory';
-<<<<<<< HEAD
 import Loader from './components/Loader';
-=======
 import CardDetailBlog from './components/Blog/cardDetailBlog';
->>>>>>> 7eff1e3eb02d73e6048a635a3c12965a2b4573fe
 
 //MUI
 import ArrowCircleUpRoundedIcon from '@mui/icons-material/ArrowCircleUpRounded';
@@ -67,7 +64,6 @@ function App(props) {
     return (
         <div className="App">
 
-<<<<<<< HEAD
             {loading ? (
                 <div className="loadingContainer">
                     <div className="loadingImg">
@@ -107,33 +103,6 @@ function App(props) {
                     />
                 </>
             )}
-=======
-            <Routes>
-                <Route path='/' element={<HomePage />} />
-                <Route path='/home' element={<HomePage />} />
-                <Route path='/products' element={<ProductsPage />} />
-                <Route path='/products/:id' element={<DetailsPage />} />
-                <Route path='/aboutus' element={<AboutUsPage />} />
-                <Route path='/blog' element={<BlogPage />} />
-                <Route path='/blog/:id' element={<cardDetailBlog />} />
-                <Route path='/user' element={props.user?.role === 'admin' ? <AdminPage /> : <UserProfile />} />
-                <Route path='/shopping-cart' element={<ShoppingCart />} />
-                <Route path='/buys' element={<BuyingHistoy />} />
-                <Route path='/sign' element={props.user ? <HomePage /> : <SignInOutPage />} />
-                <Route path='/cart' element={<CartPage />} />
-                <Route path='/addproduct' element={<AddProductPage />} />
-                <Route path='/addblog' element={<AddBlogPage />} />
-
-            </Routes>
-            <Footer />
-            <Toaster
-                position='top-center'
-                autoClose={6000}
-                hideProgressBar={true}
-                newestOnTop={true}
-                transition={'scale'}
-            />
->>>>>>> 7eff1e3eb02d73e6048a635a3c12965a2b4573fe
         </div>
     );
 }
