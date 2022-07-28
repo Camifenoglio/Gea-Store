@@ -86,9 +86,15 @@ export default function Products() {
                             className='btnSidebarCategory_F buttonCategory_F'
                             value={category}
                             onClick={selectCategoryBtn}
-                        >{category}</button>
+                        >{category}
+                        </button>
                     ))}
                 </div>
+
+
+
+
+
 
                 <div className='products_F'>
                     {filterStore.length > 0 ? filterStore?.map((product, index) => (
