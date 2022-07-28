@@ -22,6 +22,12 @@
     padding-bottom: 2vh;
 }
 
+.selectCategory_F{
+    background-color: #4b5f2d1b;
+    width: 90%;
+}
+
+
 .btnSidebarCategory_F{
     width: 80%;
 }

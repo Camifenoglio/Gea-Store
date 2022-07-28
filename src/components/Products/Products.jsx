@@ -15,13 +15,22 @@ import { addToCart, countCart } from "../../redux/actions/shoppingActions";
 import IconButton from '@mui/material/IconButton';
 import SearchRoundedIcon from '@mui/icons-material/SearchRounded';
 import LocalGroceryStoreOutlinedIcon from '@mui/icons-material/LocalGroceryStoreOutlined';
+import InputLabel from '@mui/material/InputLabel';
+import MenuItem from '@mui/material/MenuItem';
+import Select from '@mui/material/Select';
+import FormHelperText from '@mui/material/FormHelperText';
+import FormControl from '@mui/material/FormControl';
+
 
 //STYLES
 import '../../styles/products.css'
 import { set } from 'lodash';
 
 
-const arrayCategories = ["Gluten free", "Sugar free", "Lactose free", "Vegan", "Canned food", "Sweets and jams", "Flours and more", "Cookies, bakery and more", "Nuts, seeds and more", "Snacks", "Rice and pasta", "Oils, dressings and more", "Sugar, sweeteners and more", "Broths, soups and sauces", "Cereals, granola and more", "Chocolate and more"]
+
+
+
+const arrayCategories = ["All Categories","Gluten free", "Sugar free", "Lactose free", "Vegan", "Canned food", "Sweets and jams", "Flours and more", "Cookies, bakery and more", "Nuts, seeds and more", "Snacks", "Rice and pasta", "Oils, dressings and more", "Sugar, sweeteners and more", "Broths, soups and sauces", "Cereals, granola and more", "Chocolate and more"]
 
 
 export default function Products() {
@@ -61,8 +70,13 @@ export default function Products() {
     const selectCategoryBtn = async (event) => {
         setCategory(event.target.value)
         const selectCategory = category
-        const res = await dispatch(productsActions.filterPerCategory(selectCategory))
+        console.log(selectCategory)
 
+        if (event.target.value === 'All Categories') {
+            dispatch(productsActions.getProducts())
+        } else {
+            const res = await dispatch(productsActions.filterPerCategory(selectCategory))
+        }
         setReload(!reload)
     }
 
@@ -79,15 +93,32 @@ export default function Products() {
             <div className='productAndFilters_F'>
                 <div className='categoriesSidebar_F'>
                     <img src='https://i.imgur.com/hD3qytz.png' alt='logoGea' className='logoSidebar_F' />
+                            <InputLabel id='category-label'>Category</InputLabel>
+                            <Select
+                                //className='btnSidebarCategory_F buttonCategory_F' 
+                                onChange={selectCategoryBtn}
+                                value={category}
+                                sx={{borderColor: '#F2A0A0', color: '#1b2808', fontWeight: 'bold'}}
+                                displayEmpty
+                                className='selectCategory_F'
 
-                    {arrayCategories.sort().map((category, index) => (
-                        <button
+                            >
+                            {arrayCategories.sort().map((category, index) => (
+                                <MenuItem 
+                                    key={index}
+                                    value={category}
+                                    sx={{backgroundColor: '#ECF2E4', fontWeight: 500}}
+                                    //onChange={selectCategoryBtn}
+                                    >{category}</MenuItem>
+                                ))}
+                            </Select>
+                        {/* <button
                             key={index}
                             className='btnSidebarCategory_F buttonCategory_F'
                             value={category}
                             onClick={selectCategoryBtn}
-                        >{category}</button>
-                    ))}
+                        >{category}</button> */}
+                    
                 </div>
 
                 <div className='products_F'>
@@ -103,7 +134,7 @@ export default function Products() {
                                 {product.image.includes("https") ? 
                                     <img className="card-img" src={product.image} alt='product' />
                                 :
-                                    <img className="card-img" src={process.env.PUBLIC_URL +`storage/product/${product.image}`} alt='product' />
+                                    <img className="card-img" src={process.env +`storage/product/${product.image}`} alt='product' />
                                 }
                                 <div className="card-info">
                                     <p className="text-title">{product.name}</p>
