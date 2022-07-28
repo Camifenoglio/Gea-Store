@@ -6,7 +6,7 @@ const blogActions = {
         console.log(formData)
         return async (dispatch, getState) => {
             try {
-                const res = await axios.post( urlBack + '/api/addblog', formData );
+                const res = await axios.post( urlBack + '/api/post', formData );
                 //await axios.post( `http://localhost:4000/api/addblog`, formData );
             } catch (error) {
                 console.log(error)
