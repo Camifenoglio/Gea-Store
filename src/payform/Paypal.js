@@ -1,8 +1,5 @@
 import React, { useEffect, useState } from "react";
-import ReactDOM from "react-dom"
 import { PayPalScriptProvider, PayPalButtons } from "@paypal/react-paypal-js"; //Importamos el npm
-import { useStateValue } from 'react';
-import { getTotal } from "../redux/reducers/shoppingReducers";
 import { useSelector } from "react-redux";
 
 export default function PayPal() {
@@ -50,8 +47,6 @@ export default function PayPal() {
                     },
 
                 },
-
-
             ],
 
             /* purchase_units: [{
