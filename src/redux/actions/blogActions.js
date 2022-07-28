@@ -6,7 +6,7 @@ const blogActions = {
         console.log(formData)
         return async (dispatch, getState) => {
             try {
-                await axios.post( urlBack + '/api/addblog', formData );
+                const res = await axios.post( urlBack + '/api/addblog', formData );
                 //await axios.post( `http://localhost:4000/api/addblog`, formData );
             } catch (error) {
                 console.log(error)
@@ -15,7 +15,7 @@ const blogActions = {
     },
     getPosts: () => {
         return async(dispatch, getState) => {
-            const answer = await axios.get(urlBack+`api/post`)
+            const answer = await axios.get(urlBack +`api/post`)
             dispatch({type:'GET_POSTS', payload:answer.data.response.topics})
             return answer.data.response.post
         }
@@ -24,7 +24,7 @@ const blogActions = {
     getOnePost: (id) => {
         return async(dispatch, getState) => {
             try {
-                const answer = await axios.get(urlBack+`api/post/${id}`)
+                const answer = await axios.get(urlBack +`api/post/${id}`)
                 
                 return answer.data.response.post
             }catch (err) {
@@ -37,7 +37,7 @@ const blogActions = {
         console.log(post)
         const token = localStorage.getItem("token")
         return async(dispatch,getState) => {
-            const answer = await axios.post(urlBack+"api/post", {...post} ,
+            const answer = await axios.post(urlBack +"api/post", {...post} ,
                 {headers:{ Authorization: `Bearer ${token}`}})
             dispatch({type:'UPD_POST', payload:answer.data.response.newPost})
             return answer.data.response.newPost
@@ -47,7 +47,7 @@ const blogActions = {
     modifyPost: (post) => {
         const token = localStorage.getItem("token")
         return async (dispatch, getState) => {
-            const answer = await axios.put(urlBack+"api/posts",{...post},
+            const answer = await axios.put(urlBack +"api/posts",{...post},
                 {headers: {Authorization: `Bearer ${token}`}})
             dispatch({type:'MOD_POST', payload:answer.data.response})
             return answer.data.response
@@ -58,7 +58,7 @@ const blogActions = {
         const token = localStorage.getItem("token")
         return async(dispatch, getState) => {
             try {
-                const answer = await axios.post(urlBack+`api/posts/${id}`,{},
+                const answer = await axios.post(urlBack +`api/posts/${id}`,{},
                     {headers:{ Authorization: `Bearer ${token}`}})
                 dispatch({type:'DEL_POST', payload:answer.data.response})
             }catch (err) {
@@ -71,11 +71,8 @@ const blogActions = {
         const token = localStorage.getItem('token')
         return async(dispatch, getState) => {
             try {
-                const answer = await axios.put(urlBack+`api/posts/likes/${id}`,{},
-                    {headers: {'Authorization': 'Bearer '+token}})
-                    //console.log('holaa'+answer)
-                    console.log(id)
-                    console.log(answer)
+                const answer = await axios.put(urlBack +`api/posts/likes/${id}`,{},
+                    {headers: {Authorization: "Bearer "+token}})
                 return answer.data.response
             }catch (err) {
                 console.log(err)
@@ -86,7 +83,7 @@ const blogActions = {
     addComment: (comment) => {
         const token = localStorage.getItem('token')
         return async (dispatch, getState) => {
-            const answer = await axios.post(urlBack+`api/comments`,{...comment},
+            const answer = await axios.post(urlBack +`api/comments`,{...comment},
                     {headers: {'Authorization': "Bearer "+token}})
                 dispatch({type: 'message', payload: {view: true, message: answer.data.message, success: answer.data.success}
                 })
@@ -98,7 +95,7 @@ const blogActions = {
     modifyComment: (comment) => {
         const token = localStorage.getItem('token')
         return async (dispatch, getState) => {
-            const answer = await axios.put(urlBack+`api/comments`,{...comment},
+            const answer = await axios.put(urlBack +`api/comments`,{...comment},
                 {headers: {Authorization: "Bearer "+token}})
             dispatch({type: 'message', payload: {view: true, message: answer.data.message, success: answer.data.success}
             })
@@ -109,7 +106,7 @@ const blogActions = {
     deleteComment: (id) => {
         const token = localStorage.getItem('token')
         return async (dispatch, getState) => {
-            const answer = await axios.post(urlBack+`api/comments/${id}`,{},
+            const answer = await axios.post(urlBack +`api/comments/${id}`,{},
                 {headers: {Authorization: "Bearer "+token}})
             dispatch({type: 'message', payload: {view: true, message: answer.data.message, success: answer.data.success}
             })

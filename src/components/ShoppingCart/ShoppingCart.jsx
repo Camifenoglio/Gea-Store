@@ -10,6 +10,7 @@ import '../../styles/shoppingContainer.css';
 import { Container } from '@mui/system';
 import Swal from 'sweetalert2'
 import Paypal from '../../payform/Paypal';
+import { Button } from '@mui/material';
 
 
 const ShoppingCart = () => {
@@ -56,54 +57,62 @@ const ShoppingCart = () => {
 
     return (
         <div className='main'>
-
             <div className='main-content'>
-                <div className='titles'>
-                    <div>
+                <div className='cart-cointainer'>
+                    <div className='titles'>
                         <h2>Shopping Cart</h2>
                         <h3>Products</h3>
 
-                    </div>
-                    {cart.map((item) => {
-                        const product = productsById[item.productId];
-                        return (
-                            <div className='cart-cointainer'>
-                                <div justifyContent="center" >
+                        {cart.map((item) => {
+                            const product = productsById[item.productId];
+                            return (
+                                <div className='yellow'>
                                     <div className="image-container">
                                         <img src={product.image} alt={product.name} />
                                     </div>
-                                </div>
-                                <div className='product-description'>
-                                    <h3>{product.name}</h3>
-                                    <Box display={{ xs: 'none', md: 'block' }}>{product.description}</Box>
-                                </div>
-                                <div justifyContent="center" direction={{ xs: "column", sm: "row" }} spacing={2}>
-                                    <div justifyContent="center" spacing={2}>
-                                        <div spacing={2} direction="row">
-                                            <button onClick={() => dispatch(addToCart(product._id))}>+</button>
-                                            <div>
-                                                {item.quantity}
-                                            </div>
-                                            <button onClick={() => dispatch(delFromCart(product._id))}>-</button>
-                                        </div>
-                                        <button onClick={() => dispatch(delFromCart(product._id, true))}>Remove Product
-                                        </button>
+                                    <div className='product-description'>
+                                        <h3>{product.name}</h3>
                                     </div>
-                                    <div justifyContent="center">{new Intl.NumberFormat('us-US', { style: 'currency', currency: 'USD' }).format(product.price)}</div>
+                                    <div className='content-right'>
+                                        <div className='quantity-more'>
+                                            <div className='plus'>
+                                                <Button
+                                                    className='btnShopping_A'
+                                                    onClick={() => dispatch(addToCart(product._id))}>+</Button>
+                                                <h4>
+                                                    {item.quantity}
+                                                </h4>
+                                                <Button
+                                                    className='btnShopping_A'
+                                                    onClick={() => dispatch(delFromCart(product._id))}>-</Button>
+                                            </div>
+                                            <Button
+                                                className='btnShopping_A'
+                                                onClick={() => dispatch(delFromCart(product._id, true))}>Remove Product
+                                            </Button>
+                                            <div className='price'>
+                                                <h3 className='total-price'>Price:</h3>
+                                                <h3> {new Intl.NumberFormat('us-US', { style: 'currency', currency: 'USD' }).format(product.price)}</h3>
+                                            </div>
+                                        </div>
+                                    </div>
                                 </div>
-                            </div>
-                        )
-                    })}
+                            )
+                        })}
+                    </div>
                 </div>
                 <div className='total'>
                     <div>
-                        <h4>Total</h4>
+                        <h2>Total</h2>
+                        <h3>{new Intl.NumberFormat('us-US', { style: 'currency', currency: 'USD' }).format(total)}</h3>
                     </div>
-                    <div>{new Intl.NumberFormat('us-US', { style: 'currency', currency: 'USD' }).format(total)}</div>
-                    <button onClick={() => {
-                        handleDelete()
-                    }
-                    }>Clear Cart</button>
+                    <Button
+                        className='btnShopping_A'
+                        onClick={() => {
+                            handleDelete()
+                        }
+                        }>Clear Cart
+                    </Button>
                     <Paypal />
                 </div>
             </div>
