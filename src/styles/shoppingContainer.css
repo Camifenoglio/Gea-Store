@@ -14,7 +14,7 @@
     min-width: 200px;
     max-width: 250px;
     width: 20vw;
-    aspect-ratio: 1;
+    /* aspect-ratio: 1; */
     /* se calcula el ancho o el alto faltante */
     border: 1px solid gray;
     flex-shrink: 0;
@@ -26,4 +26,25 @@
     object-fit: contain;
     width: 100%;
     height: 100%;
+}
+
+.main {
+    display: flex;
+    background-color: aqua;
+    flex-grow: 1;
+
+}
+
+.main-content {
+    width: 100%;
+}
+
+.cointainer {
+    flex-direction: row;
+
+}
+
+.total {
+    flex-direction: row;
+    background-color: red;
 }
