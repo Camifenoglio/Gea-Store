@@ -6,6 +6,8 @@ import TableCell from '@mui/material/TableCell';
 import TableHead from '@mui/material/TableHead';
 import TableRow from '@mui/material/TableRow';
 import Title from './Title';
+import BtnSignOut from '../SignIn-Out/Btn-SignOut';
+
 import '../../styles/adminPages.css'
 
 // Generate Order Data
@@ -58,7 +60,7 @@ export default function Orders() {
             <div className="order-shopping">
                 <React.Fragment>
                     <Title sx={{ color: '#A4BF41' }}>Recent Orders</Title>
-                    <Table size="small">
+                    <Table size="small" className='tableOrder_F'>
                         <TableHead>
                             <TableRow>
                                 <TableCell>Date</TableCell>
@@ -84,6 +86,7 @@ export default function Orders() {
                         See more orders
                     </Link>
                 </React.Fragment>
+                <BtnSignOut/>
             </div>
     );
 }

@@ -1,9 +1,7 @@
 import React, { useEffect, useState } from "react";
-import ReactDOM from "react-dom"
 import { PayPalScriptProvider, PayPalButtons } from "@paypal/react-paypal-js"; //Importamos el npm
-import { useStateValue } from 'react';
-import { getTotal } from "../redux/reducers/shoppingReducers";
-import { useSelector } from "react-redux";
+import { useDispatch, useSelector } from "react-redux";
+import { clearCart } from "../redux/actions/shoppingActions";
 
 export default function PayPal() {
     const { products } = useSelector((state) => state.productReducers);
@@ -11,6 +9,7 @@ export default function PayPal() {
     const [success, setSuccess] = useState(false);
     const [orderID, setOrderID] = useState(false);
     const [ErrorMessage, setErrorMessage] = useState("");
+    const dispatch = useDispatch()
 
     // console.log(1, orderID);
     // console.log(2, success);
@@ -50,8 +49,6 @@ export default function PayPal() {
                     },
 
                 },
-
-
             ],
 
             /* purchase_units: [{
@@ -146,6 +143,7 @@ export default function PayPal() {
                 alert('Transaction ' + transaction.status + ': ' + transaction.id + '\n\nSee console for all available details');
                 console.log(details)
                 setOrderID(transaction.id)
+                dispatch(clearCart())
             });
     };
     const onCancel = (data) => {

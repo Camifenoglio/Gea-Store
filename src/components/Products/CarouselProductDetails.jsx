@@ -17,6 +17,7 @@ import "swiper/css/thumbs";
 // STYLES
 import '../../styles/carouselProductDetails.css'
 import productsActions from "../../redux/actions/productsActions";
+import { addToCart, countCart } from "../../redux/actions/shoppingActions";
 //import CardCredit from "./CardCredit";
 
 // import required modules
@@ -28,12 +29,22 @@ import { IconButton, Typography } from "@mui/material";
 import userActions from "../../redux/actions/userActions";
 
 
+
 export default function CarouselProductDetail() {
     const idProduct = useParams()
     const dispatch = useDispatch()
     const user = useSelector(store => store.usersReducers.user)
     const [product, setProduct] = useState()
     const [reload, setReload] = useState()
+    const [count, setCount] = React.useState(1);
+
+    const ScrollToTop = () =>  {
+        window.scroll({
+            top: 0,
+            behavior: "smooth",
+            left:0
+        })
+    }
 
     useEffect(() => {
         dispatch(productsActions.getOneProduct(idProduct))
@@ -45,6 +56,18 @@ export default function CarouselProductDetail() {
     //console.log(dataProduct)
 
     const [thumbsSwiper, setThumbsSwiper] = useState(null);
+
+    async function likeOrDislike(event) {
+        event.preventDefault()
+        await dispatch(productsActions.addFavorite(dataProduct._id))
+        setReload(!reload)
+    }
+
+    function alertCart(success) {
+        return (
+            toast.success('Added to Cart', { position: "bottom-center" })
+        )
+    }
 
     function alerts(res) {
         if (res === undefined) {
@@ -66,7 +89,7 @@ export default function CarouselProductDetail() {
         <div className="flexbox_F">
             <div className="productDetailPage_F">
                 <div className="btnBackContainer_F">
-                    <LinkRouter to='/products' className="underline-none">
+                    <LinkRouter to='/products' className="underline-none" onClick={ScrollToTop}>
                         <button className="btnBackProducts_F">
                             <ArrowBackOutlinedIcon className="arrowBackBtn_F" />
                             Back to products
@@ -126,7 +149,22 @@ export default function CarouselProductDetail() {
                                 <p key={index}>#{category}</p>
                             ))}
                         </div>
-                        <button className="btnCardDetails_F">
+                        <button
+                            onClick={
+                                (success) => {
+
+                                    if (user) {
+                                        setCount(count + 1)
+                                        dispatch(addToCart(dataProduct._id))
+                                        dispatch(countCart(count))
+                                        toast.success('Added to Cart', { position: "bottom-center" })
+                                    } else {
+                                        toast.error('You need to be logged to add to the cart', { position: "bottom-center" })
+                                    }
+                                }}
+                            className="btnCardDetails_F"
+                        >
+
                             Add to cart
                             <div className="arrow-wrapper">
                                 <div className="arrow"></div>
@@ -141,15 +179,15 @@ export default function CarouselProductDetail() {
                             {user ?
                                 (<IconButton onClick={likeOrDislike}>
                                     {dataProduct?.favorite.includes(user.id) ?
-                                    <FavoriteIcon sx={{ color: "red", fontSize: 40 }} /> :
-                                    <FavoriteIcon sx={{ color: "black", fontSize: 40 }} />}
+                                        <FavoriteIcon sx={{ color: "red", fontSize: 40 }} /> :
+                                        <FavoriteIcon sx={{ color: "black", fontSize: 40 }} />}
                                 </IconButton>)
 
                                 : (
-                                <IconButton onClick={likeOrDislike}>
-                                    <FavoriteIcon sx={{ fontSize: 40 }} />
-                                
-                                </IconButton>
+                                    <IconButton onClick={likeOrDislike}>
+                                        <FavoriteIcon sx={{ fontSize: 40 }} />
+
+                                    </IconButton>
                                 )}
 
                             <h4 style={{ color: "black ", fontSize: 30, margin: 0 }}>{dataProduct?.favorite?.length}</h4>

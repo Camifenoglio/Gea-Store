@@ -1,5 +1,9 @@
+// REACT
 import React from 'react';
-import '../App';
+import { useSelector } from 'react-redux';
+import { Link as LinkRouter } from 'react-router-dom';
+
+//MUI
 import { styled } from '@mui/material/styles';
 import Card from '@mui/material/Card';
 import CardHeader from '@mui/material/CardHeader';
@@ -11,9 +15,14 @@ import Avatar from '@mui/material/Avatar';
 import IconButton from '@mui/material/IconButton';
 import Typography from '@mui/material/Typography';
 import ExpandMoreIcon from '@mui/icons-material/ExpandMore';
-import { useSelector } from 'react-redux';
+
+// STYLES
+import '../App';
+
+//COMPONENTS
 import BtnSignOut from '../components/SignIn-Out/Btn-SignOut';
 import UserLikes from '../components/UserAndAdmin/UserLikes';
+
 
 const ExpandMore = styled((props) => {
     const { expand, ...other } = props;
@@ -71,12 +80,13 @@ export default function RecipeReviewCard() {
                 </CardContent>
             </Collapse>
         </Card> : 
-                <CardContent sx={{ margin: '5rem', backgroundImage: 'url("https://i.imgur.com/c6Ttmlb.jpg")' }}>
-                    
-                    <Typography paragraph>
-                        Please Sign In to see your profile
-                    </Typography>
-                </CardContent>
+                <div className='SignInCallToAction_F'>
+                    <LinkRouter to='/sign' className='underline-none'>
+                        <h1 className='callToActionUserProfile_F'>Please Sign In to see your profile</h1>
+                        <img className='imgProfileAction_F' src='https://i.imgur.com/v3tmtDk.png' alt='plant'/>
+                    </LinkRouter>
+
+                </div>
         }
 </>
     );

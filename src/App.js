@@ -1,8 +1,9 @@
 // REACT
-import { React, useEffect } from 'react';
+import { React, useEffect, useState } from 'react';
 import { useDispatch } from 'react-redux';
 import { Route, Routes } from 'react-router-dom';
 import { Toaster } from 'react-hot-toast';
+import ScrollToTop from 'react-scroll-to-top'
 
 //STYLES
 import './styles/App.css';
@@ -19,34 +20,94 @@ import ShoppingCart from './components/ShoppingCart/ShoppingCart';
 import SignInOutPage from './pages/SignInOutPage';
 import CartPage from './pages/CartPage';
 import AddProductPage from './components/UserAndAdmin/AddProductPage.jsx';
-import {connect} from 'react-redux';
+import { connect } from 'react-redux';
 import userActions from '../src/redux/actions/userActions'
 import AddBlogPage from './components/UserAndAdmin/AddBlogPage.jsx'
 import AdminPage from './pages/AdminPage';
 import UserProfile from './pages/UserProfile';
 import BuyingHistoy from './pages/BuyingHistory';
+<<<<<<< HEAD
+import Loader from './components/Loader';
+=======
+import CardDetailBlog from './components/Blog/cardDetailBlog';
+>>>>>>> 7eff1e3eb02d73e6048a635a3c12965a2b4573fe
 
+//MUI
+import ArrowCircleUpRoundedIcon from '@mui/icons-material/ArrowCircleUpRounded';
 //ACTIONS
 import productsActions from './redux/actions/productsActions';
-
 
 function App(props) {
 
     const dispatch = useDispatch()
+    const [loading, setLoading] = useState(false);
 
     useEffect(() => {
-        if(localStorage.getItem('token')!==null){
-            const token=localStorage.getItem('token')
+        if (localStorage.getItem('token') !== null) {
+            const token = localStorage.getItem('token')
             props.verifyToken(token)
         }
         dispatch(productsActions.getProducts())
         // eslint-disable-next-line
     }, [])
 
+    useEffect(() => {
+        setTimeout(() => {
+            window.scrollTo(0, 0)
+        }, 500)
+    }, [])
+
+    useEffect(() => {
+        setLoading(true);
+        setTimeout(() => {
+            setLoading(false);
+        }, 4000);
+    }, []);
+
     return (
         <div className="App">
-            <NavBar />
 
+<<<<<<< HEAD
+            {loading ? (
+                <div className="loadingContainer">
+                    <div className="loadingImg">
+                        <Loader />
+                    </div>
+                </div>
+            ) : (
+                <>
+                    <NavBar />
+                    <Routes>
+                        <Route path='/' element={<HomePage />} />
+                        <Route path='/home' element={<HomePage />} />
+                        <Route path='/products' element={<ProductsPage />} />
+                        <Route path='/products/:id' element={<DetailsPage />} />
+                        <Route path='/aboutus' element={<AboutUsPage />} />
+                        <Route path='/blog' element={<BlogPage />} />
+                        <Route path='/user' element={props.user?.role === 'admin' ? <AdminPage /> : <UserProfile />} />
+                        <Route path='/shopping-cart' element={<ShoppingCart />} />
+                        <Route path='/buys' element={<BuyingHistoy />} />
+                        <Route path='/sign' element={props.user ? <HomePage /> : <SignInOutPage />} />
+                        <Route path='/cart' element={<CartPage />} />
+                        <Route path='/addproduct' element={<AddProductPage />} />
+                        <Route path='/addblog' element={<AddBlogPage />} />
+                    </Routes>
+                    <Footer />
+                    <Toaster
+                        position='top-center'
+                        autoClose={6000}
+                        hideProgressBar={true}
+                        newestOnTop={true}
+                        transition={'scale'}
+                    />
+                    <ScrollToTop
+                        smooth
+                        component={< ArrowCircleUpRoundedIcon sx={{ color: "#F2F2F2", fontSize: "4.5rem", backgroundColor: "#F2A0A0", borderRadius: "100%" }} />}
+                        style={{ backgroundColor: "transparent", boxShadow: "none", paddingBottom: "4.4rem", paddingRight: '3rem'}}
+                    />
+                </>
+            )}
+=======
             <Routes>
                 <Route path='/' element={<HomePage />} />
                 <Route path='/home' element={<HomePage />} />
@@ -54,10 +115,11 @@ function App(props) {
                 <Route path='/products/:id' element={<DetailsPage />} />
                 <Route path='/aboutus' element={<AboutUsPage />} />
                 <Route path='/blog' element={<BlogPage />} />
-                <Route path='/user' element={props.user?.role === 'admin'? <AdminPage/> : <UserProfile />} />
+                <Route path='/blog/:id' element={<cardDetailBlog />} />
+                <Route path='/user' element={props.user?.role === 'admin' ? <AdminPage /> : <UserProfile />} />
                 <Route path='/shopping-cart' element={<ShoppingCart />} />
                 <Route path='/buys' element={<BuyingHistoy />} />
-                <Route path='/sign' element={props.user ? <HomePage/> : <SignInOutPage />} />
+                <Route path='/sign' element={props.user ? <HomePage /> : <SignInOutPage />} />
                 <Route path='/cart' element={<CartPage />} />
                 <Route path='/addproduct' element={<AddProductPage />} />
                 <Route path='/addblog' element={<AddBlogPage />} />
@@ -71,19 +133,20 @@ function App(props) {
                 newestOnTop={true}
                 transition={'scale'}
             />
+>>>>>>> 7eff1e3eb02d73e6048a635a3c12965a2b4573fe
         </div>
     );
 }
 
-const mapDispatchToProps={
-    verifyToken:userActions.verifyToken
-  }
-  const mapStateToProps=(state)=>{
+const mapDispatchToProps = {
+    verifyToken: userActions.verifyToken
+}
+const mapStateToProps = (state) => {
     return {
-      user:state.usersReducers.user
+        user: state.usersReducers.user
     }
-  }
-  
-  export default connect(mapStateToProps, mapDispatchToProps)(App);
-  
+}
+
+export default connect(mapStateToProps, mapDispatchToProps)(App);
+
 

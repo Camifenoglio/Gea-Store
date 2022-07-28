@@ -28,34 +28,13 @@ const pages = [
 
 function Footer() {
 
-
-    //const [anchorElNav, setAnchorElNav] = React.useState(null);
-    //const [anchorElUser, setAnchorElUser] = React.useState(null);
-
-    // const handleOpenNavMenu = (event) => {
-    //     setAnchorElNav(event.currentTarget);
-    // };
-    // const handleOpenUserMenu = (event) => {
-    //     setAnchorElUser(event.currentTarget);
-    // };
-
-    // const handleCloseNavMenu = () => {
-    //     setAnchorElNav(null);
-    // };
-
-    // const handleCloseUserMenu = () => {
-    //     setAnchorElUser(null);
-    // };
-
-
-    // const ScrollToTop = () => {
-    //     window.scroll({
-    //         top: 0,
-    //         behavior: "smooth",
-    //         left: 0
-    //     })
-    // }
-
+    const ScrollToTop = () =>  {
+        window.scroll({
+            top: 0,
+            behavior: "smooth",
+            left:0
+        })
+    }
     return (
         <>
             <div className="footerNav">
@@ -78,22 +57,19 @@ function Footer() {
                     
                 <div className="navFooter">
                     <div className="navegation">
-                        {/* <Button onClick={ScrollToTop} style={{ color: "#F2F2F2" }}>Home</Button> */}
                         {pages.map((page, index) => (
                         <LinkRouter 
                             to={page.to}
                             key={index}
-                            // onClick={handleCloseNavMenu}
                             className='underline-none'
                             >
                         <Button 
-                        //onClick={handleCloseNavMenu} 
+                        onClick={ScrollToTop} 
                         style={{ color: "#F2F2F2" }}
                         >{page.name}</Button>
                         </LinkRouter>
                         ))}
-                        {/* <Button onClick={ScrollToTop} style={{ color: "#F2F2F2" }}>About Us</Button>
-                        <Button onClick={ScrollToTop} style={{ color: "#F2F2F2" }}>Blog</Button> */}
+
                     </div>
 
                 </div>
