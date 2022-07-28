@@ -74,11 +74,12 @@ const blogActions = {
                 const answer = await axios.put(urlBack+`api/posts/likes/${id}`,{},
                     {headers: {'Authorization': 'Bearer '+token}})
                     //console.log('holaa'+answer)
+                    console.log(id)
+                    console.log(answer)
                 return answer.data.response
             }catch (err) {
                 console.log(err)
             }
-            
         }
     },
 

@@ -30,12 +30,8 @@ export default function Products() {
 
     function alerts(success) {
         return (
-
             toast.success('Added to Cart', { position: "bottom-center" })
-
-
         )
-
     }
 
 
@@ -90,10 +86,6 @@ export default function Products() {
                         </button>
                     ))}
                 </div>
-
-
-
-
 
 
                 <div className='products_F'>

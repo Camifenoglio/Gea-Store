@@ -9,9 +9,8 @@ import Data from '../Data'
 
 
 
+
 export default function CardBlog() {
-
-
 
 
     return (
@@ -19,35 +18,29 @@ export default function CardBlog() {
             <div className='conteinerCards'>
                 {Data.map((data, index) => (
                     <Card className='card-conteiner_B' sx={{ maxWidth: 645, flexWrap: 'nowrap' }} key={index}>
-
-                       
                         <Box className='boxCardRP' >
-                        <Typography className='titleCardRP'>
-                            {data.name}
+                            <Typography className='titleCardRP'>
+                                {data.name}
                             </Typography>
-                                <CardMedia className='img-blog_B'
-                                    component="img"
-                                    height="140"
-                                    image={data.image}
-                                    alt={data.name}
-                                />
-                            
+                            <CardMedia className='img-blog_B'
+                                component="img"
+                                height="140"
+                                image={data.image}
+                                alt={data.name}
+                            />
                         </Box>
-                            <Box className='boxContainerRP' sx={{ maxWidth: 300, display: 'flex', justifyContent: 'flex-end', alignItems: 'flex-end', flexDirection: 'column' }}>
-                                <CardContent className='text-blog_B'>
-                                    <Typography >
-                                        {data.country}
-                                    </Typography>
-                                </CardContent>
-                                <CardActions className='buttom-blog_B' >
-                                    <Button sx={{ color: 'black' }} size="small" color="primary">
-                                        Show More
-                                    </Button>
-                                </CardActions>
-                                
-                            </Box>
-                          
-
+                        <Box className='boxContainerRP' sx={{ maxWidth: 300, display: 'flex', justifyContent: 'flex-end', alignItems: 'flex-end', flexDirection: 'column' }}>
+                            <CardContent className='text-blog_B'>
+                                <Typography >
+                                    {data.country}
+                                </Typography>
+                            </CardContent>
+                            <CardActions className='buttom-blog_B' >
+                                <Button sx={{ color: 'black' }} size="small" color="primary">
+                                    Show More
+                                </Button>
+                            </CardActions>
+                        </Box>
                     </Card>
                 ))
                 }
