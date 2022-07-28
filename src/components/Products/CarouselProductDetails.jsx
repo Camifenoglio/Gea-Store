@@ -16,7 +16,6 @@ import "swiper/css/thumbs";
 // STYLES
 import '../../styles/carouselProductDetails.css'
 import productsActions from "../../redux/actions/productsActions";
-import productReducers from "../../redux/reducers/productReducers";
 //import CardCredit from "./CardCredit";
 
 // import required modules
@@ -27,9 +26,9 @@ import ArrowBackOutlinedIcon from '@mui/icons-material/ArrowBackOutlined';
 
 
 export default function CarouselProductDetail() {
-
     const idProduct = useParams()
     const dispatch = useDispatch()
+    const user = useSelector(store => store.usersReducers.user)
     const [product, setProduct] = useState()
     const [reload, setReload] = useState()
 
@@ -40,18 +39,18 @@ export default function CarouselProductDetail() {
     }, [])
 
     const dataProduct = useSelector(store => store.productReducers.oneProduct)
+    console.log(dataProduct)
 
     const [thumbsSwiper, setThumbsSwiper] = useState(null);
 
-    const user = useSelector(store => store.usersReducers.user)
+    // async function likeOrDislike(event){
+    //     event.preventDefault()
+    //     await dispatch(productsActions.addFavorite(dataProduct._id))
+    //     setReload(!reload)
+    // }
 
-    async function likeOrDislike(){
-        await dispatch(productsActions.addFavorite(dataProduct._id))
 
-        setReload(!reload)
-    }
 
-    console.log(dataProduct)
     return (
         <div className="flexbox_F">
             <div className="productDetailPage_F">
@@ -130,13 +129,18 @@ export default function CarouselProductDetail() {
                             <p >{dataProduct.description}.</p>
                         </div>
                         <div>
-                    {user ?
-                        (<IconButton onClick={likeOrDislike}>{dataProduct?.favorite.length?
-                            <FavoriteIcon sx={{ color: "red", fontSize: 30 }} /> :
-                            <FavoriteIcon sx={{ color: "black", fontSize: 30 }} />}</IconButton>)
-
-                            : (<FavoriteIcon sx={{ fontSize: 30 }} />)}
-
+                            {/* {!user ?
+                                <FavoriteIcon sx={{ fontSize: 30 }} />
+                            :
+                            <IconButton 
+                                onClick={likeOrDislike}
+                                >
+                                {dataProduct?.favorite.length > 0 ?
+                                    <FavoriteIcon sx={{ color: "red", fontSize: 30 }} /> 
+                                    :
+                                    <FavoriteIcon sx={{ color: "black", fontSize: 30 }} />}
+                            </IconButton>
+                            } */}
                             <h3 style={{ color: "black ", fontSize: 30, margin: 0 }}>{dataProduct?.favorite?.length}</h3>
                         
                     </div>
