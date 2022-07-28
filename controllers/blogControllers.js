@@ -205,7 +205,7 @@ const blogControllers = {
             })
             newPost = await new Blog({
                 title, 
-                fileUpload: `https://gea-store-backend.herokuapp.com/product/${fileName}`, 
+                fileUpload: `https://gea-store-backend.herokuapp.com/blog/${fileName}`, 
                 description}).save()
         } catch(errCatch) {
             error = errCatch
