@@ -192,7 +192,6 @@ const settingProfile = [
                             open={Boolean(anchorElUser)}
                             onClose={handleCloseUserMenu}
                         >{!user ?
-
                             settings.map((setting, index) => (
                                 <LinkRouter
                                     to={setting.to}

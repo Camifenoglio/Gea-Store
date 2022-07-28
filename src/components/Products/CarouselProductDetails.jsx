@@ -24,14 +24,14 @@ import { FreeMode, Navigation, Thumbs } from "swiper";
 
 import FavoriteIcon from '@mui/icons-material/Favorite';
 import ArrowBackOutlinedIcon from '@mui/icons-material/ArrowBackOutlined';
-import { IconButton } from "@mui/material";
+import { IconButton, Typography } from "@mui/material";
 
 
 export default function CarouselProductDetail() {
-
     const idProduct = useParams()
     const dispatch = useDispatch()
-    // const [product, setProduct] = useState()
+    const user = useSelector(store => store.usersReducers.user)
+    const [product, setProduct] = useState()
     const [reload, setReload] = useState()
 
     useEffect(() => {
@@ -41,10 +41,15 @@ export default function CarouselProductDetail() {
     }, [reload])
 
     const dataProduct = useSelector(store => store.productReducers.oneProduct)
+    console.log(dataProduct)
 
     const [thumbsSwiper, setThumbsSwiper] = useState(null);
 
-    const user = useSelector(store => store.usersReducers.user)
+    async function likeOrDislike(event){
+        event.preventDefault()
+        await dispatch(productsActions.addFavorite(dataProduct._id))
+        setReload(!reload)
+    }
 
 
     function alerts(res) {
@@ -112,8 +117,6 @@ export default function CarouselProductDetail() {
                             <SwiperSlide>
                                 <img className="swiperDetailImage_B" src={dataProduct.imageInfo} alt="product" />
                             </SwiperSlide>
-
-
                         </Swiper>
 
                     </div>
@@ -139,21 +142,22 @@ export default function CarouselProductDetail() {
                             <h4>Description:</h4>
                             <p >{dataProduct.description}.</p>
                         </div>
-                        <div>
+                        <div className="favorite-icon">
                             {user ?
                                 (<IconButton onClick={likeOrDislike}>
                                     {dataProduct?.favorite.includes(user.id) ?
-                                    <FavoriteIcon sx={{ color: "red", fontSize: 30 }} /> :
-                                    <FavoriteIcon sx={{ color: "black", fontSize: 30 }} />}
+                                    <FavoriteIcon sx={{ color: "red", fontSize: 40 }} /> :
+                                    <FavoriteIcon sx={{ color: "black", fontSize: 40 }} />}
                                 </IconButton>)
 
                                 : (
                                 <IconButton onClick={likeOrDislike}>
-                                    <FavoriteIcon sx={{ fontSize: 30 }} />
+                                    <FavoriteIcon sx={{ fontSize: 40 }} />
+                                
                                 </IconButton>
                                 )}
 
-                            <h3 style={{ color: "black ", fontSize: 30, margin: 0 }}>{dataProduct?.favorite?.length}</h3>
+                            <h4 style={{ color: "black ", fontSize: 30, margin: 0 }}>{dataProduct?.favorite?.length}</h4>
 
                         </div>
 

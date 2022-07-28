@@ -39,6 +39,7 @@ const productsActions = {
         }
     },
     createProduct: (formData) => {
+        console.log(formData)
         return async (dispatch, getState) => {
             try {
                 await axios.post( urlBack + '/api/products', formData );

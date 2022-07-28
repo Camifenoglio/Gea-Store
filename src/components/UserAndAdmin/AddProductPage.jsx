@@ -55,7 +55,6 @@ export default function AddProductPage() {
         }
     }
 
-
     async function handleSubmit(event) {
         event.preventDefault()
         console.log(event)
