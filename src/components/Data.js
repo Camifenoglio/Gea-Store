@@ -1,73 +1,72 @@
 
 
-var Data=[
+var Data = [
     {
-        "id":"1",
+        "id": "1",
         "name": "Receta",
         "country": "Under Construction",
         "description": "Comming Soon",
         "image": "https://i.imgur.com/hD3qytz.png",
-        "favorite":[]
-        
+        "favorite": []
+
     },
     {
-        "id":"2",
+        "id": "2",
         "name": "Receta",
         "country": "Under Construction",
         "description": "Comming Soon",
         "image": "https://i.imgur.com/FMf12pR.png",
-        "favorite":[]
+        "favorite": []
     },
     {
-        "id":"3",
+        "id": "3",
         "name": "Receta",
         "country": "Under Construction",
         "description": "Comming Soon",
         "image": "https://i.imgur.com/FMf12pR.png",
-        "favorite":[]
+        "favorite": []
     },
     {
-        "id":"4",
+        "id": "4",
         "name": "Receta",
         "country": "Under Construction",
         "description": "Comming Soon",
         "image": "https://i.imgur.com/FMf12pR.png",
-        "favorite":[]
+        "favorite": []
     },
     {
-        "id":"3",
+        "id": "3",
         "name": "Receta",
         "country": "Under Construction",
         "description": "Comming Soon",
         "image": "https://i.imgur.com/FMf12pR.png",
-        "favorite":[]
+        "favorite": []
     },
     {
-        "id":"3",
+        "id": "3",
         "name": "Receta",
         "country": "Under Construction",
         "description": "Comming Soon",
         "image": "https://i.imgur.com/FMf12pR.png",
-        "favorite":[]
+        "favorite": []
     },
     {
-        "id":"3",
+        "id": "3",
         "name": "Receta",
         "country": "Under Construction",
         "description": "Comming Soon",
         "image": "https://i.imgur.com/FMf12pR.png",
-        "favorite":[]
+        "favorite": []
     },
     {
-        "id":"3",
+        "id": "3",
         "name": "Receta",
         "country": "Under Construction",
         "description": "Comming Soon",
         "image": "https://i.imgur.com/FMf12pR.png",
-        "favorite":[]
-    }
-    
-]
+        "favorite": []
+
+    }]
 export default Data
 
 

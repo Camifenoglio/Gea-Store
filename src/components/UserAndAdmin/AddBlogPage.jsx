@@ -86,7 +86,7 @@ export default function AddBlogPage() {
                         rows={4}
                         variant="filled"
                     />
-                    <Button type="submit" onClick={ ScrollToTop } color="success" variant="contained" style={{ height: '3rem' }}>Add Product</Button>
+                    <Button type="submit" onClick={ ScrollToTop } color="success" variant="contained" style={{ height: '3rem' }}>Add Blog</Button>
                 </Box>
 
             </div>

@@ -2,12 +2,10 @@ import { useEffect } from 'react'
 import { useDispatch, useSelector } from "react-redux";
 import Stack from '@mui/material/Stack';
 import CircularProgress from '@mui/material/CircularProgress';
-import Divider from '@mui/material/Divider';
 import Box from '@mui/material/Box';
 
 import { addToCart, delFromCart, clearCart } from "../../redux/actions/shoppingActions";
 import '../../styles/shoppingContainer.css';
-import { Container } from '@mui/system';
 import Swal from 'sweetalert2'
 import Paypal from '../../payform/Paypal';
 import { Button } from '@mui/material';

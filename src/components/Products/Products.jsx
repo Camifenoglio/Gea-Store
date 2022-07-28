@@ -69,7 +69,15 @@ export default function Products() {
     }, [])
 
     // COMO SOBRA
+<<<<<<< HEAD
 
+=======
+    // useEffect(() => {
+    //     removeProduct()
+    //     dispatch(productsActions.getProducts(currentStore))
+    //     //eslint-disable-next-line react-hooks/exhaustive-deps
+    // }, [!reload])
+>>>>>>> 7eff1e3eb02d73e6048a635a3c12965a2b4573fe
 
     useEffect(() => {
         dispatch(productsActions.filterPerCategory(category))
@@ -135,12 +143,16 @@ export default function Products() {
                 <div className='products_F'>
                     <>
                     {filterStore.length > 0 ? filterStore?.map((product, index) => (
-                        <div className='card' id={product._id}>
+                        <div className='card' id={product._id} key={index}>
                             <LinkRouter
                                 to={`/products/${product._id}`}
                                 className="underline-none"
+<<<<<<< HEAD
                                 key={index}
                                 onClick={ScrollToTop}
+=======
+
+>>>>>>> 7eff1e3eb02d73e6048a635a3c12965a2b4573fe
                             >
                                 {product.image.includes("https") ?
                                     <img className="card-img" src={product.image} alt='product' />
@@ -158,7 +170,11 @@ export default function Products() {
                                     <>
                                         <button
                                             id={product._id}
+<<<<<<< HEAD
                                             onClick={removeProduct}
+=======
+                                            onClick={(e) => { removeProduct(e); reloadSet() }}
+>>>>>>> 7eff1e3eb02d73e6048a635a3c12965a2b4573fe
                                         >
                                             ಥ_ಥ
                                         </button>
@@ -178,13 +194,19 @@ export default function Products() {
                                     <>
                                         <IconButton
                                             className="card-button"
-                                            onClick={(success) => {
-                                                alerts()
-                                                setCount(count + 1)
-                                                dispatch(addToCart(product._id))
-                                                dispatch(countCart(count))
-                                            }
-                                            }>
+                                            onClick={
+                                                (success) => {
+
+                                                    if (user) {
+
+                                                        setCount(count + 1)
+                                                        dispatch(addToCart(product._id))
+                                                        dispatch(countCart(count))
+                                                        toast.success('Added to Cart', { position: "bottom-center" })
+                                                    } else {
+                                                        toast.error('You need to be logged to add to the cart', { position: "bottom-center" })
+                                                    }
+                                                }}>
                                             <LocalGroceryStoreOutlinedIcon fontSize='small' className="svg-icon" viewBox="0 0 20 20" />
                                         </IconButton>
                                     </>
