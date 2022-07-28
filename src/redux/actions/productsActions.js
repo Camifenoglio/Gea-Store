@@ -15,7 +15,7 @@ const productsActions = {
     getOneProduct: (id) => {
         return async (dispatch, getState) => {
             try {
-                const res = await axios.get( urlBack + `/api/products/${id.id}` );
+                const res = await axios.get( urlBack + `/api/products/${id.id}` || `/api/products/${id}` );
                 console.log(res)
                 dispatch({ type: 'GET_ONE_PRODUCT', payload: res.data.response });
             } catch (error) {
@@ -38,11 +38,12 @@ const productsActions = {
             dispatch({type:'FILTER_PRODUCTS', payload:input})
         }
     },
-    createProduct: (product) => {
+    createProduct: (formData) => {
+        //console.log(formData)
         return async (dispatch, getState) => {
             try {
-                //await axios.post( urlBack + '/api/products', product );
-                await axios.post( `http://localhost:4000/api/products`, product );
+                await axios.post( urlBack + '/api/products', formData );
+                //await axios.post( `http://localhost:4000/api/products`, formData );
             } catch (error) {
                 console.log(error)
             }
@@ -69,8 +70,12 @@ const productsActions = {
     addFavorite: (id) => {
         return async (dispatch, getState) => {
             try{
-                const res = await axios.post( urlBack + `/api/products/favorite/${id}` );
+                const res = await axios.put( urlBack + `/api/products/favorites/${id}` , {}, { headers:{Authorization: `Bearer ${localStorage.getItem('token')}`}}            
+            );
+                //console.log(res)
                 dispatch({ type: 'ADD_FAVORITE', payload: res.data.response })
+
+            return res
             } catch (error) {
                 console.log(error)
             }

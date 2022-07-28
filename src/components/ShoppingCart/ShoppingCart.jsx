@@ -2,12 +2,10 @@ import { useEffect } from 'react'
 import { useDispatch, useSelector } from "react-redux";
 import Stack from '@mui/material/Stack';
 import CircularProgress from '@mui/material/CircularProgress';
-import Divider from '@mui/material/Divider';
 import Box from '@mui/material/Box';
 
 import { addToCart, delFromCart, clearCart } from "../../redux/actions/shoppingActions";
 import '../../styles/shoppingContainer.css';
-import { Container } from '@mui/system';
 import Swal from 'sweetalert2'
 import Paypal from '../../payform/Paypal';
 import { Button } from '@mui/material';
@@ -77,17 +75,17 @@ const ShoppingCart = () => {
                                         <div className='quantity-more'>
                                             <div className='plus'>
                                                 <Button
-                                                    className='btnAdminNav_F'
+                                                    className='btnShopping_A'
                                                     onClick={() => dispatch(addToCart(product._id))}>+</Button>
                                                 <h4>
                                                     {item.quantity}
                                                 </h4>
                                                 <Button
-                                                    className='btnAdminNav_F'
+                                                    className='btnShopping_A'
                                                     onClick={() => dispatch(delFromCart(product._id))}>-</Button>
                                             </div>
                                             <Button
-                                                className='btnAdminNav_F'
+                                                className='btnShopping_A'
                                                 onClick={() => dispatch(delFromCart(product._id, true))}>Remove Product
                                             </Button>
                                             <div className='price'>
@@ -107,7 +105,7 @@ const ShoppingCart = () => {
                         <h3>{new Intl.NumberFormat('us-US', { style: 'currency', currency: 'USD' }).format(total)}</h3>
                     </div>
                     <Button
-                        className='btnAdminNav_F'
+                        className='btnShopping_A'
                         onClick={() => {
                             handleDelete()
                         }

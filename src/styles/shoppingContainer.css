@@ -1,5 +1,4 @@
 .shoppingContainer {
-
     padding: 1rem;
     margin: 1rem;
     box-shadow: 0 0 1rem #00000025 inset;
@@ -16,7 +15,7 @@
     min-width: 200px;
     max-width: 250px;
     width: 20vw;
-    /* aspect-ratio: 1; */
+    aspect-ratio: 1;
     /* se calcula el ancho o el alto faltante */
     border: 1px solid gray;
     flex-shrink: 0;
@@ -105,12 +104,12 @@
     justify-content: center;
 }
 
-.btnAdminNav_F {
+.btnShopping_A {
     border: solid 1px #6D8C3E !important;
     color: #6D8C3E !important;
 }
 
-.btnAdminNav_F:hover {
+.btnShopping_A:hover {
     background-color: #F2F2F2 !important;
     color: #6D8C3E;
 }

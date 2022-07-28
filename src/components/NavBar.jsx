@@ -89,6 +89,13 @@ const settingProfile = [
         setAnchorElUser(null);
     };
 
+    const ScrollToTop = () =>  {
+        window.scroll({
+            top: 0,
+            behavior: "smooth",
+            left:0
+        })
+    }
     return (
         <AppBar position="static" className='navbarColor_F'>
             <Container maxWidth="xl" className='navbarFlex_F'>
@@ -192,7 +199,6 @@ const settingProfile = [
                             open={Boolean(anchorElUser)}
                             onClose={handleCloseUserMenu}
                         >{!user ?
-
                             settings.map((setting, index) => (
                                 <LinkRouter
                                     to={setting.to}
@@ -227,19 +233,3 @@ const settingProfile = [
     );
 };
 export default NavBar;
-
-
-
-
-// {props.user ?
-//         <MenuItem>
-//             <Typography textAlign="center" onClick={signOut}>LogOut</Typography>
-//         </MenuItem>
-//     :
-//     settings.map((setting, index) => (
-//         <LinkRouter key={index} to={setting.to} onClick={handleCloseUserMenu}>
-//             <MenuItem>
-//                 <button>{setting.name}</button>
-//             </MenuItem>
-//         </LinkRouter>
-//     ))}

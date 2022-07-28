@@ -1,65 +1,67 @@
-.conteinerCards{
+.conteinerCards {
     background-image: url(https://th.bing.com/th/id/R.150201d…?rik=KKoE7FFruI1AJA&riu=http%3a%2f%2fwww.unico-poland.eu%2fwp-content%2fuploads%2f2021%2f01%2fSuperfoods-scaled.jpeg&ehk=Vpwk84BR4fn8TR6n7Z0cR1ta5ZCoCLcGEoRWH9tqS80%3d&risl=&pid=ImgRaw&r=0);
     background-size: cover;
     background-position: center;
-    display:flex;
-    flex-wrap:wrap;
-    justify-content:center;
-    align-items:center;
-    
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    width: 100%;
 }
 
 
-.card-conteiner_B{
+.card-conteiner_B {
     background-color: rgba(217, 232, 216) !important;
     margin: 2rem;
-    paddign:2rem;
     display: flex;
    flex-direction:row;
    justify-content:center;
    align-content:center;
    border-radius:3rem!important;
+   width:100%;
 }
 
 
 .boxCardRP {
     display:flex;
     flex-direction:column;
+    text-align:center;
     justify-content:center!important;
     align-items:center!important;
     
     
     
 }
+
 .titleCardRP {
-   display:flex;
-   margin-bottom:.5rem!important;
-   margin-bottom:0!important;
-   margin-top:.5rem!important;
- 
-   
+    display: flex;
+    margin-bottom: .5rem !important;
+    margin-bottom: 0 !important;
+    margin-top: .5rem !important;
+
+
 }
 
 .boxContainerRP {
- display:flex;
- flex-direction:column;
- justify-content:space-evenly!important;
- align-items:center!important;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly !important;
+    align-items: center !important;
 
 }
 
 
-.buttom-blog_B{
+.buttom-blog_B {
     height: 5vh;
-    color:black !important;
+    color: black !important;
     background-color: #A4BF41;
-    border-radius:5rem;
+    border-radius: 5rem;
 }
 
-.img-blog_B{
-    border-radius:1rem;
-    margin:1rem;
+.img-blog_B {
+    border-radius: 1rem;
+    margin: 1rem;
     width: 20vw !important;
     height: 25vh;
 }
-

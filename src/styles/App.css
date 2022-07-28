@@ -3,8 +3,8 @@
   flex-direction:column;
   justify-content:center;
   text-align: center;
-
 }
+
 body {
   background-color: #f9f4f4 ;
 }
@@ -47,10 +47,37 @@ body {
   text-decoration: none;
 }
 
+.loadingContainer{
+  align-self: center;
+}
 
+.adminPage_F {
+  width: 100%;
+  min-height: 70vh;
+  display: flex;
+  flex-direction: column;
+}
+
+.callToActionUserProfile_F {
+  color: #3a4a22 ;
+}
+.callToActionUserProfile_F:hover{
+  color: #e94e4e ;
+}
+
+.SignInCallToAction_F{
+  min-height: 70vh;
+}
 /* 
 VERDE OSCURO -> #6D8C3E
 VERDE CLARO -> #A4BF41
+verde mas claro -> #ECF2E4
 ROSA -> #F2A0A0
 BASE -> #F2F2F2 
 */
+
+/* @media (min-width: 400px){
+  .imgProfileAction_F{
+    width: 80px;
+  }
+} */
