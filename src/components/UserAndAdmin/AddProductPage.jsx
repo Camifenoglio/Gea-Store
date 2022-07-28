@@ -26,17 +26,6 @@ const arrayCategories = ["Gluten free", "Sugar free", "Lactose free", "Vegan", "
 
 export default function AddProductPage() {
 
-
-    //const [currency, setCurrency] = React.useState('');
-    //const [category, setCategory] = React.useState([]);
-
-    // const handleChange = (event) => {
-    //     setCurrency(event.target.value);
-    // };
-
-    // const categoryChange = (event) => {
-    //     setCategory(event.target.value)
-    // }
     const dispatch = useDispatch()
 
     // VAR DE ESTADO
@@ -53,6 +42,14 @@ export default function AddProductPage() {
         } else {
             setCategoryArray(categoryArray.filter(category => category !== event.target.value))
         }
+    }
+
+    const ScrollToTop = () =>  {
+        window.scroll({
+            top: 0,
+            behavior: "smooth",
+            left:0
+        })
     }
 
     async function handleSubmit(event) {
@@ -178,7 +175,7 @@ export default function AddProductPage() {
 
                 </TextField> */}
 
-                    <Button type="submit" color="success" variant="contained" style={{ height: '3rem' }}>Add Product</Button>
+                    <Button type="submit" onClick={ ScrollToTop } color="success" variant="contained" style={{ height: '3rem' }}>Add Product</Button>
                 </Box>
             </div>
         </>

@@ -1,15 +1,15 @@
 import React from 'react';
 import '../App';
-import BtnSignOut from '../components/SignIn-Out/Btn-SignOut';
 import AdminProfile from '../components/UserAndAdmin/AdminProfile';
+import ListOrder from '../components/UserAndAdmin/ListOrders'
 
 
 function UserProfile() {
     return (
-        <>
+        <div className='adminPage_F'>
             <AdminProfile/>
-            <BtnSignOut/>
-        </>
+            <ListOrder />
+        </div>
     );
 }
 

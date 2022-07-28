@@ -21,7 +21,6 @@ export default function CardBlog() {
                 {Data.map((data, index) => (
                     <Card className='card-conteiner_B' sx={{ maxWidth: 645, flexWrap: 'nowrap' }} key={index}>
 
-                       
                         <Box className='boxCardRP' >
                         <Typography className='titleCardRP'>
                             {data.name}

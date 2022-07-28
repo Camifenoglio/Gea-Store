@@ -9,6 +9,7 @@ import toast from 'react-hot-toast';
 import productsActions from '../../redux/actions/productsActions';
 import Error from '../Error'
 import { addToCart, countCart } from "../../redux/actions/shoppingActions";
+import Loader from '../Loader';
 
 
 //MUI
@@ -18,7 +19,6 @@ import LocalGroceryStoreOutlinedIcon from '@mui/icons-material/LocalGroceryStore
 import InputLabel from '@mui/material/InputLabel';
 import MenuItem from '@mui/material/MenuItem';
 import Select from '@mui/material/Select';
-import DeleteForeverRoundedIcon from '@mui/icons-material/DeleteForeverRounded';
 
 //STYLES
 import '../../styles/products.css'
@@ -42,17 +42,26 @@ export default function Products() {
         )
     }
 
+    const ScrollToTop = () =>  {
+        window.scroll({
+            top: 0,
+            behavior: "smooth",
+            left:0
+        })
+    }
 
     // VAR DE ESTADO
     const [category, setCategory] = useState('')
     const [reload, setReload] = useState(false)
     const [input, setInput] = useState('')
+    console.log(input)
     const [count, setCount] = React.useState(1);
 
 
     const user = useSelector(store => store.usersReducers.user)
     const currentStore = useSelector(store => store.productReducers.filterPerCategory)
     const filterStore = currentStore.filter(product => product.name.toLowerCase().includes(input.trim().toLowerCase()))
+    console.log(filterStore)
 
     useEffect(() => {
         dispatch(productsActions.getProducts())
@@ -60,12 +69,8 @@ export default function Products() {
     }, [])
 
     // COMO SOBRA
-    // useEffect(() => {
-    //     removeProduct()
-    //     dispatch(productsActions.getProducts(currentStore))
-    //     //eslint-disable-next-line react-hooks/exhaustive-deps
-    // }, [!reload])
-    
+
+
     useEffect(() => {
         dispatch(productsActions.filterPerCategory(category))
         // eslint-disable-next-line react-hooks/exhaustive-deps
@@ -84,18 +89,14 @@ export default function Products() {
             const res = await dispatch(productsActions.filterPerCategory(selectCategory))
             setReload(!reload)
         }
-    
+
     }
 
     async function removeProduct(event) {
         //console.log(event)
-        const res = await dispatch(productsActions.deleteProduct(event.target.id))
+        await dispatch(productsActions.deleteProduct(event.target.id))
         setReload(!reload)
-    }
-
-    function reloadSet() {
-        dispatch(productsActions.filterPerCategory(currentStore))
-        setReload(!reload)
+        dispatch(productsActions.getProducts())
     }
 
 
@@ -113,6 +114,7 @@ export default function Products() {
                     <Select
                         //className='btnSidebarCategory_F buttonCategory_F' 
                         onChange={selectCategoryBtn}
+                        onClick={ScrollToTop}
                         value={category}
                         sx={{ borderColor: '#F2A0A0', color: '#1b2808', fontWeight: 'bold' }}
                         displayEmpty
@@ -128,22 +130,17 @@ export default function Products() {
                             >{category}</MenuItem>
                         ))}
                     </Select>
-                    {/* <button
-                            key={index}
-                            className='btnSidebarCategory_F buttonCategory_F'
-                            value={category}
-                            onClick={selectCategoryBtn}
-                        >{category}</button> */}
-
                 </div>
 
                 <div className='products_F'>
+                    <>
                     {filterStore.length > 0 ? filterStore?.map((product, index) => (
                         <div className='card' id={product._id}>
                             <LinkRouter
                                 to={`/products/${product._id}`}
                                 className="underline-none"
                                 key={index}
+                                onClick={ScrollToTop}
                             >
                                 {product.image.includes("https") ?
                                     <img className="card-img" src={product.image} alt='product' />
@@ -160,11 +157,10 @@ export default function Products() {
                                 {user?.role === 'admin' ?
                                     <>
                                         <button
-                                        id={product._id}
-                                        onClick={(e)=> {removeProduct(e); reloadSet()}}
+                                            id={product._id}
+                                            onClick={removeProduct}
                                         >
                                             ಥ_ಥ
-                                            {/* //<DeleteForeverRoundedIcon disable fontSize='small'color='error'/> */}
                                         </button>
                                         <IconButton
                                             className="card-button"
@@ -178,7 +174,6 @@ export default function Products() {
                                             <LocalGroceryStoreOutlinedIcon fontSize='small' className="svg-icon" viewBox="0 0 20 20" />
                                         </IconButton>
                                     </>
-
                                     :
                                     <>
                                         <IconButton
@@ -195,11 +190,9 @@ export default function Products() {
                                     </>
                                 }
                             </div>
-                            <div>
-
-                            </div>
                         </div>
-                    )) : <Error />}
+                    )) : <Loader/>}
+                    </>
                 </div>
             </div>
         </div>

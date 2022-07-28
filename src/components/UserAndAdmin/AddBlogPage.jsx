@@ -24,6 +24,13 @@ export default function AddBlogPage() {
     const [files, setFiles] = useState([])
     console.log(files)
 
+    const ScrollToTop = () =>  {
+        window.scroll({
+            top: 0,
+            behavior: "smooth",
+            left:0
+        })
+    }
 
     async function handleSubmit(event) {
         console.log(event)
@@ -36,7 +43,6 @@ export default function AddBlogPage() {
         const description = await event.target[2].value
         console.log(title)
         console.log(description)
-
 
         // construccion de un nuevo formData
         const formData = await new FormData()
@@ -80,7 +86,7 @@ export default function AddBlogPage() {
                         rows={4}
                         variant="filled"
                     />
-                    <Button type="submit" color="success" variant="contained" style={{ height: '3rem' }}>Add Product</Button>
+                    <Button type="submit" onClick={ ScrollToTop } color="success" variant="contained" style={{ height: '3rem' }}>Add Product</Button>
                 </Box>
 
             </div>

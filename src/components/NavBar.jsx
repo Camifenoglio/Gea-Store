@@ -89,6 +89,13 @@ const settingProfile = [
         setAnchorElUser(null);
     };
 
+    const ScrollToTop = () =>  {
+        window.scroll({
+            top: 0,
+            behavior: "smooth",
+            left:0
+        })
+    }
     return (
         <AppBar position="static" className='navbarColor_F'>
             <Container maxWidth="xl" className='navbarFlex_F'>

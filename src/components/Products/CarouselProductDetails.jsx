@@ -34,6 +34,14 @@ export default function CarouselProductDetail() {
     const [product, setProduct] = useState()
     const [reload, setReload] = useState()
 
+    const ScrollToTop = () =>  {
+        window.scroll({
+            top: 0,
+            behavior: "smooth",
+            left:0
+        })
+    }
+
     useEffect(() => {
         dispatch(productsActions.getOneProduct(idProduct))
         //dispatch(itineraryActions.getItinerayByIdCity(idCity))
@@ -71,7 +79,7 @@ export default function CarouselProductDetail() {
         <div className="flexbox_F">
             <div className="productDetailPage_F">
                 <div className="btnBackContainer_F">
-                    <LinkRouter to='/products' className="underline-none">
+                    <LinkRouter to='/products' className="underline-none" onClick={ScrollToTop}>
                         <button className="btnBackProducts_F">
                             <ArrowBackOutlinedIcon className="arrowBackBtn_F" />
                             Back to products

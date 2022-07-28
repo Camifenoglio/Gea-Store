@@ -8,9 +8,10 @@
     align-items: center;
     width: 90%;
     min-height: 100%;
-    background-image: url(https://i.imgur.com/xt1g8mC.jpg);
+    background-image: url(https://i.imgur.com/s7vvi05.png);
     background-repeat: no-repeat;
     background-size: cover;
+    background-position: bottom;
     padding: 20px;
     margin: auto;
     border-radius: 10px;
@@ -27,4 +28,8 @@
     margin: auto;
     margin-top: 20px;
     margin-bottom: 20px;
+}
+
+.tableOrder_F{
+    background-color: #f2f2f2e2 ;
 }
