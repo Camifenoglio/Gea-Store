@@ -6,7 +6,7 @@ const blogActions = {
         console.log(formData)
         return async (dispatch, getState) => {
             try {
-                await axios.post(urlBack + '/api/addblog', formData);
+                const res = await axios.post(urlBack + '/api/post', formData);
                 //await axios.post( `http://localhost:4000/api/addblog`, formData );
             } catch (error) {
                 console.log(error)
@@ -15,9 +15,10 @@ const blogActions = {
     },
     getPosts: () => {
         return async (dispatch, getState) => {
-            const answer = await axios.get(urlBack + `api/post`)
-            dispatch({ type: 'GET_POST', payload: answer.data.response.topics })
-            return answer.data.response.post
+            const answer = await axios.get(urlBack + `/api/post`)
+            console.log(answer)
+            dispatch({ type: 'GET_POSTS', payload: answer.data.response.posting })
+            return answer.data.response.posting
         }
     },
 

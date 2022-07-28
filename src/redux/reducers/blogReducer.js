@@ -5,13 +5,16 @@ const initialState = {
 }
 
 const blogReducer = (state = initialState, action) => {
-    //console.log(action)
-    //console.log(state)
+    // console.log(action)
+    console.log(state)
     switch (action.type) {
-        case 'GET_POST':
+
+        case 'GET_POSTS':
+
             return {
                 ...state,
-                post: action.payload
+                post: action.payload,
+
             }
         case 'GET_ONE':
             return {

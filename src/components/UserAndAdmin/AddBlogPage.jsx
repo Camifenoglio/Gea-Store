@@ -80,7 +80,12 @@ export default function AddBlogPage() {
                         rows={4}
                         variant="filled"
                     />
-                    <Button type="submit" color="success" variant="contained" style={{ height: '3rem' }}>Add Blog</Button>
+                    <Button
+
+                        type="submit"
+                        color="success"
+                        variant="contained"
+                        style={{ height: '3rem' }}>Add Blog</Button>
                 </Box>
 
             </div>

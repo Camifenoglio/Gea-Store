@@ -192,7 +192,6 @@ const settingProfile = [
                             open={Boolean(anchorElUser)}
                             onClose={handleCloseUserMenu}
                         >{!user ?
-
                             settings.map((setting, index) => (
                                 <LinkRouter
                                     to={setting.to}
@@ -227,19 +226,3 @@ const settingProfile = [
     );
 };
 export default NavBar;
-
-
-
-
-// {props.user ?
-//         <MenuItem>
-//             <Typography textAlign="center" onClick={signOut}>LogOut</Typography>
-//         </MenuItem>
-//     :
-//     settings.map((setting, index) => (
-//         <LinkRouter key={index} to={setting.to} onClick={handleCloseUserMenu}>
-//             <MenuItem>
-//                 <button>{setting.name}</button>
-//             </MenuItem>
-//         </LinkRouter>
-//     ))}

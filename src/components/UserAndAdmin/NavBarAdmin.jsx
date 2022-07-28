@@ -13,10 +13,10 @@ export default function NavBarAdmin() {
             <>
                 <div className="navbarAdmin_F">
                     <LinkRouter to='/addproduct' className="underline-none">
-                            <Button sx={{backgroundColor: '#87A658',fontWeight: "bold" }} startIcon={<AddIcon />} className="btnAdminNav_F" variant="contained">New product</Button>
+                            <Button sx={{backgroundColor: '#87A658',fontWeight: "bold", color: '#F2F2F2' }} startIcon={<AddIcon />} className="btnAdminNav_F" variant="contained">New product</Button>
                     </LinkRouter>
                     <LinkRouter to='/addblog' className="underline-none" >
-                        <Button sx={{backgroundColor: '#87A658', fontWeight: "bold" }} startIcon={<AddIcon />} className="btnAdminNav_F" variant="contained">New post</Button>
+                        <Button sx={{backgroundColor: '#87A658', fontWeight: "bold", color: '#F2F2F2' }} startIcon={<AddIcon />} className="btnAdminNav_F" variant="contained">New post</Button>
                     </LinkRouter>
                 </div>
             </>
