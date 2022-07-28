@@ -68,7 +68,7 @@ export default function Products() {
         // eslint-disable-next-line react-hooks/exhaustive-deps
     }, [])
 
-    // COMO SOBRA
+
 
     useEffect(() => {
         dispatch(productsActions.filterPerCategory(category))
@@ -130,6 +130,7 @@ export default function Products() {
                         ))}
                     </Select>
                 </div>
+
 
                 <div className='products_F'>
                     <>
