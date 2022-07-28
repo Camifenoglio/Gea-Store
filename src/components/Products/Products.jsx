@@ -69,15 +69,12 @@ export default function Products() {
     }, [])
 
     // COMO SOBRA
-<<<<<<< HEAD
 
-=======
     // useEffect(() => {
     //     removeProduct()
     //     dispatch(productsActions.getProducts(currentStore))
     //     //eslint-disable-next-line react-hooks/exhaustive-deps
     // }, [!reload])
->>>>>>> 7eff1e3eb02d73e6048a635a3c12965a2b4573fe
 
     useEffect(() => {
         dispatch(productsActions.filterPerCategory(category))
@@ -147,12 +144,9 @@ export default function Products() {
                             <LinkRouter
                                 to={`/products/${product._id}`}
                                 className="underline-none"
-<<<<<<< HEAD
                                 key={index}
                                 onClick={ScrollToTop}
-=======
 
->>>>>>> 7eff1e3eb02d73e6048a635a3c12965a2b4573fe
                             >
                                 {product.image.includes("https") ?
                                     <img className="card-img" src={product.image} alt='product' />
@@ -170,11 +164,7 @@ export default function Products() {
                                     <>
                                         <button
                                             id={product._id}
-<<<<<<< HEAD
                                             onClick={removeProduct}
-=======
-                                            onClick={(e) => { removeProduct(e); reloadSet() }}
->>>>>>> 7eff1e3eb02d73e6048a635a3c12965a2b4573fe
                                         >
                                             ಥ_ಥ
                                         </button>

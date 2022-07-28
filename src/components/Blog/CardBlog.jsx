@@ -8,6 +8,7 @@ import { Link as LinkRouter } from 'react-router-dom'
 import '../../styles/cardBlog.css';
 import { useDispatch, useSelector } from 'react-redux';
 import { useState, useEffect } from 'react';
+import Data from '../../data/data.json';
 
 import blogActions from '../../redux/actions/blogActions'
 
@@ -45,7 +46,6 @@ export default function CardBlog() {
     return (
 
         <>
-<<<<<<< HEAD
             <div className='conteinerCards'>
                 {Data.map((data, index) => (
                     <Card className='card-conteiner_B' sx={{ maxWidth: 645, flexWrap: 'nowrap' }} key={index}>
@@ -80,14 +80,6 @@ export default function CardBlog() {
 
                     </Card>
                 ))
-=======
-            <div>
-                {post?.length > 0 ? post?.map((blog, index) => {
-                    <h1>hola</h1>
-                    console.log(blog)
-                })
-                    : <p>error</p>
->>>>>>> 7eff1e3eb02d73e6048a635a3c12965a2b4573fe
                 }
             </div>
 
