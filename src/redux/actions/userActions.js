@@ -30,7 +30,7 @@ const userActions = {
     logInUser: (logedUser) => {
         return async (dispatch, getState) => {
             const user = await axios.post(urlBack + '/api/auth/signin', { logedUser })
-            console.log(user)
+            //console.log(user)
             if (user.data.success) {
                 localStorage.setItem('token', user.data.response.token)
                 //tomo el token que le envie desde el back y lo envio al local storage
@@ -89,6 +89,20 @@ const userActions = {
                 type: 'USER',
                 payload: null
             })
+        }
+    },
+    addLike: (id) => {
+        return async (dispatch, getState) => {
+            try{
+                const res = await axios.put( urlBack + `/api/auth/likes/${id}` , {}, { headers:{Authorization: `Bearer ${localStorage.getItem('token')}`}}            
+            );
+                console.log(res)
+                dispatch({ type: 'ADD_LIKES', payload: res.data.response })
+
+            return res
+            } catch (error) {
+                console.log(error)
+            }
         }
     }
 

@@ -25,6 +25,7 @@ import { FreeMode, Navigation, Thumbs } from "swiper";
 import FavoriteIcon from '@mui/icons-material/Favorite';
 import ArrowBackOutlinedIcon from '@mui/icons-material/ArrowBackOutlined';
 import { IconButton, Typography } from "@mui/material";
+import userActions from "../../redux/actions/userActions";
 
 
 export default function CarouselProductDetail() {
@@ -41,16 +42,9 @@ export default function CarouselProductDetail() {
     }, [reload])
 
     const dataProduct = useSelector(store => store.productReducers.oneProduct)
-    console.log(dataProduct)
+    //console.log(dataProduct)
 
     const [thumbsSwiper, setThumbsSwiper] = useState(null);
-
-    async function likeOrDislike(event){
-        event.preventDefault()
-        await dispatch(productsActions.addFavorite(dataProduct._id))
-        setReload(!reload)
-    }
-
 
     function alerts(res) {
         if (res === undefined) {
@@ -62,6 +56,7 @@ export default function CarouselProductDetail() {
     }
     async function likeOrDislike() {
         const res = await dispatch(productsActions.addFavorite(dataProduct._id))
+        await dispatch(userActions.addLike(dataProduct._id))
         alerts(res)
         setReload(res)
     }

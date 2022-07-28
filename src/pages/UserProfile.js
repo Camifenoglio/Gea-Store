@@ -13,6 +13,7 @@ import Typography from '@mui/material/Typography';
 import ExpandMoreIcon from '@mui/icons-material/ExpandMore';
 import { useSelector } from 'react-redux';
 import BtnSignOut from '../components/SignIn-Out/Btn-SignOut';
+import UserLikes from '../components/UserAndAdmin/UserLikes';
 
 const ExpandMore = styled((props) => {
     const { expand, ...other } = props;
@@ -32,11 +33,11 @@ export default function RecipeReviewCard() {
         setExpanded(!expanded);
     };
     const user = useSelector(store => store.usersReducers.user)
-    console.log(user)
+    //console.log(user)
     return (
 <>
 { user ?
-        <Card sx={{ margin: '5rem', backgroundImage: 'url("https://i.imgur.com/c6Ttmlb.jpg")' }}>
+        <Card sx={{ margin: '5rem', backgroundImage: 'url("https://i.imgur.com/s7vvi05.png")', borderRadius: '30px' }}>
             <CardHeader
                 avatar={
                     <Avatar sx={{ bgcolor: '#6D8C3E' }} aria-label="recipe">
@@ -46,10 +47,8 @@ export default function RecipeReviewCard() {
                 title={user.fullName}
                 subheader="Thanks for your purchase!"
             />
-            <CardMedia
-                component="img"
-                height="100%"
-                image={user.imageUser}
+            <Avatar sx={{ width: 200, height: 200, margin: 'auto', marginTop: '1rem' }} 
+                src={user.imageUser}
                 alt={user.image}
             />
                 <CardActions disableSpacing>
@@ -66,10 +65,9 @@ export default function RecipeReviewCard() {
             <Collapse in={expanded} timeout="auto" unmountOnExit>
                 <CardContent>
                     <Typography paragraph>My Favorite</Typography>
-                    <Typography paragraph>
-                        Heat 1/2 cup of the broth in a pot until simmering, add saffron and set
-                        aside for 10 minutes.
-                    </Typography>
+                    <CardContent>
+                        <UserLikes/>
+                    </CardContent>
                 </CardContent>
             </Collapse>
         </Card> : 
