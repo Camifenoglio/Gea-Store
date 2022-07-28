@@ -42,22 +42,22 @@ const blogControllers = {
         })
     },
 
-    uploadPost: async (req,res) => {
-        //console.log(req.body)
-        const {title, text} = req.body
-        const userPost = req.user._id
-        try {
-            const newPost = await new Posting ({userPost: userPost, title, text, date: Date.now()}).save()
-            res.json({success: true,
-                response: {newPost},
-                message: "the posting has been uploaded"})
-        }
-        catch (error) {
-            console.log(error)
-            res.json({ success: true,
-                message: "sorry! we couldn't upload the posting, please try again!" })
-        }
-    },
+    // uploadPost: async (req,res) => {
+    //     //console.log(req.body)
+    //     const {title, text} = req.body
+    //     const userPost = req.user._id
+    //     try {
+    //         const newPost = await new Posting ({userPost: userPost, title, text, date: Date.now()}).save()
+    //         res.json({success: true,
+    //             response: {newPost},
+    //             message: "the posting has been uploaded"})
+    //     }
+    //     catch (error) {
+    //         console.log(error)
+    //         res.json({ success: true,
+    //             message: "sorry! we couldn't upload the posting, please try again!" })
+    //     }
+    // },
 
     deletePost: async (req,res) => {
         const id = req.params.id

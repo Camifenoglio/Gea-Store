@@ -39,15 +39,15 @@ Router.route('/auth/token').get(passport.authenticate('jwt', {session: false}),v
 module.exports = Router;  
 
 // // Upload Blog 
-Router.route('/addblog')
-.post(addBlog) 
+// Router.route('/addblog')
+// .post(addBlog) 
 //.post(passport.authenticate('jwt', {session: false}), addBlog) // si el usuario esta logeado y quiere subir la foto de un product debe autenticarse con passport porque es un usuario REGISTRADO
 
 // Blog & Comments & Likes
 Router.route('/post')
     .get(getPosts)
     .put(passport.authenticate('jwt', {session:false}), modifyPost)
-    .post(passport.authenticate('jwt', {session:false}), uploadPost)
+    .post(passport.authenticate('jwt', {session:false}), addBlog)
 Router.route('/post/:id')
     .get(getOnePost)
     .post(passport.authenticate('jwt', {session: false}), deletePost)

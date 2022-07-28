@@ -152,7 +152,6 @@ const productControllers = {
                 description, 
                 price, 
                 image: `https://gea-store-backend.herokuapp.com/product/${fileName}`, 
-                //image: `http://localhost:4000/product/${fileName}`, 
                 category, 
                 stock, 
                 imageInfo:`https://gea-store-backend.herokuapp.com/product-info/${fileNameInfo}`,
