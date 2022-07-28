@@ -76,8 +76,6 @@ export default function CardBlog() {
                                         </LinkRouter>
                                     </CardActions>
                             </Box>
-                          
-
                     </Card>
                 ))
                 }
