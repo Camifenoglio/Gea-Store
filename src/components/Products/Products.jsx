@@ -69,7 +69,6 @@ export default function Products() {
     }, [])
 
     // COMO SOBRA
-
     // useEffect(() => {
     //     removeProduct()
     //     dispatch(productsActions.getProducts(currentStore))
@@ -137,6 +136,7 @@ export default function Products() {
                     </Select>
                 </div>
 
+
                 <div className='products_F'>
                     <>
                     {filterStore.length > 0 ? filterStore?.map((product, index) => (
@@ -146,7 +146,6 @@ export default function Products() {
                                 className="underline-none"
                                 key={index}
                                 onClick={ScrollToTop}
-
                             >
                                 {product.image.includes("https") ?
                                     <img className="card-img" src={product.image} alt='product' />

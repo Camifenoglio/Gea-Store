@@ -112,10 +112,10 @@ export default function CarouselProductDetail() {
                             className="mySwiper2"
                         >
                             <SwiperSlide>
-                                <img src={dataProduct.image} alt="product" />
+                                <img className="BL-img-prodcut-D" src={dataProduct.image} alt="product" />
                             </SwiperSlide>
                             <SwiperSlide>
-                                <img src={dataProduct.imageInfo} alt="product" />
+                                <img className="BL-img-prodcut-D" src={dataProduct.imageInfo} alt="product" />
                             </SwiperSlide>
                         </Swiper>
                         <Swiper

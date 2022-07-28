@@ -8,9 +8,9 @@ import { Link as LinkRouter } from 'react-router-dom'
 import '../../styles/cardBlog.css';
 import { useDispatch, useSelector } from 'react-redux';
 import { useState, useEffect } from 'react';
-import Data from '../../data/data.json';
-
 import blogActions from '../../redux/actions/blogActions'
+import Data from '../Data'
+
 
 export default function CardBlog() {
 
@@ -49,18 +49,24 @@ export default function CardBlog() {
             <div className='conteinerCards'>
                 {Data.map((data, index) => (
                     <Card className='card-conteiner_B' sx={{ maxWidth: 645, flexWrap: 'nowrap' }} key={index}>
-
                         <Box className='boxCardRP' >
-                        <Typography className='titleCardRP'>
-                            {data.name}
+                            <Typography className='titleCardRP'>
+                                {data.title}
                             </Typography>
-                                <CardMedia className='img-blog_B'
-                                    component="img"
-                                    height="140"
-                                    image={data.image}
-                                    alt={data.name}
-                                />
-                            
+                            <CardMedia className='img-blog_B'
+                                component="img"
+                                height="140"
+                                image={data.image}
+                                alt={data.name}
+                            />
+                        </Box>
+                        <Box className='boxContainerRP' sx={{ maxWidth: 300, display: 'flex', justifyContent: 'flex-end', alignItems: 'flex-end', flexDirection: 'column' }}>
+                            <CardContent className='text-blog_B'>
+                                <Typography >
+                                    {data.country}
+                                </Typography>
+                            </CardContent>
+
                         </Box>
                             <Box className='boxContainerRP' sx={{ maxWidth: 300, display: 'flex', justifyContent: 'flex-end', alignItems: 'flex-end', flexDirection: 'column' }}>
                                 <CardContent className='text-blog_B'>
@@ -68,18 +74,25 @@ export default function CardBlog() {
                                         {data.country}
                                     </Typography>
                                 </CardContent>
-                                <CardActions className='buttom-blog_B' >
-                                        <LinkRouter to={`'${Data._id}`}>
-                                            <Button sx={{ color: 'black' }} size="small" color="primary">
-                                                Show More
-                                            </Button>
-                                        </LinkRouter>
-                                    </CardActions>
                             </Box>
                     </Card>
                 ))
                 }
-            </div>
+             </div>
+            </>) 
+    }
+{/* =======
+            <div>
+                {post?.length > 0 ? post?.map((blog, index) => {
+                    <h1>hola</h1>
+                    console.log(blog)
+                })
+                    : <p>error</p>
+>>>>>>> 7eff1e3eb02d73e6048a635a3c12965a2b4573fe
+=======
+>>>>>>> 996afeadcd85829265631570bd1ab1389a18adfc
+                }
+            </div> */}
 
             {/* <div className='conteinerCards'>
 
@@ -118,10 +131,3 @@ export default function CardBlog() {
 
 
                     // </Card> */}
-
-
-
-
-        </>
-    );
-}
