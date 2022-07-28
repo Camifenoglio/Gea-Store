@@ -16,7 +16,7 @@ const productsActions = {
         return async (dispatch, getState) => {
             try {
                 const res = await axios.get( urlBack + `/api/products/${id.id}` );
-                console.log(res)
+                // console.log(res)
                 dispatch({ type: 'GET_ONE_PRODUCT', payload: res.data.response });
             } catch (error) {
                 console.log(error.message)
@@ -69,8 +69,12 @@ const productsActions = {
     addFavorite: (id) => {
         return async (dispatch, getState) => {
             try{
-                const res = await axios.post( urlBack + `/api/products/favorite/${id}` );
+                const res = await axios.put( urlBack + `/api/products/favorites/${id}` , {}, { headers:{Authorization: `Bearer ${localStorage.getItem('token')}`}}            
+            );
+                console.log(res)
                 dispatch({ type: 'ADD_FAVORITE', payload: res.data.response })
+
+            return res
             } catch (error) {
                 console.log(error)
             }
