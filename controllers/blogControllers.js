@@ -203,7 +203,10 @@ const blogControllers = {
                     console.log('uploaded file')
                 }
             })
-            newPost = await new Blog({title, fileUpload: fileName, description}).save()
+            newPost = await new Blog({
+                title, 
+                fileUpload: `https://gea-store-backend.herokuapp.com/product/${fileName}`, 
+                description}).save()
         } catch(errCatch) {
             error = errCatch
             console.log(error)

@@ -4,7 +4,6 @@ const crypto = require('crypto')
 const path = require('path') //objeto nativo de node.js
 
 
-
 const productControllers = {
     getAllProducts: async (req, res) => {
         let products
@@ -152,11 +151,11 @@ const productControllers = {
                 name,
                 description, 
                 price, 
-                image: `https://gea-store-backend.herokuapp.com/api/product/${fileName}`, 
+                image: `https://gea-store-backend.herokuapp.com/product/${fileName}`, 
                 //image: `http://localhost:4000/product/${fileName}`, 
                 category, 
                 stock, 
-                imageInfo:`https://gea-store-backend.herokuapp.com/api/product-info/${fileNameInfo}`,
+                imageInfo:`https://gea-store-backend.herokuapp.com/product-info/${fileNameInfo}`,
             }).save()
         } catch(errCatch) {
             error = errCatch
