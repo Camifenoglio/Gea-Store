@@ -49,16 +49,16 @@ export default function CardBlog() {
                             </CardContent>
 
                         </Box>
-                            <Box className='boxContainerRP' sx={{ maxWidth: 300, display: 'flex', justifyContent: 'flex-end', alignItems: 'flex-end', flexDirection: 'column' }}>
-                                <CardContent className='text-blog_B'>
-                                    <Typography >
-                                        {data.country}
-                                    </Typography>
-                                </CardContent>
-                            </Box>
+                        <Box className='boxContainerRP' sx={{ maxWidth: 300, display: 'flex', justifyContent: 'flex-end', alignItems: 'flex-end', flexDirection: 'column' }}>
+                            <CardContent className='text-blog_B'>
+                                <Typography >
+                                    {data.country}
+                                </Typography>
+                            </CardContent>
+                        </Box>
                     </Card>
                 ))}
             </div>
-            </>
-            ) 
-    }
+        </>
+    )
+}

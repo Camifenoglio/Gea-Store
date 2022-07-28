@@ -74,20 +74,20 @@ const ShoppingCart = () => {
                                     <div className='content-right'>
                                         <div className='quantity-more'>
                                             <div className='plus'>
-                                                <Button
-                                                    className='btnShopping_A'
-                                                    onClick={() => dispatch(addToCart(product._id))}>+</Button>
-                                                <h4>
+                                                <button
+                                                    className='btnShopping_A boton_n'
+                                                    onClick={() => dispatch(addToCart(product._id))}>+</button>
+                                                <h3>
                                                     {item.quantity}
-                                                </h4>
-                                                <Button
-                                                    className='btnShopping_A'
-                                                    onClick={() => dispatch(delFromCart(product._id))}>-</Button>
+                                                </h3>
+                                                <button
+                                                    className='btnShopping_A boton_n'
+                                                    onClick={() => dispatch(delFromCart(product._id))}>-</button>
                                             </div>
-                                            <Button
+                                            <button
                                                 className='btnShopping_A'
-                                                onClick={() => dispatch(delFromCart(product._id, true))}>Remove Product
-                                            </Button>
+                                                onClick={() => { dispatch(delFromCart(product._id, true)); handleDelete() }}>Remove Product
+                                            </button>
                                             <div className='price'>
                                                 <h3 className='total-price'>Price:</h3>
                                                 <h3> {new Intl.NumberFormat('us-US', { style: 'currency', currency: 'USD' }).format(product.price)}</h3>
@@ -104,13 +104,13 @@ const ShoppingCart = () => {
                         <h2>Total</h2>
                         <h3>{new Intl.NumberFormat('us-US', { style: 'currency', currency: 'USD' }).format(total)}</h3>
                     </div>
-                    <Button
+                    <button
                         className='btnShopping_A'
                         onClick={() => {
                             handleDelete()
                         }
                         }>Clear Cart
-                    </Button>
+                    </button>
                     <Paypal />
                 </div>
             </div>

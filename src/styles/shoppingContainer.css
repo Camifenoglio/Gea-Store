@@ -105,14 +105,60 @@
 }
 
 .btnShopping_A {
-    border: solid 1px #6D8C3E !important;
-    color: #6D8C3E !important;
+    --primary-color: #6D8C3E;
+    --primary-color: #F2A0A0;
+    --secondary-color: #fff;
+    --hover-color: #111;
+    --arrow-width: 10px;
+    --arrow-stroke: 2px;
+    box-sizing: border-box;
+    border: 0;
+    border-radius: 20px;
+    color: var(--secondary-color);
+    padding: 1em 1.8em;
+    background: var(--primary-color);
+    display: flex;
+    transition: 0.2s background;
+    align-items: center;
+    gap: 0.6em;
+    font-weight: bold;
+    font-size: large;
+    width: 90%;
+    justify-content: center;
+}
+
+.boton_n {
+    width: 50px;
+    height: 50px;
+}
+
+.btnShopping_A .arrow::before {
+    content: "";
+    box-sizing: border-box;
+    position: absolute;
+    border: solid var(--secondary-color);
+    border-width: 0 var(--arrow-stroke) var(--arrow-stroke) 0;
+    display: inline-block;
+    top: -3px;
+    right: 3px;
+    transition: 0.2s;
+    padding: 3px;
+    transform: rotate(-45deg);
 }
 
 .btnShopping_A:hover {
-    background-color: #F2F2F2 !important;
-    color: #6D8C3E;
+    background-color: var(--hover-color);
 }
+
+.btnShopping_A:hover .arrow {
+    background: var(--secondary-color);
+}
+
+.btnShopping_A:hover .arrow:before {
+    right: 0;
+}
+
+
 
 
 .titles {
