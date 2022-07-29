@@ -12,6 +12,9 @@
     padding: 20px;
     margin: auto;
     border-radius: 10px;
+    box-shadow: 9px 15px 55px 1px rgba(125,121,121,0.36);
+    -webkit-box-shadow: 9px 15px 55px 1px rgba(125,121,121,0.36);
+    -moz-box-shadow: 9px 15px 55px 1px rgba(125,121,121,0.36);
 }
 .btn-signout{
     background-color: #F2A0A0;

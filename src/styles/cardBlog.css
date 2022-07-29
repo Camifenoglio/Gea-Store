@@ -11,7 +11,7 @@
 }
 
 
-.card-conteiner_B {
+.cardBlog_F-conteiner_B {
     background-color: rgba(217, 232, 216) !important;
     margin: 2rem;
     display: flex;
@@ -64,4 +64,105 @@
     margin: 1rem;
     width: 20vw !important;
     height: 25vh;
+}
+
+
+
+@import url('https://fonts.googleapis.com/css2?family=Josefin+Sans&display=swap');
+
+.blogContainer_F {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-around;
+    min-height: 70vh;
+}
+
+.textCardBlog_F{
+  font-family: "Josefin Sans", Arial;
+  position: absolute;
+  bottom: 0;
+  right: 0;
+  font-size: 14px;
+  margin: 0.7rem 1rem;
+}
+
+.textCardBlog_F a{
+  text-decoration: none;
+  color: black;
+}
+
+.textCardBlog_F a:hover{
+  color: red;
+}
+
+
+.cardBlog_F, .imgCardBlog_F{
+  width: 250px;
+  border-radius: 15px;
+}
+
+.cardBlog_F{
+  overflow: hidden;
+  height: 370px;
+  box-shadow: 20px 20px 60px #9d9d9d, -20px -20px 60px #ffffff;
+}
+
+.cardBlog_F:hover{
+  transform: translateY(-1%);
+  
+}
+
+.cardBlog_F:hover .content_F{
+  top: -55%;
+  opacity: 1;
+}
+
+.content_F{
+  padding: 1rem 0.7rem;
+  position: relative;
+  opacity: 0;
+  font-family: "Josefin Sans", Arial;
+  display: flex;
+  box-shadow: none; 
+  backdrop-filter: blur(10px);
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  padding-top: 0;
+  text-align: center;
+}
+
+.content_F h1{
+  font-size: 23px;
+  color: red;
+  margin: 0.7rem 0;
+  margin-top: 2rem;
+}
+
+.content_F h3{
+  color: #fff;
+  font-size: 15px;
+  font-weight: 300;
+  letter-spacing: 2px;
+  line-height: 1.6;
+}
+
+.btnBlog_F{
+  margin: 1rem;
+  border: 2px solid red;
+  background: red;
+  padding: 0.7rem 1rem;
+  text-transform: uppercase;
+  font-weight: 600;
+  color: white;
+  box-shadow: 0 7px 12px rgba(0, 0, 0, 0.1);
+  letter-spacing: 2px;
+  cursor: pointer;
+  border-radius: 20px;
+}
+
+.btnBlog_F:hover{
+  background: #EF0000;
+  box-shadow: 0 7px 12px rgba(0, 0, 0, 0.1);
 }

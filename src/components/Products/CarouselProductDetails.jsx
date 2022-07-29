@@ -57,12 +57,6 @@ export default function CarouselProductDetail() {
 
     const [thumbsSwiper, setThumbsSwiper] = useState(null);
 
-    async function likeOrDislike(event) {
-        event.preventDefault()
-        await dispatch(productsActions.addFavorite(dataProduct._id))
-        setReload(!reload)
-    }
-
     function alertCart(success) {
         return (
             toast.success('Added to Cart', { position: "bottom-center" })
@@ -83,6 +77,8 @@ export default function CarouselProductDetail() {
         alerts(res)
         setReload(res)
     }
+
+    
 
     // console.log(dataProduct)
     return (

@@ -5,11 +5,11 @@ import CardMedia from '@mui/material/CardMedia';
 import Typography from '@mui/material/Typography';
 import { Button, CardActions, Box } from '@mui/material';
 import { Link as LinkRouter } from 'react-router-dom'
-import '../../styles/cardBlog.css';
 import { useDispatch, useSelector } from 'react-redux';
 import { useState, useEffect } from 'react';
 import blogActions from '../../redux/actions/blogActions'
 import Data from '../Data'
+import '../../styles/cardBlog.css';
 
 
 export default function CardBlog() {
@@ -26,7 +26,8 @@ export default function CardBlog() {
 
     return (
 
-        <>
+
+        <div className='blogContainer_F'>
             <div className='conteinerCards'>
                 {Data.map((data, index) => (
                     <Card className='card-conteiner_B' sx={{ maxWidth: 645, flexWrap: 'nowrap' }} key={index}>
@@ -49,16 +50,21 @@ export default function CardBlog() {
                             </CardContent>
 
                         </Box>
-                            <Box className='boxContainerRP' sx={{ maxWidth: 300, display: 'flex', justifyContent: 'flex-end', alignItems: 'flex-end', flexDirection: 'column' }}>
-                                <CardContent className='text-blog_B'>
-                                    <Typography >
-                                        {data.country}
-                                    </Typography>
-                                </CardContent>
-                            </Box>
+                        <Box className='boxContainerRP' sx={{ maxWidth: 300, display: 'flex', justifyContent: 'flex-end', alignItems: 'flex-end', flexDirection: 'column' }}>
+                            <CardContent className='text-blog_B'>
+                                <Typography >
+                                    {data.country}
+                                </Typography>
+                            </CardContent>
+                        </Box>
                     </Card>
                 ))}
             </div>
-            </>
-            ) 
-    }
+        </div>
+    )
+}
+
+
+
+
+
