@@ -177,7 +177,7 @@ const settingProfile = [
                                 {user ?
                                     <Box sx={{ display: 'flex', justifyContent: 'center', alignItems: 'center', flexDirection: 'row' }}>
                                         <Typography sx={{ color: 'black' }}>{user.fullName}</Typography>
-                                        <Avatar src={user.imageUser} alt='imgUsuario' />
+                                        <Avatar src={user.imageUser} alt='imgUsuario'/>
                                     </Box> :
                                     <AccountCircleIcon />
                                 }
@@ -207,7 +207,7 @@ const settingProfile = [
                                     className='underline-none'
                                 >
                                     <MenuItem key={index} onClick={handleCloseUserMenu}>
-                                        <Typography textAlign="center">{setting.name}</Typography>
+                                        <Typography sx={{color: '#6D8C3E' }} textAlign="center">{setting.name}</Typography>
                                     </MenuItem>
                                 </LinkRouter>
                             ))

@@ -109,7 +109,7 @@ export default function Products() {
             <div className='productAndFilters_F'>
                 <div className='categoriesSidebar_F'>
                     <img src='https://i.imgur.com/hD3qytz.png' alt='logoGea' className='logoSidebar_F' />
-                    <InputLabel id='category-label'>Category</InputLabel>
+                    <InputLabel id='category-label'>Select Your Category</InputLabel>
                     <Select
                         //className='btnSidebarCategory_F buttonCategory_F' 
                         onChange={selectCategoryBtn}
@@ -159,8 +159,9 @@ export default function Products() {
                                         <button
                                             id={product._id}
                                             onClick={removeProduct}
+                                            className='removeProductBtn_F'
                                         >
-                                            ಥ_ಥ
+                                            ❌
                                         </button>
                                         <IconButton
                                             className="card-button"
