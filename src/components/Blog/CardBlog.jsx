@@ -29,6 +29,36 @@ export default function CardBlog() {
 
         <div className='blogContainer_F'>
             <div className='conteinerCards'>
+                {post.map((onepost =>(
+            
+                <Card className='card-conteiner_B' sx={{ maxWidth: 645, flexWrap: 'nowrap' }} key={onepost._id}>
+                        <Box className='boxCardRP' >
+                            <Typography className='titleCardRP'>
+                                {onepost.title}
+                            </Typography>
+                            <CardMedia className='img-blog_B'
+                                component="img"
+                                height="140"
+                                image={onepost.fileUpload}
+                                alt={onepost.name}
+                            />
+                        </Box>
+                        <Box className='boxContainerRP' sx={{display: 'flex', justifyContent: 'flex-end', alignItems: 'flex-end', flexDirection: 'column' }}>
+                            <CardContent className='text-blog_B'>
+                                <Typography >
+                                    {onepost.description}
+                                </Typography>
+                            </CardContent>
+
+                        </Box>
+                    </Card>
+                
+                
+                
+                )))}
+                
+
+
                 {Data.map((data, index) => (
                     <Card className='card-conteiner_B' sx={{ maxWidth: 645, flexWrap: 'nowrap' }} key={index}>
                         <Box className='boxCardRP' >
