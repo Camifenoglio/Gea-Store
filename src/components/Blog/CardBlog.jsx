@@ -45,57 +45,11 @@ export default function CardBlog() {
                                 </h2>
                                 <p className='description'>{onepost.description}</p>
                             </div>
-
                         </div>
-
-                        {/* <Box className='boxContainerRP' sx={{ display: 'flex', justifyContent: 'flex-end', alignItems: 'flex-end', flexDirection: 'column' }}>
-                            <CardContent className='text-blog_B'>
-                                <Typography >
-                                    {onepost.description}
-                                </Typography>
-                            </CardContent>
-
-                        </Box> */}
                     </div>
-
-
-
                 )))}
 
-
-
-                {/* {Data.map((data, index) => (
-                    <Card className='card-conteiner_B' sx={{ maxWidth: 645, flexWrap: 'nowrap' }} key={index}>
-                        <Box className='boxCardRP' >
-                            <Typography className='titleCardRP'>
-                                {data.title}
-                            </Typography>
-                            <CardMedia className='img-blog_B'
-                                component="img"
-                                height="140"
-                                image={data.image}
-                                alt={data.name}
-                            />
-                        </Box>
-                        <Box className='boxContainerRP' sx={{ maxWidth: 300, display: 'flex', justifyContent: 'flex-end', alignItems: 'flex-end', flexDirection: 'column' }}>
-                            <CardContent className='text-blog_B'>
-                                <Typography >
-                                    {data.country}
-                                </Typography>
-                            </CardContent>
-
-                        </Box>
-                        <Box className='boxContainerRP' sx={{ maxWidth: 300, display: 'flex', justifyContent: 'flex-end', alignItems: 'flex-end', flexDirection: 'column' }}>
-                            <CardContent className='text-blog_B'>
-                                <Typography >
-                                    {data.country}
-                                </Typography>
-                            </CardContent>
-                        </Box>
-                    </Card>
-                ))} */}
             </div>
-<<<<<<< HEAD
         </div>
     )
 }
@@ -104,8 +58,3 @@ export default function CardBlog() {
 
 
 
-=======
-        </>
-    )
-}
->>>>>>> c7c39752e64f563959f380f7d0d11d4ac98d66b5
