@@ -39,7 +39,7 @@ const productsActions = {
         }
     },
     createProduct: (formData) => {
-        console.log(formData)
+        //console.log(formData)
         return async (dispatch, getState) => {
             try {
                 await axios.post( urlBack + '/api/products', formData );
@@ -72,7 +72,7 @@ const productsActions = {
             try{
                 const res = await axios.put( urlBack + `/api/products/favorites/${id}` , {}, { headers:{Authorization: `Bearer ${localStorage.getItem('token')}`}}            
             );
-                console.log(res)
+                //console.log(res)
                 dispatch({ type: 'ADD_FAVORITE', payload: res.data.response })
 
             return res

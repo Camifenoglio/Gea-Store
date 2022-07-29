@@ -46,7 +46,6 @@ export default function CardBlog() {
     return (
 
         <>
-
             <div className='conteinerCards'>
                 {Data.map((data, index) => (
                     <Card className='card-conteiner_B' sx={{ maxWidth: 645, flexWrap: 'nowrap' }} key={index}>
@@ -90,6 +89,8 @@ export default function CardBlog() {
                 })
                     : <p>error</p>
 >>>>>>> 7eff1e3eb02d73e6048a635a3c12965a2b4573fe
+=======
+>>>>>>> 996afeadcd85829265631570bd1ab1389a18adfc
                 }
             </div> */}
 

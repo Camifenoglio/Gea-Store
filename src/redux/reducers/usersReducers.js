@@ -6,7 +6,8 @@ const initialState= {
         message:"",
         success:false
 
-    }
+    },
+    likes:[]
 }
 
 const usersReducers = (state= initialState, action) => {
@@ -19,6 +20,10 @@ const usersReducers = (state= initialState, action) => {
         case 'message' : return {
             ...state,
             userSign:action.payload
+        }
+        case 'ADD_LIKE' : return {
+            ...state,
+            likes:action.payload
         }
         default: return state
     }
