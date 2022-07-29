@@ -38,11 +38,11 @@ export default function CarouselProductDetail() {
     const [reload, setReload] = useState()
     const [count, setCount] = React.useState(1);
 
-    const ScrollToTop = () =>  {
+    const ScrollToTop = () => {
         window.scroll({
             top: 0,
             behavior: "smooth",
-            left:0
+            left: 0
         })
     }
 
@@ -178,7 +178,7 @@ export default function CarouselProductDetail() {
                         <div className="favorite-icon">
                             {user ?
                                 (<IconButton onClick={likeOrDislike}>
-                                    {dataProduct?.favorite.includes(user.id) ?
+                                    {dataProduct.favorite?.includes(user.id) ?
                                         <FavoriteIcon sx={{ color: "red", fontSize: 40 }} /> :
                                         <FavoriteIcon sx={{ color: "black", fontSize: 40 }} />}
                                 </IconButton>)

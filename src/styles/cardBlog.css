@@ -91,7 +91,7 @@
 
 }
 
-@media (max-height: 750px) {
+@media (min-height: 750px) {
     .boxCardRP {
         display: flex;
         flex-direction: column !important;
