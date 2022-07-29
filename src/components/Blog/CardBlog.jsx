@@ -21,7 +21,7 @@ export default function CardBlog() {
                     <Card className='card-conteiner_B' sx={{ maxWidth: 645, flexWrap: 'nowrap' }} key={index}>
                         <Box className='boxCardRP' >
                             <Typography className='titleCardRP'>
-                                {data.name}
+                                {data.title}
                             </Typography>
                             <CardMedia className='img-blog_B'
                                 component="img"
@@ -36,11 +36,7 @@ export default function CardBlog() {
                                     {data.country}
                                 </Typography>
                             </CardContent>
-                            <CardActions className='buttom-blog_B' >
-                                <Button sx={{ color: 'black' }} size="small" color="primary">
-                                    Show More
-                                </Button>
-                            </CardActions>
+
                         </Box>
                             <Box className='boxContainerRP' sx={{ maxWidth: 300, display: 'flex', justifyContent: 'flex-end', alignItems: 'flex-end', flexDirection: 'column' }}>
                                 <CardContent className='text-blog_B'>
@@ -48,13 +44,6 @@ export default function CardBlog() {
                                         {data.country}
                                     </Typography>
                                 </CardContent>
-                                <CardActions className='buttom-blog_B' >
-                                        <LinkRouter to={`'${Data._id}`}>
-                                            <Button sx={{ color: 'black' }} size="small" color="primary">
-                                                Show More
-                                            </Button>
-                                        </LinkRouter>
-                                    </CardActions>
                             </Box>
                     </Card>
                 ))

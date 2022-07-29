@@ -278,6 +278,12 @@ width:35vw !important;
 .btnCardDetails_F:hover .arrow:before {
   right: 0;
 }
+.favorite-icon{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: row;
+}
 
 @media (max-width:650px){
   .productDetailContainer_F {

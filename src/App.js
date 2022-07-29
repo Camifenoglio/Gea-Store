@@ -51,7 +51,7 @@ function App(props) {
                 <Route path='/' element={<HomePage />} />
                 <Route path='/home' element={<HomePage />} />
                 <Route path='/products' element={<ProductsPage />} />
-                <Route path='/products/:id' element={<DetailsPage />} />
+                <Route path='/products/:id' element={<DetailsPage/>} />
                 <Route path='/aboutus' element={<AboutUsPage />} />
                 <Route path='/blog' element={<BlogPage />} />
                 <Route path='/user' element={props.user?.role === 'admin'? <AdminPage/> : <UserProfile />} />

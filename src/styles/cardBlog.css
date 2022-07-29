@@ -6,6 +6,7 @@
     flex-wrap:wrap;
     justify-content:center;
     align-items:center;
+    align-content:center;
     
 }
 
@@ -13,18 +14,19 @@
 .card-conteiner_B{
     background-color: rgba(217, 232, 216) !important;
     margin: 2rem;
-    paddign:2rem;
     display: flex;
    flex-direction:row;
    justify-content:center;
    align-content:center;
    border-radius:3rem!important;
+   width:100%;
 }
 
 
 .boxCardRP {
     display:flex;
     flex-direction:column;
+    text-align:center;
     justify-content:center!important;
     align-items:center!important;
     
