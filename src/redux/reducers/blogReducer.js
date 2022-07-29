@@ -5,36 +5,39 @@ const initialState = {
 }
 
 const blogReducer = (state = initialState, action) => {
-    //console.log(action)
-    //console.log(state)
-    switch(action.type) {
-        case 'GET_POST':
+    // console.log(action)
+    console.log(state)
+    switch (action.type) {
+
+        case 'GET_POSTS':
+
             return {
                 ...state,
-                topics: action.payload
+                post: action.payload,
+
             }
         case 'GET_ONE':
             return {
                 ...state,
-                oneTopic: action.payload
+                onePost: action.payload
             }
         case 'MOD_POST':
             return {
                 ...state,
-                auxTopic: action.payload
+                onePost: action.payload
             }
         case 'UPD_POST':
-            let topics = [...state.topics]
-            topics.push(action.payload)
-            return{
+            let post = [...state.post]
+            post.push(action.payload)
+            return {
                 ...state,
-                topics: action.payload,
-                auxTopics: [...topics]
+                post: action.payload,
+                auxPosting: [...post]
             }
         case 'DEL_POST':
             return {
                 ...state,
-                topics: action.payload
+                post: action.payload
             }
         default:
             return state

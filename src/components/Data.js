@@ -1,6 +1,6 @@
 
 
-var Data=[
+var Data = [
     {
         "id":"1",
         "title":"How to make vegan tacos al pastor. Recipe with texturized soy.",
