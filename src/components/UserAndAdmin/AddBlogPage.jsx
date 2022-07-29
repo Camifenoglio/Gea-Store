@@ -2,6 +2,7 @@
 // REACT
 import React, { useState } from "react"
 import { useDispatch } from "react-redux";
+import toast from 'react-hot-toast';
 
 
 //MUI
@@ -24,13 +25,6 @@ export default function AddBlogPage() {
     const [files, setFiles] = useState([])
     console.log(files)
 
-    const ScrollToTop = () =>  {
-        window.scroll({
-            top: 0,
-            behavior: "smooth",
-            left:0
-        })
-    }
 
     async function handleSubmit(event) {
         console.log(event)
@@ -44,6 +38,7 @@ export default function AddBlogPage() {
         console.log(title)
         console.log(description)
 
+
         // construccion de un nuevo formData
         const formData = await new FormData()
         formData.append('title', title)
@@ -54,8 +49,18 @@ export default function AddBlogPage() {
         await dispatch(blogActions.createBlog(formData))
 
     }
-
-
+    function alertCart(success) {
+        return (
+            toast.success('You blog has been posted', { position: "bottom-center" })
+        )
+    }
+    const ScrollToTop = () => {
+        window.scroll({
+            top: 0,
+            behavior: "smooth",
+            left: 0
+        })
+    }
 
     return (
         <>
@@ -86,7 +91,12 @@ export default function AddBlogPage() {
                         rows={4}
                         variant="filled"
                     />
-                    <Button type="submit" onClick={ ScrollToTop } color="success" variant="contained" style={{ height: '3rem' }}>Add Blog</Button>
+                    <Button
+                        onClick={() => { alertCart(); ScrollToTop() }}
+                        type="submit"
+                        color="success"
+                        variant="contained"
+                        style={{ height: '3rem' }}>Add Blog</Button>
                 </Box>
 
             </div>

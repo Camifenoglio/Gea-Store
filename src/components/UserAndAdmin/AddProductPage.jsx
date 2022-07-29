@@ -1,6 +1,7 @@
 //REACT
 import React, { useState, useEffect } from "react"
 import { useDispatch } from "react-redux";
+import toast from 'react-hot-toast';
 
 // MUI
 import TextField from '@mui/material/TextField';
@@ -26,6 +27,12 @@ const arrayCategories = ["Gluten free", "Sugar free", "Lactose free", "Vegan", "
 
 export default function AddProductPage() {
 
+
+    function alertCart(success) {
+        return (
+            toast.success('You Product has been added', { position: "bottom-center" })
+        )
+    }
     const dispatch = useDispatch()
 
     // VAR DE ESTADO
@@ -44,11 +51,11 @@ export default function AddProductPage() {
         }
     }
 
-    const ScrollToTop = () =>  {
+    const ScrollToTop = () => {
         window.scroll({
             top: 0,
             behavior: "smooth",
-            left:0
+            left: 0
         })
     }
 
@@ -69,13 +76,13 @@ export default function AddProductPage() {
 
         // construccion de un nuevo formData
         const formData = await new FormData()
-            formData.append('name', name)
-            formData.append('description', description)
-            formData.append('price', price)
-            formData.append('image', file)
-            formData.append('category', await categoryArray)
-            formData.append('stock', stock)
-            formData.append('imageInfo', fileTwo)
+        formData.append('name', name)
+        formData.append('description', description)
+        formData.append('price', price)
+        formData.append('image', file)
+        formData.append('category', await categoryArray)
+        formData.append('stock', stock)
+        formData.append('imageInfo', fileTwo)
         console.log(formData) // si todo sale bien, deberia no traer nada
         console.log(categoryArray)
         await dispatch(productsActions.createProduct(formData))
@@ -175,7 +182,7 @@ export default function AddProductPage() {
 
                 </TextField> */}
 
-                    <Button type="submit" onClick={ ScrollToTop } color="success" variant="contained" style={{ height: '3rem' }}>Add Product</Button>
+                    <Button type="submit" onClick={() => { alertCart(); ScrollToTop() }} color="success" variant="contained" style={{ height: '3rem' }}>Add Product</Button>
                 </Box>
             </div>
         </>
