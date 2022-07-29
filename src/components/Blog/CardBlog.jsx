@@ -28,37 +28,42 @@ export default function CardBlog() {
 
         <>
             <div className='conteinerCards'>
-                {post.map((onepost =>(
-            
-                <Card className='card-conteiner_B' sx={{ maxWidth: 645, flexWrap: 'nowrap' }} key={onepost._id}>
-                        <Box className='boxCardRP' >
-                            <Typography className='titleCardRP'>
-                                {onepost.title}
-                            </Typography>
-                            <CardMedia className='img-blog_B'
-                                component="img"
-                                height="140"
-                                image={onepost.fileUpload}
-                                alt={onepost.name}
-                            />
-                        </Box>
-                        <Box className='boxContainerRP' sx={{display: 'flex', justifyContent: 'flex-end', alignItems: 'flex-end', flexDirection: 'column' }}>
+                {post.map((onepost => (
+
+                    <div className='card-conteiner_B' sx={{ maxWidth: 645, flexWrap: 'nowrap' }} key={onepost._id}>
+                        <div className='boxCardRP' >
+                            <div className='img-conteiner'>
+                                <img className='img-blog_B'
+                                    src={onepost.fileUpload}
+                                    alt={onepost.name} />
+                            </div>
+                            <div className='img-description'>
+
+                                <h2 className='titleCardRP'>
+                                    {onepost.title}
+                                </h2>
+                                <p className='description'>{onepost.description}</p>
+                            </div>
+
+                        </div>
+
+                        {/* <Box className='boxContainerRP' sx={{ display: 'flex', justifyContent: 'flex-end', alignItems: 'flex-end', flexDirection: 'column' }}>
                             <CardContent className='text-blog_B'>
                                 <Typography >
                                     {onepost.description}
                                 </Typography>
                             </CardContent>
 
-                        </Box>
-                    </Card>
-                
-                
-                
+                        </Box> */}
+                    </div>
+
+
+
                 )))}
-                
 
 
-                {Data.map((data, index) => (
+
+                {/* {Data.map((data, index) => (
                     <Card className='card-conteiner_B' sx={{ maxWidth: 645, flexWrap: 'nowrap' }} key={index}>
                         <Box className='boxCardRP' >
                             <Typography className='titleCardRP'>
@@ -87,7 +92,7 @@ export default function CardBlog() {
                             </CardContent>
                         </Box>
                     </Card>
-                ))}
+                ))} */}
             </div>
         </>
     )

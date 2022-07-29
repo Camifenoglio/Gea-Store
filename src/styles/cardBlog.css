@@ -15,23 +15,19 @@
     background-color: rgba(217, 232, 216) !important;
     margin: 2rem;
     display: flex;
-   flex-direction:column;
-   justify-content:center;
-   align-content:center;
-   border-radius:3rem!important;
-   width:100%;
+    justify-content: center;
+    align-content: center;
+    border-radius: 3rem !important;
+    width: 100vw;
 }
 
 
 .boxCardRP {
-    display:flex;
-    flex-direction:column;
-    text-align:center;
-    justify-content:center!important;
-    align-items:center!important;
-    
-    
-    
+    display: flex;
+    text-align: center;
+    justify-content: center !important;
+    align-items: center !important;
+
 }
 
 .titleCardRP {
@@ -39,7 +35,9 @@
     margin-bottom: .5rem !important;
     margin-bottom: 0 !important;
     margin-top: .5rem !important;
-
+    padding: 1rem !important;
+    justify-content: center;
+    color: #456515;
 
 }
 
@@ -60,8 +58,58 @@
 }
 
 .img-blog_B {
-    border-radius: 1rem;
+    border-radius: 40px;
     margin: 1rem;
-    width: 20vw !important;
-    height: 25vh;
+    width: 30vw !important;
+    height: 85%;
+    padding-bottom: 1rem !important;
+    object-fit: cover !important;
+    margin-top: 1.5rem;
+}
+
+.css-1i42878-MuiPaper-root-MuiCard-root {
+    width: 35vw !important;
+
+}
+
+.img-description {
+    display: flex;
+    flex-direction: column;
+}
+
+.description {
+    text-align: justify;
+    padding: 1rem;
+    padding-right: 1.5rem;
+}
+
+.img-conteiner {
+    height: 100%;
+    display: flex;
+    align-items: center;
+    margin-left: 1rem;
+
+}
+
+@media (max-height: 750px) {
+    .boxCardRP {
+        display: flex;
+        flex-direction: column !important;
+        text-align: center;
+        justify-content: center !important;
+        align-items: center !important;
+        margin-top: 1rem;
+    }
+
+    .img-blog_B {
+        border-radius: 40px;
+        margin: 1rem;
+        width: 70vw !important;
+        height: 85%;
+        padding-bottom: 1rem !important;
+        object-fit: cover !important;
+        margin-top: 1.5rem;
+        margin-right: 1.8rem;
+    }
+
 }

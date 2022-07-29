@@ -24,6 +24,26 @@ const ShoppingCart = () => {
         );
     };
 
+    function handleDeleteOne(id) {
+        console.log(id)
+        Swal.fire({
+            title: 'Are you sure?',
+            text: "You won't be able to revert this!",
+            icon: 'warning',
+            showCancelButton: true,
+            confirmButtonColor: '#3085d6',
+            cancelButtonColor: '#d33',
+            confirmButtonText: 'Yes, delete it!'
+        }).then((result) => {
+
+            if (result.isConfirmed) {
+
+                dispatch(delFromCart(id.target.id));
+            }
+        })
+    }
+
+
     function handleDelete() {
         Swal.fire({
             title: 'Are you sure?',
@@ -75,18 +95,19 @@ const ShoppingCart = () => {
                                         <div className='quantity-more'>
                                             <div className='plus'>
                                                 <button
-                                                    className='btnShopping_A boton_n'
+                                                    className='boton_n'
                                                     onClick={() => dispatch(addToCart(product._id))}>+</button>
                                                 <h3>
                                                     {item.quantity}
                                                 </h3>
                                                 <button
-                                                    className='btnShopping_A boton_n'
+                                                    className='boton_n'
                                                     onClick={() => dispatch(delFromCart(product._id))}>-</button>
                                             </div>
                                             <button
+                                                id={product._id}
                                                 className='btnShopping_A'
-                                                onClick={() => { dispatch(delFromCart(product._id, true)); handleDelete() }}>Remove Product
+                                                onClick={handleDeleteOne}>Remove Product
                                             </button>
                                             <div className='price'>
                                                 <h3 className='total-price'>Price:</h3>
