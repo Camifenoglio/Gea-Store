@@ -73,12 +73,12 @@ export default function CarouselProductDetail() {
     }
     async function likeOrDislike() {
         const res = await dispatch(productsActions.addFavorite(dataProduct._id))
-        await dispatch(userActions.addLike(dataProduct._id))
+        // await dispatch(userActions.addLike(dataProduct._id))
         alerts(res)
         setReload(res)
     }
 
-    
+
 
     // console.log(dataProduct)
     return (
