@@ -10,8 +10,7 @@
     width: 100%;
 }
 
-
-.cardBlog_F-conteiner_B {
+.card-conteiner_B {
     background-color: rgba(217, 232, 216) !important;
     margin: 2rem;
     display: flex;
@@ -23,7 +22,7 @@
 
 
 .boxCardRP {
-    display: flex;
+    display: flex !important;
     text-align: center;
     justify-content: center !important;
     align-items: center !important;
@@ -91,7 +90,7 @@
 
 }
 
-@media (min-height: 750px) {
+@media (max-height: 750px) {
     .boxCardRP {
         display: flex;
         flex-direction: column !important;
