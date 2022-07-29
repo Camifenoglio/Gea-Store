@@ -2,6 +2,7 @@ import React, { useState, useEffect } from "react";
 import { useParams } from "react-router-dom";
 import { useDispatch, useSelector } from "react-redux";
 import { Link as LinkRouter } from 'react-router-dom';
+import toast from 'react-hot-toast';
 
 
 // Import Swiper React components
@@ -16,20 +17,20 @@ import "swiper/css/thumbs";
 // STYLES
 import '../../styles/carouselProductDetails.css'
 import productsActions from "../../redux/actions/productsActions";
-import productReducers from "../../redux/reducers/productReducers";
 //import CardCredit from "./CardCredit";
 
 // import required modules
 import { FreeMode, Navigation, Thumbs } from "swiper";
-import { IconButton } from "@mui/material";
+
 import FavoriteIcon from '@mui/icons-material/Favorite';
 import ArrowBackOutlinedIcon from '@mui/icons-material/ArrowBackOutlined';
+import { IconButton } from "@mui/material";
 
 
 export default function CarouselProductDetail() {
-
     const idProduct = useParams()
     const dispatch = useDispatch()
+    const user = useSelector(store => store.usersReducers.user)
     const [product, setProduct] = useState()
     const [reload, setReload] = useState()
 
@@ -37,21 +38,35 @@ export default function CarouselProductDetail() {
         dispatch(productsActions.getOneProduct(idProduct))
         //dispatch(itineraryActions.getItinerayByIdCity(idCity))
         // eslint-disable-next-line
-    }, [])
+    }, [reload])
 
     const dataProduct = useSelector(store => store.productReducers.oneProduct)
+    console.log(dataProduct)
 
     const [thumbsSwiper, setThumbsSwiper] = useState(null);
 
-    const user = useSelector(store => store.usersReducers.user)
+    // async function likeOrDislike(event){
+    //     event.preventDefault()
+    //     await dispatch(productsActions.addFavorite(dataProduct._id))
+    //     setReload(!reload)
+    // }
 
-    async function likeOrDislike(){
-        await dispatch(productsActions.addFavorite(dataProduct._id))
 
-        setReload(!reload)
+    function alerts(res) {
+        if (res === undefined) {
+            toast.error("You must be logged in to comment or like an Product");
+        }
+        else if (res.data.success === true) {
+            toast.success(res.data.message);
+        }
+    }
+    async function likeOrDislike() {
+        const res = await dispatch(productsActions.addFavorite(dataProduct._id))
+        alerts(res)
+        setReload(res)
     }
 
-    console.log(dataProduct)
+    // console.log(dataProduct)
     return (
         <div className="flexbox_F">
             <div className="productDetailPage_F">
@@ -82,7 +97,7 @@ export default function CarouselProductDetail() {
                                 <img className="BL-img-prodcut-D" src={dataProduct.image} alt="product" />
                             </SwiperSlide>
                             <SwiperSlide>
-                                <img src={dataProduct.imageInfo} alt="product" />
+                                <img className="BL-img-prodcut-D" src={dataProduct.imageInfo} alt="product" />
                             </SwiperSlide>
                         </Swiper>
                         <Swiper
@@ -130,16 +145,22 @@ export default function CarouselProductDetail() {
                             <p >{dataProduct.description}.</p>
                         </div>
                         <div>
-                    {user ?
-                        (<IconButton onClick={likeOrDislike}>{dataProduct?.favorite.length?
-                            <FavoriteIcon sx={{ color: "red", fontSize: 30 }} /> :
-                            <FavoriteIcon sx={{ color: "black", fontSize: 30 }} />}</IconButton>)
+                            {/* {user ?
+                                (<IconButton onClick={likeOrDislike}>
+                                    {dataProduct?.favorite.includes(user.id) ?
+                                    <FavoriteIcon sx={{ color: "red", fontSize: 30 }} /> :
+                                    <FavoriteIcon sx={{ color: "black", fontSize: 30 }} />}
+                                </IconButton>)
 
-                            : (<FavoriteIcon sx={{ fontSize: 30 }} />)}
+                                : (
+                                <IconButton onClick={likeOrDislike}>
+                                    <FavoriteIcon sx={{ fontSize: 30 }} />
+                                </IconButton>
+                                )} */}
 
                             <h3 style={{ color: "black ", fontSize: 30, margin: 0 }}>{dataProduct?.favorite?.length}</h3>
-                        
-                    </div>
+
+                        </div>
 
                     </div>
                 </div>

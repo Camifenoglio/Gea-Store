@@ -16,7 +16,7 @@
   /* background-image: url(https://i.pinimg.com/564x/7b/e0/1b/7be01ba16a5f75490aeab54923512fb7.jpg); */
 }
 .BL-img-prodcut-D{
-width:40vh !important;
+width:35vw !important;
 }
 .spaceBtwn_F {
   background-color: #111;
@@ -318,7 +318,7 @@ width:40vh !important;
     justify-content: space-evenly;
     width: 30vh;
   }
-  .swiper-slide{
-    width:45vw !important;
-  }
+  .BL-img-prodcut-D{
+    width:40vw !important;
+    }
 }

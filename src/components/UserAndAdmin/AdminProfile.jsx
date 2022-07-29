@@ -1,7 +1,6 @@
 import React from "react";
 import NavBarAdmin from "./NavBarAdmin";
-
-
+import ListOrder from "./ListOrders";
 
 export default function AdminProfile() {
     return (
@@ -9,6 +8,7 @@ export default function AdminProfile() {
             <div>
                 <NavBarAdmin />
                 
+                <ListOrder />
             </div>
         </>
     )
