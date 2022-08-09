@@ -92,9 +92,10 @@ const userActions = {
         }
     },
     addLike: (id) => {
+        const token = localStorage.getItem("token")
         return async (dispatch, getState) => {
             try{
-                const res = await axios.put( urlBack + `/api/auth/likes/${id}` , {}, { headers:{Authorization: `Bearer ${localStorage.getItem('token')}`}}            
+                const res = await axios.put( urlBack + `/api/auth/likes/${id}` , {}, { headers:{Authorization: `Bearer  ` + token}}            
             );
                 console.log(res)
                 dispatch({ type: 'ADD_LIKES', payload: res.data.response })
